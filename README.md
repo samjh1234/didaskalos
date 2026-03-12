@@ -1,6 +1,6 @@
-# Koine Gospel Study
+# Didaskalos
 
-Web app statica per lo studio del greco koine del Nuovo Testamento.
+Web app statica per lo studio del greco del Nuovo Testamento.
 
 Obiettivo attuale:
 - interlineare affidabile
