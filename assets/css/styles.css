@@ -46,7 +46,7 @@ main {
 .site-header {
   display: grid;
   gap: 1rem;
-  padding: 1.5rem 0 1rem;
+  padding: 1rem 0 0.8rem;
 }
 
 .main-nav {
@@ -59,6 +59,14 @@ main {
   border: 1px solid var(--line);
   border-radius: 22px;
   box-shadow: var(--shadow);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .main-nav a {
@@ -679,8 +687,89 @@ code {
     align-items: start;
   }
 
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: min(1120px, calc(100% - 0.8rem));
+    padding: 0.45rem 0 0.35rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
   .main-nav {
-    padding: 0.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+    padding: 0.42rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(77, 45, 21, 0.12);
+    overflow: visible;
+  }
+
+  .main-nav a {
+    min-height: 40px;
+    padding: 0.58rem 0.7rem;
+    font-size: 0.93rem;
+    width: 100%;
+  }
+
+  main {
+    width: min(1120px, calc(100% - 0.95rem));
+    padding-bottom: 0.8rem;
+  }
+
+  .hero {
+    gap: 0.7rem;
+  }
+
+  .hero-visual,
+  .hero-card {
+    min-height: 0;
+  }
+
+  .hero-visual {
+    padding: 0.95rem 0.9rem 0.85rem;
+    min-height: 14.5rem;
+    background-position: center;
+  }
+
+  .hero h1.project-name {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .hero .project-name + p {
+    max-width: none;
+    font-size: 0.98rem;
+    line-height: 1.34;
+  }
+
+  .hero-card ul {
+    gap: 0.24rem;
+    padding-left: 1rem;
+  }
+
+  .hero-card,
+  .hero-copy {
+    padding: 0.9rem 0.95rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 0.68rem;
+  }
+
+  .summary-card {
+    padding: 0.75rem 0.82rem;
+  }
+
+  .summary-grid .panel h3 {
+    margin-bottom: 0.3rem;
+  }
+
+  .summary-stat {
+    margin-top: 0.35rem;
+    font-size: 0.86rem;
   }
 
   .paradigm-row {
