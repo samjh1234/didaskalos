@@ -1,0 +1,37 @@
+{
+  "αυτος": {
+    "lemma": "αὐτός",
+    "class": "pronome personale/dimostrativo",
+    "meaning_it": "egli, lui, stesso",
+    "status": "verified",
+    "notes": "Paradigma dei casi del pronome αὐτός.",
+    "paradigms": {
+      "Casi del pronome": {
+        "Nominativo singolare maschile": "αὐτός",
+        "Genitivo singolare maschile": "αὐτοῦ",
+        "Dativo singolare maschile": "αὐτῷ",
+        "Accusativo singolare maschile": "αὐτόν",
+        "Nominativo singolare femminile": "αὐτή",
+        "Genitivo singolare femminile": "αὐτῆς",
+        "Dativo singolare femminile": "αὐτῇ",
+        "Accusativo singolare femminile": "αὐτήν",
+        "Nominativo singolare neutro": "αὐτό",
+        "Genitivo singolare neutro": "αὐτοῦ",
+        "Dativo singolare neutro": "αὐτῷ",
+        "Accusativo singolare neutro": "αὐτό",
+        "Nominativo plurale maschile": "αὐτοί",
+        "Genitivo plurale maschile": "αὐτῶν",
+        "Dativo plurale maschile": "αὐτοῖς",
+        "Accusativo plurale maschile": "αὐτούς",
+        "Nominativo plurale femminile": "αὐταί",
+        "Genitivo plurale femminile": "αὐτῶν",
+        "Dativo plurale femminile": "αὐταῖς",
+        "Accusativo plurale femminile": "αὐτάς",
+        "Nominativo plurale neutro": "αὐτά",
+        "Genitivo plurale neutro": "αὐτῶν",
+        "Dativo plurale neutro": "αὐτοῖς",
+        "Accusativo plurale neutro": "αὐτά"
+      }
+    }
+  }
+}

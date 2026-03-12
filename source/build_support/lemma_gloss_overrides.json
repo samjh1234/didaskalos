@@ -1,0 +1,791 @@
+{
+  "γενεσις": {
+    "glossIt": "generazione, genealogia"
+  },
+  "γενεα": {
+    "glossIt": "generazione"
+  },
+  "ἰησους": {
+    "glossIt": "Gesù"
+  },
+  "ιησους": {
+    "glossIt": "Gesù"
+  },
+  "χριστος": {
+    "glossIt": "Cristo"
+  },
+  "δαυιδ": {
+    "glossIt": "Davide"
+  },
+  "αβρααμ": {
+    "glossIt": "Abramo"
+  },
+  "βιβλος": {
+    "glossIt": "libro, rotolo"
+  },
+  "γενναω": {
+    "glossIt": "generare"
+  },
+  "ειμι": {
+    "glossIt": "essere"
+  },
+  "λεγω": {
+    "glossIt": "dire"
+  },
+  "ερχομαι": {
+    "glossIt": "venire"
+  },
+  "εχω": {
+    "glossIt": "avere"
+  },
+  "βλεπω": {
+    "glossIt": "vedere"
+  },
+  "ακουω": {
+    "glossIt": "udire"
+  },
+  "γινωσκω": {
+    "glossIt": "conoscere"
+  },
+  "ποιεω": {
+    "glossIt": "fare"
+  },
+  "πληροω": {
+    "glossIt": "compiere"
+  },
+  "ευλογεω": {
+    "glossIt": "benedire"
+  },
+  "πας": {
+    "glossIt": "tutto, ogni"
+  },
+  "οραω": {
+    "glossIt": "vedere"
+  },
+  "διδωμι": {
+    "glossIt": "dare"
+  },
+  "πολυς": {
+    "glossIt": "molto, numeroso"
+  },
+  "ημερα": {
+    "glossIt": "giorno"
+  },
+  "λαλεω": {
+    "glossIt": "parlare"
+  },
+  "οιδα": {
+    "glossIt": "sapere"
+  },
+  "μαθητης": {
+    "glossIt": "discepolo"
+  },
+  "λαμβανω": {
+    "glossIt": "prendere, ricevere"
+  },
+  "πιστις": {
+    "glossIt": "fede"
+  },
+  "πιστευω": {
+    "glossIt": "credere"
+  },
+  "μεγας": {
+    "glossIt": "grande"
+  },
+  "αγιος": {
+    "glossIt": "santo"
+  },
+  "αποκρινομαι": {
+    "glossIt": "rispondere"
+  },
+  "ουδεις": {
+    "glossIt": "nessuno"
+  },
+  "ονομα": {
+    "glossIt": "nome"
+  },
+  "ανηρ": {
+    "glossIt": "uomo, marito"
+  },
+  "εξερχομαι": {
+    "glossIt": "uscire"
+  },
+  "δυναμαι": {
+    "glossIt": "potere"
+  },
+  "θελω": {
+    "glossIt": "volere"
+  },
+  "ἰουδαιος": {
+    "glossIt": "giudeo"
+  },
+  "εισερχομαι": {
+    "glossIt": "entrare"
+  },
+  "νομος": {
+    "glossIt": "legge"
+  },
+  "γραφω": {
+    "glossIt": "scrivere"
+  },
+  "κοσμος": {
+    "glossIt": "mondo"
+  },
+  "ευρισκω": {
+    "glossIt": "trovare"
+  },
+  "χειρ": {
+    "glossIt": "mano"
+  },
+  "αγγελος": {
+    "glossIt": "angelo, messaggero"
+  },
+  "οχλος": {
+    "glossIt": "folla"
+  },
+  "αμαρτια": {
+    "glossIt": "peccato"
+  },
+  "εργον": {
+    "glossIt": "opera"
+  },
+  "δοξα": {
+    "glossIt": "gloria"
+  },
+  "πολις": {
+    "glossIt": "città"
+  },
+  "εθνος": {
+    "glossIt": "nazione, popolo"
+  },
+  "παυλος": {
+    "glossIt": "Paolo"
+  },
+  "εσθιω": {
+    "glossIt": "mangiare"
+  },
+  "καρδια": {
+    "glossIt": "cuore"
+  },
+  "πετρος": {
+    "glossIt": "Pietro"
+  },
+  "χαρις": {
+    "glossIt": "grazia"
+  },
+  "αλλος": {
+    "glossIt": "altro"
+  },
+  "δεω": {
+    "glossIt": "legare"
+  },
+  "ιστημι": {
+    "glossIt": "stare, porre"
+  },
+  "πρωτος": {
+    "glossIt": "primo"
+  },
+  "πορευομαι": {
+    "glossIt": "andare"
+  },
+  "καλεω": {
+    "glossIt": "chiamare"
+  },
+  "σαρξ": {
+    "glossIt": "carne"
+  },
+  "προφητης": {
+    "glossIt": "profeta"
+  },
+  "αφιημι": {
+    "glossIt": "lasciare, perdonare"
+  },
+  "εγειρω": {
+    "glossIt": "suscitare, alzare"
+  },
+  "σωμα": {
+    "glossIt": "corpo"
+  },
+  "λαος": {
+    "glossIt": "popolo"
+  },
+  "ζαω": {
+    "glossIt": "vivere"
+  },
+  "φωνη": {
+    "glossIt": "voce"
+  },
+  "δυο": {
+    "glossIt": "due"
+  },
+  "πεντε": {
+    "glossIt": "cinque"
+  },
+  "κελευω": {
+    "glossIt": "ordinare"
+  },
+  "ανακλινω": {
+    "glossIt": "far sdraiare, far sedere a mensa"
+  },
+  "χορτος": {
+    "glossIt": "erba"
+  },
+  "ιχθυς": {
+    "glossIt": "pesce"
+  },
+  "αναβλεπω": {
+    "glossIt": "alzare gli occhi, guardare in alto"
+  },
+  "κλαω": {
+    "glossIt": "spezzare"
+  },
+  "ευχαριστεω": {
+    "glossIt": "rendere grazie"
+  },
+  "ανακειμαι": {
+    "glossIt": "stare a tavola, giacere"
+  },
+  "προφητεια": {
+    "glossIt": "profezia"
+  },
+  "χαρισμα": {
+    "glossIt": "dono di grazia"
+  },
+  "χρυσιον": {
+    "glossIt": "oro"
+  },
+  "βηθσαιδα": {
+    "glossIt": "Betsaida"
+  },
+  "σκορπιος": {
+    "glossIt": "scorpione"
+  },
+  "δομα": {
+    "glossIt": "dono"
+  },
+  "εξοχη": {
+    "glossIt": "luogo elevato, altura"
+  },
+  "κατειδωλος": {
+    "glossIt": "pieno di idoli"
+  },
+  "κολωνια": {
+    "glossIt": "colonia"
+  },
+  "λυκαονια": {
+    "glossIt": "Licaonia"
+  },
+  "μαθητρια": {
+    "glossIt": "discepola"
+  },
+  "συκαμινος": {
+    "glossIt": "gelso"
+  },
+  "ἰωαννης": {
+    "glossIt": "Giovanni"
+  },
+  "αποστελλω": {
+    "glossIt": "mandare"
+  },
+  "νεκρος": {
+    "glossIt": "morto"
+  },
+  "δουλος": {
+    "glossIt": "servo"
+  },
+  "αιων": {
+    "glossIt": "età, secolo"
+  },
+  "αρχιερευς": {
+    "glossIt": "sommo sacerdote"
+  },
+  "βαλλω": {
+    "glossIt": "gettare"
+  },
+  "θανατος": {
+    "glossIt": "morte"
+  },
+  "δυναμις": {
+    "glossIt": "potenza"
+  },
+  "παραδιδωμι": {
+    "glossIt": "consegnare"
+  },
+  "μενω": {
+    "glossIt": "rimanere"
+  },
+  "απερχομαι": {
+    "glossIt": "andarsene"
+  },
+  "ζητεω": {
+    "glossIt": "cercare"
+  },
+  "αγαπη": {
+    "glossIt": "amore"
+  },
+  "βασιλευς": {
+    "glossIt": "re"
+  },
+  "εκκλησια": {
+    "glossIt": "assemblea, chiesa"
+  },
+  "ιδιος": {
+    "glossIt": "proprio"
+  },
+  "κρινω": {
+    "glossIt": "giudicare"
+  },
+  "οικος": {
+    "glossIt": "casa"
+  },
+  "αποθνῄσκω": {
+    "glossIt": "morire"
+  },
+  "μονος": {
+    "glossIt": "solo"
+  },
+  "αληθεια": {
+    "glossIt": "verità"
+  },
+  "μελλω": {
+    "glossIt": "stare per"
+  },
+  "παρακαλεω": {
+    "glossIt": "esortare, consolare"
+  },
+  "ανιστημι": {
+    "glossIt": "alzarsi, risorgere"
+  },
+  "ολος": {
+    "glossIt": "tutto intero"
+  },
+  "σωζω": {
+    "glossIt": "salvare"
+  },
+  "ωρα": {
+    "glossIt": "ora"
+  },
+  "εξουσια": {
+    "glossIt": "autorità, potere"
+  },
+  "καλος": {
+    "glossIt": "buono, bello"
+  },
+  "ψυχη": {
+    "glossIt": "anima, vita"
+  },
+  "αγαθος": {
+    "glossIt": "buono"
+  },
+  "αιρω": {
+    "glossIt": "prendere, sollevare"
+  },
+  "οδος": {
+    "glossIt": "via, strada"
+  },
+  "οφθαλμος": {
+    "glossIt": "occhio"
+  },
+  "τιθημι": {
+    "glossIt": "porre"
+  },
+  "τεκνον": {
+    "glossIt": "figlio, bambino"
+  },
+  "αιμα": {
+    "glossIt": "sangue"
+  },
+  "αρτος": {
+    "glossIt": "pane"
+  },
+  "ετερος": {
+    "glossIt": "altro, diverso"
+  },
+  "διδασκω": {
+    "glossIt": "insegnare"
+  },
+  "φαρισαιος": {
+    "glossIt": "fariseo"
+  },
+  "περιπατεω": {
+    "glossIt": "camminare"
+  },
+  "φοβεομαι": {
+    "glossIt": "temere"
+  },
+  "τοπος": {
+    "glossIt": "luogo"
+  },
+  "οικια": {
+    "glossIt": "casa"
+  },
+  "πους": {
+    "glossIt": "piede"
+  },
+  "δικαιοσυνη": {
+    "glossIt": "giustizia"
+  },
+  "ειρηνη": {
+    "glossIt": "pace"
+  },
+  "θαλασσα": {
+    "glossIt": "mare"
+  },
+  "καθημαι": {
+    "glossIt": "sedere"
+  },
+  "απολλυμι": {
+    "glossIt": "perdere, distruggere"
+  },
+  "μηδεις": {
+    "glossIt": "nessuno"
+  },
+  "πιπτω": {
+    "glossIt": "cadere"
+  },
+  "ακολουθεω": {
+    "glossIt": "seguire"
+  },
+  "επτα": {
+    "glossIt": "sette"
+  },
+  "αρχω": {
+    "glossIt": "cominciare, governare"
+  },
+  "προσερχομαι": {
+    "glossIt": "avvicinarsi"
+  },
+  "καιρος": {
+    "glossIt": "tempo opportuno"
+  },
+  "προσευχομαι": {
+    "glossIt": "pregare"
+  },
+  "αναβαινω": {
+    "glossIt": "salire"
+  },
+  "εκαστος": {
+    "glossIt": "ciascuno"
+  },
+  "εκβαλλω": {
+    "glossIt": "scacciare, gettare fuori"
+  },
+  "μαλλον": {
+    "glossIt": "piuttosto, più"
+  },
+  "οπου": {
+    "glossIt": "dove"
+  },
+  "οσος": {
+    "glossIt": "quanto, tanto"
+  },
+  "καταβαινω": {
+    "glossIt": "discendere"
+  },
+  "αποστολος": {
+    "glossIt": "apostolo"
+  },
+  "δικαιος": {
+    "glossIt": "giusto"
+  },
+  "μωυσης": {
+    "glossIt": "Mosè"
+  },
+  "πεμπω": {
+    "glossIt": "mandare"
+  },
+  "υπαγω": {
+    "glossIt": "andare"
+  },
+  "πονηρος": {
+    "glossIt": "malvagio"
+  },
+  "στομα": {
+    "glossIt": "bocca"
+  },
+  "ανοιγω": {
+    "glossIt": "aprire"
+  },
+  "εμος": {
+    "glossIt": "mio"
+  },
+  "μαρτυρεω": {
+    "glossIt": "testimoniare"
+  },
+  "προσωπον": {
+    "glossIt": "volto, presenza"
+  },
+  "υδωρ": {
+    "glossIt": "acqua"
+  },
+  "ἰερουσαλημ": {
+    "glossIt": "Gerusalemme"
+  },
+  "δωδεκα": {
+    "glossIt": "dodici"
+  },
+  "σιμων": {
+    "glossIt": "Simone"
+  },
+  "χαιρω": {
+    "glossIt": "rallegrarsi"
+  },
+  "αποκτεινω": {
+    "glossIt": "uccidere"
+  },
+  "ἀβρααμ": {
+    "glossIt": "Abramo"
+  },
+  "ιερος": {
+    "glossIt": "tempio, sacro"
+  },
+  "πινω": {
+    "glossIt": "bere"
+  },
+  "τηρεω": {
+    "glossIt": "custodire"
+  },
+  "πυρ": {
+    "glossIt": "fuoco"
+  },
+  "αιτεω": {
+    "glossIt": "chiedere"
+  },
+  "αιωνιος": {
+    "glossIt": "eterno"
+  },
+  "ἰσραηλ": {
+    "glossIt": "Israele"
+  },
+  "τρεις": {
+    "glossIt": "tre"
+  },
+  "σαββατον": {
+    "glossIt": "sabato"
+  },
+  "αγω": {
+    "glossIt": "condurre"
+  },
+  "ρημα": {
+    "glossIt": "parola, detto"
+  },
+  "πλοιον": {
+    "glossIt": "barca"
+  },
+  "πιστος": {
+    "glossIt": "fedele"
+  },
+  "καρπος": {
+    "glossIt": "frutto"
+  },
+  "απολυω": {
+    "glossIt": "rimandare, lasciare"
+  },
+  "φερω": {
+    "glossIt": "portare"
+  },
+  "εντολη": {
+    "glossIt": "comandamento"
+  },
+  "πρεσβυτερος": {
+    "glossIt": "anziano"
+  },
+  "ειτε": {
+    "glossIt": "o, sia"
+  },
+  "ἱεροσολυμα": {
+    "glossIt": "Gerusalemme"
+  },
+  "δαιμονιον": {
+    "glossIt": "demonio"
+  },
+  "ορος": {
+    "glossIt": "monte"
+  },
+  "θρονος": {
+    "glossIt": "trono"
+  },
+  "θελημα": {
+    "glossIt": "volontà"
+  },
+  "ερωταω": {
+    "glossIt": "chiedere"
+  },
+  "δοκεω": {
+    "glossIt": "sembrare"
+  },
+  "γραμματευς": {
+    "glossIt": "scriba"
+  },
+  "ωδε": {
+    "glossIt": "qui"
+  },
+  "νυξ": {
+    "glossIt": "notte"
+  },
+  "κηρυσσω": {
+    "glossIt": "predicare"
+  },
+  "δοξαζω": {
+    "glossIt": "glorificare"
+  },
+  "γαλιλαια": {
+    "glossIt": "Galilea"
+  },
+  "αγαπητος": {
+    "glossIt": "amato"
+  },
+  "ἠλιας": {
+    "glossIt": "Elia"
+  },
+  "ἕλλην": {
+    "glossIt": "greco"
+  },
+  "ἔφεσος": {
+    "glossIt": "Efeso"
+  },
+  "ἰωνας": {
+    "glossIt": "Giona"
+  },
+  "ἐλισαβετ": {
+    "glossIt": "Elisabetta"
+  },
+  "φηλιξ": {
+    "glossIt": "Felice"
+  },
+  "σαμαριτης": {
+    "glossIt": "samaritano"
+  },
+  "ἰσκαριωτης": {
+    "glossIt": "Iscariota"
+  },
+  "μαρκος": {
+    "glossIt": "Marco"
+  },
+  "κορνηλιος": {
+    "glossIt": "Cornelio"
+  },
+  "ζηλωτης": {
+    "glossIt": "zelota"
+  },
+  "βηθλεεμ": {
+    "glossIt": "Betlemme"
+  },
+  "ἀχαια": {
+    "glossIt": "Acaia"
+  },
+  "θωμας": {
+    "glossIt": "Tommaso"
+  },
+  "ζαχαριας": {
+    "glossIt": "Zaccaria"
+  },
+  "γαλιλαιος": {
+    "glossIt": "galileo"
+  },
+  "ἰωσηφ": {
+    "glossIt": "Giuseppe"
+  },
+  "ἰουδας": {
+    "glossIt": "Giuda"
+  },
+  "ἰουδαια": {
+    "glossIt": "Giudea"
+  },
+  "ἡρωδης": {
+    "glossIt": "Erode"
+  },
+  "ἰακωβος": {
+    "glossIt": "Giacomo"
+  },
+  "φιλιππος": {
+    "glossIt": "Filippo"
+  },
+  "καισαρ": {
+    "glossIt": "Cesare"
+  },
+  "μαρια": {
+    "glossIt": "Maria"
+  },
+  "μαριαμ": {
+    "glossIt": "Maria"
+  },
+  "ἠσαιας": {
+    "glossIt": "Isaia"
+  },
+  "μακεδονια": {
+    "glossIt": "Macedonia"
+  },
+  "ἰσαακ": {
+    "glossIt": "Isacco"
+  },
+  "ἀσια": {
+    "glossIt": "Asia"
+  },
+  "ἰορδανης": {
+    "glossIt": "Giordano"
+  },
+  "σαυλος": {
+    "glossIt": "Saulo"
+  },
+  "σιδων": {
+    "glossIt": "Sidone"
+  },
+  "κηφας": {
+    "glossIt": "Cefa"
+  },
+  "καιαφας": {
+    "glossIt": "Caifa"
+  },
+  "συρια": {
+    "glossIt": "Siria"
+  },
+  "υιος": {
+    "glossIt": "figlio"
+  },
+  "αδελφος": {
+    "glossIt": "fratello"
+  },
+  "θεος": {
+    "glossIt": "Dio"
+  },
+  "κυριος": {
+    "glossIt": "Signore"
+  },
+  "ανθρωπος": {
+    "glossIt": "uomo"
+  },
+  "γυνη": {
+    "glossIt": "donna"
+  },
+  "πατηρ": {
+    "glossIt": "padre"
+  },
+  "μητηρ": {
+    "glossIt": "madre"
+  },
+  "βασιλεια": {
+    "glossIt": "regno"
+  },
+  "ουρανος": {
+    "glossIt": "cielo"
+  },
+  "γη": {
+    "glossIt": "terra"
+  },
+  "πνευμα": {
+    "glossIt": "spirito"
+  },
+  "ζωη": {
+    "glossIt": "vita"
+  },
+  "φως": {
+    "glossIt": "luce"
+  },
+  "γραφη": {
+    "glossIt": "Scrittura"
+  },
+  "λογος": {
+    "glossIt": "parola"
+  }
+}

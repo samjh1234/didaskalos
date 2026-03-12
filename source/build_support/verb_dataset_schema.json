@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "description": "Schema di riferimento per il dataset verbale koine locale del progetto.",
+  "key": "lemma normalizzato senza accenti, per esempio 'ειμι' o 'λεγω'",
+  "files": {
+    "assets/data/verb_lemmas.json": {
+      "purpose": "Identita del lemma verbale e parti principali",
+      "fields": {
+        "lemma": "Forma greca principale con accenti",
+        "normalized_lemma": "Chiave normalizzata del dataset",
+        "greek": "Lemma greco mostrato nelle pagine",
+        "pronunciation": "Pronuncia/traslitterazione mostrata nelle pagine",
+        "meaning_it": "Significato base italiano del lemma",
+        "class": "Classe verbale didattica",
+        "principal_parts": [
+          "presente",
+          "futuro",
+          "aoristo",
+          "perfetto attivo",
+          "perfetto medio-passivo",
+          "aoristo passivo"
+        ],
+        "notes": "Note didattiche o filologiche"
+      }
+    },
+    "assets/data/verb_paradigms.json": {
+      "purpose": "Paradigmi finiti del verbo",
+      "fields": {
+        "lemma": "Lemma greco con accenti",
+        "class": "Classe verbale didattica",
+        "meaning_it": "Significato base italiano",
+        "occurrences": "Occorrenze del lemma nel NT",
+        "status": "pending oppure verified",
+        "notes": "Note sullo stato del paradigma",
+        "paradigms": {
+          "Nome della sezione": {
+            "forms": {
+              "1a singolare": "forma greca",
+              "2a singolare": "forma greca",
+              "3a singolare": "forma greca",
+              "1a plurale": "forma greca",
+              "2a plurale": "forma greca",
+              "3a plurale": "forma greca"
+            },
+            "meanings_it": {
+              "1a singolare": "resa italiana della persona",
+              "2a singolare": "resa italiana della persona",
+              "3a singolare": "resa italiana della persona",
+              "1a plurale": "resa italiana della persona",
+              "2a plurale": "resa italiana della persona",
+              "3a plurale": "resa italiana della persona"
+            }
+          }
+        }
+      }
+    },
+    "assets/data/verb_non_finite.json": {
+      "purpose": "Infiniti e participi",
+      "fields": {
+        "Infinito presente attivo": {
+          "form": "forma greca",
+          "meaning_it": "resa italiana"
+        },
+        "Participio presente attivo": {
+          "maschile nominativo singolare": "forma greca",
+          "femminile nominativo singolare": "forma greca",
+          "neutro nominativo singolare": "forma greca",
+          "meaning_it": "resa italiana"
+        }
+      }
+    },
+    "assets/data/verb_metadata.json": {
+      "purpose": "Metadati, stato e copertura",
+      "fields": {
+        "occurrences": "Occorrenze del lemma nel NT",
+        "status": "pending oppure verified",
+        "has_paradigms": "true/false",
+        "is_irregular": "true/false",
+        "is_deponent": "true/false",
+        "is_mi_verb": "true/false",
+        "coverage": {
+          "finite": {
+            "indicative": {
+              "present": "true/false",
+              "imperfect": "true/false",
+              "future": "true/false",
+              "aorist": "true/false",
+              "perfect": "true/false",
+              "pluperfect": "true/false"
+            },
+            "subjunctive": {
+              "present": "true/false",
+              "aorist": "true/false",
+              "perfect": "true/false"
+            },
+            "optative": {
+              "present": "true/false",
+              "aorist": "true/false"
+            },
+            "imperative": {
+              "present": "true/false",
+              "aorist": "true/false",
+              "perfect": "true/false"
+            }
+          },
+          "non_finite": {
+            "infinitive_present": "true/false",
+            "infinitive_aorist": "true/false",
+            "infinitive_perfect": "true/false",
+            "participle_present": "true/false",
+            "participle_aorist": "true/false",
+            "participle_perfect": "true/false"
+          }
+        },
+        "completion": {
+          "minimum_profile_name": "Profilo minimo di completezza richiesto per considerare un verbo davvero completo",
+          "meets_minimum_profile": "true/false",
+          "missing_sections": [
+            "Lista delle sezioni mancanti rispetto al profilo minimo"
+          ]
+        }
+      }
+    }
+  },
+  "minimum_profile": {
+    "name": "core_full_verb",
+    "description": "Soglia minima seria per un verbo didatticamente completo nel progetto",
+    "required_finite": {
+      "indicative": [
+        "present",
+        "imperfect",
+        "future",
+        "aorist",
+        "perfect"
+      ],
+      "subjunctive": [
+        "present",
+        "aorist"
+      ],
+      "imperative": [
+        "present",
+        "aorist"
+      ]
+    },
+    "required_non_finite": [
+      "infinitive_present",
+      "infinitive_aorist",
+      "participle_present",
+      "participle_aorist"
+    ]
+  }
+}

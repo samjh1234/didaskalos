@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Didaskalos</title>
+    <meta
+      name="description"
+      content="Didaskalos: piattaforma web per studiare il greco koine del Nuovo Testamento con interlineare, vocabolario, grammatica e morfologia."
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-nav">
+        <a href="#home" data-route="home">Home</a>
+        <a href="#interlinear" data-route="interlinear">Interlineare</a>
+        <a href="#vocabulary" data-route="vocabulary">Vocabolario</a>
+        <a href="#grammar" data-route="grammar">Grammatica</a>
+        <a href="#morphology" data-route="morphology">Morfologia</a>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section id="home-view" class="view active"></section>
+      <section id="interlinear-view" class="view"></section>
+      <section id="vocabulary-view" class="view"></section>
+      <section id="grammar-view" class="view"></section>
+      <section id="morphology-view" class="view"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Copyright &copy; Seminario Vescovile di Fiesole, LazzaroMaria &#10013;</p>
+    </footer>
+
+    <template id="home-template">
+      <section class="hero">
+        <div class="hero-copy hero-visual">
+          <h1 class="project-name">Διδάσκαλος</h1>
+          <p>
+            Didaskalos unisce interlineare, vocabolario, grammatica e morfologia in uno spazio dedicato
+            allo studio del greco del Nuovo Testamento, accessibile da ogni dispositivo.
+          </p>
+        </div>
+        <article class="panel hero-card">
+          <h2>Visione del progetto</h2>
+          <ul>
+            <li>Lettura guidata del Nuovo Testamento in greco con supporto immediato parola per parola</li>
+            <li>Vocabolario biblico con accesso per lemma, forma e significato</li>
+            <li>Grammatica essenziale collegata allo studio reale del testo</li>
+            <li>Morfologia con paradigmi verificabili e riusabili in tutto il progetto</li>
+            <li>Guida e strumenti per lo studio del koine, il greco del Nuovo Testamento, in un unico ambiente cross-platform</li>
+          </ul>
+        </article>
+      </section>
+      <section class="grid summary-grid" id="home-summary"></section>
+    </template>
+
+    <template id="interlinear-template">
+      <section class="page-head">
+        <p>Leggi il testo greco del Nuovo Testamento parola per parola e passa dalla lettura all’analisi della singola voce.</p>
+      </section>
+      <form class="toolbar" id="interlinear-form">
+        <label>
+          Libro
+          <select id="book-select"></select>
+        </label>
+        <label>
+          Capitolo
+          <select id="chapter-select"></select>
+        </label>
+        <label>
+          Versetto
+          <select id="verse-select"></select>
+        </label>
+      </form>
+      <section class="stack" id="interlinear-results"></section>
+    </template>
+
+    <template id="vocabulary-template">
+      <section class="page-head">
+        <p>Consulta lemmi, significati e note utili per orientarti nello studio del greco del Nuovo Testamento.</p>
+      </section>
+      <form class="toolbar" id="vocabulary-form">
+        <label class="grow">
+          Cerca
+          <input id="vocabulary-search" type="search" placeholder="es. λογος, parola, amare">
+        </label>
+      </form>
+      <section class="stack" id="vocabulary-results"></section>
+    </template>
+
+    <template id="grammar-template">
+      <section class="page-head">
+        <p>Raccoglie gli argomenti essenziali per accompagnare la lettura del koine in modo ordinato e progressivo.</p>
+      </section>
+      <section class="stack" id="grammar-results"></section>
+    </template>
+
+    <template id="morphology-template">
+      <section class="page-head">
+        <p>Esplora forme, paradigmi e categorie grammaticali del greco del Nuovo Testamento in uno spazio dedicato allo studio morfologico.</p>
+      </section>
+      <form class="toolbar" id="morphology-form">
+        <label>
+          Tipo
+          <select id="morph-type">
+            <option value="verb">Verbo</option>
+            <option value="noun">Sostantivo</option>
+            <option value="pronoun">Pronome</option>
+          </select>
+        </label>
+        <label class="grow">
+          Lemma
+          <input id="morph-lemma" type="text" placeholder="es. λυω oppure λογος">
+        </label>
+      </form>
+      <section id="morphology-result"></section>
+    </template>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

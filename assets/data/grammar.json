@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Articolo e sostantivo",
+    "summary": "Accordo fra articolo, genere, numero e caso nel greco koine.",
+    "details": [
+      "Il nominativo esprime spesso il soggetto della frase.",
+      "Il genitivo segnala possesso, relazione o origine.",
+      "Il dativo copre funzione indiretta, mezzo o sfera.",
+      "L'articolo è frequente e lega sostantivi, aggettivi e participi."
+    ]
+  },
+  {
+    "title": "Presente indicativo attivo",
+    "summary": "Paradigma di base dei verbi regolari in -ω.",
+    "details": [
+      "1a singolare: -ω",
+      "2a singolare: -εις",
+      "3a singolare: -ει",
+      "1a plurale: -ομεν",
+      "2a plurale: -ετε",
+      "3a plurale: -ουσι(ν)"
+    ]
+  },
+  {
+    "title": "Prima e seconda declinazione",
+    "summary": "I modelli più comuni per iniziare a leggere i Vangeli.",
+    "details": [
+      "Maschili in -ος e neutri in -ον seguono normalmente la seconda declinazione.",
+      "Femminili in -η e -α seguono la prima declinazione con piccole variazioni.",
+      "La terza declinazione richiede tabelle dedicate e sarà aggiunta in una fase successiva."
+    ]
+  }
+]

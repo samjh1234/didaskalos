@@ -1,0 +1,1034 @@
+{
+  "ειμι": {
+    "Infinito presente": {
+      "form": "εἶναι",
+      "meaning_it": "essere"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "ὤν",
+      "femminile nominativo singolare": "οὖσα",
+      "neutro nominativo singolare": "ὄν",
+      "meaning_it": "essendo"
+    }
+  },
+  "λεγω": {
+    "Infinito presente attivo": {
+      "form": "λέγειν",
+      "meaning_it": "dire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "εἰπεῖν",
+      "meaning_it": "dire"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "λέγων",
+      "femminile nominativo singolare": "λέγουσα",
+      "neutro nominativo singolare": "λέγον",
+      "meaning_it": "dicendo"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "εἰπών",
+      "femminile nominativo singolare": "εἰποῦσα",
+      "neutro nominativo singolare": "εἰπόν",
+      "meaning_it": "avendo detto"
+    }
+  },
+  "εχω": {
+    "Infinito presente attivo": {
+      "form": "ἔχειν",
+      "meaning_it": "avere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "σχεῖν",
+      "meaning_it": "avere"
+    }
+  },
+  "γινομαι": {
+    "Infinito presente medio": {
+      "form": "γίνεσθαι",
+      "meaning_it": "divenire"
+    },
+    "Infinito aoristo medio": {
+      "form": "γενέσθαι",
+      "meaning_it": "divenire"
+    },
+    "Participio presente medio": {
+      "maschile nominativo singolare": "γινόμενος",
+      "femminile nominativo singolare": "γινομένη",
+      "neutro nominativo singolare": "γινόμενον",
+      "meaning_it": "divenendo"
+    },
+    "Participio aoristo medio": {
+      "maschile nominativo singolare": "γενόμενος",
+      "femminile nominativo singolare": "γενομένη",
+      "neutro nominativo singolare": "γενόμενον",
+      "meaning_it": "divenuto, avendo avuto luogo"
+    }
+  },
+  "ερχομαι": {
+    "Infinito presente medio": {
+      "form": "ἔρχεσθαι",
+      "meaning_it": "venire"
+    },
+    "Infinito futuro medio": {
+      "form": "ἐλεύσεσθαι",
+      "meaning_it": "venire"
+    }
+  },
+  "ποιεω": {
+    "Infinito presente attivo": {
+      "form": "ποιεῖν",
+      "meaning_it": "fare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ποιῆσαι",
+      "meaning_it": "fare"
+    },
+    "Infinito perfetto attivo": {
+      "form": "πεποιηκέναι",
+      "meaning_it": "avere fatto"
+    },
+    "Infinito presente medio/passivo": {
+      "form": "ποιεῖσθαι",
+      "meaning_it": "farsi, essere fatto"
+    },
+    "Infinito aoristo passivo": {
+      "form": "ποιηθῆναι",
+      "meaning_it": "essere fatto"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "ποιῶν",
+      "femminile nominativo singolare": "ποιοῦσα",
+      "neutro nominativo singolare": "ποιοῦν",
+      "meaning_it": "facendo"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "ποιήσας",
+      "femminile nominativo singolare": "ποιήσασα",
+      "neutro nominativo singolare": "ποιῆσαν",
+      "meaning_it": "avendo fatto"
+    },
+    "Participio presente medio/passivo": {
+      "maschile nominativo singolare": "ποιούμενος",
+      "femminile nominativo singolare": "ποιουμένη",
+      "neutro nominativo singolare": "ποιούμενον",
+      "meaning_it": "facendosi, essendo fatto"
+    },
+    "Participio aoristo passivo": {
+      "maschile nominativo singolare": "ποιηθείς",
+      "femminile nominativo singolare": "ποιηθεῖσα",
+      "neutro nominativo singolare": "ποιηθέν",
+      "meaning_it": "essendo stato fatto"
+    },
+    "Participio perfetto medio/passivo": {
+      "maschile nominativo singolare": "πεποιημένος",
+      "femminile nominativo singolare": "πεποιημένη",
+      "neutro nominativo singolare": "πεποιημένον",
+      "meaning_it": "fatto"
+    }
+  },
+  "οραω": {
+    "Infinito presente attivo": {
+      "form": "ὁρᾶν",
+      "meaning_it": "vedere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἰδεῖν",
+      "meaning_it": "vedere"
+    }
+  },
+  "ακουω": {
+    "Infinito presente attivo": {
+      "form": "ἀκούειν",
+      "meaning_it": "udire, ascoltare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀκοῦσαι",
+      "meaning_it": "udire, ascoltare"
+    }
+  },
+  "διδωμι": {
+    "Infinito presente attivo": {
+      "form": "διδόναι",
+      "meaning_it": "dare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "δοῦναι",
+      "meaning_it": "dare"
+    }
+  },
+  "λαλεω": {
+    "Infinito presente attivo": {
+      "form": "λαλεῖν",
+      "meaning_it": "parlare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "λαλῆσαι",
+      "meaning_it": "parlare"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "λαλῶν",
+      "femminile nominativo singolare": "λαλοῦσα",
+      "neutro nominativo singolare": "λαλοῦν",
+      "meaning_it": "parlando"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "λαλήσας",
+      "femminile nominativo singolare": "λαλήσασα",
+      "neutro nominativo singolare": "λαλῆσαν",
+      "meaning_it": "avendo parlato"
+    }
+  },
+  "οιδα": {
+    "Infinito perfetto": {
+      "form": "εἰδέναι",
+      "meaning_it": "sapere, conoscere"
+    }
+  },
+  "λαμβανω": {
+    "Infinito presente attivo": {
+      "form": "λαμβάνειν",
+      "meaning_it": "prendere, ricevere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "λαβεῖν",
+      "meaning_it": "prendere, ricevere"
+    }
+  },
+  "πιστευω": {
+    "Infinito presente attivo": {
+      "form": "πιστεύειν",
+      "meaning_it": "credere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "πιστεῦσαι",
+      "meaning_it": "credere"
+    },
+    "Infinito perfetto attivo": {
+      "form": "πεπιστευκέναι",
+      "meaning_it": "avere creduto"
+    },
+    "Infinito aoristo passivo": {
+      "form": "πιστευθῆναι",
+      "meaning_it": "essere creduto, essere affidato"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "πιστεύων",
+      "femminile nominativo singolare": "πιστεύουσα",
+      "neutro nominativo singolare": "πιστεῦον",
+      "meaning_it": "credendo"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "πιστεύσας",
+      "femminile nominativo singolare": "πιστεύσασα",
+      "neutro nominativo singolare": "πιστεῦσαν",
+      "meaning_it": "avendo creduto"
+    },
+    "Participio aoristo passivo": {
+      "maschile nominativo singolare": "πιστευθείς",
+      "femminile nominativo singolare": "πιστευθεῖσα",
+      "neutro nominativo singolare": "πιστευθέν",
+      "meaning_it": "essendo stato creduto, affidato"
+    },
+    "Participio perfetto attivo": {
+      "maschile nominativo singolare": "πεπιστευκώς",
+      "femminile nominativo singolare": "πεπιστευκυῖα",
+      "neutro nominativo singolare": "πεπιστευκός",
+      "meaning_it": "avendo creduto stabilmente"
+    }
+  },
+  "αποκρινομαι": {
+    "Infinito presente medio": {
+      "form": "ἀποκρίνεσθαι",
+      "meaning_it": "rispondere"
+    },
+    "Infinito aoristo passivo deponente": {
+      "form": "ἀποκριθῆναι",
+      "meaning_it": "rispondere"
+    }
+  },
+  "γινωσκω": {
+    "Infinito presente attivo": {
+      "form": "γινώσκειν",
+      "meaning_it": "conoscere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "γνῶναι",
+      "meaning_it": "conoscere"
+    }
+  },
+  "εξερχομαι": {
+    "Infinito presente medio": {
+      "form": "ἐξέρχεσθαι",
+      "meaning_it": "uscire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἐξελθεῖν",
+      "meaning_it": "uscire"
+    }
+  },
+  "δυναμαι": {
+    "Infinito presente medio": {
+      "form": "δύνασθαι",
+      "meaning_it": "potere"
+    }
+  },
+  "θελω": {
+    "Infinito presente attivo": {
+      "form": "θέλειν",
+      "meaning_it": "volere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "θελῆσαι",
+      "meaning_it": "volere"
+    }
+  },
+  "εισερχομαι": {
+    "Infinito presente medio": {
+      "form": "εἰσέρχεσθαι",
+      "meaning_it": "entrare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "εἰσελθεῖν",
+      "meaning_it": "entrare"
+    }
+  },
+  "γραφω": {
+    "Infinito presente attivo": {
+      "form": "γράφειν",
+      "meaning_it": "scrivere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "γράψαι",
+      "meaning_it": "scrivere"
+    }
+  },
+  "ευρισκω": {
+    "Infinito presente attivo": {
+      "form": "εὑρίσκειν",
+      "meaning_it": "trovare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "εὑρεῖν",
+      "meaning_it": "trovare"
+    }
+  },
+  "εσθιω": {
+    "Infinito presente attivo": {
+      "form": "ἐσθίειν",
+      "meaning_it": "mangiare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "φαγεῖν",
+      "meaning_it": "mangiare"
+    }
+  },
+  "δεω": {
+    "Infinito presente attivo": {
+      "form": "δεῖν",
+      "meaning_it": "legare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "δῆσαι",
+      "meaning_it": "legare"
+    }
+  },
+  "ιστημι": {
+    "Infinito presente attivo": {
+      "form": "ἱστάναι",
+      "meaning_it": "porre, far stare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "στῆσαι",
+      "meaning_it": "porre, far stare"
+    }
+  },
+  "πορευομαι": {
+    "Infinito presente medio": {
+      "form": "πορεύεσθαι",
+      "meaning_it": "andare, mettersi in cammino"
+    },
+    "Infinito futuro medio": {
+      "form": "πορεύσεσθαι",
+      "meaning_it": "andare, mettersi in cammino"
+    }
+  },
+  "καλεω": {
+    "Infinito presente attivo": {
+      "form": "καλεῖν",
+      "meaning_it": "chiamare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "καλέσαι",
+      "meaning_it": "chiamare"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "καλῶν",
+      "femminile nominativo singolare": "καλοῦσα",
+      "neutro nominativo singolare": "καλοῦν",
+      "meaning_it": "chiamando"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "καλέσας",
+      "femminile nominativo singolare": "καλέσασα",
+      "neutro nominativo singolare": "καλέσαν",
+      "meaning_it": "avendo chiamato"
+    }
+  },
+  "αγαπαω": {
+    "Infinito presente attivo": {
+      "form": "ἀγαπᾶν",
+      "meaning_it": "amare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀγαπῆσαι",
+      "meaning_it": "amare"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "ἀγαπῶν",
+      "femminile nominativo singolare": "ἀγαπῶσα",
+      "neutro nominativo singolare": "ἀγαπῶν",
+      "meaning_it": "amando"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "ἀγαπήσας",
+      "femminile nominativo singolare": "ἀγαπήσασα",
+      "neutro nominativo singolare": "ἀγαπῆσαν",
+      "meaning_it": "avendo amato"
+    }
+  },
+  "αφιημι": {
+    "Infinito presente attivo": {
+      "form": "ἀφιέναι",
+      "meaning_it": "lasciare, perdonare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀφεῖναι",
+      "meaning_it": "lasciare, perdonare"
+    }
+  },
+  "εγειρω": {
+    "Infinito presente attivo": {
+      "form": "ἐγείρειν",
+      "meaning_it": "svegliare, risuscitare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἐγεῖραι",
+      "meaning_it": "svegliare, risuscitare"
+    }
+  },
+  "ζαω": {
+    "Infinito presente attivo": {
+      "form": "ζῆν",
+      "meaning_it": "vivere"
+    }
+  },
+  "βλεπω": {
+    "Infinito presente attivo": {
+      "form": "βλέπειν",
+      "meaning_it": "guardare, vedere"
+    }
+  },
+  "αποστελλω": {
+    "Infinito presente attivo": {
+      "form": "ἀποστέλλειν",
+      "meaning_it": "mandare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀποστεῖλαι",
+      "meaning_it": "mandare"
+    }
+  },
+  "βαλλω": {
+    "Infinito presente attivo": {
+      "form": "βάλλειν",
+      "meaning_it": "gettare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "βαλεῖν",
+      "meaning_it": "gettare"
+    }
+  },
+  "παραδιδωμι": {
+    "Infinito presente attivo": {
+      "form": "παραδιδόναι",
+      "meaning_it": "consegnare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "παραδοῦναι",
+      "meaning_it": "consegnare"
+    }
+  },
+  "μενω": {
+    "Infinito presente attivo": {
+      "form": "μένειν",
+      "meaning_it": "rimanere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "μεῖναι",
+      "meaning_it": "rimanere"
+    }
+  },
+  "απερχομαι": {
+    "Infinito presente medio": {
+      "form": "ἀπέρχεσθαι",
+      "meaning_it": "andare via"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀπελθεῖν",
+      "meaning_it": "andare via"
+    }
+  },
+  "ζητεω": {
+    "Infinito presente attivo": {
+      "form": "ζητεῖν",
+      "meaning_it": "cercare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ζητῆσαι",
+      "meaning_it": "cercare"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "ζητῶν",
+      "femminile nominativo singolare": "ζητοῦσα",
+      "neutro nominativo singolare": "ζητοῦν",
+      "meaning_it": "cercando"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "ζητήσας",
+      "femminile nominativo singolare": "ζητήσασα",
+      "neutro nominativo singolare": "ζητῆσαν",
+      "meaning_it": "avendo cercato"
+    }
+  },
+  "κρινω": {
+    "Infinito presente attivo": {
+      "form": "κρίνειν",
+      "meaning_it": "giudicare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "κρῖναι",
+      "meaning_it": "giudicare"
+    }
+  },
+  "αποθνῄσκω": {
+    "Infinito presente attivo": {
+      "form": "ἀποθνῄσκειν",
+      "meaning_it": "morire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀποθανεῖν",
+      "meaning_it": "morire"
+    }
+  },
+  "μελλω": {
+    "Infinito presente attivo": {
+      "form": "μέλλειν",
+      "meaning_it": "stare per, essere sul punto di"
+    }
+  },
+  "παρακαλεω": {
+    "Infinito presente attivo": {
+      "form": "παρακαλεῖν",
+      "meaning_it": "esortare, incoraggiare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "παρακαλέσαι",
+      "meaning_it": "esortare, incoraggiare"
+    }
+  },
+  "ανιστημι": {
+    "Infinito presente attivo": {
+      "form": "ἀνιστάναι",
+      "meaning_it": "alzare, far sorgere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀναστῆσαι",
+      "meaning_it": "alzare, far sorgere"
+    }
+  },
+  "σωζω": {
+    "Infinito presente attivo": {
+      "form": "σῴζειν",
+      "meaning_it": "salvare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "σῶσαι",
+      "meaning_it": "salvare"
+    }
+  },
+  "αιρω": {
+    "Infinito presente attivo": {
+      "form": "αἴρειν",
+      "meaning_it": "alzare, togliere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἆραι",
+      "meaning_it": "alzare, togliere"
+    }
+  },
+  "τιθημι": {
+    "Infinito presente attivo": {
+      "form": "τιθέναι",
+      "meaning_it": "porre, mettere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "θεῖναι",
+      "meaning_it": "porre, mettere"
+    }
+  },
+  "γενναω": {
+    "Infinito presente attivo": {
+      "form": "γεννᾶν",
+      "meaning_it": "generare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "γεννῆσαι",
+      "meaning_it": "generare"
+    }
+  },
+  "διδασκω": {
+    "Infinito presente attivo": {
+      "form": "διδάσκειν",
+      "meaning_it": "insegnare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "διδάξαι",
+      "meaning_it": "insegnare"
+    }
+  },
+  "περιπατεω": {
+    "Infinito presente attivo": {
+      "form": "περιπατεῖν",
+      "meaning_it": "camminare"
+    }
+  },
+  "φοβεομαι": {
+    "Infinito presente medio": {
+      "form": "φοβεῖσθαι",
+      "meaning_it": "temere"
+    }
+  },
+  "καθημαι": {
+    "Infinito presente medio": {
+      "form": "καθῆσθαι",
+      "meaning_it": "sedere, stare seduto"
+    }
+  },
+  "απολλυμι": {
+    "Infinito presente attivo": {
+      "form": "ἀπολλύναι",
+      "meaning_it": "distruggere, perire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀπολέσαι",
+      "meaning_it": "distruggere, perire"
+    }
+  },
+  "πιπτω": {
+    "Infinito presente attivo": {
+      "form": "πίπτειν",
+      "meaning_it": "cadere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "πεσεῖν",
+      "meaning_it": "cadere"
+    }
+  },
+  "ακολουθεω": {
+    "Infinito presente attivo": {
+      "form": "ἀκολουθεῖν",
+      "meaning_it": "seguire"
+    }
+  },
+  "αρχω": {
+    "Infinito presente attivo": {
+      "form": "ἄρχειν",
+      "meaning_it": "cominciare, governare"
+    }
+  },
+  "πληροω": {
+    "Infinito presente attivo": {
+      "form": "πληροῦν",
+      "meaning_it": "compiere, riempire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "πληρῶσαι",
+      "meaning_it": "compiere, riempire"
+    },
+    "Infinito perfetto attivo": {
+      "form": "πεπληρωκέναι",
+      "meaning_it": "avere compiuto, avere riempito"
+    },
+    "Infinito presente medio/passivo": {
+      "form": "πληροῦσθαι",
+      "meaning_it": "essere compiuto, essere riempito"
+    },
+    "Infinito aoristo passivo": {
+      "form": "πληρωθῆναι",
+      "meaning_it": "essere compiuto, essere riempito"
+    },
+    "Participio presente attivo": {
+      "maschile nominativo singolare": "πληρῶν",
+      "femminile nominativo singolare": "πληροῦσα",
+      "neutro nominativo singolare": "πληροῦν",
+      "meaning_it": "compiendo, riempiendo"
+    },
+    "Participio aoristo attivo": {
+      "maschile nominativo singolare": "πληρώσας",
+      "femminile nominativo singolare": "πληρώσασα",
+      "neutro nominativo singolare": "πληρῶσαν",
+      "meaning_it": "avendo compiuto, avendo riempito"
+    },
+    "Participio aoristo passivo": {
+      "maschile nominativo singolare": "πληρωθείς",
+      "femminile nominativo singolare": "πληρωθεῖσα",
+      "neutro nominativo singolare": "πληρωθέν",
+      "meaning_it": "essendo stato compiuto, essendo stato riempito"
+    },
+    "Participio perfetto medio/passivo": {
+      "maschile nominativo singolare": "πεπληρωμένος",
+      "femminile nominativo singolare": "πεπληρωμένη",
+      "neutro nominativo singolare": "πεπληρωμένον",
+      "meaning_it": "compiuto, riempito"
+    }
+  },
+  "προσερχομαι": {
+    "Infinito presente medio": {
+      "form": "προσέρχεσθαι",
+      "meaning_it": "avvicinarsi, venire a"
+    },
+    "Infinito aoristo attivo": {
+      "form": "προσελθεῖν",
+      "meaning_it": "avvicinarsi, venire a"
+    }
+  },
+  "προσευχομαι": {
+    "Infinito presente medio": {
+      "form": "προσεύχεσθαι",
+      "meaning_it": "pregare"
+    },
+    "Infinito aoristo medio": {
+      "form": "προσεύξασθαι",
+      "meaning_it": "pregare"
+    }
+  },
+  "αναβαινω": {
+    "Infinito presente attivo": {
+      "form": "ἀναβαίνειν",
+      "meaning_it": "salire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀναβῆναι",
+      "meaning_it": "salire"
+    }
+  },
+  "εκβαλλω": {
+    "Infinito presente attivo": {
+      "form": "ἐκβάλλειν",
+      "meaning_it": "scacciare, gettare fuori"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἐκβαλεῖν",
+      "meaning_it": "scacciare, gettare fuori"
+    }
+  },
+  "καταβαινω": {
+    "Infinito presente attivo": {
+      "form": "καταβαίνειν",
+      "meaning_it": "scendere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "καταβῆναι",
+      "meaning_it": "scendere"
+    }
+  },
+  "πεμπω": {
+    "Infinito presente attivo": {
+      "form": "πέμπειν",
+      "meaning_it": "mandare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "πέμψαι",
+      "meaning_it": "mandare"
+    }
+  },
+  "υπαγω": {
+    "Infinito presente attivo": {
+      "form": "ὑπάγειν",
+      "meaning_it": "andare via"
+    }
+  },
+  "ανοιγω": {
+    "Infinito presente attivo": {
+      "form": "ἀνοίγειν",
+      "meaning_it": "aprire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀνοῖξαι",
+      "meaning_it": "aprire"
+    }
+  },
+  "βαπτιζω": {
+    "Infinito presente attivo": {
+      "form": "βαπτίζειν",
+      "meaning_it": "battezzare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "βαπτίσαι",
+      "meaning_it": "battezzare"
+    }
+  },
+  "μαρτυρεω": {
+    "Infinito presente attivo": {
+      "form": "μαρτυρεῖν",
+      "meaning_it": "testimoniare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "μαρτυρῆσαι",
+      "meaning_it": "testimoniare"
+    }
+  },
+  "αποκτεινω": {
+    "Infinito presente attivo": {
+      "form": "ἀποκτείνειν",
+      "meaning_it": "uccidere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀποκτεῖναι",
+      "meaning_it": "uccidere"
+    }
+  },
+  "χαιρω": {
+    "Infinito presente attivo": {
+      "form": "χαίρειν",
+      "meaning_it": "rallegrarsi, gioire"
+    }
+  },
+  "πινω": {
+    "Infinito presente attivo": {
+      "form": "πίνειν",
+      "meaning_it": "bere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "πιεῖν",
+      "meaning_it": "bere"
+    }
+  },
+  "τηρεω": {
+    "Infinito presente attivo": {
+      "form": "τηρεῖν",
+      "meaning_it": "custodire, osservare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "τηρῆσαι",
+      "meaning_it": "custodire, osservare"
+    }
+  },
+  "αιτεω": {
+    "Infinito presente attivo": {
+      "form": "αἰτεῖν",
+      "meaning_it": "chiedere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "αἰτῆσαι",
+      "meaning_it": "chiedere"
+    }
+  },
+  "αγω": {
+    "Infinito presente attivo": {
+      "form": "ἄγειν",
+      "meaning_it": "condurre"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀγαγεῖν",
+      "meaning_it": "condurre"
+    }
+  },
+  "απολυω": {
+    "Infinito presente attivo": {
+      "form": "ἀπολύειν",
+      "meaning_it": "mandare via, sciogliere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀπολῦσαι",
+      "meaning_it": "mandare via, sciogliere"
+    }
+  },
+  "φερω": {
+    "Infinito presente attivo": {
+      "form": "φέρειν",
+      "meaning_it": "portare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἐνεγκεῖν",
+      "meaning_it": "portare"
+    }
+  },
+  "φημι": {
+    "Infinito presente attivo": {
+      "form": "φάναι",
+      "meaning_it": "dire, affermare"
+    }
+  },
+  "δοκεω": {
+    "Infinito presente attivo": {
+      "form": "δοκεῖν",
+      "meaning_it": "sembrare, parere"
+    }
+  },
+  "ερωταω": {
+    "Infinito presente attivo": {
+      "form": "ἐρωτᾶν",
+      "meaning_it": "chiedere, domandare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἐρωτῆσαι",
+      "meaning_it": "chiedere, domandare"
+    }
+  },
+  "δοξαζω": {
+    "Infinito presente attivo": {
+      "form": "δοξάζειν",
+      "meaning_it": "glorificare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "δοξάσαι",
+      "meaning_it": "glorificare"
+    }
+  },
+  "κηρυσσω": {
+    "Infinito presente attivo": {
+      "form": "κηρύσσειν",
+      "meaning_it": "proclamare, predicare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "κηρῦξαι",
+      "meaning_it": "proclamare, predicare"
+    }
+  },
+  "προσκυνεω": {
+    "Infinito presente attivo": {
+      "form": "προσκυνεῖν",
+      "meaning_it": "adorare, prosternarsi"
+    },
+    "Infinito aoristo attivo": {
+      "form": "προσκυνῆσαι",
+      "meaning_it": "adorare, prosternarsi"
+    }
+  },
+  "υπαρχω": {
+    "Infinito presente attivo": {
+      "form": "ὑπάρχειν",
+      "meaning_it": "essere, trovarsi, appartenere"
+    }
+  },
+  "ασπαζομαι": {
+    "Infinito presente medio": {
+      "form": "ἀσπάζεσθαι",
+      "meaning_it": "salutare"
+    }
+  },
+  "συναγω": {
+    "Infinito presente attivo": {
+      "form": "συνάγειν",
+      "meaning_it": "radunare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "συναγαγεῖν",
+      "meaning_it": "radunare"
+    }
+  },
+  "θεωρεω": {
+    "Infinito presente attivo": {
+      "form": "θεωρεῖν",
+      "meaning_it": "osservare, contemplare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "θεωρῆσαι",
+      "meaning_it": "osservare, contemplare"
+    }
+  },
+  "δεχομαι": {
+    "Infinito presente medio": {
+      "form": "δέχεσθαι",
+      "meaning_it": "ricevere, accogliere"
+    },
+    "Infinito aoristo medio": {
+      "form": "δέξασθαι",
+      "meaning_it": "ricevere, accogliere"
+    }
+  },
+  "επερωταω": {
+    "Infinito presente attivo": {
+      "form": "ἐπερωτᾶν",
+      "meaning_it": "interrogare, chiedere"
+    }
+  },
+  "κραζω": {
+    "Infinito presente attivo": {
+      "form": "κράζειν",
+      "meaning_it": "gridare"
+    }
+  },
+  "ευαγγελιζω": {
+    "Infinito presente attivo": {
+      "form": "εὐαγγελίζειν",
+      "meaning_it": "annunciare la buona notizia, evangelizzare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "εὐαγγελίσαι",
+      "meaning_it": "annunciare la buona notizia, evangelizzare"
+    }
+  },
+  "πειθω": {
+    "Infinito presente attivo": {
+      "form": "πείθειν",
+      "meaning_it": "persuadere, convincere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "πεῖσαι",
+      "meaning_it": "persuadere, convincere"
+    }
+  },
+  "σπειρω": {
+    "Infinito presente attivo": {
+      "form": "σπείρειν",
+      "meaning_it": "seminare"
+    },
+    "Infinito aoristo attivo": {
+      "form": "σπεῖραι",
+      "meaning_it": "seminare"
+    }
+  },
+  "παραλαμβανω": {
+    "Infinito presente attivo": {
+      "form": "παραλαμβάνειν",
+      "meaning_it": "prendere con sé, ricevere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "παραλαβεῖν",
+      "meaning_it": "prendere con sé, ricevere"
+    }
+  },
+  "αποδιδωμι": {
+    "Infinito presente attivo": {
+      "form": "ἀποδιδόναι",
+      "meaning_it": "restituire, rendere"
+    },
+    "Infinito aoristo attivo": {
+      "form": "ἀποδοῦναι",
+      "meaning_it": "restituire, rendere"
+    }
+  },
+  "ευλογεω": {
+    "Infinito presente attivo": {
+      "form": "εὐλογεῖν",
+      "meaning_it": "benedire"
+    },
+    "Infinito aoristo attivo": {
+      "form": "εὐλογῆσαι",
+      "meaning_it": "benedire"
+    }
+  }
+}

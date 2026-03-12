@@ -1,0 +1,729 @@
+:root {
+  --bg: #f5efe4;
+  --paper: #fffaf3;
+  --ink: #1f1a16;
+  --muted: #66594f;
+  --line: #dac8af;
+  --accent: #8c4c23;
+  --accent-soft: #f0dbc7;
+  --shadow: 0 18px 54px rgba(77, 45, 21, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(140, 76, 35, 0.15), transparent 28rem),
+    linear-gradient(180deg, #fcf7f0 0%, var(--bg) 100%);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.site-header,
+main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 0 1rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.7rem;
+  background: color-mix(in srgb, var(--accent-soft) 72%, white 28%);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid transparent;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease, border-color 140ms ease;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(140, 76, 35, 0.08);
+  outline: none;
+}
+
+.main-nav a.active {
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff9f4;
+  border-color: var(--accent);
+  box-shadow: 0 10px 22px rgba(140, 76, 35, 0.18);
+}
+
+main {
+  padding-bottom: 1.35rem;
+}
+
+.site-footer {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0.35rem auto 0.9rem;
+  padding-top: 0;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+  animation: rise 220ms ease;
+}
+
+.hero,
+.page-head,
+.toolbar,
+.grid,
+.stack {
+  margin-top: 1.15rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.15rem;
+  align-items: stretch;
+}
+
+.hero > div {
+  display: grid;
+  align-content: start;
+  gap: 0.95rem;
+  min-width: 0;
+}
+
+.hero-visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 18rem;
+  padding: 1.15rem 1.2rem 1.05rem;
+  border-radius: 28px;
+  box-shadow: 0 16px 34px rgba(77, 45, 21, 0.12);
+  background: url("../graphics/bible1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(245, 239, 228, 0.28), rgba(245, 239, 228, 0.4));
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-visual > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy {
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.9), rgba(245, 235, 220, 0.82));
+  border: 1px solid rgba(218, 200, 175, 0.92);
+}
+
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.hero h1,
+.page-head h1 {
+  margin: 0.45rem 0 0.8rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.02;
+}
+
+.hero h1.project-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: clamp(2.5rem, 6.2vw, 4.5rem);
+  line-height: 0.95;
+  color: #17120e;
+  text-shadow: none;
+}
+
+.hero p,
+.page-head p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 45rem;
+}
+
+.page-head p {
+  margin: 0;
+  font-size: 1.14rem;
+  line-height: 1.65;
+  max-width: 52rem;
+}
+
+.hero .project-name + p {
+  margin: 0;
+  font-size: 1.12rem;
+  max-width: 31rem;
+  line-height: 1.45;
+  color: #17120e;
+  text-shadow: none;
+}
+
+.hero-actions {
+  margin-top: 0.35rem;
+}
+
+.hero-card h2 {
+  margin-bottom: 0.85rem;
+}
+
+.hero-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.4rem;
+  line-height: 1.35;
+}
+
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  align-self: stretch;
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.96), rgba(241, 228, 207, 0.92));
+  border-color: rgba(218, 200, 175, 0.96);
+}
+
+.hero-card h2 {
+  margin-bottom: 0.65rem;
+}
+
+.summary-card {
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+  padding: 0.88rem 0.95rem;
+}
+
+.summary-card:hover,
+.summary-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 35px rgba(60, 44, 26, 0.12);
+  outline: none;
+}
+
+.summary-stat {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.pagination-bar {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.pagination-page,
+.pagination-arrow {
+  min-width: 42px;
+  min-height: 42px;
+  padding: 0.65rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fffdfa;
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.pagination-page.is-active {
+  background: var(--accent);
+  color: #fff9f4;
+  border-color: var(--accent);
+}
+
+.pagination-page:disabled,
+.pagination-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.hero-actions,
+.toolbar {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.button,
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff9f4;
+  padding: 0.85rem 1.15rem;
+  cursor: pointer;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.toolbar label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+}
+
+.toolbar .grow {
+  flex: 1 1 18rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fffdf9;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.summary-grid .panel h3,
+.panel h2,
+.panel h3 {
+  margin-top: 0;
+}
+
+.summary-grid .panel h3 {
+  margin-bottom: 0.45rem;
+}
+
+.summary-grid .panel p {
+  margin: 0;
+  line-height: 1.42;
+}
+
+.greek-line {
+  font-size: 1.38rem;
+  margin: 0.4rem 0 1rem;
+}
+
+.verse-italian {
+  margin: -0.25rem 0 1rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.token-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.token-card,
+.form-row,
+.micro-panel {
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.85rem;
+}
+
+.token-card {
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.token-card strong {
+  display: block;
+  color: var(--ink);
+}
+
+.token-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.token-card span,
+.token-card small,
+.form-row span,
+.meta {
+  display: block;
+  color: var(--muted);
+}
+
+.token-card .pronunciation,
+.word-pronunciation {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.token-card .token-italian {
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.lexicon-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.notice {
+  color: var(--muted);
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.word-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.paradigm-card {
+  margin-top: 1rem;
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.paradigm-filters {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: end;
+  margin-top: 1rem;
+}
+
+.paradigm-filters label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  min-width: 160px;
+  flex: 1 1 180px;
+}
+
+.paradigm-header {
+  padding: 0.95rem 1rem;
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.paradigm-header h4 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.paradigm-subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.paradigm-list {
+  display: grid;
+}
+
+.paradigm-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 170px) minmax(120px, 1fr) minmax(120px, 1fr) minmax(180px, 1.2fr);
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.paradigm-row:last-child {
+  border-bottom: 0;
+}
+
+.paradigm-label {
+  color: var(--muted);
+}
+
+.paradigm-greek {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.paradigm-pronunciation {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.paradigm-meaning {
+  color: var(--muted);
+}
+
+.word-hero h2 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.word-hero p {
+  margin: 0.35rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  margin-top: 1rem;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.occurrence-details {
+  margin-top: 1rem;
+}
+
+.occurrence-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.occurrence-stack {
+  margin-top: 1rem;
+}
+
+.occurrence-greek {
+  margin: 0.6rem 0 0.25rem;
+  font-size: 1.08rem;
+  color: var(--ink);
+}
+
+.occurrence-focus {
+  font-weight: 700;
+}
+
+.occurrence-italian {
+  margin: 0;
+  color: var(--muted);
+}
+
+.verse-word-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.occurrence-italian .verse-word-link {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.occurrence-verse-text {
+  display: block;
+}
+
+.pronoun-table-card + .pronoun-table-card {
+  margin-top: 1rem;
+}
+
+.pronoun-table-card h5 {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.pronoun-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffdfa;
+  border: 1px solid var(--line);
+}
+
+.pronoun-table th,
+.pronoun-table td {
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.pronoun-table th:last-child,
+.pronoun-table td:last-child {
+  border-right: 0;
+}
+
+.pronoun-table tbody tr:last-child th,
+.pronoun-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.pronoun-table thead th {
+  background: var(--accent-soft);
+}
+
+.pronoun-table td .paradigm-pronunciation {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+code {
+  background: rgba(140, 76, 35, 0.08);
+  border-radius: 8px;
+  padding: 0.1rem 0.35rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 780px) {
+  .site-header,
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .main-nav {
+    padding: 0.6rem;
+  }
+
+  .paradigm-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .paradigm-greek,
+  .paradigm-pronunciation,
+  .paradigm-meaning {
+    text-align: left;
+  }
+
+  .paradigm-filters {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .pronoun-table,
+  .pronoun-table thead,
+  .pronoun-table tbody,
+  .pronoun-table tr,
+  .pronoun-table th,
+  .pronoun-table td {
+    display: block;
+  }
+
+  .pronoun-table thead {
+    display: none;
+  }
+
+  .pronoun-table tr {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pronoun-table tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .pronoun-table th,
+  .pronoun-table td {
+    border-right: 0;
+    border-bottom: 0;
+    padding: 0.55rem 0.7rem;
+  }
+}

@@ -1,0 +1,9 @@
+**/.DS_Store
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+private_data/*.json
+!private_data/*.example.json
+!private_data/README.md
+private_data/cei2008/
