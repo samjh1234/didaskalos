@@ -111,7 +111,8 @@ const getCeiVerseText = (data, occurrence) => {
   const chapter = String(Number(bcv.slice(2, 4)));
   const verse = String(Number(bcv.slice(4, 6)));
   const slug = getSlugFromBcv(bookIndex);
-  return data.ceiVerses?.[slug]?.chapters?.[chapter]?.[verse] || "";
+  const rawText = data.ceiVerses?.[slug]?.chapters?.[chapter]?.[verse] || "";
+  return rawText.replace(/^\s*\d+\s*-->\s*/, "").trim();
 };
 
 const morphologyTypeFromPartOfSpeech = (partOfSpeech = "") =>

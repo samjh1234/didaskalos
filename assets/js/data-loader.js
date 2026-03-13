@@ -1,5 +1,10 @@
+const assetVersion = window.__APP_VERSION__ || "dev";
+
+const versionedPath = (path) =>
+  `${path}${path.includes("?") ? "&" : "?"}v=${encodeURIComponent(assetVersion)}`;
+
 const loadJson = async (path) => {
-  const response = await fetch(path);
+  const response = await fetch(versionedPath(path));
   if (!response.ok) {
     throw new Error(`Impossibile caricare ${path}`);
   }

@@ -8,7 +8,7 @@
       name="description"
       content="Didaskalos: piattaforma web per studiare il greco koine del Nuovo Testamento con interlineare, vocabolario, grammatica e morfologia."
     >
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link id="app-styles" rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
     <header class="site-header">
@@ -118,6 +118,21 @@
       <section id="morphology-result"></section>
     </template>
 
-    <script type="module" src="assets/js/app.js"></script>
+    <script type="module">
+      let appVersion = "dev";
+      try {
+        const response = await fetch("assets/data/version.json", { cache: "no-store" });
+        if (response.ok) {
+          const payload = await response.json();
+          appVersion = payload.version || appVersion;
+        }
+      } catch {
+        // Se il file versione non e disponibile, il sito continua a funzionare.
+      }
+
+      window.__APP_VERSION__ = appVersion;
+      document.querySelector("#app-styles").href = `assets/css/styles.css?v=${encodeURIComponent(appVersion)}`;
+      await import(`./assets/js/app.js?v=${encodeURIComponent(appVersion)}`);
+    </script>
   </body>
 </html>
