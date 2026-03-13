@@ -105,7 +105,8 @@ const getVerseAddress = (verse) => {
 const getCeiVerseText = (slug, verse) => {
   const address = getVerseAddress(verse);
   if (!address || !state.data.ceiVerses?.[slug]) return "";
-  return state.data.ceiVerses[slug]?.chapters?.[address.chapter]?.[address.verse] || "";
+  const rawText = state.data.ceiVerses[slug]?.chapters?.[address.chapter]?.[address.verse] || "";
+  return rawText.replace(/^\s*\d+\s*-->\s*/, "").trim();
 };
 
 const getLexiconGloss = (lemma) => {
@@ -393,7 +394,7 @@ const renderInterlinear = () => {
           <article class="panel">
             <h2>${escapeHtml(verse.reference)}</h2>
             <p class="greek-line">${escapeHtml(verse.greek)}</p>
-            <p class="verse-italian"><strong>Italiano:</strong> ${escapeHtml(getVerseItalianText(slug, verse))}</p>
+            <p class="verse-italian">${escapeHtml(getVerseItalianText(slug, verse))}</p>
             <div class="token-grid">
               ${verse.tokens
                 .map(
