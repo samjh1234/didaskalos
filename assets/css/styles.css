@@ -838,9 +838,14 @@ code {
   .summary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.68rem;
+    align-items: stretch;
   }
 
   .summary-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding: 0.82rem 0.82rem 0.78rem;
     min-height: 100%;
     background:
@@ -875,18 +880,18 @@ code {
   }
 
   .summary-card:nth-child(2) {
-    transform: translateY(0.12rem) rotate(-0.4deg);
+    transform: none;
   }
 
   .summary-card:nth-child(3) {
-    transform: translateY(-0.08rem) rotate(0.35deg);
+    transform: none;
   }
 
   .summary-card:nth-child(4) {
     background:
       radial-gradient(circle at bottom left, rgba(140, 76, 35, 0.16), transparent 9rem),
       linear-gradient(180deg, rgba(255, 250, 243, 0.98), rgba(240, 219, 199, 0.92));
-    transform: translateY(0.08rem) rotate(-0.2deg);
+    transform: none;
   }
 
   .paradigm-row {
@@ -953,9 +958,14 @@ code {
   .summary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.52rem;
+    align-items: stretch;
   }
 
   .summary-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding: 0.74rem 0.72rem 0.7rem;
   }
 
