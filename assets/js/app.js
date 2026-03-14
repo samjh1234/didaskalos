@@ -349,6 +349,64 @@ const getVerseItalianText = (slug, verse) => {
   return verse.tokens.map((token, index) => getTokenDisplayGloss(token, verse, index)).join(" ");
 };
 
+// Raccoglie tutte le occorrenze di un lemma nel Nuovo Testamento gia caricato.
+// Serve per mostrare nella pagina Morfologia dove la parola compare davvero nel testo.
+const collectOccurrences = (gospels, lemma) => {
+  const matches = [];
+  Object.entries(gospels).forEach(([slug, verses]) => {
+    verses.forEach((verse) => {
+      verse.tokens.forEach((token) => {
+        if (normalize(token.lemma) !== normalize(lemma)) return;
+        matches.push({
+          slug,
+          lemma: token.lemma,
+          surface: token.surface,
+          reference: verse.reference,
+          pronunciation: token.pronunciation || pronounceGreek(token.surface),
+          morphologyLabel: token.morphologyLabel || "",
+          verseGreek: verse.greek,
+          verseItalian: getVerseItalianText(slug, verse),
+          bcv: token.bcv || "",
+        });
+      });
+    });
+  });
+  return matches;
+};
+
+// Link diretto dall'occorrenza al versetto corrispondente nell'Interlineare.
+const buildInterlinearHref = (occurrence) =>
+  `#interlinear?book=${encodeURIComponent(occurrence.slug)}&chapter=${encodeURIComponent(
+    String(Number(String(occurrence.bcv).slice(2, 4))),
+  )}&verse=${encodeURIComponent(String(Number(String(occurrence.bcv).slice(4, 6))))}`;
+
+// Evidenzia nel versetto greco solo la parola attualmente cercata nella scheda.
+const renderGreekVerseWithHighlight = (occurrence) => {
+  const verse = (state.data.gospels?.[occurrence.slug] || []).find((item) => item.reference === occurrence.reference);
+  if (!verse?.tokens?.length) return escapeHtml(occurrence.verseGreek || "");
+  return verse.tokens
+    .map((token) => {
+      const content = escapeHtml(token.surface);
+      return normalize(token.lemma) === normalize(occurrence.lemma)
+        ? `<strong class="occurrence-focus">${content}</strong>`
+        : content;
+    })
+    .join(" ");
+};
+
+// Piccole statistiche riassuntive per il blocco "Occorrenze nel NT".
+const buildOccurrenceStats = (occurrences) => {
+  const references = [...new Set(occurrences.map((item) => item.reference))];
+  const books = [...new Set(references.map((item) => item.split(" ")[0]).filter(Boolean))];
+  const forms = [...new Set(occurrences.map((item) => item.surface))];
+  return {
+    total: occurrences.length,
+    references: references.length,
+    books: books.length,
+    forms: forms.length,
+  };
+};
+
 // Home page: presenta i moduli del progetto e calcola le statistiche sintetiche.
 const renderHome = () => {
   views.home.replaceChildren(cloneTemplate(templates.home));
@@ -788,6 +846,8 @@ const renderMorphology = () => {
   const draw = () => {
     const lemma = normalize(lemmaInput.value);
     const detectedType = lemma ? resolveMorphType(lemma) : "";
+    const occurrences = lemma ? collectOccurrences(state.data.gospels, lemma) : [];
+    const occurrenceStats = buildOccurrenceStats(occurrences);
     replaceRouteState("morphology", {
       lemma,
     });
@@ -846,6 +906,62 @@ const renderMorphology = () => {
                   .join("")
             : `<div class="notice">Per questo lemma non è ancora disponibile una scheda morfologica completa.</div>`
         }
+        <section class="stack morphology-occurrences">
+          <h3>Occorrenze nel Nuovo Testamento</h3>
+          ${
+            occurrences.length
+              ? `
+                <div class="stats-grid">
+                  <div class="micro-panel stat-card">
+                    <span class="meta">Occorrenze totali</span>
+                    <strong>${escapeHtml(String(occurrenceStats.total))}</strong>
+                  </div>
+                  <div class="micro-panel stat-card">
+                    <span class="meta">Versetti distinti</span>
+                    <strong>${escapeHtml(String(occurrenceStats.references))}</strong>
+                  </div>
+                  <div class="micro-panel stat-card">
+                    <span class="meta">Libri coinvolti</span>
+                    <strong>${escapeHtml(String(occurrenceStats.books))}</strong>
+                  </div>
+                  <div class="micro-panel stat-card">
+                    <span class="meta">Forme attestate</span>
+                    <strong>${escapeHtml(String(occurrenceStats.forms))}</strong>
+                  </div>
+                </div>
+                <details class="occurrence-details">
+                  <summary>Apri i versetti e le occorrenze</summary>
+                  <div class="stack occurrence-stack">
+                    ${occurrences
+                      .map(
+                        (occurrence) => `
+                          <div class="micro-panel">
+                            <strong>${escapeHtml(occurrence.surface)}</strong>
+                            <span class="word-pronunciation">${escapeHtml(occurrence.pronunciation)}</span>
+                            <span class="meta"><a class="verse-word-link" href="${buildInterlinearHref(
+                              occurrence,
+                            )}">${escapeHtml(occurrence.reference)}</a></span>
+                            ${
+                              occurrence.morphologyLabel
+                                ? `<span class="meta">${escapeHtml(occurrence.morphologyLabel)}</span>`
+                                : ""
+                            }
+                            <p class="occurrence-greek">${renderGreekVerseWithHighlight(occurrence)}</p>
+                            ${
+                              occurrence.verseItalian
+                                ? `<p class="occurrence-italian">${escapeHtml(occurrence.verseItalian)}</p>`
+                                : ""
+                            }
+                          </div>
+                        `,
+                      )
+                      .join("")}
+                  </div>
+                </details>
+              `
+              : `<div class="notice">Nessuna occorrenza trovata nei dati attuali.</div>`
+          }
+        </section>
       </article>
     `;
     if (verbEntries.length) {
