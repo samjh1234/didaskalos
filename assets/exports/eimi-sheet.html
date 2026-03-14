@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scheda Verbale - εἰμί</title>
+    <style>
+      :root {
+        --bg: #f6efe3;
+        --paper: #fffaf2;
+        --ink: #221711;
+        --muted: #6c5448;
+        --accent: #8c4c23;
+        --line: #d8c4ae;
+        --soft: #efe1cf;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        background:
+          radial-gradient(circle at top right, rgba(140, 76, 35, 0.14), transparent 18rem),
+          linear-gradient(180deg, #f7f0e6, #efe2d0);
+        color: var(--ink);
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 14mm 14mm 16mm;
+      }
+
+      .sheet {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 14mm 12mm;
+        box-shadow: 0 18px 32px rgba(62, 37, 21, 0.08);
+      }
+
+      .eyebrow {
+        margin: 0 0 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 10px;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+
+      .subhead {
+        margin: 6px 0 0;
+        font-size: 16px;
+        color: var(--muted);
+      }
+
+      .hero-grid,
+      .info-grid,
+      .stats-grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        margin-top: 14px;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 12px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 14px;
+      }
+
+      .card {
+        background: linear-gradient(180deg, #fffaf4, #f4e8d7);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 10px 12px;
+      }
+
+      .card h2,
+      .section h2 {
+        margin: 0 0 6px;
+        font-size: 15px;
+        color: var(--accent);
+      }
+
+      .meta-label {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .meta-value {
+        display: block;
+        margin-top: 3px;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      .principal-parts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .principal-parts span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(140, 76, 35, 0.08);
+        border: 1px solid rgba(140, 76, 35, 0.14);
+      }
+
+      .section {
+        margin-top: 16px;
+      }
+
+      .section-title {
+        margin: 0 0 8px;
+        padding: 8px 10px;
+        border-radius: 12px;
+        background: var(--soft);
+        color: var(--ink);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .paradigm {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+      }
+
+      .paradigm th,
+      .paradigm td {
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      .paradigm tr:last-child td,
+      .paradigm tr:last-child th {
+        border-bottom: 0;
+      }
+
+      .paradigm thead th {
+        background: rgba(140, 76, 35, 0.08);
+        color: var(--accent);
+        font-size: 12px;
+      }
+
+      .label-col {
+        width: 26%;
+        color: var(--muted);
+      }
+
+      .greek-col {
+        width: 28%;
+        font-weight: 700;
+      }
+
+      .italian-col {
+        width: 24%;
+      }
+
+      .small-note {
+        margin: 6px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .non-finite-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .footer-note {
+        margin-top: 16px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <article class="sheet">
+        <p class="eyebrow">Didaskalos · Scheda verbale</p>
+        <h1>εἰμί</h1>
+        <p class="subhead">Verbo in -μι irregolare · significato base: essere</p>
+
+        <section class="hero-grid">
+          <div class="card">
+            <h2>Identità del lemma</h2>
+            <span class="meta-label">Pronuncia</span>
+            <span class="meta-value">εἰμί</span>
+            <span class="meta-label" style="margin-top:8px;">Nota</span>
+            <span class="meta-value">Paradigmi fissi locali verificati per il verbo essere.</span>
+          </div>
+          <div class="card">
+            <h2>Copertura attuale</h2>
+            <span class="meta-label">Occorrenze nel NT</span>
+            <span class="meta-value">2456</span>
+            <span class="meta-label" style="margin-top:8px;">Stato</span>
+            <span class="meta-value">Verificato</span>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px;">
+          <h2>Parti principali</h2>
+          <div class="principal-parts">
+            <span>εἰμί</span>
+            <span>ἔσομαι</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Presente indicativo attivo</h2>
+          <table class="paradigm">
+            <thead>
+              <tr>
+                <th class="label-col">Persona</th>
+                <th class="greek-col">Koine</th>
+                <th>Pronuncia</th>
+                <th class="italian-col">Italiano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th class="label-col">1a singolare</th><td class="greek-col">εἰμί</td><td>eimi</td><td class="italian-col">sono</td></tr>
+              <tr><th class="label-col">2a singolare</th><td class="greek-col">εἶ</td><td>ei</td><td class="italian-col">sei</td></tr>
+              <tr><th class="label-col">3a singolare</th><td class="greek-col">ἐστί(ν)</td><td>esti(n)</td><td class="italian-col">è</td></tr>
+              <tr><th class="label-col">1a plurale</th><td class="greek-col">ἐσμέν</td><td>esmen</td><td class="italian-col">siamo</td></tr>
+              <tr><th class="label-col">2a plurale</th><td class="greek-col">ἐστέ</td><td>este</td><td class="italian-col">siete</td></tr>
+              <tr><th class="label-col">3a plurale</th><td class="greek-col">εἰσί(ν)</td><td>eisi(n)</td><td class="italian-col">sono</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Imperfetto indicativo attivo</h2>
+          <table class="paradigm">
+            <thead>
+              <tr>
+                <th class="label-col">Persona</th>
+                <th class="greek-col">Koine</th>
+                <th>Pronuncia</th>
+                <th class="italian-col">Italiano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th class="label-col">1a singolare</th><td class="greek-col">ἤμην</td><td>emen</td><td class="italian-col">ero</td></tr>
+              <tr><th class="label-col">2a singolare</th><td class="greek-col">ἦς</td><td>es</td><td class="italian-col">eri</td></tr>
+              <tr><th class="label-col">3a singolare</th><td class="greek-col">ἦν</td><td>en</td><td class="italian-col">era</td></tr>
+              <tr><th class="label-col">1a plurale</th><td class="greek-col">ἦμεν</td><td>emen</td><td class="italian-col">eravamo</td></tr>
+              <tr><th class="label-col">2a plurale</th><td class="greek-col">ἦτε</td><td>ete</td><td class="italian-col">eravate</td></tr>
+              <tr><th class="label-col">3a plurale</th><td class="greek-col">ἦσαν</td><td>esan</td><td class="italian-col">erano</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Futuro indicativo medio</h2>
+          <table class="paradigm">
+            <thead>
+              <tr>
+                <th class="label-col">Persona</th>
+                <th class="greek-col">Koine</th>
+                <th>Pronuncia</th>
+                <th class="italian-col">Italiano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th class="label-col">1a singolare</th><td class="greek-col">ἔσομαι</td><td>esomai</td><td class="italian-col">sarò</td></tr>
+              <tr><th class="label-col">2a singolare</th><td class="greek-col">ἔσῃ</td><td>ese</td><td class="italian-col">sarai</td></tr>
+              <tr><th class="label-col">3a singolare</th><td class="greek-col">ἔσται</td><td>estai</td><td class="italian-col">sarà</td></tr>
+              <tr><th class="label-col">1a plurale</th><td class="greek-col">ἐσόμεθα</td><td>esometha</td><td class="italian-col">saremo</td></tr>
+              <tr><th class="label-col">2a plurale</th><td class="greek-col">ἔσεσθε</td><td>esesthe</td><td class="italian-col">sarete</td></tr>
+              <tr><th class="label-col">3a plurale</th><td class="greek-col">ἔσονται</td><td>esontai</td><td class="italian-col">saranno</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Congiuntivo presente attivo</h2>
+          <table class="paradigm">
+            <thead>
+              <tr>
+                <th class="label-col">Persona</th>
+                <th class="greek-col">Koine</th>
+                <th>Pronuncia</th>
+                <th class="italian-col">Italiano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th class="label-col">1a singolare</th><td class="greek-col">ὦ</td><td>o</td><td class="italian-col">che io sia</td></tr>
+              <tr><th class="label-col">2a singolare</th><td class="greek-col">ᾖς</td><td>es</td><td class="italian-col">che tu sia</td></tr>
+              <tr><th class="label-col">3a singolare</th><td class="greek-col">ᾖ</td><td>e</td><td class="italian-col">che egli sia</td></tr>
+              <tr><th class="label-col">1a plurale</th><td class="greek-col">ὦμεν</td><td>omen</td><td class="italian-col">che noi siamo</td></tr>
+              <tr><th class="label-col">2a plurale</th><td class="greek-col">ἦτε</td><td>ete</td><td class="italian-col">che voi siate</td></tr>
+              <tr><th class="label-col">3a plurale</th><td class="greek-col">ὦσι(ν)</td><td>osi(n)</td><td class="italian-col">che essi siano</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Imperativo presente attivo</h2>
+          <table class="paradigm">
+            <thead>
+              <tr>
+                <th class="label-col">Persona</th>
+                <th class="greek-col">Koine</th>
+                <th>Pronuncia</th>
+                <th class="italian-col">Italiano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th class="label-col">2a singolare</th><td class="greek-col">ἴσθι</td><td>isthi</td><td class="italian-col">sii</td></tr>
+              <tr><th class="label-col">3a singolare</th><td class="greek-col">ἔστω</td><td>esto</td><td class="italian-col">sia</td></tr>
+              <tr><th class="label-col">2a plurale</th><td class="greek-col">ἔστε</td><td>este</td><td class="italian-col">siate</td></tr>
+              <tr><th class="label-col">3a plurale</th><td class="greek-col">ἔστωσαν</td><td>estosan</td><td class="italian-col">siano</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Forme non finite</h2>
+          <div class="non-finite-grid">
+            <div class="card">
+              <h2>Infinito presente</h2>
+              <span class="meta-value">εἶναι</span>
+              <p class="small-note">Significato: essere</p>
+            </div>
+            <div class="card">
+              <h2>Participio presente attivo</h2>
+              <p class="small-note"><strong>Maschile nom. sg.:</strong> ὤν</p>
+              <p class="small-note"><strong>Femminile nom. sg.:</strong> οὖσα</p>
+              <p class="small-note"><strong>Neutro nom. sg.:</strong> ὄν</p>
+              <p class="small-note"><strong>Significato:</strong> essendo</p>
+            </div>
+          </div>
+        </section>
+
+        <p class="footer-note">
+          Scheda generata dai dataset verbali locali di Didaskalos. Questa pagina riassume tutte le sezioni attualmente disponibili per il verbo εἰμί.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

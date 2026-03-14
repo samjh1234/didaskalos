@@ -11,6 +11,7 @@ import {
   escapeHtml,
   normalize,
   normalizeParadigmSection,
+  openParadigmPrintView,
   pronounceGreek,
   renderParadigmCard,
   renderVerbSectionControls,
@@ -127,10 +128,8 @@ const getCeiVerseText = (data, occurrence) => {
   return rawText.replace(/^\s*\d+\s*-->\s*/, "").trim();
 };
 
-// Link diretto dalla scheda parola alla pagina Morfologia.
-// La pagina riconosce da sola il tipo grammaticale del lemma.
-const buildMorphologyHref = (lemma) =>
-  `index.html#morphology?lemma=${encodeURIComponent(normalize(lemma))}`;
+// Link diretto alla scheda lessicale completa di una parola.
+const buildWordHref = (lemma) => `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
 
 // Link diretto dalla scheda parola all'Interlineare sul versetto preciso.
 const buildInterlinearHref = (occurrence) => {
@@ -474,6 +473,11 @@ const renderWord = async () => {
           }
           ${
             filledSections.length
+              ? `<div class="panel-actions"><button type="button" class="secondary-button" data-print-paradigm>Stampa scheda</button></div>`
+              : ""
+          }
+          ${
+            filledSections.length
               ? verbEntries.length > 1
                 ? renderVerbSectionControls(verbEntries, verbSelectorId)
                 : filledSections
@@ -522,9 +526,8 @@ const renderWord = async () => {
                       .map(
                         (occurrence) => `
                           <div class="micro-panel">
-                            <strong><a class="verse-word-link" href="${buildMorphologyHref(
+                            <strong><a class="verse-word-link" href="${buildWordHref(
                               occurrence.lemma,
-                              occurrence.partOfSpeech,
                             )}" target="_blank" rel="noopener noreferrer">${escapeHtml(occurrence.surface)}</a></strong>
                             <span class="word-pronunciation">${escapeHtml(occurrence.pronunciation)}</span>
                             <span class="meta"><a class="verse-word-link" href="${buildInterlinearHref(
@@ -556,6 +559,26 @@ const renderWord = async () => {
     if (verbEntries.length > 1) {
       wireVerbSectionControls(result, verbSelectorId, verbEntries, word.morphology.meaningIt || word.gloss, {
         mode: "default",
+      });
+    }
+    const printButton = result.querySelector("[data-print-paradigm]");
+    if (printButton) {
+      printButton.addEventListener("click", () => {
+        const visibleCards = [...result.querySelectorAll(".paradigm-card")]
+          .map((card) => card.outerHTML)
+          .join("");
+        openParadigmPrintView({
+          title: word.greek,
+          subtitle: `${word.partOfSpeech} · ${word.gloss || "significato da definire"}`,
+          metadata: [
+            { label: "Lemma", value: word.lemma },
+            { label: "Categoria", value: word.partOfSpeech },
+            { label: "Significato", value: word.gloss || "Da definire nel lessico italiano" },
+            { label: "Pronuncia", value: word.pronunciation },
+          ],
+          contentHtml: visibleCards,
+          notes: "La stampa rispetta le sezioni attualmente visibili della scheda.",
+        });
       });
     }
   } catch (error) {

@@ -12,6 +12,7 @@ import {
   escapeHtml,
   normalize,
   normalizeParadigmSection,
+  openParadigmPrintView,
   pronounceGreek,
   renderParadigmCard,
   renderVerbSectionControls,
@@ -113,6 +114,9 @@ const replaceRouteState = (route, params = {}) => {
 const goToWord = (lemma) => {
   window.location.href = `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
 };
+
+// Link diretto alla scheda parola completa.
+const buildWordHref = (lemma) => `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
 
 // Legge lo stato dall'hash e ricostruisce la route corrente.
 const activateRouteFromHash = () => {
@@ -889,6 +893,11 @@ const renderMorphology = () => {
         ${showTopNote ? `<p>${escapeHtml(note)}</p>` : ""}
         ${
           filledSections.length
+            ? `<div class="panel-actions"><button type="button" class="secondary-button" data-print-paradigm>Stampa scheda</button></div>`
+            : ""
+        }
+        ${
+          filledSections.length
             ? verbEntries.length
               ? renderVerbSectionControls(verbEntries, verbSelectorId)
               : filledSections
@@ -936,7 +945,9 @@ const renderMorphology = () => {
                       .map(
                         (occurrence) => `
                           <div class="micro-panel">
-                            <strong>${escapeHtml(occurrence.surface)}</strong>
+                            <strong><a class="verse-word-link" href="${buildWordHref(occurrence.lemma)}">${escapeHtml(
+                              occurrence.surface,
+                            )}</a></strong>
                             <span class="word-pronunciation">${escapeHtml(occurrence.pronunciation)}</span>
                             <span class="meta"><a class="verse-word-link" href="${buildInterlinearHref(
                               occurrence,
@@ -967,6 +978,28 @@ const renderMorphology = () => {
     if (verbEntries.length) {
       wireVerbSectionControls(output, verbSelectorId, verbEntries, meaning, {
         mode: "default",
+      });
+    }
+    const printButton = output.querySelector("[data-print-paradigm]");
+    if (printButton) {
+      printButton.addEventListener("click", () => {
+        const visibleCards = [...output.querySelectorAll(".paradigm-card")]
+          .map((card) => card.outerHTML)
+          .join("");
+        openParadigmPrintView({
+          title: official?.lemma || lemmaInput.value.trim() || lemma,
+          subtitle: `${title} · ${meaning}`,
+          metadata: [
+            { label: "Lemma", value: official?.lemma || lemmaInput.value.trim() || lemma },
+            { label: "Categoria", value: detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo" },
+            { label: "Classe", value: title },
+            { label: "Significato", value: meaning },
+          ],
+          contentHtml: visibleCards,
+          notes: detectedType === "verb"
+            ? "La stampa rispetta le sezioni attualmente visibili della scheda verbale."
+            : "La stampa rispetta la scheda morfologica attualmente visibile.",
+        });
       });
     }
   };

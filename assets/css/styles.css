@@ -382,6 +382,18 @@ button {
   border: 1px solid var(--accent);
 }
 
+.secondary-button {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.6rem 0 0.2rem;
+}
+
 .toolbar label {
   /* Ogni filtro/input della toolbar e autoetichettato */
   display: grid;

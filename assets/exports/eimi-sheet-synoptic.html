@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scheda sinottica - εἰμί</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      :root {
+        --ink: #000;
+        --line: #000;
+        --soft: #f1f1f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 10.2pt;
+        line-height: 1.16;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      .sheet {
+        width: 100%;
+      }
+
+      .topbar {
+        border: 1px solid var(--line);
+        padding: 7px 10px;
+        margin-bottom: 6px;
+      }
+
+      .topbar h1 {
+        margin: 0;
+        font-size: 22pt;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .topbar .subline {
+        margin-top: 4px;
+        text-align: center;
+        font-size: 10.2pt;
+      }
+
+      .meta-table,
+      .mini-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .meta-table {
+        margin-bottom: 6px;
+      }
+
+      .meta-table td {
+        border: 1px solid var(--line);
+        padding: 5px 7px;
+        vertical-align: top;
+      }
+
+      .meta-label {
+        width: 14%;
+        font-weight: bold;
+      }
+
+      .parts {
+        font-size: 11pt;
+        letter-spacing: 0.01em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+
+      .block {
+        border: 1px solid var(--line);
+      }
+
+      .block-title {
+        padding: 5px 7px;
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 10pt;
+        letter-spacing: 0.02em;
+      }
+
+      .subblock + .subblock {
+        border-top: 1px solid var(--line);
+      }
+
+      .subblock-title {
+        padding: 4px 7px;
+        font-style: italic;
+        font-size: 10pt;
+      }
+
+      .mini-table th,
+      .mini-table td {
+        border-top: 1px solid var(--line);
+        padding: 3px 5px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .mini-table tr:first-child th,
+      .mini-table tr:first-child td {
+        border-top: 1px solid var(--line);
+      }
+
+      .mini-table th {
+        font-size: 9.4pt;
+      }
+
+      .col-person {
+        width: 17%;
+      }
+
+      .col-greek {
+        width: 29%;
+      }
+
+      .col-pron {
+        width: 24%;
+      }
+
+      .col-it {
+        width: 30%;
+      }
+
+      .notes {
+        margin-top: 6px;
+        border: 1px solid var(--line);
+      }
+
+      .notes .block-title {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .notes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .notes-grid > div {
+        padding: 6px 8px;
+      }
+
+      .notes-grid > div + div {
+        border-left: 1px solid var(--line);
+      }
+
+      ul {
+        margin: 5px 0 0 16px;
+        padding: 0;
+      }
+
+      li + li {
+        margin-top: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <section class="topbar">
+        <h1>εἰμί</h1>
+        <div class="subline">Scheda sinottica del verbo · significato base: <strong>essere</strong></div>
+      </section>
+
+      <table class="meta-table">
+        <tr>
+          <td class="meta-label">Lemma</td>
+          <td>εἰμί</td>
+          <td class="meta-label">Pronuncia</td>
+          <td>eimi</td>
+          <td class="meta-label">Classe</td>
+          <td>Verbo in -μι irregolare</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Parti principali</td>
+          <td colspan="5" class="parts">εἰμί · ἔσομαι · - · - · - · -</td>
+        </tr>
+      </table>
+
+      <section class="grid">
+        <article class="block">
+          <div class="block-title">Modi finiti</div>
+
+          <section class="subblock">
+            <div class="subblock-title">Presente indicativo attivo</div>
+            <table class="mini-table">
+              <tr><th class="col-person">Pers.</th><th class="col-greek">Koine</th><th class="col-pron">Pronuncia</th><th class="col-it">Italiano</th></tr>
+              <tr><td>1 sg</td><td>εἰμί</td><td>eimi</td><td>sono</td></tr>
+              <tr><td>2 sg</td><td>εἶ</td><td>ei</td><td>sei</td></tr>
+              <tr><td>3 sg</td><td>ἐστί(ν)</td><td>esti(n)</td><td>è</td></tr>
+              <tr><td>1 pl</td><td>ἐσμέν</td><td>esmen</td><td>siamo</td></tr>
+              <tr><td>2 pl</td><td>ἐστέ</td><td>este</td><td>siete</td></tr>
+              <tr><td>3 pl</td><td>εἰσί(ν)</td><td>eisi(n)</td><td>sono</td></tr>
+            </table>
+          </section>
+
+          <section class="subblock">
+            <div class="subblock-title">Imperfetto indicativo attivo</div>
+            <table class="mini-table">
+              <tr><th class="col-person">Pers.</th><th class="col-greek">Koine</th><th class="col-pron">Pronuncia</th><th class="col-it">Italiano</th></tr>
+              <tr><td>1 sg</td><td>ἤμην</td><td>emen</td><td>ero</td></tr>
+              <tr><td>2 sg</td><td>ἦς</td><td>es</td><td>eri</td></tr>
+              <tr><td>3 sg</td><td>ἦν</td><td>en</td><td>era</td></tr>
+              <tr><td>1 pl</td><td>ἦμεν</td><td>emen</td><td>eravamo</td></tr>
+              <tr><td>2 pl</td><td>ἦτε</td><td>ete</td><td>eravate</td></tr>
+              <tr><td>3 pl</td><td>ἦσαν</td><td>esan</td><td>erano</td></tr>
+            </table>
+          </section>
+
+          <section class="subblock">
+            <div class="subblock-title">Futuro indicativo medio</div>
+            <table class="mini-table">
+              <tr><th class="col-person">Pers.</th><th class="col-greek">Koine</th><th class="col-pron">Pronuncia</th><th class="col-it">Italiano</th></tr>
+              <tr><td>1 sg</td><td>ἔσομαι</td><td>esomai</td><td>sarò</td></tr>
+              <tr><td>2 sg</td><td>ἔσῃ</td><td>ese</td><td>sarai</td></tr>
+              <tr><td>3 sg</td><td>ἔσται</td><td>estai</td><td>sarà</td></tr>
+              <tr><td>1 pl</td><td>ἐσόμεθα</td><td>esometha</td><td>saremo</td></tr>
+              <tr><td>2 pl</td><td>ἔσεσθε</td><td>esesthe</td><td>sarete</td></tr>
+              <tr><td>3 pl</td><td>ἔσονται</td><td>esontai</td><td>saranno</td></tr>
+            </table>
+          </section>
+        </article>
+
+        <article class="block">
+          <div class="block-title">Altri modi e forme</div>
+
+          <section class="subblock">
+            <div class="subblock-title">Congiuntivo presente attivo</div>
+            <table class="mini-table">
+              <tr><th class="col-person">Pers.</th><th class="col-greek">Koine</th><th class="col-pron">Pronuncia</th><th class="col-it">Italiano</th></tr>
+              <tr><td>1 sg</td><td>ὦ</td><td>o</td><td>che io sia</td></tr>
+              <tr><td>2 sg</td><td>ᾖς</td><td>es</td><td>che tu sia</td></tr>
+              <tr><td>3 sg</td><td>ᾖ</td><td>e</td><td>che egli sia</td></tr>
+              <tr><td>1 pl</td><td>ὦμεν</td><td>omen</td><td>che noi siamo</td></tr>
+              <tr><td>2 pl</td><td>ἦτε</td><td>ete</td><td>che voi siate</td></tr>
+              <tr><td>3 pl</td><td>ὦσι(ν)</td><td>osi(n)</td><td>che essi siano</td></tr>
+            </table>
+          </section>
+
+          <section class="subblock">
+            <div class="subblock-title">Imperativo presente attivo</div>
+            <table class="mini-table">
+              <tr><th class="col-person">Pers.</th><th class="col-greek">Koine</th><th class="col-pron">Pronuncia</th><th class="col-it">Italiano</th></tr>
+              <tr><td>2 sg</td><td>ἴσθι</td><td>isthi</td><td>sii</td></tr>
+              <tr><td>3 sg</td><td>ἔστω</td><td>esto</td><td>sia</td></tr>
+              <tr><td>2 pl</td><td>ἔστε</td><td>este</td><td>siate</td></tr>
+              <tr><td>3 pl</td><td>ἔστωσαν</td><td>estosan</td><td>siano</td></tr>
+            </table>
+          </section>
+
+          <section class="subblock">
+            <div class="subblock-title">Forme non finite</div>
+            <table class="mini-table">
+              <tr><th class="col-person">Tipo</th><th class="col-greek">Koine</th><th class="col-pron">Pronuncia</th><th class="col-it">Italiano</th></tr>
+              <tr><td>Infinito presente</td><td>εἶναι</td><td>einai</td><td>essere</td></tr>
+              <tr><td>Part. pres. masc. nom. sg.</td><td>ὤν</td><td>on</td><td>essendo</td></tr>
+              <tr><td>Part. pres. femm. nom. sg.</td><td>οὖσα</td><td>ousa</td><td>essendo</td></tr>
+              <tr><td>Part. pres. neutro nom. sg.</td><td>ὄν</td><td>on</td><td>essendo</td></tr>
+            </table>
+          </section>
+        </article>
+      </section>
+
+      <section class="notes">
+        <div class="block-title">Note morfologiche</div>
+        <div class="notes-grid">
+          <div>
+            <strong>Carattere del verbo</strong>
+            <ul>
+              <li>Verbo irregolare in -μι.</li>
+              <li>Usato come verbo fondamentale di stato e identità.</li>
+              <li>Il futuro è attestato come medio di forma.</li>
+            </ul>
+          </div>
+          <div>
+            <strong>Copertura attuale del dataset</strong>
+            <ul>
+              <li>Indicativo: presente, imperfetto, futuro.</li>
+              <li>Congiuntivo: presente.</li>
+              <li>Imperativo: presente.</li>
+              <li>Forme non finite: infinito presente, participio presente.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

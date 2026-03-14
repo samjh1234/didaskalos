@@ -24,6 +24,161 @@ export const escapeHtml = (value = "") =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 
+// Apre una finestra di stampa con una scheda essenziale in bianco e nero.
+// Il contenuto delle sezioni viene preso dalla scheda visibile,
+// cosi la stampa rispetta davvero i filtri scelti dall'utente.
+export const openParadigmPrintView = ({
+  title = "",
+  subtitle = "",
+  metadata = [],
+  contentHtml = "",
+  notes = "",
+}) => {
+  const printWindow = window.open("", "_blank", "noopener,noreferrer,width=980,height=1200");
+  if (!printWindow) return false;
+
+  const metadataRows = metadata.length
+    ? `
+      <table class="meta-table">
+        ${metadata
+          .map(
+            ({ label, value }) => `
+              <tr>
+                <td class="meta-label">${escapeHtml(label)}</td>
+                <td>${escapeHtml(value)}</td>
+              </tr>
+            `,
+          )
+          .join("")}
+      </table>
+    `
+    : "";
+
+  printWindow.document.write(`<!doctype html>
+    <html lang="it">
+      <head>
+        <meta charset="utf-8">
+        <title>${escapeHtml(title)}</title>
+        <style>
+          @page { size: A4; margin: 10mm; }
+          body {
+            margin: 0;
+            background: #fff;
+            color: #000;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 10.5pt;
+            line-height: 1.16;
+          }
+          .sheet {
+            padding: 6mm 4mm;
+          }
+          h1 {
+            margin: 0;
+            font-size: 20pt;
+            text-align: center;
+          }
+          .subtitle {
+            margin: 4px 0 8px;
+            text-align: center;
+            font-size: 10.5pt;
+          }
+          .meta-table,
+          .pronoun-table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+          .meta-table {
+            margin-bottom: 8px;
+          }
+          .meta-table td,
+          .pronoun-table th,
+          .pronoun-table td {
+            border: 1px solid #000;
+            padding: 4px 6px;
+            vertical-align: top;
+          }
+          .meta-label {
+            width: 22%;
+            font-weight: bold;
+          }
+          .print-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+          }
+          .paradigm-card,
+          .pronoun-table-card {
+            border: 1px solid #000;
+            break-inside: avoid;
+            margin: 0;
+          }
+          .paradigm-header {
+            padding: 4px 6px;
+            border-bottom: 1px solid #000;
+            background: #f1f1f1;
+          }
+          .paradigm-header h4,
+          .pronoun-table-card h5 {
+            margin: 0;
+            font-size: 11pt;
+          }
+          .paradigm-subtitle {
+            margin: 4px 0 0;
+            font-size: 9.5pt;
+          }
+          .paradigm-list {
+            display: block;
+          }
+          .paradigm-row {
+            display: grid;
+            grid-template-columns: 18% 28% 22% 32%;
+            border-top: 1px solid #000;
+          }
+          .paradigm-row > * {
+            padding: 4px 6px;
+            border-left: 1px solid #000;
+            text-align: left !important;
+            justify-self: stretch !important;
+          }
+          .paradigm-row > *:first-child {
+            border-left: 0;
+          }
+          .paradigm-label {
+            font-weight: bold;
+          }
+          .paradigm-greek {
+            font-weight: bold;
+          }
+          .paradigm-pronunciation {
+            font-style: italic;
+          }
+          .pronoun-table-card + .pronoun-table-card {
+            margin-top: 6px;
+          }
+          .notes {
+            margin-top: 8px;
+            font-size: 9.8pt;
+          }
+        </style>
+      </head>
+      <body>
+        <main class="sheet">
+          <h1>${escapeHtml(title)}</h1>
+          ${subtitle ? `<p class="subtitle">${escapeHtml(subtitle)}</p>` : ""}
+          ${metadataRows}
+          <section class="print-grid">${contentHtml}</section>
+          ${notes ? `<p class="notes">${escapeHtml(notes)}</p>` : ""}
+        </main>
+      </body>
+    </html>`);
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.addEventListener("load", () => {
+    printWindow.print();
+  });
+  return true;
+};
+
 // Pulisce le note italiane importate da fonti esterne.
 // Qui togliamo rumore, esempi lunghi, artefatti di encoding e code inutili.
 export const cleanVocabularyItalianNote = (value = "") => {
