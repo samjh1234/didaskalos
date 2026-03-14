@@ -1,3 +1,9 @@
+// word-page.js costruisce la scheda completa di una singola parola.
+// Qui confluiscono tre livelli:
+// - lessico del lemma
+// - morfologia/paradigmi
+// - occorrenze nel Nuovo Testamento
+
 import { loadData } from "./data-loader.js";
 import {
   buildVerbSectionEntries,
@@ -15,6 +21,8 @@ import { analyzeNoun, analyzeVerb } from "./morphology.js";
 
 const result = document.querySelector("#word-page-result");
 
+// Fallback molto semplice per intuire la categoria della parola
+// quando il lessico non offre ancora un dato completo.
 const inferPartOfSpeech = (lemma) => {
   if (lemma.endsWith("ω") || lemma.endsWith("μι")) return "verbo";
   if (
@@ -29,6 +37,7 @@ const inferPartOfSpeech = (lemma) => {
   return "parola";
 };
 
+// Raccoglie tutte le occorrenze di un lemma nel NT gia caricato.
 const collectOccurrences = (gospels, lemma) => {
   const matches = [];
   Object.values(gospels).forEach((verses) => {
@@ -56,6 +65,7 @@ const collectOccurrences = (gospels, lemma) => {
   return matches;
 };
 
+// Traduce il prefisso BCV nel relativo slug del libro usato dal progetto.
 const getSlugFromBcv = (bcv = "") => {
   const slugByIndex = {
     1: "matthew",
@@ -89,6 +99,7 @@ const getSlugFromBcv = (bcv = "") => {
   return slugByIndex[Number(String(bcv).slice(0, 2))] || "";
 };
 
+// Recupera il versetto strutturato a cui appartiene una certa occorrenza.
 const getVerseRecord = (data, occurrence) => {
   if (!occurrence?.bcv) return null;
   const slug = getSlugFromBcv(occurrence.bcv);
@@ -104,6 +115,7 @@ const getVerseRecord = (data, occurrence) => {
   });
 };
 
+// Recupera il testo CEI 2008 del versetto dell'occorrenza.
 const getCeiVerseText = (data, occurrence) => {
   if (!occurrence?.bcv || !data.ceiVerses) return "";
   const bcv = String(occurrence.bcv);
@@ -115,6 +127,7 @@ const getCeiVerseText = (data, occurrence) => {
   return rawText.replace(/^\s*\d+\s*-->\s*/, "").trim();
 };
 
+// Traduce la parte del discorso in uno dei tipi attesi dalla pagina morfologia.
 const morphologyTypeFromPartOfSpeech = (partOfSpeech = "") =>
   normalize(partOfSpeech).startsWith("pronome")
     ? "pronoun"
@@ -122,11 +135,13 @@ const morphologyTypeFromPartOfSpeech = (partOfSpeech = "") =>
       ? "noun"
       : "verb";
 
+// Link diretto dalla scheda parola alla pagina Morfologia.
 const buildMorphologyHref = (lemma, partOfSpeech) =>
   `index.html#morphology?lemma=${encodeURIComponent(normalize(lemma))}&type=${encodeURIComponent(
     morphologyTypeFromPartOfSpeech(partOfSpeech),
   )}`;
 
+// Link diretto dalla scheda parola all'Interlineare sul versetto preciso.
 const buildInterlinearHref = (occurrence) => {
   const slug = getSlugFromBcv(occurrence.bcv);
   const chapter = Number(String(occurrence.bcv).slice(2, 4));
@@ -136,6 +151,7 @@ const buildInterlinearHref = (occurrence) => {
   )}&verse=${encodeURIComponent(String(verse))}`;
 };
 
+// Evidenzia nel versetto greco la parola attualmente studiata.
 const renderGreekVerseWithLinks = (data, occurrence) => {
   const verseRecord = getVerseRecord(data, occurrence);
   if (!verseRecord?.tokens?.length) return escapeHtml(occurrence.verseGreek || "");
@@ -150,6 +166,7 @@ const renderGreekVerseWithLinks = (data, occurrence) => {
     .join(" ");
 };
 
+// Utility leggere per deduplicare e contare valori nelle occorrenze.
 const uniqueValues = (values) => [...new Set(values.filter(Boolean))];
 
 const countValues = (values) => {
@@ -163,6 +180,7 @@ const countValues = (values) => {
 const getFixedFunctionGloss = (data, lemma) => data.functionGlosses?.[normalize(lemma)]?.glossIt || "";
 const getFixedLexiconGloss = (data, lemma) => data.fixedLexicon?.[normalize(lemma)]?.glossIt || "";
 
+// Piccolo dizionario di supporto per interpretare gloss secondari.
 const dictionaryMeaningToItalian = (detail) => {
   if (!detail) return "";
   const raw = detail.includes("=") ? detail.split("=")[1] : detail;
@@ -220,6 +238,7 @@ const dictionaryMeaningToItalian = (detail) => {
   return dictionaryMap[normalized] || "";
 };
 
+// Elenco di parole italiane troppo deboli per essere usate come evidenziazione.
 const isWeakItalianWord = (value = "") => {
   const weak = new Set([
     "il",
@@ -251,6 +270,7 @@ const isWeakItalianWord = (value = "") => {
   return weak.has((value || "").trim().toLowerCase());
 };
 
+// Per alcuni participi costruiamo una resa italiana piu plausibile.
 const buildItalianParticiple = (lexicalGloss = "", occurrence) => {
   const gloss = (lexicalGloss || "").split(",")[0].trim().toLowerCase();
   const morphology = normalize(occurrence?.morphologyLabel || "");
@@ -273,6 +293,7 @@ const buildItalianParticiple = (lexicalGloss = "", occurrence) => {
   return "";
 };
 
+// Candidati possibili per capire come la parola potrebbe apparire nel testo italiano.
 const buildItalianHighlightCandidates = (occurrence, lexicalGloss = "") => {
   const rawCandidates = [
     buildItalianParticiple(lexicalGloss, occurrence),
@@ -296,6 +317,9 @@ const buildItalianHighlightCandidates = (occurrence, lexicalGloss = "") => {
   return [...new Set(expanded)].sort((left, right) => right.length - left.length);
 };
 
+// Evidenziatore italiano:
+// oggi e una funzione conservata nel progetto,
+// ma l'interfaccia non evidenzia piu il testo CEI per evitare falsi allineamenti.
 const highlightItalianVerse = (verseText, occurrence, lexicalGloss = "") => {
   const text = verseText || "";
   if (!text) return "";
@@ -313,6 +337,12 @@ const highlightItalianVerse = (verseText, occurrence, lexicalGloss = "") => {
   return escapeHtml(text);
 };
 
+// Ricava il significato principale del lemma.
+// Ordine di priorita:
+// 1. lessico fisso
+// 2. parole-funzione fisse
+// 3. gloss lessicale del lexicon
+// 4. gloss dedotto dalle occorrenze
 const summarizeLemmaGloss = (data, entry, occurrences) => {
   const fixedLexiconGloss = getFixedLexiconGloss(data, entry?.lemma || occurrences[0]?.lemma || "");
   if (fixedLexiconGloss) return fixedLexiconGloss;
@@ -333,6 +363,7 @@ const summarizeLemmaGloss = (data, entry, occurrences) => {
   return "";
 };
 
+// Statistiche riassuntive mostrate sopra l'elenco delle occorrenze.
 const buildOccurrenceStats = (occurrences) => {
   const total = occurrences.length;
   const references = uniqueValues(occurrences.map((item) => item.reference));
@@ -341,6 +372,7 @@ const buildOccurrenceStats = (occurrences) => {
   return { total, references: references.length, books: books.length, forms: forms.length };
 };
 
+// Cerca il paradigma ufficiale del lemma in base alla categoria grammaticale.
 const getOfficialParadigmForWord = (data, lemma, partOfSpeech) => {
   if (partOfSpeech === "verbo") return data.verbParadigms?.[lemma] || null;
   if (partOfSpeech === "sostantivo") return data.nounParadigms?.[lemma] || null;
@@ -348,6 +380,7 @@ const getOfficialParadigmForWord = (data, lemma, partOfSpeech) => {
   return null;
 };
 
+// Costruisce il modello dati completo della parola da renderizzare nella pagina.
 const buildWordData = (data, lemma) => {
   const entry = data.lexicon.find((item) => normalize(item.lemma) === normalize(lemma));
   const occurrences = collectOccurrences(data.gospels, lemma);
@@ -396,6 +429,11 @@ const buildWordData = (data, lemma) => {
   };
 };
 
+// Render finale della pagina parola.
+// Legge il lemma dall'URL, carica i dati e costruisce:
+// - scheda lessicale
+// - scheda morfologica
+// - occorrenze nel NT
 const renderWord = async () => {
   const params = new URLSearchParams(window.location.search);
   const lemma = normalize(params.get("lemma") || "");

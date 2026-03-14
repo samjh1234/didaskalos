@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="it">
   <head>
+    <!--
+      Pagina dedicata alla singola parola.
+      Questa pagina non usa le viste interne di index.html:
+      carica direttamente word-page.js e costruisce una scheda autonoma.
+    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Analisi Parola | Didaskalos</title>
@@ -11,6 +16,7 @@
     <link id="app-styles" rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
+    <!-- Navigazione coerente con il resto del progetto -->
     <header class="site-header">
       <nav class="main-nav">
         <a href="index.html#home">Home</a>
@@ -21,14 +27,21 @@
       </nav>
     </header>
 
+    <!-- Punto di montaggio della scheda parola -->
     <main>
       <section id="word-page-result"></section>
     </main>
 
+    <!-- Footer condiviso -->
     <footer class="site-footer">
       <p>Copyright &copy; Seminario Vescovile di Fiesole, LazzaroMaria &#10013;</p>
     </footer>
 
+    <!--
+      Stesso meccanismo di versioning usato in index.html:
+      serve a evitare che Safari o altri browser restino bloccati
+      su CSS/JS vecchi dopo un aggiornamento del sito.
+    -->
     <script type="module">
       let appVersion = "dev";
       try {

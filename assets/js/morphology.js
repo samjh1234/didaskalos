@@ -1,3 +1,8 @@
+// Questo file contiene solo il motore morfologico minimo di fallback.
+// Non e il cuore definitivo della morfologia del progetto:
+// quando esiste un paradigma ufficiale nei dataset locali, il sito usa quello.
+// Queste funzioni servono solo quando la scheda completa non e ancora disponibile.
+
 const verbEndings = {
   "1a singolare": "ω",
   "2a singolare": "εις",
@@ -7,6 +12,7 @@ const verbEndings = {
   "3a plurale": "ουσι(ν)",
 };
 
+// Riconoscimento molto semplice del tipo nominale in base alla desinenza finale.
 const nounPattern = (lemma) => {
   if (lemma.endsWith("ος")) return "second-declension-masculine";
   if (lemma.endsWith("ον")) return "second-declension-neuter";
@@ -15,6 +21,9 @@ const nounPattern = (lemma) => {
   return "unknown";
 };
 
+// Fallback per verbi:
+// genera solo un presente indicativo attivo regolare in -ω.
+// I verbi irregolari o complessi devono invece arrivare dai dataset locali.
 export const analyzeVerb = (lemma) => {
   if (!lemma) return null;
   if (lemma.endsWith("ω")) {
@@ -47,6 +56,9 @@ export const analyzeVerb = (lemma) => {
   };
 };
 
+// Fallback per sostantivi:
+// gestisce solo prima e seconda declinazione regolare.
+// Se la parola non rientra in questi schemi, la scheda finale deve arrivare dai dataset.
 export const analyzeNoun = (lemma) => {
   if (!lemma) return null;
 

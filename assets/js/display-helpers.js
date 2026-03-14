@@ -1,3 +1,13 @@
+// Raccolta di helper condivisi da app.js e word-page.js.
+// L'obiettivo e avere una sola logica per:
+// - normalizzazione del testo
+// - pulizia delle note
+// - pronuncia
+// - costruzione delle schede paradigmatiche
+// In questo modo le pagine restano coerenti tra loro.
+
+// Normalizza il testo per confronti robusti:
+// rimuove accenti combinati, uniforma in minuscolo e toglie spazi superflui.
 export const normalize = (value = "") =>
   value
     .normalize("NFD")
@@ -5,6 +15,7 @@ export const normalize = (value = "") =>
     .toLowerCase()
     .trim();
 
+// Escape HTML per rendere sicuri i valori dinamici inseriti nel DOM.
 export const escapeHtml = (value = "") =>
   value
     .replaceAll("&", "&amp;")
@@ -13,6 +24,8 @@ export const escapeHtml = (value = "") =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 
+// Pulisce le note italiane importate da fonti esterne.
+// Qui togliamo rumore, esempi lunghi, artefatti di encoding e code inutili.
 export const cleanVocabularyItalianNote = (value = "") => {
   if (!value) return "";
   if (/[ØøŁł]/u.test(value) || value.includes("=")) return "";
@@ -40,6 +53,7 @@ export const cleanVocabularyItalianNote = (value = "") => {
   return concise.length > 220 ? `${concise.slice(0, 217).trim()}...` : concise;
 };
 
+// Decide se una nota italiana e abbastanza pulita e utile da mostrare all'utente.
 export const shouldShowItalianNote = (entry, cleanedNote, gloss = "") => {
   if (!cleanedNote) return false;
   const normalizedGloss = normalize(gloss);
@@ -49,6 +63,7 @@ export const shouldShowItalianNote = (entry, cleanedNote, gloss = "") => {
   return true;
 };
 
+// Mappa base per la traslitterazione leggibile del greco in caratteri latini.
 const transliterationMap = {
   α: "a",
   β: "b",
@@ -77,6 +92,9 @@ const transliterationMap = {
   ω: "o",
 };
 
+// Pronuncia/traslitterazione pratica usata nell'interfaccia.
+// Non pretende di essere una ricostruzione fonetica accademica perfetta:
+// serve a dare all'utente un appoggio di lettura immediata.
 export const pronounceGreek = (value = "") => {
   const normalized = normalize(value);
   let output = "";
@@ -130,6 +148,8 @@ export const pronounceGreek = (value = "") => {
   return output || value;
 };
 
+// Coniugatore italiano di supporto per il campo "significato" dei paradigmi verbali.
+// Quando il dataset locale offre gia meanings_it, quel dato ha priorita.
 export const conjugateItalianGloss = (gloss, label) => {
   const value = (gloss || "").split(",")[0].trim().toLowerCase();
   if (!value) return "";
@@ -226,11 +246,13 @@ export const conjugateItalianGloss = (gloss, label) => {
   return value;
 };
 
+// Per i verbi la colonna italiana delle schede usa una forma personale coerente.
 export const buildParadigmMeaning = (gloss, label) => {
   if (!gloss) return label;
   return conjugateItalianGloss(gloss, label) || gloss;
 };
 
+// Per sostantivi e simili il significato viene adattato almeno al caso grammaticale.
 export const buildNominalMeaning = (gloss, label) => {
   if (!gloss) return "";
   const normalized = normalize(label);
@@ -239,6 +261,9 @@ export const buildNominalMeaning = (gloss, label) => {
   return gloss;
 };
 
+// Uniforma due possibili formati dei dati paradigmatici:
+// - forma semplice {label: form}
+// - forma completa {forms: {...}, meanings_it: {...}}
 export const normalizeParadigmSection = (section) => {
   if (!section) return { forms: [], meanings: {} };
   if (section.forms) {
@@ -253,6 +278,8 @@ export const normalizeParadigmSection = (section) => {
   };
 };
 
+// Estrae da un titolo di sezione verbale le tre coordinate usate dai filtri:
+// modo, tempo e voce.
 export const parseVerbSectionMeta = (title = "") => {
   const lowered = normalize(title);
   const mood =
@@ -268,6 +295,7 @@ export const parseVerbSectionMeta = (title = "") => {
   return { mood, tense, voice };
 };
 
+// Trasforma le sezioni verbali in una lista piu comoda da filtrare e renderizzare.
 export const buildVerbSectionEntries = (sections, idPrefix = "verb-section") =>
   sections
     .filter((section) => section.forms.length)
@@ -279,6 +307,7 @@ export const buildVerbSectionEntries = (sections, idPrefix = "verb-section") =>
 
 const uniqueByKey = (items, key) => [...new Set(items.map((item) => item.meta[key]).filter(Boolean))];
 
+// Etichette umane dei metadati verbali usati nelle tendine.
 const labelVerbMeta = (value) =>
   ({
     indicativo: "Indicativo",
@@ -299,6 +328,8 @@ const labelVerbMeta = (value) =>
     "medio/passivo": "Medio/Passivo",
   })[value] || value;
 
+// Costruisce i controlli a tendina delle schede verbali.
+// Le opzioni mostrate dipendono solo da cio che esiste davvero nel verbo selezionato.
 export const renderVerbSectionControls = (entries, idPrefix) => {
   const moods = uniqueByKey(entries, "mood");
   if (entries.length <= 1 || !moods.length) return "";
@@ -321,6 +352,7 @@ export const renderVerbSectionControls = (entries, idPrefix) => {
   `;
 };
 
+// Significati guidati per il paradigma pronominale di αὐτός e strutture simili.
 const getPronounCellMeaning = (caseName, gender, number) => {
   const key = `${normalize(caseName)}|${normalize(number)}|${normalize(gender)}`;
   const map = {
@@ -352,6 +384,7 @@ const getPronounCellMeaning = (caseName, gender, number) => {
   return map[key] || "";
 };
 
+// Costruisce la tabella dei casi per i pronomi.
 const buildPronounGrid = (forms) => {
   const numbers = ["singolare", "plurale"];
   const cases = ["Nominativo", "Genitivo", "Dativo", "Accusativo"];
@@ -407,6 +440,11 @@ const buildPronounGrid = (forms) => {
     .join("");
 };
 
+// Renderer unificato delle schede:
+// - verbo
+// - sostantivo
+// - pronome
+// Lo stesso renderer viene usato in Morfologia e in word.html.
 export const renderParadigmCard = (title, forms, gloss, options = {}) => {
   if (options.mode === "pronoun") {
     return `
@@ -446,6 +484,8 @@ export const renderParadigmCard = (title, forms, gloss, options = {}) => {
   `;
 };
 
+// Collega i filtri dinamici delle sezioni verbali al loro contenuto.
+// L'utente puo vedere tutto oppure restringere per modo/tempo/voce.
 export const wireVerbSectionControls = (root, idPrefix, entries, gloss, options = {}) => {
   const filterRoot = root.querySelector(`[data-verb-filters="${idPrefix}"]`);
   const sectionsRoot = root.querySelector(`[data-verb-sections="${idPrefix}"]`);

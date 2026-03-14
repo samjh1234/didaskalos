@@ -1,3 +1,10 @@
+// app.js e il cuore della single-page application.
+// Gestisce:
+// - routing tramite hash
+// - stato corrente dell'interfaccia
+// - rendering delle viste principali
+// - collegamento tra UI e dataset caricati da data-loader.js
+
 import { loadData } from "./data-loader.js";
 import {
   buildVerbSectionEntries,
@@ -13,6 +20,8 @@ import {
 } from "./display-helpers.js";
 import { analyzeNoun, analyzeVerb } from "./morphology.js";
 
+// Stato centrale della SPA.
+// Ogni vista legge qui i parametri che servono per ricostruire la pagina.
 const state = {
   route: "home",
   selectedLemma: "",
@@ -29,6 +38,7 @@ const state = {
   data: null,
 };
 
+// Riferimenti ai contenitori delle viste principali.
 const views = {
   home: document.querySelector("#home-view"),
   interlinear: document.querySelector("#interlinear-view"),
@@ -37,6 +47,7 @@ const views = {
   morphology: document.querySelector("#morphology-view"),
 };
 
+// Template HTML clonati al bisogno per popolare le viste.
 const templates = {
   home: document.querySelector("#home-template"),
   interlinear: document.querySelector("#interlinear-template"),
@@ -47,7 +58,8 @@ const templates = {
 
 const cloneTemplate = (template) => template.content.cloneNode(true);
 
-
+// Costruisce l'hash dell'URL a partire dalla route e dai parametri.
+// E il meccanismo che rende la pagina condivisibile e ripristinabile.
 const buildHash = (route, params = {}) => {
   const search = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
@@ -57,6 +69,8 @@ const buildHash = (route, params = {}) => {
   return query ? `${route}?${query}` : route;
 };
 
+// Cambio completo di route:
+// aggiorna stato, URL e re-renderizza.
 const setRoute = (route, params = {}) => {
   state.route = route;
   state.selectedLemma = params.lemma || "";
@@ -74,6 +88,9 @@ const setRoute = (route, params = {}) => {
   render();
 };
 
+// Aggiornamento leggero dello stato della route senza cambiare pagina.
+// Qui usiamo history.replaceState per tenere l'URL sincronizzato
+// mentre l'utente cambia filtri, pagine o selezioni.
 const replaceRouteState = (route, params = {}) => {
   state.route = route;
   state.selectedLemma = params.lemma || "";
@@ -91,10 +108,13 @@ const replaceRouteState = (route, params = {}) => {
   history.replaceState(null, "", `#${nextHash}`);
 };
 
+// Apertura della pagina parola dedicata.
+// Qui il lemma viene passato come querystring.
 const goToWord = (lemma) => {
   window.location.href = `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
 };
 
+// Legge lo stato dall'hash e ricostruisce la route corrente.
 const activateRouteFromHash = () => {
   const rawHash = window.location.hash.replace("#", "");
   if (!rawHash) {
@@ -125,6 +145,7 @@ const activateRouteFromHash = () => {
   };
 };
 
+// Estrae capitolo e versetto dai codici BCV presenti nei token.
 const getVerseAddress = (verse) => {
   const bcv = verse?.tokens?.[0]?.bcv;
   if (!bcv) return null;
@@ -134,6 +155,9 @@ const getVerseAddress = (verse) => {
   };
 };
 
+// Recupera il versetto CEI 2008 quando disponibile.
+// Questo testo serve per la riga italiana del versetto,
+// non per i singoli quadrini dell'interlineare.
 const getCeiVerseText = (slug, verse) => {
   const address = getVerseAddress(verse);
   if (!address || !state.data.ceiVerses?.[slug]) return "";
@@ -141,14 +165,17 @@ const getCeiVerseText = (slug, verse) => {
   return rawText.replace(/^\s*\d+\s*-->\s*/, "").trim();
 };
 
+// Accesso rapido al significato base di una voce lessicale.
 const getLexiconGloss = (lemma) => {
   const entry = state.data.lexicon.find((item) => normalize(item.lemma) === normalize(lemma));
   return entry?.glossIt || "";
 };
 
+// Gloss fissi per parole grammaticali e lemma lessicale.
 const getFixedFunctionGloss = (lemma) => state.data.functionGlosses?.[normalize(lemma)]?.glossIt || "";
 const getFixedLexiconGloss = (lemma) => state.data.fixedLexicon?.[normalize(lemma)]?.glossIt || "";
 
+// Per articoli, pronomi e parole-funzione usiamo gloss dipendenti da caso/numero/genere.
 const getFixedFunctionFormGloss = (token) => {
   const lemma = normalize(token.lemma);
   const morphology = normalize(token.morphologyLabel || "");
@@ -165,12 +192,14 @@ const getFixedFunctionFormGloss = (token) => {
   return keys.map((key) => state.data.functionFormGlosses?.[key]).find(Boolean) || "";
 };
 
+// Gloss token-per-token usati soltanto per l'interlineare.
 const getFixedTokenGloss = (verse, tokenIndex) => {
   const bcv = verse?.tokens?.[tokenIndex]?.bcv;
   if (!bcv && bcv !== "") return "";
   return state.data.tokenGlossesFixed?.[`${bcv}:${tokenIndex}`] || "";
 };
 
+// Piccolo dizionario di supporto per interpretare alcune fonti secondarie.
 const dictionaryMeaningToItalian = (detail) => {
   if (!detail) return "";
   const raw = detail.includes("=") ? detail.split("=")[1] : detail;
@@ -228,10 +257,12 @@ const dictionaryMeaningToItalian = (detail) => {
   return dictionaryMap[normalized] || "";
 };
 
+// Primo livello di gloss sensibile alla morfologia per le parole-funzione.
 const getMorphologyAwareGloss = (token) => {
   return getFixedFunctionFormGloss(token);
 };
 
+// Coordinate morfologiche minime usate per confrontare nome/aggettivo/pronome.
 const getTokenTraits = (token) => {
   const morphology = normalize(token?.morphologyLabel || "");
   const caseName = ["nominativo", "genitivo", "dativo", "accusativo"].find((value) =>
@@ -242,11 +273,14 @@ const getTokenTraits = (token) => {
   return [caseName || "", number || "", gender || ""].join("|");
 };
 
+// Verifica se due token condividono gli stessi tratti nominali di base.
 const sameNominalTraits = (left, right) => {
   if (!left || !right) return false;
   return getTokenTraits(left) === getTokenTraits(right);
 };
 
+// Applica una resa italiana minima del caso per sostantivi e aggettivi.
+// Serve soprattutto nell'interlineare quando non esiste gia un gloss token-specifico.
 const applyNominalCaseGloss = (token, baseGloss, previousToken = null, nextToken = null) => {
   if (!baseGloss) return "";
   const morphology = normalize(token.morphologyLabel || "");
@@ -268,10 +302,17 @@ const applyNominalCaseGloss = (token, baseGloss, previousToken = null, nextToken
   return baseGloss;
 };
 
+// Significato lessicale di base del lemma.
 const getBaseLexicalGloss = (token) =>
   getFixedLexiconGloss(token.lemma) ||
   "";
 
+// Regola generale per il significato del singolo quadrino nell'interlineare.
+// Ordine di priorita:
+// 1. gloss fisso del token
+// 2. gloss grammaticale fisso
+// 3. gloss lessicale adattato
+// 4. placeholder di completamento
 const getTokenDisplayGloss = (token, verse = null, tokenIndex = -1) => {
   const fixedTokenGloss =
     verse && Number.isInteger(tokenIndex) && tokenIndex >= 0 ? getFixedTokenGloss(verse, tokenIndex) : "";
@@ -300,12 +341,15 @@ const getTokenDisplayGloss = (token, verse = null, tokenIndex = -1) => {
   return getBaseLexicalGloss(token) || "da completare nel lessico fisso";
 };
 
+// Rende il versetto italiano intero:
+// prima prova il CEI 2008, altrimenti usa il fallback ricostruito dai token.
 const getVerseItalianText = (slug, verse) => {
   const ceiText = getCeiVerseText(slug, verse);
   if (ceiText) return ceiText;
   return verse.tokens.map((token, index) => getTokenDisplayGloss(token, verse, index)).join(" ");
 };
 
+// Home page: presenta i moduli del progetto e calcola le statistiche sintetiche.
 const renderHome = () => {
   views.home.replaceChildren(cloneTemplate(templates.home));
   const summary = views.home.querySelector("#home-summary");
@@ -369,6 +413,10 @@ const renderHome = () => {
   });
 };
 
+// Interlineare:
+// - popola libro/capitolo/versetto
+// - mantiene la selezione nell'URL
+// - disegna il greco, il versetto italiano e i quadrini parola per parola
 const renderInterlinear = () => {
   views.interlinear.replaceChildren(cloneTemplate(templates.interlinear));
   const select = views.interlinear.querySelector("#book-select");
@@ -384,6 +432,7 @@ const renderInterlinear = () => {
     )
     .join("");
 
+  // Estrae capitolo e versetto a partire dal BCV del primo token del versetto.
   const getChapterVerse = (verse) => {
     const bcv = verse?.tokens?.[0]?.bcv || "";
     return {
@@ -392,6 +441,7 @@ const renderInterlinear = () => {
     };
   };
 
+  // Popola la lista dei capitoli disponibili per il libro scelto.
   const populateChapterOptions = (slug) => {
     const verses = gospels[slug] || [];
     const chapters = [...new Set(verses.map((verse) => getChapterVerse(verse).chapter))];
@@ -401,6 +451,7 @@ const renderInterlinear = () => {
     return chapters;
   };
 
+  // Popola la lista dei versetti del capitolo scelto.
   const populateVerseOptions = (slug, chapter) => {
     const verses = (gospels[slug] || []).filter(
       (verse) => getChapterVerse(verse).chapter === Number(chapter),
@@ -412,6 +463,7 @@ const renderInterlinear = () => {
     ].join("");
   };
 
+  // Disegna i risultati effettivi del filtro corrente.
   const drawSelection = (slug, chapter, verseNumber = "") => {
     const verses = (gospels[slug] || []).filter((item) => {
       const address = getChapterVerse(item);
@@ -450,6 +502,7 @@ const renderInterlinear = () => {
     });
   };
 
+  // Sincronizza URL e risultati quando cambia libro/capitolo.
   const syncAndDraw = () => {
     populateVerseOptions(select.value, chapterSelect.value);
     replaceRouteState("interlinear", {
@@ -495,12 +548,18 @@ const renderInterlinear = () => {
   drawSelection(initialSlug, chapterSelect.value, verseSelect.value);
 };
 
+// Vocabolario:
+// - ricerca nel lessico
+// - ranking dei risultati
+// - paginazione
+// - salvataggio della query nello stato dell'URL
 const renderVocabulary = (prefill = "") => {
   views.vocabulary.replaceChildren(cloneTemplate(templates.vocabulary));
   const input = views.vocabulary.querySelector("#vocabulary-search");
   const results = views.vocabulary.querySelector("#vocabulary-results");
   const PAGE_SIZE = 10;
   let currentPage = Number(state.vocabularySelection.page || "1");
+  // Gloss mostrato all'utente: prima il lessico fisso, poi il gloss del lexicon.
   const displayGlossForEntry = (entry) => getFixedLexiconGloss(entry.lemma) || entry.glossIt || "";
   const entries = [...state.data.lexicon].sort((left, right) => {
     const leftScore = Number(Boolean(displayGlossForEntry(left))) + Number(Boolean(left.notesIt));
@@ -509,8 +568,10 @@ const renderVocabulary = (prefill = "") => {
     return right.occurrences - left.occurrences;
   });
 
+  // Costruisce i risultati del vocabolario in base alla query.
   const drawResults = (query) => {
     const needle = normalize(query);
+    // Ranking: il lemma esatto e sempre piu importante dei match rumorosi.
     const scoreVocabularyMatch = (entry) => {
       if (!needle) {
         return 0;
@@ -662,6 +723,7 @@ const renderVocabulary = (prefill = "") => {
   drawResults(prefill);
 };
 
+// Grammatica: semplice rendering della lista di argomenti.
 const renderGrammar = () => {
   views.grammar.replaceChildren(cloneTemplate(templates.grammar));
   const container = views.grammar.querySelector("#grammar-results");
@@ -682,6 +744,11 @@ const renderGrammar = () => {
     .join("");
 };
 
+// Morfologia:
+// - seleziona il tipo di parola
+// - cerca il lemma
+// - usa prima i paradigmi ufficiali del dataset
+// - solo in mancanza, ricorre al fallback minimo di morphology.js
 const renderMorphology = () => {
   views.morphology.replaceChildren(cloneTemplate(templates.morphology));
   const form = views.morphology.querySelector("#morphology-form");
@@ -689,6 +756,7 @@ const renderMorphology = () => {
   const lemmaInput = views.morphology.querySelector("#morph-lemma");
   const output = views.morphology.querySelector("#morphology-result");
 
+  // Cerca il paradigma ufficiale nel dataset corretto in base al tipo di parola.
   const getOfficialParadigm = (lemma, type) => {
     const source =
       type === "noun"
@@ -699,6 +767,7 @@ const renderMorphology = () => {
     return source[lemma] || null;
   };
 
+  // Disegna la scheda morfologica corrente.
   const draw = () => {
     const lemma = normalize(lemmaInput.value);
     replaceRouteState("morphology", {
@@ -796,6 +865,7 @@ const renderMorphology = () => {
   output.innerHTML = `<article class="notice">Inserisci un lemma e scegli il tipo di parola da analizzare.</article>`;
 };
 
+// Collega i link della UI al router interno della SPA.
 const wireRouteLinks = (root = document) => {
   root.querySelectorAll("[data-route], [data-route-link]").forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -807,6 +877,7 @@ const wireRouteLinks = (root = document) => {
   });
 };
 
+// Render centrale: attiva una sola vista per volta e poi la costruisce.
 const render = (vocabularyPrefill = "") => {
   Object.entries(views).forEach(([key, element]) => {
     element.classList.toggle("active", key === state.route);
@@ -825,6 +896,8 @@ const render = (vocabularyPrefill = "") => {
   wireRouteLinks();
 };
 
+// Bootstrap iniziale del sito:
+// carica i dati, legge l'URL e monta la vista giusta.
 const bootstrap = async () => {
   try {
     state.data = await loadData();
@@ -840,6 +913,7 @@ const bootstrap = async () => {
   }
 };
 
+// Se cambia l'hash, il sito ricostruisce lo stato corrispondente.
 window.addEventListener("hashchange", () => {
   activateRouteFromHash();
   render();

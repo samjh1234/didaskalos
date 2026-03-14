@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="it">
   <head>
+    <!--
+      Pagina principale dell'app.
+      Qui vivono:
+      - la struttura fissa della shell del sito
+      - i template HTML delle viste renderizzate da app.js
+      - il bootstrap con versioning per evitare problemi di cache nel browser
+    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Didaskalos</title>
@@ -11,6 +18,7 @@
     <link id="app-styles" rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
+    <!-- Navigazione globale condivisa tra tutte le viste principali del sito -->
     <header class="site-header">
       <nav class="main-nav">
         <a href="#home" data-route="home">Home</a>
@@ -21,6 +29,10 @@
       </nav>
     </header>
 
+    <!--
+      Contenitore delle viste.
+      app.js attiva una sola section per volta in base all'hash dell'URL.
+    -->
     <main id="app">
       <section id="home-view" class="view active"></section>
       <section id="interlinear-view" class="view"></section>
@@ -29,10 +41,12 @@
       <section id="morphology-view" class="view"></section>
     </main>
 
+    <!-- Footer semplice condiviso -->
     <footer class="site-footer">
       <p>Copyright &copy; Seminario Vescovile di Fiesole, LazzaroMaria &#10013;</p>
     </footer>
 
+    <!-- Home: presentazione del progetto e accesso ai moduli principali -->
     <template id="home-template">
       <section class="hero">
         <div class="hero-copy hero-visual">
@@ -56,6 +70,7 @@
       <section class="grid summary-grid" id="home-summary"></section>
     </template>
 
+    <!-- Interlineare: filtri libro/capitolo/versetto e risultati -->
     <template id="interlinear-template">
       <section class="page-head">
         <p>Leggi il testo greco del Nuovo Testamento parola per parola e passa dalla lettura all’analisi della singola voce.</p>
@@ -77,6 +92,7 @@
       <section class="stack" id="interlinear-results"></section>
     </template>
 
+    <!-- Vocabolario: ricerca per lemma, forma o significato -->
     <template id="vocabulary-template">
       <section class="page-head">
         <p>Consulta lemmi, significati e note utili per orientarti nello studio del greco del Nuovo Testamento.</p>
@@ -90,6 +106,7 @@
       <section class="stack" id="vocabulary-results"></section>
     </template>
 
+    <!-- Grammatica: elenco di argomenti sintetici -->
     <template id="grammar-template">
       <section class="page-head">
         <p>Raccoglie gli argomenti essenziali per accompagnare la lettura del koine in modo ordinato e progressivo.</p>
@@ -97,6 +114,7 @@
       <section class="stack" id="grammar-results"></section>
     </template>
 
+    <!-- Morfologia: ricerca e scheda paradigmatica della parola -->
     <template id="morphology-template">
       <section class="page-head">
         <p>Esplora forme, paradigmi e categorie grammaticali del greco del Nuovo Testamento in uno spazio dedicato allo studio morfologico.</p>
@@ -118,6 +136,12 @@
       <section id="morphology-result"></section>
     </template>
 
+    <!--
+      Bootstrap frontend:
+      1. legge la versione del sito senza cache
+      2. ricarica CSS e JS con querystring ?v=...
+      3. forza il browser a usare la versione aggiornata dei file statici
+    -->
     <script type="module">
       let appVersion = "dev";
       try {
