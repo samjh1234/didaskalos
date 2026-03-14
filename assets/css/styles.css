@@ -1009,25 +1009,36 @@ code {
   }
 
   /*
-    Nella pagina Morfologia le schede mobili usano un allineamento centrale
-    per rendere piu leggibili i quattro blocchi interni della singola forma.
+    Nella pagina Morfologia e nella pagina parola le schede mobili usano
+    un allineamento centrale per rendere piu leggibili i quattro blocchi
+    interni della singola forma.
   */
   #morphology-result .paradigm-card,
+  #word-page-result .paradigm-card,
   #morphology-result .paradigm-header,
+  #word-page-result .paradigm-header,
   #morphology-result .paradigm-subtitle,
+  #word-page-result .paradigm-subtitle,
   #morphology-result .paradigm-list,
-  #morphology-result .paradigm-row {
+  #word-page-result .paradigm-list,
+  #morphology-result .paradigm-row,
+  #word-page-result .paradigm-row {
     text-align: center;
   }
 
-  #morphology-result .paradigm-header {
+  #morphology-result .paradigm-header,
+  #word-page-result .paradigm-header {
     justify-items: center;
   }
 
   #morphology-result .paradigm-label,
+  #word-page-result .paradigm-label,
   #morphology-result .paradigm-greek,
+  #word-page-result .paradigm-greek,
   #morphology-result .paradigm-pronunciation,
-  #morphology-result .paradigm-meaning {
+  #word-page-result .paradigm-pronunciation,
+  #morphology-result .paradigm-meaning,
+  #word-page-result .paradigm-meaning {
     text-align: center;
     justify-self: center;
   }
