@@ -55,5 +55,6 @@ python3 scripts/parse_cei2008_nt.py
 Il risultato viene salvato in:
 
 - Il file CEI usato dal sito a runtime viene pubblicato in `assets/data/cei2008_verses.json`
+- La cartella `private_data/cei2008` non e piu necessaria per il funzionamento del sito pubblicato.
 
 Il sito usa `nt_verses.json` come contesto italiano del versetto quando disponibile.
