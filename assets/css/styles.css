@@ -812,13 +812,42 @@ code {
   .hero-visual {
     padding: 0.95rem 0.9rem 0.85rem;
     min-height: 10.5rem;
+    width: 100%;
     background-position: center;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-visual::before {
+    background:
+      linear-gradient(180deg, rgba(245, 239, 228, 0.56), rgba(245, 239, 228, 0.62));
+  }
+
+  .hero-copy.hero-visual {
+    background:
+      url("../graphics/bible1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: rgba(218, 200, 175, 0.78);
   }
 
   .hero h1.project-name {
     font-size: clamp(2rem, 9vw, 3rem);
+    margin: 0;
+  }
+
+  .hero-copy {
+    display: flex;
+    width: 100%;
+    min-height: 10.5rem;
+    padding: 0.95rem 0.9rem 0.85rem;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero .project-name + p {
