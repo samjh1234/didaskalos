@@ -114,20 +114,16 @@
       <section class="stack" id="grammar-results"></section>
     </template>
 
-    <!-- Morfologia: ricerca e scheda paradigmatica della parola -->
+    <!--
+      Morfologia: ricerca e scheda paradigmatica della parola.
+      Il tipo grammaticale non viene piu chiesto all'utente:
+      la pagina lo riconosce automaticamente dal lessico e dai dataset locali.
+    -->
     <template id="morphology-template">
       <section class="page-head">
         <p>Esplora forme, paradigmi e categorie grammaticali del greco del Nuovo Testamento in uno spazio dedicato allo studio morfologico.</p>
       </section>
       <form class="toolbar" id="morphology-form">
-        <label>
-          Tipo
-          <select id="morph-type">
-            <option value="verb">Verbo</option>
-            <option value="noun">Sostantivo</option>
-            <option value="pronoun">Pronome</option>
-          </select>
-        </label>
         <label class="grow">
           Lemma
           <input id="morph-lemma" type="text" placeholder="es. λυω oppure λογος">

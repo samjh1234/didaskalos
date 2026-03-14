@@ -127,19 +127,10 @@ const getCeiVerseText = (data, occurrence) => {
   return rawText.replace(/^\s*\d+\s*-->\s*/, "").trim();
 };
 
-// Traduce la parte del discorso in uno dei tipi attesi dalla pagina morfologia.
-const morphologyTypeFromPartOfSpeech = (partOfSpeech = "") =>
-  normalize(partOfSpeech).startsWith("pronome")
-    ? "pronoun"
-    : normalize(partOfSpeech) === "sostantivo"
-      ? "noun"
-      : "verb";
-
 // Link diretto dalla scheda parola alla pagina Morfologia.
-const buildMorphologyHref = (lemma, partOfSpeech) =>
-  `index.html#morphology?lemma=${encodeURIComponent(normalize(lemma))}&type=${encodeURIComponent(
-    morphologyTypeFromPartOfSpeech(partOfSpeech),
-  )}`;
+// La pagina riconosce da sola il tipo grammaticale del lemma.
+const buildMorphologyHref = (lemma) =>
+  `index.html#morphology?lemma=${encodeURIComponent(normalize(lemma))}`;
 
 // Link diretto dalla scheda parola all'Interlineare sul versetto preciso.
 const buildInterlinearHref = (occurrence) => {

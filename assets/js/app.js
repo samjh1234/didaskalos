@@ -745,14 +745,13 @@ const renderGrammar = () => {
 };
 
 // Morfologia:
-// - seleziona il tipo di parola
+// - riconosce automaticamente il tipo di parola
 // - cerca il lemma
 // - usa prima i paradigmi ufficiali del dataset
 // - solo in mancanza, ricorre al fallback minimo di morphology.js
 const renderMorphology = () => {
   views.morphology.replaceChildren(cloneTemplate(templates.morphology));
   const form = views.morphology.querySelector("#morphology-form");
-  const typeSelect = views.morphology.querySelector("#morph-type");
   const lemmaInput = views.morphology.querySelector("#morph-lemma");
   const output = views.morphology.querySelector("#morphology-result");
 
@@ -767,32 +766,50 @@ const renderMorphology = () => {
     return source[lemma] || null;
   };
 
+  // Riconosce il tipo grammaticale partendo prima dal lessico
+  // e poi dai dataset paradigmatici ufficiali.
+  const resolveMorphType = (lemma) => {
+    const lexiconEntry = state.data.lexicon.find((entry) => normalize(entry.lemma) === lemma);
+    const partOfSpeech = normalize(lexiconEntry?.partOfSpeech || "");
+
+    if (partOfSpeech.startsWith("pronome")) return "pronoun";
+    if (partOfSpeech === "sostantivo") return "noun";
+    if (partOfSpeech === "verbo") return "verb";
+
+    if (state.data.pronounParadigms?.[lemma]) return "pronoun";
+    if (state.data.nounParadigms?.[lemma]) return "noun";
+    if (state.data.verbParadigms?.[lemma]) return "verb";
+
+    if (lemma.endsWith("ω") || lemma.endsWith("μι")) return "verb";
+    return "noun";
+  };
+
   // Disegna la scheda morfologica corrente.
   const draw = () => {
     const lemma = normalize(lemmaInput.value);
+    const detectedType = lemma ? resolveMorphType(lemma) : "";
     replaceRouteState("morphology", {
       lemma,
-      type: typeSelect.value,
     });
     if (!lemma) {
       output.innerHTML = `<article class="notice">Inserisci un lemma per visualizzare la scheda morfologica.</article>`;
       return;
     }
 
-    const officialCandidate = getOfficialParadigm(lemma, typeSelect.value);
+    const officialCandidate = getOfficialParadigm(lemma, detectedType);
     const official =
       officialCandidate && Object.keys(officialCandidate.paradigms || {}).length
         ? officialCandidate
         : null;
     const result =
-      typeSelect.value === "noun"
+      detectedType === "noun"
         ? analyzeNoun(lemma)
-        : typeSelect.value === "pronoun"
+        : detectedType === "pronoun"
           ? { forms: {}, pattern: "Pronome", note: "Scheda pronominale disponibile." }
           : analyzeVerb(lemma);
     const meaning =
       official?.meaning_it ||
-      (typeSelect.value === "noun" ? "sostantivo" : typeSelect.value === "pronoun" ? "pronome" : "verbo");
+      (detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo");
     const title = official ? official.class : result.pattern;
     const note = official ? "" : result.note;
     const sections = official
@@ -804,7 +821,7 @@ const renderMorphology = () => {
     const filledSections = sections.filter((section) => section.forms.length);
     const verbSelectorId = `morph-${lemma}`;
     const verbEntries =
-      typeSelect.value === "verb" && official ? buildVerbSectionEntries(filledSections, verbSelectorId) : [];
+      detectedType === "verb" && official ? buildVerbSectionEntries(filledSections, verbSelectorId) : [];
     const showTopNote = Boolean(note) && filledSections.length > 0;
     output.innerHTML = `
       <article class="panel">
@@ -818,9 +835,9 @@ const renderMorphology = () => {
                   .map((section) =>
                     renderParadigmCard(section.title, section.forms, meaning, {
                       mode:
-                        typeSelect.value === "pronoun"
+                        detectedType === "pronoun"
                           ? "pronoun"
-                          : typeSelect.value === "noun"
+                          : detectedType === "noun"
                             ? "case"
                             : "default",
                       meanings: section.meanings,
@@ -847,22 +864,16 @@ const renderMorphology = () => {
     draw();
   });
 
-  typeSelect.addEventListener("change", () => {
-    draw();
-  });
-
   if (state.selectedLemma) {
     lemmaInput.value = state.selectedLemma;
-    typeSelect.value = state.selectedMorphType;
     draw();
     return;
   }
 
   replaceRouteState("morphology", {
     lemma: "",
-    type: typeSelect.value,
   });
-  output.innerHTML = `<article class="notice">Inserisci un lemma e scegli il tipo di parola da analizzare.</article>`;
+  output.innerHTML = `<article class="notice">Inserisci un lemma per visualizzare la scheda morfologica.</article>`;
 };
 
 // Collega i link della UI al router interno della SPA.

@@ -943,9 +943,10 @@ code {
 
   .paradigm-row {
     grid-template-columns: 1fr;
-    gap: 0.24rem;
-    padding: 0.85rem 0.9rem;
+    gap: 0;
+    padding: 0.34rem 0.38rem;
     background: linear-gradient(180deg, rgba(255, 250, 243, 0.98), rgba(244, 234, 219, 0.94));
+    border-radius: 14px;
   }
 
   .paradigm-label,
@@ -955,16 +956,57 @@ code {
     display: block;
     width: 100%;
     text-align: left;
+    padding: 0.42rem 0.5rem;
+  }
+
+  .paradigm-row > * + * {
+    border-top: 1px solid rgba(218, 200, 175, 0.9);
   }
 
   .paradigm-label {
     font-size: 0.92rem;
     font-weight: 700;
+    color: var(--accent);
+    background: rgba(240, 219, 199, 0.42);
+    border-radius: 10px 10px 0 0;
   }
 
   .paradigm-greek {
     font-size: 1.08rem;
     line-height: 1.2;
+  }
+
+  .paradigm-pronunciation {
+    font-size: 0.92rem;
+  }
+
+  .paradigm-meaning {
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 0 0 10px 10px;
+  }
+
+  /*
+    Nella pagina Morfologia le schede mobili usano un allineamento centrale
+    per rendere piu leggibili i quattro blocchi interni della singola forma.
+  */
+  #morphology-result .paradigm-card,
+  #morphology-result .paradigm-header,
+  #morphology-result .paradigm-subtitle,
+  #morphology-result .paradigm-list,
+  #morphology-result .paradigm-row {
+    text-align: center;
+  }
+
+  #morphology-result .paradigm-header {
+    justify-items: center;
+  }
+
+  #morphology-result .paradigm-label,
+  #morphology-result .paradigm-greek,
+  #morphology-result .paradigm-pronunciation,
+  #morphology-result .paradigm-meaning {
+    text-align: center;
+    justify-self: center;
   }
 
   .paradigm-filters {
@@ -1048,6 +1090,21 @@ code {
   .paradigm-filters select {
     padding: 0.58rem 0.48rem;
     font-size: 0.8rem;
+  }
+
+  .paradigm-row {
+    padding: 0.28rem 0.3rem;
+  }
+
+  .paradigm-label,
+  .paradigm-greek,
+  .paradigm-pronunciation,
+  .paradigm-meaning {
+    padding: 0.36rem 0.4rem;
+  }
+
+  .paradigm-greek {
+    font-size: 1rem;
   }
 
   .summary-card {
