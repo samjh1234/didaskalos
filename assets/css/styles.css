@@ -846,12 +846,10 @@ code {
     background:
       linear-gradient(180deg, rgba(255, 250, 243, 0.98), rgba(240, 219, 199, 0.92));
     border-color: rgba(184, 139, 102, 0.46);
-    box-shadow: 0 16px 30px rgba(77, 45, 21, 0.12);
-  }
-
-  .summary-grid .summary-card:nth-child(1),
-  .summary-grid .summary-card:nth-child(4) {
-    grid-column: 1 / -1;
+    box-shadow:
+      0 14px 22px rgba(77, 45, 21, 0.12),
+      0 3px 0 rgba(188, 155, 124, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
   }
 
   .summary-grid .panel h3 {
@@ -877,17 +875,18 @@ code {
   }
 
   .summary-card:nth-child(2) {
-    transform: translateY(0.15rem);
+    transform: translateY(0.12rem) rotate(-0.4deg);
   }
 
   .summary-card:nth-child(3) {
-    transform: translateY(-0.1rem);
+    transform: translateY(-0.08rem) rotate(0.35deg);
   }
 
   .summary-card:nth-child(4) {
     background:
       radial-gradient(circle at bottom left, rgba(140, 76, 35, 0.16), transparent 9rem),
       linear-gradient(180deg, rgba(255, 250, 243, 0.98), rgba(240, 219, 199, 0.92));
+    transform: translateY(0.08rem) rotate(-0.2deg);
   }
 
   .paradigm-row {
@@ -952,11 +951,24 @@ code {
   }
 
   .summary-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.52rem;
   }
 
-  .summary-grid .summary-card:nth-child(1),
-  .summary-grid .summary-card:nth-child(4) {
-    grid-column: auto;
+  .summary-card {
+    padding: 0.74rem 0.72rem 0.7rem;
+  }
+
+  .summary-grid .panel h3 {
+    font-size: 0.95rem;
+  }
+
+  .summary-grid .panel p {
+    font-size: 0.88rem;
+    line-height: 1.28;
+  }
+
+  .summary-stat {
+    font-size: 0.8rem;
   }
 }
