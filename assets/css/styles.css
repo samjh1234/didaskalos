@@ -826,6 +826,10 @@ code {
   }
 
   .hero-copy.hero-visual {
+    display: grid;
+    place-items: center;
+    min-height: 10.5rem;
+    padding: 0.9rem;
     background:
       url("../graphics/bible1.png");
     background-size: cover;
@@ -837,6 +841,13 @@ code {
   .hero h1.project-name {
     font-size: clamp(2rem, 9vw, 3rem);
     margin: 0;
+  }
+
+  .hero-copy.hero-visual .project-name {
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    text-align: center;
   }
 
   .hero-copy {
