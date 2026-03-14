@@ -17,6 +17,10 @@ const state = {
   route: "home",
   selectedLemma: "",
   selectedMorphType: "verb",
+  vocabularySelection: {
+    query: "",
+    page: "1",
+  },
   interlinearSelection: {
     book: "",
     chapter: "",
@@ -57,6 +61,10 @@ const setRoute = (route, params = {}) => {
   state.route = route;
   state.selectedLemma = params.lemma || "";
   state.selectedMorphType = params.type || "verb";
+  state.vocabularySelection = {
+    query: params.q || "",
+    page: params.page || "1",
+  };
   state.interlinearSelection = {
     book: params.book || "",
     chapter: params.chapter || "",
@@ -64,6 +72,23 @@ const setRoute = (route, params = {}) => {
   };
   window.location.hash = buildHash(route, params);
   render();
+};
+
+const replaceRouteState = (route, params = {}) => {
+  state.route = route;
+  state.selectedLemma = params.lemma || "";
+  state.selectedMorphType = params.type || "verb";
+  state.vocabularySelection = {
+    query: params.q || "",
+    page: params.page || "1",
+  };
+  state.interlinearSelection = {
+    book: params.book || "",
+    chapter: params.chapter || "",
+    verse: params.verse || "",
+  };
+  const nextHash = buildHash(route, params);
+  history.replaceState(null, "", `#${nextHash}`);
 };
 
 const goToWord = (lemma) => {
@@ -76,6 +101,7 @@ const activateRouteFromHash = () => {
     state.route = "home";
     state.selectedLemma = "";
     state.selectedMorphType = "verb";
+    state.vocabularySelection = { query: "", page: "1" };
     state.interlinearSelection = { book: "", chapter: "", verse: "" };
     return;
   }
@@ -85,7 +111,13 @@ const activateRouteFromHash = () => {
   const allowed = Object.keys(views);
   state.route = allowed.includes(hash) ? hash : "home";
   state.selectedLemma = normalize(params.get("lemma") || "");
-  state.selectedMorphType = params.get("type") === "noun" ? "noun" : "verb";
+  state.selectedMorphType = ["verb", "noun", "pronoun"].includes(params.get("type"))
+    ? params.get("type")
+    : "verb";
+  state.vocabularySelection = {
+    query: params.get("q") || "",
+    page: params.get("page") || "1",
+  };
   state.interlinearSelection = {
     book: params.get("book") || "",
     chapter: params.get("chapter") || "",
@@ -420,6 +452,11 @@ const renderInterlinear = () => {
 
   const syncAndDraw = () => {
     populateVerseOptions(select.value, chapterSelect.value);
+    replaceRouteState("interlinear", {
+      book: select.value,
+      chapter: chapterSelect.value,
+      verse: verseSelect.value,
+    });
     drawSelection(select.value, chapterSelect.value, verseSelect.value);
   };
 
@@ -436,6 +473,11 @@ const renderInterlinear = () => {
   });
 
   verseSelect.addEventListener("change", () => {
+    replaceRouteState("interlinear", {
+      book: select.value,
+      chapter: chapterSelect.value,
+      verse: verseSelect.value,
+    });
     drawSelection(select.value, chapterSelect.value, verseSelect.value);
   });
 
@@ -445,6 +487,11 @@ const renderInterlinear = () => {
   chapterSelect.value = String(state.interlinearSelection.chapter || chapters[0] || 1);
   populateVerseOptions(initialSlug, chapterSelect.value);
   verseSelect.value = state.interlinearSelection.verse || "";
+  replaceRouteState("interlinear", {
+    book: initialSlug,
+    chapter: chapterSelect.value,
+    verse: verseSelect.value,
+  });
   drawSelection(initialSlug, chapterSelect.value, verseSelect.value);
 };
 
@@ -453,7 +500,7 @@ const renderVocabulary = (prefill = "") => {
   const input = views.vocabulary.querySelector("#vocabulary-search");
   const results = views.vocabulary.querySelector("#vocabulary-results");
   const PAGE_SIZE = 10;
-  let currentPage = 1;
+  let currentPage = Number(state.vocabularySelection.page || "1");
   const displayGlossForEntry = (entry) => getFixedLexiconGloss(entry.lemma) || entry.glossIt || "";
   const entries = [...state.data.lexicon].sort((left, right) => {
     const leftScore = Number(Boolean(displayGlossForEntry(left))) + Number(Boolean(left.notesIt));
@@ -513,6 +560,7 @@ const renderVocabulary = (prefill = "") => {
     }
 
     const totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
+    currentPage = Math.min(Math.max(currentPage, 1), totalPages);
     currentPage = Math.min(Math.max(1, currentPage), totalPages);
     const start = (currentPage - 1) * PAGE_SIZE;
     const pagedMatches = matches.slice(start, start + PAGE_SIZE);
@@ -582,6 +630,10 @@ const renderVocabulary = (prefill = "") => {
     results.querySelectorAll("[data-page-number]").forEach((button) => {
       button.addEventListener("click", () => {
         currentPage = Number(button.dataset.pageNumber || "1");
+        replaceRouteState("vocabulary", {
+          q: input.value.trim(),
+          page: String(currentPage),
+        });
         drawResults(input.value);
       });
     });
@@ -589,6 +641,10 @@ const renderVocabulary = (prefill = "") => {
     results.querySelectorAll("[data-page-nav]").forEach((button) => {
       button.addEventListener("click", () => {
         currentPage += button.dataset.pageNav === "next" ? 1 : -1;
+        replaceRouteState("vocabulary", {
+          q: input.value.trim(),
+          page: String(currentPage),
+        });
         drawResults(input.value);
       });
     });
@@ -597,6 +653,10 @@ const renderVocabulary = (prefill = "") => {
   input.value = prefill;
   input.addEventListener("input", () => {
     currentPage = 1;
+    replaceRouteState("vocabulary", {
+      q: input.value.trim(),
+      page: "1",
+    });
     drawResults(input.value);
   });
   drawResults(prefill);
@@ -641,6 +701,10 @@ const renderMorphology = () => {
 
   const draw = () => {
     const lemma = normalize(lemmaInput.value);
+    replaceRouteState("morphology", {
+      lemma,
+      type: typeSelect.value,
+    });
     if (!lemma) {
       output.innerHTML = `<article class="notice">Inserisci un lemma per visualizzare la scheda morfologica.</article>`;
       return;
@@ -725,6 +789,10 @@ const renderMorphology = () => {
     return;
   }
 
+  replaceRouteState("morphology", {
+    lemma: "",
+    type: typeSelect.value,
+  });
   output.innerHTML = `<article class="notice">Inserisci un lemma e scegli il tipo di parola da analizzare.</article>`;
 };
 
@@ -750,7 +818,7 @@ const render = (vocabularyPrefill = "") => {
 
   if (state.route === "home") renderHome();
   if (state.route === "interlinear") renderInterlinear();
-  if (state.route === "vocabulary") renderVocabulary(vocabularyPrefill);
+  if (state.route === "vocabulary") renderVocabulary(vocabularyPrefill || state.vocabularySelection.query);
   if (state.route === "grammar") renderGrammar();
   if (state.route === "morphology") renderMorphology();
 
