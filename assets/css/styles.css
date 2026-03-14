@@ -138,6 +138,12 @@ main {
   text-align: center;
 }
 
+.copyright-cross {
+  color: #17120e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-variant-emoji: text;
+}
+
 .view {
   /* La SPA mostra una sola vista alla volta */
   display: none;
