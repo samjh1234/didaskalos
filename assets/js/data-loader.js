@@ -44,7 +44,9 @@ export const loadData = async () => {
     loadJson("assets/data/lexicon.json"),
     loadJson("assets/data/fixed_lexicon.json"),
     loadJson("assets/data/token_glosses_fixed.json"),
-    loadOptionalJson("private_data/cei2008/nt_verses.json"),
+    // Il testo CEI usato a runtime deve stare dentro assets/data,
+    // altrimenti un server statico puo rispondere 404 su cartelle private/non pubblicate.
+    loadOptionalJson("assets/data/cei2008_verses.json"),
     loadJson("assets/data/verb_paradigms.json"),
     loadOptionalJson("assets/data/verb_lemmas.json"),
     loadOptionalJson("assets/data/verb_non_finite.json"),

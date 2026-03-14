@@ -222,7 +222,7 @@ File:
 - `private_data/lexicon_it.example.json`
 - `private_data/contextual_glosses_it.example.json`
 - `private_data/lexicon_it.json`
-- `private_data/cei2008/nt_verses.json`
+- `assets/data/cei2008_verses.json`
 
 Workflow minimo:
 
