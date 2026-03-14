@@ -828,6 +828,7 @@ code {
   .hero-copy.hero-visual {
     display: grid;
     place-items: center;
+    align-content: center;
     min-height: 10.5rem;
     padding: 0.9rem;
     background:
