@@ -399,9 +399,14 @@ button {
 }
 
 .print-icon {
-  color: #17120e;
-  font-size: 1.18rem;
-  line-height: 1;
+  width: 1.22rem;
+  height: 1.22rem;
+  display: inline-block;
+  flex: 0 0 1.22rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2317120e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 8V3h10v5'/%3E%3Crect x='5' y='14' width='14' height='7'/%3E%3Cpath d='M5 10h14a2 2 0 0 1 2 2v4h-4'/%3E%3Cpath d='M7 17h10'/%3E%3Ccircle cx='17.5' cy='12.5' r='.8' fill='%2317120e' stroke='none'/%3E%3C/svg%3E");
 }
 
 .panel-actions {
@@ -1207,6 +1212,24 @@ code {
   .panel-actions {
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  #word-page-result .panel-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  #word-page-result .panel-actions {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  #word-page-result .print-button {
+    justify-content: center;
+    min-width: 8.25rem;
   }
 
   .summary-stat {

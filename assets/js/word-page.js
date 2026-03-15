@@ -473,8 +473,8 @@ const renderWord = async () => {
               filledSections.length
                 ? `
                   <div class="panel-actions">
-                    <button type="button" class="secondary-button print-button" data-print-paradigm-full><span class="print-icon" aria-hidden="true">⎙</span> Completa</button>
-                    <button type="button" class="secondary-button print-button" data-print-paradigm-current><span class="print-icon" aria-hidden="true">⎙</span> Attuale</button>
+                    <button type="button" class="secondary-button print-button" data-print-paradigm-full><span class="print-icon" aria-hidden="true"></span> Completa</button>
+                    <button type="button" class="secondary-button print-button" data-print-paradigm-current><span class="print-icon" aria-hidden="true"></span> Attuale</button>
                   </div>
                 `
                 : ""
