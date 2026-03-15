@@ -73,6 +73,7 @@ main {
   gap: 0.55rem;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   padding: 0.7rem;
   background: color-mix(in srgb, var(--accent-soft) 72%, white 28%);
   border: 1px solid var(--line);
@@ -93,6 +94,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   min-height: 40px;
   padding: 0.65rem 0.95rem;
   border-radius: 999px;
@@ -710,6 +712,11 @@ select {
   gap: 0.65rem;
 }
 
+.grammar-detail-nav .secondary-button {
+  padding: 0.56rem 0.82rem;
+  font-size: 0.92rem;
+}
+
 .lexicon-head h2 {
   margin: 0;
   font-size: 1.45rem;
@@ -1124,6 +1131,11 @@ code {
   .grammar-breadcrumb {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .grammar-detail-nav .secondary-button {
+    padding: 0.5rem 0.72rem;
+    font-size: 0.86rem;
   }
 
   .summary-grid {
