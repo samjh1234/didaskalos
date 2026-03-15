@@ -8,7 +8,6 @@
 import { loadData } from "./data-loader.js";
 import {
   buildVerbSectionEntries,
-  cleanVocabularyItalianNote,
   escapeHtml,
   normalize,
   normalizeParadigmSection,
@@ -16,7 +15,6 @@ import {
   pronounceGreek,
   renderParadigmCard,
   renderVerbSectionControls,
-  shouldShowItalianNote,
   wireVerbSectionControls,
 } from "./display-helpers.js";
 import { analyzeNoun, analyzeVerb } from "./morphology.js";
@@ -624,11 +622,31 @@ const renderVocabulary = (prefill = "") => {
   // Gloss mostrato all'utente: prima il lessico fisso, poi il gloss del lexicon.
   const displayGlossForEntry = (entry) => getFixedLexiconGloss(entry.lemma) || entry.glossIt || "";
   const entries = [...state.data.lexicon].sort((left, right) => {
-    const leftScore = Number(Boolean(displayGlossForEntry(left))) + Number(Boolean(left.notesIt));
-    const rightScore = Number(Boolean(displayGlossForEntry(right))) + Number(Boolean(right.notesIt));
+    const leftScore = Number(Boolean(displayGlossForEntry(left)));
+    const rightScore = Number(Boolean(displayGlossForEntry(right)));
     if (rightScore !== leftScore) return rightScore - leftScore;
     return right.occurrences - left.occurrences;
   });
+
+  // Render condiviso della barra di paginazione del vocabolario.
+  // Viene mostrata sia sopra che sotto i risultati correnti.
+  const renderVocabularyPagination = (current, total, pageNumbers) => `
+    <nav class="pagination-bar" aria-label="Pagine vocabolario">
+      <button type="button" class="pagination-arrow" data-page-nav="prev" ${current === 1 ? "disabled" : ""}>←</button>
+      ${pageNumbers
+        .map(
+          (page) => `
+            <button
+              type="button"
+              class="pagination-page${page === current ? " is-active" : ""}"
+              data-page-number="${page}"
+            >${page}</button>
+          `,
+        )
+        .join("")}
+      <button type="button" class="pagination-arrow" data-page-nav="next" ${current === total ? "disabled" : ""}>→</button>
+    </nav>
+  `;
 
   // Costruisce i risultati del vocabolario in base alla query.
   const drawResults = (query) => {
@@ -643,7 +661,6 @@ const renderVocabulary = (prefill = "") => {
       const greek = normalize(entry.greek);
       const gloss = normalize(displayGlossForEntry(entry));
       const notes = normalize(entry.notes || "");
-      const notesIt = normalize(entry.notesIt || "");
 
       if (greek === needle) return 100;
       if (lemma === needle) return 95;
@@ -654,7 +671,6 @@ const renderVocabulary = (prefill = "") => {
       if (greek.includes(needle)) return 30;
       if (lemma.includes(needle)) return 25;
       if (gloss.includes(needle)) return 15;
-      if (notesIt.includes(needle)) return 5;
       if (notes.includes(needle)) return 1;
       return -1;
     };
@@ -667,10 +683,8 @@ const renderVocabulary = (prefill = "") => {
           .sort((left, right) => {
             if (right.matchScore !== left.matchScore) return right.matchScore - left.matchScore;
 
-            const rightDataScore =
-              Number(Boolean(displayGlossForEntry(right.entry))) + Number(Boolean(right.entry.notesIt));
-            const leftDataScore =
-              Number(Boolean(displayGlossForEntry(left.entry))) + Number(Boolean(left.entry.notesIt));
+            const rightDataScore = Number(Boolean(displayGlossForEntry(right.entry)));
+            const leftDataScore = Number(Boolean(displayGlossForEntry(left.entry)));
             if (rightDataScore !== leftDataScore) return rightDataScore - leftDataScore;
 
             return right.entry.occurrences - left.entry.occurrences;
@@ -695,53 +709,38 @@ const renderVocabulary = (prefill = "") => {
       pageNumbers.push(page);
     }
 
-    results.innerHTML = pagedMatches
-      .map(
-        (entry) => {
-          const cleanNote = cleanVocabularyItalianNote(entry.notesIt || "");
-          const showItalianNote = shouldShowItalianNote(
-            entry,
-            cleanNote,
-            displayGlossForEntry(entry) || "",
-          );
-          return `
-          <article class="panel">
+    const cardsHtml = pagedMatches
+      .map((entry) => {
+        return `
+          <article class="panel lexicon-card">
             <div class="lexicon-head">
               <h2>${escapeHtml(entry.greek)}</h2>
               <span class="meta">${escapeHtml(entry.partOfSpeech)}</span>
             </div>
-            <p class="word-pronunciation">${escapeHtml(pronounceGreek(entry.greek))}</p>
-            <p><strong>Lemma:</strong> ${escapeHtml(entry.lemma)}</p>
-            <p><strong>Significato:</strong> ${escapeHtml(displayGlossForEntry(entry) || "Da definire nel lessico italiano privato")}</p>
-            ${
-              showItalianNote
-                ? `<p><strong>Nota italiana:</strong> ${escapeHtml(cleanNote)}</p>`
-                : ""
-            }
-            <p><a href="word.html?lemma=${encodeURIComponent(normalize(entry.lemma))}" data-word-link="${escapeHtml(
+            <div class="lexicon-meta-grid">
+              <div class="lexicon-meta-cell">
+                <strong>Pronuncia</strong>
+                <span class="word-pronunciation">${escapeHtml(pronounceGreek(entry.greek))}</span>
+              </div>
+              <div class="lexicon-meta-cell">
+                <strong>Lemma</strong>
+                <span>${escapeHtml(entry.lemma)}</span>
+              </div>
+              <div class="lexicon-meta-cell lexicon-meta-cell-wide">
+                <strong>Significato</strong>
+                <span>${escapeHtml(displayGlossForEntry(entry) || "Da definire nel lessico italiano")}</span>
+              </div>
+            </div>
+            <p class="lexicon-link-row"><a href="word.html?lemma=${encodeURIComponent(normalize(entry.lemma))}" data-word-link="${escapeHtml(
               entry.lemma,
             )}">Apri analisi completa</a></p>
           </article>
         `;
-        },
-      )
-      .join("") + `
-        <nav class="pagination-bar" aria-label="Pagine vocabolario">
-          <button type="button" class="pagination-arrow" data-page-nav="prev" ${currentPage === 1 ? "disabled" : ""}>←</button>
-          ${pageNumbers
-            .map(
-              (page) => `
-                <button
-                  type="button"
-                  class="pagination-page${page === currentPage ? " is-active" : ""}"
-                  data-page-number="${page}"
-                >${page}</button>
-              `,
-            )
-            .join("")}
-          <button type="button" class="pagination-arrow" data-page-nav="next" ${currentPage === totalPages ? "disabled" : ""}>→</button>
-        </nav>
-      `;
+      })
+      .join("");
+
+    const paginationHtml = renderVocabularyPagination(currentPage, totalPages, pageNumbers);
+    results.innerHTML = `${paginationHtml}${cardsHtml}${paginationHtml}`;
 
     results.querySelectorAll("[data-word-link]").forEach((link) => {
       link.addEventListener("click", (event) => {
@@ -815,8 +814,6 @@ const renderMorphology = () => {
   views.morphology.replaceChildren(cloneTemplate(templates.morphology));
   const form = views.morphology.querySelector("#morphology-form");
   const lemmaInput = views.morphology.querySelector("#morph-lemma");
-  const printFullButton = views.morphology.querySelector("#morph-print-full");
-  const printCurrentButton = views.morphology.querySelector("#morph-print-current");
   const output = views.morphology.querySelector("#morphology-result");
 
   // Cerca il paradigma ufficiale nel dataset corretto in base al tipo di parola.
@@ -858,11 +855,6 @@ const renderMorphology = () => {
       lemma,
     });
     if (!lemma) {
-      [printFullButton, printCurrentButton].forEach((button) => {
-        button.hidden = true;
-        button.disabled = true;
-        button.onclick = null;
-      });
       output.innerHTML = `<article class="notice">Inserisci un lemma per visualizzare la scheda morfologica.</article>`;
       return;
     }
@@ -883,6 +875,7 @@ const renderMorphology = () => {
       (detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo");
     const title = official ? official.class : result.pattern;
     const note = official ? "" : result.note;
+    const morphologySummary = [title, note].filter(Boolean).join(". ");
     const verbLemmaEntry = detectedType === "verb" ? state.data.verbLemmas?.[lemma] || null : null;
     const sections = official
       ? Object.entries(official.paradigms).map(([sectionTitle, sectionData]) => ({
@@ -909,29 +902,46 @@ const renderMorphology = () => {
       detectedType === "verb" && official ? buildVerbSectionEntries(filledSections, verbSelectorId) : [];
     const showTopNote = Boolean(note) && filledSections.length > 0;
     output.innerHTML = `
-      <article class="panel">
-        <h2>${escapeHtml(title)}</h2>
-        ${showTopNote ? `<p>${escapeHtml(note)}</p>` : ""}
-        ${
-          filledSections.length
-            ? verbEntries.length
-              ? renderVerbSectionControls(verbEntries, verbSelectorId)
-              : filledSections
-                  .map((section) =>
-                    renderParadigmCard(section.title, section.forms, meaning, {
-                      mode:
-                        detectedType === "pronoun"
-                          ? "pronoun"
-                          : detectedType === "noun"
-                            ? "case"
-                            : "default",
-                      meanings: section.meanings,
-                    }),
-                  )
-                  .join("")
-            : `<div class="notice">Per questo lemma non è ancora disponibile una scheda morfologica completa.</div>`
-        }
-        <section class="stack morphology-occurrences">
+      <section class="word-layout">
+        <article class="panel">
+          <div class="panel-head panel-head-split">
+            <div class="panel-head-copy">
+              <h3>Analisi morfologica</h3>
+              ${showTopNote || morphologySummary ? `<p>${escapeHtml(morphologySummary)}</p>` : ""}
+            </div>
+            ${
+              filledSections.length
+                ? `
+                  <div class="panel-actions">
+                    <button type="button" class="secondary-button print-button" data-print-paradigm-full><span class="print-icon" aria-hidden="true"></span> Completa</button>
+                    <button type="button" class="secondary-button print-button" data-print-paradigm-current><span class="print-icon" aria-hidden="true"></span> Attuale</button>
+                  </div>
+                `
+                : ""
+            }
+          </div>
+          ${
+            filledSections.length
+              ? verbEntries.length
+                ? renderVerbSectionControls(verbEntries, verbSelectorId)
+                : filledSections
+                    .map((section) =>
+                      renderParadigmCard(section.title, section.forms, meaning, {
+                        mode:
+                          detectedType === "pronoun"
+                            ? "pronoun"
+                            : detectedType === "noun"
+                              ? "case"
+                              : "default",
+                        meanings: section.meanings,
+                      }),
+                    )
+                    .join("")
+              : `<div class="notice">Per questo lemma non è ancora disponibile una scheda morfologica completa.</div>`
+          }
+        </article>
+
+        <article class="panel">
           <h3>Occorrenze nel Nuovo Testamento</h3>
           ${
             occurrences.length
@@ -988,8 +998,8 @@ const renderMorphology = () => {
               `
               : `<div class="notice">Nessuna occorrenza trovata nei dati attuali.</div>`
           }
-        </section>
-      </article>
+        </article>
+      </section>
     `;
     if (verbEntries.length) {
       wireVerbSectionControls(output, verbSelectorId, verbEntries, meaning, {
@@ -1008,10 +1018,8 @@ const renderMorphology = () => {
           : []),
       ];
 
-      [printFullButton, printCurrentButton].forEach((button) => {
-        button.hidden = false;
-        button.disabled = false;
-      });
+      const printCurrentButton = output.querySelector("[data-print-paradigm-current]");
+      const printFullButton = output.querySelector("[data-print-paradigm-full]");
 
       printCurrentButton.onclick = () => {
         const visibleCards = [...output.querySelectorAll(".paradigm-card")]
@@ -1039,12 +1047,6 @@ const renderMorphology = () => {
             : "La stampa include tutta la scheda morfologica disponibile.",
         });
       };
-    } else {
-      [printFullButton, printCurrentButton].forEach((button) => {
-        button.hidden = true;
-        button.disabled = true;
-        button.onclick = null;
-      });
     }
   };
 
@@ -1063,11 +1065,6 @@ const renderMorphology = () => {
     return;
   }
 
-  [printFullButton, printCurrentButton].forEach((button) => {
-    button.hidden = true;
-    button.disabled = true;
-    button.onclick = null;
-  });
   replaceRouteState("morphology", {
     lemma: "",
   });
