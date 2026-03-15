@@ -73,7 +73,7 @@ main {
   gap: 0.55rem;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0.7rem;
   background: color-mix(in srgb, var(--accent-soft) 72%, white 28%);
   border: 1px solid var(--line);
@@ -1192,6 +1192,7 @@ code {
     display: flex;
     flex-wrap: nowrap;
     gap: 0.15rem;
+    justify-content: flex-start;
     padding: 0 0.1rem 0.12rem;
     border-radius: 0;
     border: 0;

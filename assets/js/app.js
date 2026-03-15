@@ -666,14 +666,14 @@ const renderHome = () => {
     },
     {
       title: "Grammatica",
-      body: "Raccoglie gli argomenti essenziali per accompagnare la lettura del koine in modo più ordinato e progressivo.",
-      stat: `${grammarLessons} lezioni${hasGrammarAppendix ? " e 1 appendice" : ""} disponibili`,
+      body: "Manuale di greco koine per accompagnare lo studio in modo ordinato, progressivo e consultabile.",
+      stat: `${grammarLessons} parti${hasGrammarAppendix ? " e 1 appendice" : ""} disponibili`,
       route: "grammar",
     },
     {
       title: "Morfologia",
       body: "Esplora paradigmi, forme e categorie grammaticali per approfondire verbi, sostantivi, pronomi e altre strutture.",
-      stat: `${verbComplete}/${verbTotal} verbi completi, ${nounTotal} sostantivi e ${pronounTotal} pronome nel dataset locale`,
+      stat: `${verbComplete} verbi completi, ${nounTotal} sostantivi e ${pronounTotal} pronomi gia disponibili`,
       route: "morphology",
     },
   ];
@@ -1434,6 +1434,12 @@ const wireRouteLinks = (root = document) => {
   });
 };
 
+const scrollMainNavToStart = () => {
+  const nav = document.querySelector(".main-nav");
+  if (!nav) return;
+  nav.scrollLeft = 0;
+};
+
 // Render centrale: attiva una sola vista per volta e poi la costruisce.
 const render = (vocabularyPrefill = "") => {
   Object.entries(views).forEach(([key, element]) => {
@@ -1451,6 +1457,7 @@ const render = (vocabularyPrefill = "") => {
   if (state.route === "morphology") renderMorphology();
 
   wireRouteLinks();
+  scrollMainNavToStart();
 };
 
 // Bootstrap iniziale del sito:
