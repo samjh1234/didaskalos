@@ -59,7 +59,115 @@
           ["Chi", "Χ", "χ", "ch", "aspirata"],
           ["Psi", "Ψ", "ψ", "ps", ""],
           ["Omega", "Ω", "ω", "o", "lunga"]
+        ],
+        "points": [
+          "1 All'inizio o nel corpo della parola.",
+          "2 In fine di parola.",
+          "3 Sigma lunato: C (maiuscolo) e ϲ (minuscolo). Puo essere usato indifferentemente, nel mezzo o in fine di parola."
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "points": [
+              "a) Due lettere diverse corrispondono alla nostra e: ε per la e breve, η per la e lunga.",
+              "b) Due lettere diverse corrispondono alla nostra o: ο per la o breve, ω per la o lunga.",
+              "c) Tutte le maiuscole greche sono a livello del rigo e hanno l'altezza delle nostre maiuscole. Sei minuscole sono alte: beta, delta, zeta, theta, lambda, csi (β, δ, ζ, θ, λ, ξ); undici si prolungano al di sotto del rigo: gamma e chi (γ, χ), con meta del loro corpo; le altre, con una codina: beta, zeta, eta, mi, csi, rho, sigma finale, fi, psi (β, ζ, η, μ, ξ, ρ, ς, φ, ψ).",
+              "d) Le maiuscole sono meno usate, in greco, che nelle lingue moderne: nei libri stampati, spesso, si segue l'uso di cominciare una frase o un periodo, dopo il punto fermo, con la lettera minuscola, anziche con la maiuscola. Lo stesso avviene per il discorso diretto. I sostantivi che si riferiscono a cariche pubbliche, i titoli di riguardo e il nome stesso di Dio si scrivono, normalmente, con l'iniziale minuscola. I nomi proprii di persona e di luogo, invece, hanno l'iniziale maiuscola.",
+              "e) Nelle lezioni che seguono potra capitare che parole o frasi greche siano stampate, non con i caratteri greci, ma con normali caratteri di stampa (i cosiddetti «caratteri latini»): questo procedimento si chiama translitterazione, e le parole cosi stampate sono dette «traslitterate» (perche i caratteri, o lettere, dell'alfabeto latino, italiano e delle altre lingue piu comuni sono trasferiti al servizio delle parole greche che vengono usate o spiegate). Nelle translitterazioni, per distinguere la «e» breve dalla «e» lunga, si pone sopra la prima il segno ˘, sopra la seconda il segno ¯. Lo stesso avviene per distinguere la «o» breve dalla «o» lunga. Quindi si avra: ĕ = epsilon (ε); ē = eta (η); ŏ = omicron (ο); ō = omega (ω).",
+              "f) Nelle parole translitterate, lo spirito (v. § 3) dolce non e indicato, mentre lo spirito aspro viene di regola indicato con la lettera h (per es.: hamartía, hágios, hýpnos, rispettivamente per ἁμαρτία, ἅγιος, ὕπνος).",
+              "g) La lettera υ puo essere indicata sia con Y che con U.",
+              "h) Quando e opportuno sottolineare il suono duro della lettera γ davanti a ε ed ι, essa e translitterata con il gruppo gh. Il suono nasale del γ davanti a gutturale e reso, nelle translitterazioni, con una n. Esempi: ἄγγελος (ánghelos), ἀνάγκη (anánkē).",
+              "i) Talvolta si trova un'omega maiuscola ω identica alla minuscola ω, ma di dimensioni piu alte, specialmente in pubblicazioni inglesi.",
+              "l) Insieme all'alfabeto, ricordiamo i segni di interpunzione: la virgola e il punto hanno lo stesso valore che in italiano. Un punto in alto sostituisce il nostro «punto e virgola» e i «due punti». Per il punto interrogativo, si adopera il segno «;». Il punto esclamativo non ha segno corrispondente, in greco."
+            ]
+          }
         ]
+      },
+      {
+        "heading": "§ 2 - Classificazione delle consonanti",
+        "paragraphs": [
+          "Le consonanti, di cui dovremo riparlare in grammatica (cfr. § 96, 122-123 e altrove), a causa delle loro caratteristiche, appartengono a famiglie o tipi diversi:"
+        ],
+        "groups": [
+          {
+            "title": "MUTE",
+            "items": [
+              "Gutturali: κ, γ, χ (kappa, gamma, chi)",
+              "Labiali: π, β, φ (pi, beta, phi)",
+              "Dentali: τ, δ, θ (tau, delta, theta)"
+            ]
+          },
+          {
+            "title": "SONANTI",
+            "items": [
+              "liquide: λ, ρ (lambda, rho)",
+              "nasali: μ, ν, γ [= ν] (mi, ni, gamma)",
+              "spiranti: σ/ς (sigma)",
+              "j (jod)¹, Ϝ (digamma o wau)¹"
+            ]
+          },
+          {
+            "title": "DOPPIE",
+            "items": [
+              "ζ (zeta) < sigma + Dentale",
+              "ξ (csi) < Gutturale + sigma",
+              "ψ (psi) < Labiale + sigma"
+            ]
+          }
+        ],
+        "summaryTable": {
+          "intro": "Si osservi, per chiarezza, il seguente specchietto riassuntivo:",
+          "headerRows": [
+            [
+              { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
+              { "label": "MUTE", "colspan": 3 },
+              { "label": "DOPPIE" },
+              { "label": "SONANTI", "colspan": 3 }
+            ],
+            [
+              "tenui",
+              "medie",
+              "aspirate",
+              "",
+              "spiranti",
+              "nasali",
+              "liquide"
+            ]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Gutturali", "className": "grammar-table-rowlabel" },
+              "κ",
+              "γ",
+              "χ",
+              "ξ",
+              "σ, ς",
+              "μ",
+              { "label": "λ\nρ", "rowspan": 3, "className": "grammar-table-stacked" }
+            ],
+            [
+              { "label": "Labiali", "className": "grammar-table-rowlabel" },
+              "π",
+              "β",
+              "φ",
+              "ψ",
+              "(j)",
+              "ν"
+            ],
+            [
+              { "label": "Dentali", "className": "grammar-table-rowlabel" },
+              "τ",
+              "δ",
+              "θ",
+              "ζ",
+              "(F)",
+              "γ (= ν)"
+            ]
+          ],
+          "notes": [
+            "1 Lettere usate nel greco arcaico, dette anche semivocali, la cui importanza e attestata dagli effetti fonetici che esse hanno prodotto nel greco usato successivamente."
+          ]
+        }
       }
     ]
   },

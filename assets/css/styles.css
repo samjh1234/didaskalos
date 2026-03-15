@@ -777,6 +777,44 @@ select {
   border-bottom: 0;
 }
 
+.grammar-table tbody tr:last-child th {
+  border-bottom: 0;
+}
+
+.grammar-table-summary {
+  min-width: 760px;
+}
+
+.grammar-table-summary th,
+.grammar-table-summary td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.grammar-table-summary tbody th,
+.grammar-table-summary .grammar-table-rowlabel {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.grammar-table-summary .grammar-table-corner {
+  background: rgba(140, 76, 35, 0.08);
+}
+
+.grammar-table-summary .grammar-table-stacked {
+  white-space: pre-line;
+}
+
+.grammar-table-notes {
+  margin-top: 0.7rem;
+  gap: 0.3rem;
+}
+
+.grammar-table-note {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
 .grammar-subsection {
   display: grid;
   gap: 0.65rem;

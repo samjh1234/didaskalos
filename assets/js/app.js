@@ -169,6 +169,46 @@ const renderGrammarItemNav = (previousItem, nextItem) => `
   </article>
 `;
 
+const renderGrammarTableCell = (cell, tagName = "td") => {
+  const descriptor =
+    typeof cell === "object" && cell !== null
+      ? cell
+      : {
+          label: cell ?? "",
+        };
+  const colspan = descriptor.colspan ? ` colspan="${descriptor.colspan}"` : "";
+  const rowspan = descriptor.rowspan ? ` rowspan="${descriptor.rowspan}"` : "";
+  const className = descriptor.className ? ` class="${escapeHtml(descriptor.className)}"` : "";
+  return `<${tagName}${colspan}${rowspan}${className}>${escapeHtml(descriptor.label || "")}</${tagName}>`;
+};
+
+const renderGrammarSummaryTable = (table) => {
+  if (!table) return "";
+  const headerRowsHtml = (table.headerRows || [])
+    .map((row) => `<tr>${row.map((cell) => renderGrammarTableCell(cell, "th")).join("")}</tr>`)
+    .join("");
+  const bodyRowsHtml = (table.bodyRows || [])
+    .map((row) => `<tr>${row.map((cell, index) => renderGrammarTableCell(cell, index === 0 ? "th" : "td")).join("")}</tr>`)
+    .join("");
+
+  return `
+    ${table.intro ? `<p>${escapeHtml(table.intro)}</p>` : ""}
+    <div class="grammar-table-wrap">
+      <table class="grammar-table grammar-table-summary">
+        <thead>${headerRowsHtml}</thead>
+        <tbody>${bodyRowsHtml}</tbody>
+      </table>
+    </div>
+    ${
+      table.notes?.length
+        ? `<div class="stack grammar-table-notes">${table.notes
+            .map((note) => `<p class="grammar-table-note">${escapeHtml(note)}</p>`)
+            .join("")}</div>`
+        : ""
+    }
+  `;
+};
+
 // Rendering dei contenuti interni di una parte grammaticale.
 // Supporta paragrafi, elenchi, piccoli gruppi tematici, tabelle e blocchi di greco.
 const renderGrammarSection = (section, options = {}) => {
@@ -231,6 +271,7 @@ const renderGrammarSection = (section, options = {}) => {
         </div>
       `
     : "";
+  const summaryTableHtml = section.summaryTable ? renderGrammarSummaryTable(section.summaryTable) : "";
   const subsectionsHtml = section.subsections?.length
     ? section.subsections
         .map(
@@ -268,6 +309,7 @@ const renderGrammarSection = (section, options = {}) => {
       ${alphabetTableHtml}
       ${groupsHtml}
       ${pointsHtml}
+      ${summaryTableHtml}
       ${subsectionsHtml}
       ${versesHtml}
     </article>
