@@ -27,6 +27,7 @@ const state = {
   selectedMorphType: "verb",
   grammarSelection: {
     chapter: "",
+    item: "",
   },
   vocabularySelection: {
     query: "",
@@ -80,6 +81,7 @@ const setRoute = (route, params = {}) => {
   state.selectedMorphType = params.type || "verb";
   state.grammarSelection = {
     chapter: params.chapter || "",
+    item: params.item || "",
   };
   state.vocabularySelection = {
     query: params.q || "",
@@ -103,6 +105,7 @@ const replaceRouteState = (route, params = {}) => {
   state.selectedMorphType = params.type || "verb";
   state.grammarSelection = {
     chapter: params.chapter || "",
+    item: params.item || "",
   };
   state.vocabularySelection = {
     query: params.q || "",
@@ -125,6 +128,151 @@ const goToWord = (lemma) => {
 
 // Link diretto alla scheda parola completa.
 const buildWordHref = (lemma) => `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
+
+// Nella pagina Grammatica mostriamo i capitoli del manuale come "Parti".
+// Il dato sorgente conserva ancora "Lezione" per restare vicino all'indice fotografato,
+// ma l'interfaccia utente usa il lessico richiesto dal progetto.
+const getGrammarDisplayLabel = (chapter) => {
+  if (!chapter) return "";
+  if (chapter.kind === "appendix") return "Appendice";
+  return (chapter.lessonLabel || "").replace(/^Lezione/i, "Parte");
+};
+
+// Nell'indice della grammatica mostriamo solo le voci principali.
+// Le sottovoci come "6a." o "A)" restano nei contenuti interni della lezione.
+const getGrammarOverviewContents = (chapter) =>
+  (chapter?.contents || []).filter((item) => !/^\d+[a-z]\.|^[A-ZΑ-Ω]\)/.test(item));
+
+const getGrammarChapterItems = (chapter) =>
+  getGrammarOverviewContents(chapter).map((title, index) => ({
+    id: String(index),
+    index,
+    title,
+    section:
+      (chapter?.sections || []).find(
+        (section) => normalize(section.heading || section.title || "") === normalize(title),
+      ) || null,
+  }));
+
+const renderGrammarItemNav = (previousItem, nextItem) => `
+  <article class="panel grammar-detail-nav">
+    ${
+      previousItem
+        ? `<button type="button" class="secondary-button" data-grammar-prev-item="${escapeHtml(previousItem.id)}">&larr; ${escapeHtml(previousItem.title)}</button>`
+        : `<span></span>`
+    }
+    ${
+      nextItem
+        ? `<button type="button" class="secondary-button" data-grammar-next-item="${escapeHtml(nextItem.id)}">${escapeHtml(nextItem.title)} &rarr;</button>`
+        : `<span></span>`
+    }
+  </article>
+`;
+
+// Rendering dei contenuti interni di una parte grammaticale.
+// Supporta paragrafi, elenchi, piccoli gruppi tematici, tabelle e blocchi di greco.
+const renderGrammarSection = (section, options = {}) => {
+  const { showHeading = true } = options;
+  const paragraphsHtml = (section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+  const pointsHtml = section.points?.length
+    ? `
+        <div class="stack grammar-topic-list">
+          ${section.points.map((item) => `<div class="micro-panel grammar-topic-row">${escapeHtml(item)}</div>`).join("")}
+        </div>
+      `
+    : "";
+  const groupsHtml = section.groups?.length
+    ? `
+        <div class="stack grammar-group-list">
+          ${section.groups
+            .map(
+              (group) => `
+                <div class="micro-panel grammar-group-card">
+                  <strong>${escapeHtml(group.title)}</strong>
+                  <div class="stack grammar-topic-list">
+                    ${group.items.map((item) => `<div class="grammar-topic-row">${escapeHtml(item)}</div>`).join("")}
+                  </div>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+      `
+    : "";
+  const alphabetTableHtml = section.alphabetTable?.length
+    ? `
+        <div class="grammar-table-wrap">
+          <table class="grammar-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Maiuscola</th>
+                <th>Minuscola</th>
+                <th>Pronunzia</th>
+                <th>Osservazioni</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${section.alphabetTable
+                .map(
+                  (row) => `
+                    <tr>
+                      <td>${escapeHtml(row[0] || "")}</td>
+                      <td>${escapeHtml(row[1] || "")}</td>
+                      <td>${escapeHtml(row[2] || "")}</td>
+                      <td>${escapeHtml(row[3] || "")}</td>
+                      <td>${escapeHtml(row[4] || "")}</td>
+                    </tr>
+                  `,
+                )
+                .join("")}
+            </tbody>
+          </table>
+        </div>
+      `
+    : "";
+  const subsectionsHtml = section.subsections?.length
+    ? section.subsections
+        .map(
+          (item) => `
+            <div class="grammar-subsection">
+              <h4>${escapeHtml(item.title)}</h4>
+              ${(item.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+              ${
+                item.points?.length
+                  ? `<div class="stack grammar-topic-list">${item.points
+                      .map((point) => `<div class="micro-panel grammar-topic-row">${escapeHtml(point)}</div>`)
+                      .join("")}</div>`
+                  : ""
+              }
+            </div>
+          `,
+        )
+        .join("")
+    : "";
+  const versesHtml = section.verses?.length
+    ? `
+        <div class="grammar-greek-block">
+      ${section.subheading ? `<h4>${escapeHtml(section.subheading)}</h4>` : ""}
+          <div class="stack grammar-greek-verses">
+            ${section.verses.map((verse) => `<p class="grammar-greek-line">${escapeHtml(verse)}</p>`).join("")}
+          </div>
+        </div>
+      `
+    : "";
+
+  return `
+    <article class="panel grammar-section-card">
+      ${showHeading ? `<h3>${escapeHtml(section.heading || section.title || "")}</h3>` : ""}
+      ${paragraphsHtml}
+      ${alphabetTableHtml}
+      ${groupsHtml}
+      ${pointsHtml}
+      ${subsectionsHtml}
+      ${versesHtml}
+    </article>
+  `;
+};
 
 // Prepara una versione gia normalizzata e ordinata del lessico.
 // In questo modo il Vocabolario non deve ricostruire tutto a ogni apertura
@@ -154,7 +302,7 @@ const activateRouteFromHash = () => {
     state.route = "home";
     state.selectedLemma = "";
     state.selectedMorphType = "verb";
-    state.grammarSelection = { chapter: "" };
+    state.grammarSelection = { chapter: "", item: "" };
     state.vocabularySelection = { query: "", page: "1" };
     state.interlinearSelection = { book: "", chapter: "", verse: "" };
     return;
@@ -170,6 +318,7 @@ const activateRouteFromHash = () => {
     : "verb";
   state.grammarSelection = {
     chapter: params.get("chapter") || "",
+    item: params.get("item") || "",
   };
   state.vocabularySelection = {
     query: params.get("q") || "",
@@ -457,6 +606,8 @@ const renderHome = () => {
   ).length;
   const nounTotal = Object.keys(state.data.nounParadigms || {}).length;
   const pronounTotal = Object.keys(state.data.pronounParadigms || {}).length;
+  const grammarLessons = (state.data.grammar || []).filter((item) => item.kind === "lesson").length;
+  const hasGrammarAppendix = (state.data.grammar || []).some((item) => item.kind === "appendix");
 
   const cards = [
     {
@@ -474,7 +625,7 @@ const renderHome = () => {
     {
       title: "Grammatica",
       body: "Raccoglie gli argomenti essenziali per accompagnare la lettura del koine in modo più ordinato e progressivo.",
-      stat: `${state.data.grammar.length} aree grammaticali disponibili`,
+      stat: `${grammarLessons} lezioni${hasGrammarAppendix ? " e 1 appendice" : ""} disponibili`,
       route: "grammar",
     },
     {
@@ -832,44 +983,27 @@ const renderGrammar = () => {
   views.grammar.replaceChildren(cloneTemplate(templates.grammar));
   const container = views.grammar.querySelector("#grammar-results");
   const chapters = state.data.grammar || [];
-  const selectedChapter = chapters.find((item) => item.id === state.grammarSelection.chapter) || null;
+  const frontMatter = chapters.find((item) => item.kind === "front");
+  const appendix = chapters.find((item) => item.kind === "appendix");
+  const lessons = chapters.filter((item) => item.kind === "lesson");
+  const navigableChapters = [...lessons, ...(appendix ? [appendix] : [])];
+  const selectedChapter = navigableChapters.find((item) => item.id === state.grammarSelection.chapter) || null;
+  const chapterItems = selectedChapter ? getGrammarChapterItems(selectedChapter) : [];
+  const selectedItem = chapterItems.find((item) => item.id === state.grammarSelection.item) || null;
 
   if (!selectedChapter) {
-    const parts = chapters.reduce((grouped, chapter) => {
-      if (!grouped[chapter.part]) grouped[chapter.part] = [];
-      grouped[chapter.part].push(chapter);
-      return grouped;
-    }, {});
-
     container.innerHTML = `
-      <section class="panel grammar-manual-intro">
-        <h2>Indice del manuale</h2>
-        <p>La grammatica viene presentata come un manuale di studio del greco koine: scegli un capitolo per aprire spiegazioni, temi e punti essenziali da consultare mentre leggi il Nuovo Testamento.</p>
-      </section>
       <section class="stack grammar-index">
-        ${Object.entries(parts)
+        ${navigableChapters
           .map(
-            ([partTitle, items]) => `
-              <article class="panel grammar-part">
-                <div class="grammar-part-head">
-                  <h3>${escapeHtml(partTitle)}</h3>
-                  <span class="meta">${items.length} ${items.length === 1 ? "capitolo" : "capitoli"}</span>
-                </div>
-                <div class="stack grammar-chapter-list">
-                  ${items
-                    .map(
-                      (chapter) => `
-                        <button type="button" class="grammar-chapter-card" data-grammar-chapter="${escapeHtml(chapter.id)}">
-                          <span class="grammar-chapter-kicker">${escapeHtml(chapter.chapter)}</span>
-                          <strong>${escapeHtml(chapter.title)}</strong>
-                          <span>${escapeHtml(chapter.summary)}</span>
-                        </button>
-                      `,
-                    )
-                    .join("")}
-                </div>
-              </article>
-            `,
+            (chapter) => `
+              <button type="button" class="grammar-chapter-card grammar-index-card" data-grammar-chapter="${escapeHtml(chapter.id)}">
+                <span class="grammar-chapter-kicker">${escapeHtml(getGrammarDisplayLabel(chapter).toUpperCase())}</span>
+                <strong>${escapeHtml(chapter.title)}</strong>
+                ${chapter.summary ? `<span>${escapeHtml(chapter.summary)}</span>` : ""}
+                <span class="meta">${getGrammarChapterItems(chapter).length} elementi</span>
+              </button>
+            `
           )
           .join("")}
       </section>
@@ -883,74 +1017,100 @@ const renderGrammar = () => {
     return;
   }
 
-  const chapterIndex = chapters.findIndex((item) => item.id === selectedChapter.id);
-  const previousChapter = chapterIndex > 0 ? chapters[chapterIndex - 1] : null;
-  const nextChapter = chapterIndex < chapters.length - 1 ? chapters[chapterIndex + 1] : null;
+  if (!selectedItem) {
+    container.innerHTML = `
+      <section class="stack grammar-detail">
+        <article class="panel grammar-breadcrumb">
+          <button type="button" class="text-link-button" data-grammar-back-index>&larr; Torna all'indice</button>
+          <span class="meta">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</span>
+        </article>
+
+        <article class="panel grammar-detail-hero">
+          <p class="grammar-chapter-kicker">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</p>
+          <h2>${escapeHtml(selectedChapter.title)}</h2>
+          ${selectedChapter.summary ? `<p>${escapeHtml(selectedChapter.summary)}</p>` : ""}
+        </article>
+
+        <article class="panel grammar-section-card">
+          <h3>Elementi della parte</h3>
+          <div class="stack grammar-item-list">
+            ${chapterItems
+              .map(
+                (item) => `
+                  <button type="button" class="grammar-chapter-card grammar-item-card" data-grammar-item="${escapeHtml(item.id)}">
+                    <strong>${escapeHtml(item.title)}</strong>
+                  </button>
+                `,
+              )
+              .join("")}
+          </div>
+        </article>
+      </section>
+    `;
+
+    container.querySelector("[data-grammar-back-index]")?.addEventListener("click", () => {
+      setRoute("grammar");
+    });
+    container.querySelectorAll("[data-grammar-item]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setRoute("grammar", {
+          chapter: selectedChapter.id,
+          item: button.dataset.grammarItem || "",
+        });
+      });
+    });
+    return;
+  }
+
+  const selectedSection = selectedItem.section;
+  const previousItem = selectedItem.index > 0 ? chapterItems[selectedItem.index - 1] : null;
+  const nextItem = selectedItem.index < chapterItems.length - 1 ? chapterItems[selectedItem.index + 1] : null;
+  const navigationHtml = renderGrammarItemNav(previousItem, nextItem);
 
   container.innerHTML = `
     <section class="stack grammar-detail">
       <article class="panel grammar-breadcrumb">
-        <button type="button" class="text-link-button" data-grammar-back>&larr; Torna all'indice</button>
-        <span class="meta">${escapeHtml(selectedChapter.part)} · ${escapeHtml(selectedChapter.chapter)}</span>
+        <button type="button" class="text-link-button" data-grammar-back-chapter>&larr; Torna alla parte</button>
+        <span class="meta">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</span>
       </article>
 
       <article class="panel grammar-detail-hero">
-        <p class="grammar-chapter-kicker">${escapeHtml(selectedChapter.chapter)}</p>
-        <h2>${escapeHtml(selectedChapter.title)}</h2>
-        <p>${escapeHtml(selectedChapter.summary)}</p>
+        <p class="grammar-chapter-kicker">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</p>
+        <h2>${escapeHtml(selectedItem.title)}</h2>
+        <p>${escapeHtml(selectedChapter.title)}</p>
       </article>
 
-      ${selectedChapter.sections
-        .map(
-          (section) => `
+      ${navigationHtml}
+
+      ${
+        selectedSection
+          ? renderGrammarSection(selectedSection, { showHeading: false })
+          : `
             <article class="panel grammar-section-card">
-              <h3>${escapeHtml(section.title)}</h3>
-              ${
-                (section.paragraphs || [])
-                  .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
-                  .join("")
-              }
-              ${
-                section.points?.length
-                  ? `
-                    <div class="stack">
-                      ${section.points
-                        .map((item) => `<div class="micro-panel">${escapeHtml(item)}</div>`)
-                        .join("")}
-                    </div>
-                  `
-                  : ""
-              }
+              <h3>${escapeHtml(selectedItem.title)}</h3>
+              <p>Il contenuto dettagliato di questo punto non e ancora stato inserito nel dataset locale. La struttura della navigazione e pronta, ma questa scheda verra completata in un passaggio successivo.</p>
             </article>
-          `,
-        )
-        .join("")}
+          `
+      }
 
-      <article class="panel grammar-detail-nav">
-        ${
-          previousChapter
-            ? `<button type="button" class="secondary-button" data-grammar-prev="${escapeHtml(previousChapter.id)}">&larr; ${escapeHtml(previousChapter.title)}</button>`
-            : `<span></span>`
-        }
-        ${
-          nextChapter
-            ? `<button type="button" class="secondary-button" data-grammar-next="${escapeHtml(nextChapter.id)}">${escapeHtml(nextChapter.title)} &rarr;</button>`
-            : `<span></span>`
-        }
-      </article>
+      ${navigationHtml}
     </section>
   `;
 
-  container.querySelector("[data-grammar-back]")?.addEventListener("click", () => {
-    setRoute("grammar");
+  container.querySelector("[data-grammar-back-chapter]")?.addEventListener("click", () => {
+    setRoute("grammar", { chapter: selectedChapter.id });
   });
-  container.querySelector("[data-grammar-prev]")?.addEventListener("click", (event) => {
-    const target = event.currentTarget.dataset.grammarPrev || "";
-    setRoute("grammar", { chapter: target });
+  container.querySelectorAll("[data-grammar-prev-item]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.currentTarget.dataset.grammarPrevItem || "";
+      setRoute("grammar", { chapter: selectedChapter.id, item: target });
+    });
   });
-  container.querySelector("[data-grammar-next]")?.addEventListener("click", (event) => {
-    const target = event.currentTarget.dataset.grammarNext || "";
-    setRoute("grammar", { chapter: target });
+  container.querySelectorAll("[data-grammar-next-item]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.currentTarget.dataset.grammarNextItem || "";
+      setRoute("grammar", { chapter: selectedChapter.id, item: target });
+    });
   });
 };
 

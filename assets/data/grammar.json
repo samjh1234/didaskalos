@@ -1,277 +1,598 @@
 [
   {
-    "id": "alfabeto-e-pronuncia",
-    "part": "Parte I",
-    "chapter": "Capitolo 1",
-    "title": "Alfabeto e pronuncia",
-    "summary": "Le basi della lettura: alfabeto, vocali, dittonghi, spiriti e accenti del greco koine.",
-    "sections": [
-      {
-        "title": "Obiettivo del capitolo",
-        "paragraphs": [
-          "Questo capitolo introduce i segni fondamentali del greco koine e aiuta a leggere una parola biblica con maggiore sicurezza.",
-          "Nel progetto la pronuncia visualizzata nelle schede non pretende di sostituire uno studio fonetico completo, ma offre un appoggio pratico alla lettura."
-        ]
-      },
-      {
-        "title": "Temi principali",
-        "points": [
-          "Le 24 lettere dell'alfabeto greco.",
-          "La distinzione tra vocali brevi, lunghe e dittonghi più frequenti.",
-          "Il ruolo degli spiriti e degli accenti nella lettura.",
-          "La differenza tra il valore grafico della parola e la sua traslitterazione."
-        ]
-      },
-      {
-        "title": "Da ricordare",
-        "points": [
-          "Una buona lettura nasce prima dal riconoscimento della forma scritta.",
-          "Gli accenti aiutano a orientarsi, ma all'inizio contano soprattutto le lettere e le terminazioni.",
-          "Nel Nuovo Testamento ricorrono spesso forme che diventano familiari solo con la ripetizione."
-        ]
-      }
+    "id": "front-matter",
+    "kind": "front",
+    "title": "Apertura del manuale",
+    "contents": [
+      "Prefazione dell'editore",
+      "Al lettore",
+      "Prefazione II edizione",
+      "Tavola delle abbreviazioni"
     ]
   },
   {
-    "id": "articolo-e-sostantivo",
-    "part": "Parte I",
-    "chapter": "Capitolo 2",
-    "title": "Articolo e sostantivo",
-    "summary": "Accordo tra articolo, genere, numero e caso nel sistema nominale del greco koine.",
+    "id": "lezione-prima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione prima",
+    "title": "Alfabeto, spiriti e incontri di suoni",
+    "summary": "Le basi della lettura del greco: lettere, consonanti, spiriti, accenti e primi incontri vocalici e consonantici.",
+    "contents": [
+      "§ 1 - L'alfabeto greco",
+      "§ 2 - Classificazione delle consonanti",
+      "Esercizio di lettura sui segni alfabetici",
+      "§ 3 - Spiriti (I) e accenti (II)",
+      "§ 4 - Incontri di vocali",
+      "A) Dittonghi e iota sottoscritto",
+      "B) Accento nei dittonghi",
+      "C) Incontro di vocali che non formano dittongo (iato)",
+      "§ 5 - Incontri di consonanti"
+    ],
     "sections": [
       {
-        "title": "L'articolo",
+        "heading": "§ 1 - L'alfabeto greco",
         "paragraphs": [
-          "L'articolo greco ricorre con grande frequenza e accompagna sostantivi, aggettivi, participi e altre costruzioni.",
-          "Imparare a riconoscerlo aiuta a individuare rapidamente i gruppi sintattici nella frase."
+          "L'alfabeto greco si compone di 24 lettere, consonanti e vocali.",
+          "Per iniziare bene la lettura conviene imparare insieme nome, forma maiuscola, forma minuscola e pronunzia di ogni lettera."
         ],
-        "points": [
-          "L'articolo concorda con il nome in genere, numero e caso.",
-          "Può introdurre anche un participio con valore quasi nominale.",
-          "La sua presenza o assenza può avere rilievo esegetico, ma prima di tutto ha un ruolo strutturale."
-        ]
-      },
-      {
-        "title": "I casi principali",
-        "points": [
-          "Il nominativo esprime spesso il soggetto o il nome del predicato.",
-          "Il genitivo segnala possesso, origine, relazione o specificazione.",
-          "Il dativo copre funzione indiretta, mezzo, vantaggio o sfera.",
-          "L'accusativo indica spesso il complemento oggetto o il moto a luogo."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "declinazioni-prima-seconda",
-    "part": "Parte I",
-    "chapter": "Capitolo 3",
-    "title": "Prima e seconda declinazione",
-    "summary": "I modelli nominali più comuni per iniziare a leggere i Vangeli e gli altri libri del Nuovo Testamento.",
-    "sections": [
-      {
-        "title": "Prima declinazione",
-        "points": [
-          "Comprende soprattutto femminili in -η e -α.",
-          "Le variazioni dipendono spesso dalla consonante precedente e dalla storia della parola.",
-          "Molti sostantivi frequenti del lessico biblico appartengono a questo gruppo."
-        ]
-      },
-      {
-        "title": "Seconda declinazione",
-        "points": [
-          "Comprende maschili in -ος e neutri in -ον.",
-          "I neutri hanno comportamento riconoscibile: nominativo, accusativo e vocativo coincidono.",
-          "È una delle declinazioni più utili per la lettura iniziale."
-        ]
-      },
-      {
-        "title": "Metodo di studio",
-        "paragraphs": [
-          "Conviene imparare la declinazione come schema di riconoscimento, non soltanto come tabella da memorizzare.",
-          "Nella lettura reale, il caso si riconosce dall'insieme di desinenza, articolo e contesto."
+        "alphabetTable": [
+          ["Alfa", "Α", "α", "a", ""],
+          ["Beta", "Β", "β", "b", ""],
+          ["Gamma", "Γ", "γ", "g", "davanti a gutturale ha valore nasale"],
+          ["Delta", "Δ", "δ", "d", ""],
+          ["Epsilon", "Ε", "ε", "e", "breve"],
+          ["Zeta", "Ζ", "ζ", "z (ds)", "dolce"],
+          ["Eta", "Η", "η", "e", "lunga"],
+          ["Theta", "Θ", "θ", "th", "simile al th inglese"],
+          ["Iota", "Ι", "ι", "i", ""],
+          ["Kappa", "Κ", "κ", "k", ""],
+          ["Lambda", "Λ", "λ", "l", ""],
+          ["Mi", "Μ", "μ", "m", ""],
+          ["Ni", "Ν", "ν", "n", ""],
+          ["Xi (Csi)", "Ξ", "ξ", "x (cs)", ""],
+          ["Omicron", "Ο", "ο", "o", "breve"],
+          ["Pi", "Π", "π", "p", ""],
+          ["Rho", "Ρ", "ρ", "r (rh)", "rh all'inizio di parola"],
+          ["Sigma", "Σ", "σ / ς", "s", ""],
+          ["Tau", "Τ", "τ", "t", ""],
+          ["Ypsilon", "Υ", "υ", "u", "u francese / ü tedesca"],
+          ["Phi (Fi)", "Φ", "φ", "ph (f)", ""],
+          ["Chi", "Χ", "χ", "ch", "aspirata"],
+          ["Psi", "Ψ", "ψ", "ps", ""],
+          ["Omega", "Ω", "ω", "o", "lunga"]
         ]
       }
     ]
   },
   {
-    "id": "terza-declinazione",
-    "part": "Parte I",
-    "chapter": "Capitolo 4",
-    "title": "Terza declinazione",
-    "summary": "Introduzione alle forme nominali più variabili e ai temi consonantici e vocalici.",
-    "sections": [
-      {
-        "title": "Perché è importante",
-        "paragraphs": [
-          "La terza declinazione raccoglie molte parole fondamentali del Nuovo Testamento e richiede più attenzione rispetto ai modelli della prima e seconda declinazione."
-        ]
-      },
-      {
-        "title": "Punti chiave",
-        "points": [
-          "Il tema non coincide sempre con il nominativo.",
-          "Le alternanze fonetiche possono cambiare l'aspetto della parola.",
-          "Per riconoscere bene il lemma occorre guardare anche il genitivo.",
-          "Molti lessici presentano proprio nominativo e genitivo come coppia di riferimento."
-        ]
-      }
+    "id": "lezione-seconda",
+    "kind": "lesson",
+    "lessonLabel": "Lezione seconda",
+    "title": "Nozioni generali sul verbo greco",
+    "summary": "Introduzione al sistema verbale, al tema e al presente indicativo attivo.",
+    "contents": [
+      "6. Nozioni generali sul verbo greco",
+      "6a. Il tema verbale",
+      "6b. Prospetto dell'apofonia qualitativa e quantitativa",
+      "6c. Allungamento di compenso",
+      "7. Presente indicativo attivo",
+      "Vocabolario 1º"
     ]
   },
   {
-    "id": "aggettivi-e-pronomi",
-    "part": "Parte II",
-    "chapter": "Capitolo 5",
-    "title": "Aggettivi e pronomi",
-    "summary": "Accordo, valore attributivo e principali famiglie pronominali del greco del Nuovo Testamento.",
-    "sections": [
-      {
-        "title": "Aggettivi",
-        "points": [
-          "L'aggettivo concorda con il sostantivo in genere, numero e caso.",
-          "Può avere funzione attributiva o predicativa.",
-          "Con l'articolo si creano strutture molto importanti per la lettura."
-        ]
-      },
-      {
-        "title": "Pronomi",
-        "points": [
-          "Pronomi personali, dimostrativi, relativi e interrogativi hanno un ruolo centrale nella coesione del testo.",
-          "Molti pronomi mostrano paradigmi propri che conviene riconoscere come blocchi.",
-          "Il contesto sintattico è decisivo per il loro valore."
-        ]
-      }
+    "id": "lezione-terza",
+    "kind": "lesson",
+    "lessonLabel": "Lezione terza",
+    "title": "Declinazione, articolo, congiunzioni e negazioni",
+    "summary": "Ingresso nel sistema nominale del greco: articolo, declinazioni e primi elementi di collegamento della frase.",
+    "contents": [
+      "8. La declinazione dei nomi e dell'articolo. Norme generali",
+      "9. Quadro dell'articolo determinativo nei tre generi",
+      "10. I, II e III declinazione",
+      "11. Declinazione dei nomi maschili con il tema in -ο (II decl.)",
+      "12. Quadro dei mutamenti d'accento",
+      "13. Congiunzioni",
+      "14. Negazioni",
+      "Vocabolario 2º"
     ]
   },
   {
-    "id": "verbo-presente-e-imperfetto",
-    "part": "Parte III",
-    "chapter": "Capitolo 6",
-    "title": "Presente e imperfetto",
-    "summary": "Le prime forme verbali da riconoscere: tema del presente, desinenze personali e uso dell'imperfetto.",
-    "sections": [
-      {
-        "title": "Presente indicativo attivo",
-        "points": [
-          "1a singolare: -ω",
-          "2a singolare: -εις",
-          "3a singolare: -ει",
-          "1a plurale: -ομεν",
-          "2a plurale: -ετε",
-          "3a plurale: -ουσι(ν)"
-        ]
-      },
-      {
-        "title": "Imperfetto",
-        "paragraphs": [
-          "L'imperfetto presenta normalmente l'aumento e descrive un'azione in corso nel passato o una situazione ripetuta.",
-          "Per la lettura del Nuovo Testamento è utile riconoscere l'imperfetto come tempo narrativo di sfondo."
-        ]
-      }
+    "id": "lezione-quarta",
+    "kind": "lesson",
+    "lessonLabel": "Lezione quarta",
+    "title": "Nomi neutri, femminili, preposizioni e concordanza",
+    "summary": "Completamento dei primi modelli nominali e introduzione alle preposizioni e alla concordanza del predicato.",
+    "contents": [
+      "15. Declinazione dei nomi neutri della II decl.",
+      "16. Concordanza del predicato con il soggetto",
+      "17. Preposizioni",
+      "18. Vocabolario 3º con i tempi del verbo",
+      "19. Declinazione dei nomi femminili con il tema in -η",
+      "20. Nomi femminili con il tema in -α",
+      "Vocabolario 4º"
     ]
   },
   {
-    "id": "aoristo-futuro-perfetto",
-    "part": "Parte III",
-    "chapter": "Capitolo 7",
-    "title": "Aoristo, futuro e perfetto",
-    "summary": "Le principali forme verbali che ampliano la lettura narrativa e teologica del testo.",
-    "sections": [
-      {
-        "title": "Aoristo",
-        "points": [
-          "L'aoristo è una delle forme più frequenti del Nuovo Testamento.",
-          "Non coincide semplicemente con il passato remoto italiano.",
-          "Va compreso prima di tutto come valore aspettuale e narrativo."
-        ]
-      },
-      {
-        "title": "Futuro",
-        "points": [
-          "Il futuro presenta spesso il segno sigma.",
-          "Può avere valore temporale ma anche sfumature modali o promissive."
-        ]
-      },
-      {
-        "title": "Perfetto",
-        "points": [
-          "Il perfetto unisce il compimento dell'azione e il suo stato risultante.",
-          "Alcuni perfetti sono molto importanti teologicamente e lessicalmente."
-        ]
-      }
+    "id": "lezione-quinta",
+    "kind": "lesson",
+    "lessonLabel": "Lezione quinta",
+    "title": "Terza declinazione: veri consonanti",
+    "summary": "Primo ingresso nella terza declinazione con i nomi della serie consonantica.",
+    "contents": [
+      "21. Declinazione dei nomi della terza classe (veri consonanti)",
+      "22. Vocabolario 5º"
     ]
   },
   {
-    "id": "modi-e-forme-non-finite",
-    "part": "Parte III",
-    "chapter": "Capitolo 8",
-    "title": "Congiuntivo, imperativo, infinito e participio",
-    "summary": "I modi e le forme non finite che strutturano periodo, comando, finalità e subordinazione.",
-    "sections": [
-      {
-        "title": "Congiuntivo e imperativo",
-        "points": [
-          "Il congiuntivo è frequente dopo particelle e costruzioni che esprimono possibilità, finalità o esortazione.",
-          "L'imperativo esprime comando, invito, richiesta o esortazione."
-        ]
-      },
-      {
-        "title": "Infinito e participio",
-        "points": [
-          "L'infinito può reggere costruzioni completive o avere valore finale.",
-          "Il participio è una delle forme più caratteristiche del greco e spesso concentra molte informazioni insieme.",
-          "Per leggerlo bene servono attenzione a caso, numero, genere, tempo e voce."
-        ]
-      }
+    "id": "lezione-sesta",
+    "kind": "lesson",
+    "lessonLabel": "Lezione sesta",
+    "title": "Nomi in -ις",
+    "summary": "Approfondimento della terza declinazione con i principali gruppi di nomi in -ις.",
+    "contents": [
+      "23. Nomi maschili in -ις (II declinazione)",
+      "24. Nomi femminili in -ις a dentale",
+      "25. Nomi femminili in -ις (in labiale e gutturale)",
+      "Vocabolario 6º"
     ]
   },
   {
-    "id": "sintassi-della-frase",
-    "part": "Parte IV",
-    "chapter": "Capitolo 9",
-    "title": "Sintassi della frase",
-    "summary": "I primi strumenti per leggere proposizioni, subordinate e costruzioni coordinate nel testo del Nuovo Testamento.",
-    "sections": [
-      {
-        "title": "Ordine e funzione",
-        "paragraphs": [
-          "Il greco koine non segue sempre l'ordine tipico dell'italiano. Per questo è importante riconoscere i casi, le desinenze verbali e gli elementi che introducono le subordinate."
-        ]
-      },
-      {
-        "title": "Elementi da osservare",
-        "points": [
-          "Particelle coordinanti e avversative.",
-          "Costruzioni con articolo e participio.",
-          "Proposizioni relative e completive.",
-          "Valore dei casi nella struttura sintattica."
-        ]
-      }
+    "id": "lezione-settima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione settima",
+    "title": "Altri nomi della terza declinazione e imperfetto",
+    "summary": "Nuovi gruppi nominali e introduzione all'indicativo imperfetto.",
+    "contents": [
+      "26. Nomi femminili in -υ breve",
+      "27. Nomi neutri in -ας e -ως",
+      "28. Vocabolario 7º con analisi",
+      "29. Indicativo imperfetto",
+      "30. Nomi propri di origine straniera della I declinazione"
     ]
   },
   {
-    "id": "metodo-di-lettura-del-nt",
-    "part": "Parte IV",
-    "chapter": "Capitolo 10",
-    "title": "Metodo di lettura del Nuovo Testamento",
-    "summary": "Come passare dal paradigma alla frase, e dalla frase alla comprensione del testo biblico.",
-    "sections": [
-      {
-        "title": "Percorso consigliato",
-        "points": [
-          "Riconoscere prima la forma greca.",
-          "Identificare il lemma e la categoria grammaticale.",
-          "Verificare il caso o la forma verbale.",
-          "Leggere il versetto nel suo contesto immediato."
-        ]
-      },
-      {
-        "title": "Uso del progetto",
-        "paragraphs": [
-          "Didaskalos accompagna questo metodo unendo interlineare, vocabolario, morfologia e grammatica.",
-          "L'idea non è sostituire lo studio personale, ma renderlo più ordinato, continuo e consultabile."
-        ]
-      }
+    "id": "lezione-ottava",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ottava",
+    "title": "Aggettivi e pronomi personali",
+    "summary": "Prime classi di aggettivi e introduzione ai pronomi personali e riflessivi.",
+    "contents": [
+      "31. Declinazione degli aggettivi della prima classe",
+      "32. Pronomi personali e riflessivi",
+      "33. Gli aggettivi della II classe a due uscite",
+      "34. Aggettivi della II classe a tre uscite",
+      "Vocabolario 8º"
+    ]
+  },
+  {
+    "id": "lezione-nona",
+    "kind": "lesson",
+    "lessonLabel": "Lezione nona",
+    "title": "Tempi storici, εἰμί e paratassi",
+    "summary": "Prime osservazioni sui tempi storici del verbo e sul presente di εἰμί.",
+    "contents": [
+      "35. I tempi storici del verbo",
+      "36. Presente indicativo del verbo εἰμί",
+      "37. Le enclitiche e proclitiche",
+      "38. Paratassi",
+      "Vocabolario 9º"
+    ]
+  },
+  {
+    "id": "lezione-decima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione decima",
+    "title": "εἰμί, φημί e usi di particelle",
+    "summary": "Imperativo e usi di εἰμί, forme di φημί e prime osservazioni su μή, γάρ e καί.",
+    "contents": [
+      "39. Imperativo presente del verbo εἰμί",
+      "40. Imperfetto e imperfetto indicativo attivo",
+      "41. Perfetto indicativo attivo (con aumento sillabico)",
+      "42. Futuro attivo del verbo φημί, sommario temporale",
+      "43. Imperfetto indicativo del verbo φημί",
+      "44. Usi di εἰμί",
+      "45. Usi di μή",
+      "46. Usi di μή e οὐ",
+      "47. Usi di γάρ",
+      "48. Usi di καί",
+      "Vocabolario 10º"
+    ]
+  },
+  {
+    "id": "lezione-undicesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione undicesima",
+    "title": "Dimostrativi, relativi e passivo del presente",
+    "summary": "Pronomi e aggettivi dimostrativi e relativi con il presente-imperfetto passivo.",
+    "contents": [
+      "49. Pronomi e aggettivi dimostrativi",
+      "50. Pronomi e aggettivi relativi, parte I",
+      "51. Sistema dei suffissi",
+      "52. Presente imperfetto passivo del verbo λύω",
+      "53. Imperfetto indicativo passivo",
+      "54. Futuro passivo",
+      "55. Usi di ἵνα e complemento d'agente",
+      "56. Usi di οὐ",
+      "57. Vocabolario 11º"
+    ]
+  },
+  {
+    "id": "lezione-dodicesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione dodicesima",
+    "title": "Relativi, comparazione e congiuntivo",
+    "summary": "Seconda parte dei relativi, comparazione degli aggettivi e primi usi del congiuntivo.",
+    "contents": [
+      "58. Pronomi e aggettivi relativi, parte II",
+      "59. Comparazione degli aggettivi",
+      "60. Congiuntivo esortativo",
+      "61. Uso di μέν",
+      "62. Uso di πᾶς",
+      "63. Uso di οὐδέ",
+      "64. Uso del participio",
+      "Vocabolario 12º"
+    ]
+  },
+  {
+    "id": "lezione-tredicesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione tredicesima",
+    "title": "Imperativo esortativo e quadro dell'azione",
+    "summary": "Valore dei tempi dell'azione e primi usi di ἄν nella struttura della frase.",
+    "contents": [
+      "65. Imperativo esortativo",
+      "66. Sigma mobile",
+      "67. Usi di μή nella completiva o interrogativa",
+      "68. Quadro dei tempi dell'azione continuata o aperta",
+      "69. Quadro dei tempi dell'azione puntuale o compiuta",
+      "70. Usi di ἄν",
+      "71. La frase e il periodo",
+      "Vocabolario 13º"
+    ]
+  },
+  {
+    "id": "lezione-quattordicesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione quattordicesima",
+    "title": "Pronomi e proposizioni",
+    "summary": "Pronomi reciproci, possessivi e relativi, con avvio allo studio delle proposizioni.",
+    "contents": [
+      "72. Pronome reciproco",
+      "73. Pronome possessivo",
+      "74. Pronome riflessivo",
+      "75. Pronome-aggettivo possessivo",
+      "76. Pronome relativo-oggettiva",
+      "77. La proposizione soggettiva",
+      "78. Il participio finale",
+      "79. Vocabolario 14º"
+    ]
+  },
+  {
+    "id": "lezione-quindicesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione quindicesima",
+    "title": "Futuro sigmatico e asigmatico",
+    "summary": "Studio del futuro nei suoi modelli principali e in alcuni verbi molto frequenti.",
+    "contents": [
+      "80. Il futuro sigmatico",
+      "81. Il futuro asigmatico",
+      "82. Il futuro del verbo μέλλω",
+      "83. Il futuro del verbo ἔχω",
+      "84. Il futuro di εἰμί e di γίνομαι",
+      "85. Il futuro del verbo deponente causale",
+      "86. Uso del λέγω",
+      "Vocabolario 15º"
+    ]
+  },
+  {
+    "id": "lezione-sedicesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione sedicesima",
+    "title": "Aoristo forte e infinito",
+    "summary": "Ingresso nell'aoristo forte o secondo e prime osservazioni sull'infinito.",
+    "contents": [
+      "91. L'aoristo forte o secondo",
+      "92. L'infinito del verbo",
+      "93. Uso dell'infinito",
+      "Vocabolario 18º"
+    ]
+  },
+  {
+    "id": "lezione-diciassettesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione diciassettesima",
+    "title": "Aoristo I sigmatico e asigmatico",
+    "summary": "Forme deboli e forti dell'aoristo I, attive e passive.",
+    "contents": [
+      "87. L'aoristo I (debole) sigmatico",
+      "88. L'aoristo I (debole) sigmatico passivo",
+      "89. L'aoristo I forte asigmatico dell'azione puntuale",
+      "90. L'aoristo I (debole) asigmatico dell'azione puntuale",
+      "Vocabolario 16º"
+    ]
+  },
+  {
+    "id": "lezione-diciannovesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione diciannovesima",
+    "title": "Aoristo e significazione puntuale",
+    "summary": "Approfondimento del valore puntuale dell'aoristo.",
+    "contents": [
+      "94. Aoristo e significazione puntuale. Aoristo forte (II)",
+      "95. Aoristo debole (III)",
+      "Vocabolario 20º"
+    ]
+  },
+  {
+    "id": "lezione-ventesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventesima",
+    "title": "Terza declinazione: temi consonantici",
+    "summary": "Nuova serie di temi della terza declinazione con nomi e aggettivi.",
+    "contents": [
+      "96. Declinazione dei nomi con il tema in consonante",
+      "97. Contrazione della terza declinazione",
+      "98. Temi in dentale, gutturale, labiale",
+      "99. Temi in labiale",
+      "100. Nomi declinabili secondo il modello del βάσις",
+      "101. Temi in nasale. Aggettivi e sostantivi",
+      "Vocabolario 21º"
+    ]
+  },
+  {
+    "id": "lezione-ventunesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventunesima",
+    "title": "Temi semplici, contratti e uso del participio",
+    "summary": "Nomi semplici e contratti, genitivo assoluto e funzione sintattica dell'articolo.",
+    "contents": [
+      "102. Nomi semplici. Contratti",
+      "103. Tema della seconda classe",
+      "104. Complementi e genitivo assoluto",
+      "105. Uso del participio. Funzione sintattica dell'articolo",
+      "Vocabolario 22º"
+    ]
+  },
+  {
+    "id": "lezione-ventiduesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventiduesima",
+    "title": "Perfetto attivo",
+    "summary": "Formazione del perfetto attivo e comportamenti di alcuni temi in liquida.",
+    "contents": [
+      "106. Perfetto attivo",
+      "107. Perfetto con aumento",
+      "108. Temi in liquida con apofonia",
+      "Vocabolario 23º"
+    ]
+  },
+  {
+    "id": "lezione-ventitreesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventitreesima",
+    "title": "Temi in α, ι, υ e contratti",
+    "summary": "Nuovi gruppi nominali e contratti da riconoscere nella lettura del testo.",
+    "contents": [
+      "109. Temi in -α semplici",
+      "110. Temi in -α composti",
+      "111. Temi in -ι, -υ, -ου, -ει, -αι",
+      "112. Temi contratti in -αο, -εο",
+      "Vocabolario 24º"
+    ]
+  },
+  {
+    "id": "lezione-ventiquattresima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventiquattresima",
+    "title": "Perfetto debole attivo",
+    "summary": "Introduzione sistematica al perfetto debole e ai suoi usi.",
+    "contents": [
+      "113. Il perfetto debole attivo",
+      "114. Perfetto attivo di δίδωμι",
+      "115. Perfetto",
+      "116. Uso del perfetto",
+      "Vocabolario 33º"
+    ]
+  },
+  {
+    "id": "lezione-venticinquesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione venticinquesima",
+    "title": "Piuccheperfetto e perfetti fortissimi",
+    "summary": "Piuccheperfetto debole e forte con due perfetti fortissimi molto importanti.",
+    "contents": [
+      "117. Il piuccheperfetto debole e forte",
+      "118. Perfetto fortissimo ἔοικα",
+      "119. Perfetto fortissimo οἶδα",
+      "Vocabolario 34º"
+    ]
+  },
+  {
+    "id": "lezione-ventiseiesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventiseiesima",
+    "title": "Perfetto medio-passivo e aoristo passivo",
+    "summary": "Perfetto medio-passivo, piuccheperfetto e aoristo I passivo.",
+    "contents": [
+      "120. Perfetto medio-passivo",
+      "121. Piuccheperfetto medio-passivo",
+      "122. Aoristo I passivo e futuro passivo",
+      "123. Il piuccheperfetto (II) attivo e medio-passivo",
+      "Vocabolario 35º"
+    ]
+  },
+  {
+    "id": "lezione-ventisettesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventisettesima",
+    "title": "Participi presenti e nuovi temi nominali",
+    "summary": "Primo blocco sul participio e nuovi temi nominali della terza declinazione.",
+    "contents": [
+      "124. Participi presenti",
+      "125. Temi in -σ e tematici",
+      "126. Temi in -ντ",
+      "127. Temi in -ες, -ος, -ον",
+      "128. Temi in -υς",
+      "129. Temi in -ύς, -εια, -ύ",
+      "Vocabolario 36º"
+    ]
+  },
+  {
+    "id": "lezione-ventottesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventottesima",
+    "title": "Aoristo passivo e infinito",
+    "summary": "Aoristo passivo, infinito e nuova serie di aggettivi a tre uscite.",
+    "contents": [
+      "130. L'aoristo passivo debole",
+      "131. L'aoristo passivo forte",
+      "132. L'infinito presente, aoristo, perfetto debole",
+      "133. Aggettivi della II classe a tre uscite",
+      "134. Aggettivi della I classe a tre uscite",
+      "135. Temi in -ος, -η, -ον",
+      "136. Temi in -ων, -ον",
+      "Vocabolario 37º"
+    ]
+  },
+  {
+    "id": "lezione-ventinovesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione ventinovesima",
+    "title": "Participio passivo",
+    "summary": "Blocchi principali del participio passivo e dei suoi usi sintattici.",
+    "contents": [
+      "137. Il participio passivo",
+      "138. Futuro passivo",
+      "139. Participio congiunto",
+      "140. Aoristo sigmatico passivo",
+      "141. Participio assoluto",
+      "142. Participio attributivo",
+      "143. Participio sostantivato",
+      "144. Participio suppletivo",
+      "145. Participio predicativo",
+      "Vocabolario 38º"
+    ]
+  },
+  {
+    "id": "lezione-trentesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentesima",
+    "title": "Altri usi del participio",
+    "summary": "Participio presente, perfetto, futuro e valori avverbiali principali.",
+    "contents": [
+      "146. Participio presente",
+      "147. Participio perfetto e perfetto medio-passivo",
+      "148. Participio congiunto, avverbiale, comparativo",
+      "149. Participio futuro",
+      "150. Participio causale, temporale, ipotetico, concessivo, finale",
+      "Vocabolario 39º"
+    ]
+  },
+  {
+    "id": "lezione-trentunesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentunesima",
+    "title": "Numerali e avverbi",
+    "summary": "Numerali, ordini e comparazione degli avverbi.",
+    "contents": [
+      "151. Numerali",
+      "152. Numerali indeclinabili",
+      "153. Numerale εκατον",
+      "154. Numerale ordinale",
+      "155. Comparazione degli avverbi",
+      "156. Avverbi di modo",
+      "157. Avverbi comparativi e superlativi derivati da preposizioni",
+      "Vocabolario 40º"
+    ]
+  },
+  {
+    "id": "lezione-trentaduesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentaduesima",
+    "title": "Interrogativi, indefiniti e proposizioni infinitive",
+    "summary": "Pronomi e avverbi interrogativi, indefiniti e principali usi dell'infinitiva.",
+    "contents": [
+      "158. Pronomi, aggettivi, avverbi interrogativi",
+      "159. Pronomi aggettivi indefiniti e negativi",
+      "160. Pronomi personali, reciproci, possessivi, riflessivi nel N.T.",
+      "161. Pronomi relativi",
+      "162. Proposizioni infinitive",
+      "163. Proposizioni interrogative indirette e usi speciali nel N.T.",
+      "Vocabolario 41º"
+    ]
+  },
+  {
+    "id": "lezione-trentatreesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentatreesima",
+    "title": "Verbi in -μι",
+    "summary": "Ingresso nella costruzione dei verbi in -μι e nelle loro forme principali.",
+    "contents": [
+      "165. Costruzione dei verbi in -μι",
+      "166. Aoristo α di δίδωμι, τίθημι, ἵημι",
+      "167. Seconda classe dei verbi in -μι",
+      "168. Futuro, aoristo, perfetto dei verbi in -μι della seconda classe",
+      "Vocabolario 42º"
+    ]
+  },
+  {
+    "id": "lezione-trentaquattresima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentaquattresima",
+    "title": "Proposizioni dichiarative, consecutive e finali",
+    "summary": "Uno snodo sintattico importante del manuale, con le principali proposizioni del periodo.",
+    "contents": [
+      "169. Proposizioni dichiarative, consecutive e finali. Congiunzioni avversative",
+      "Vocabolario 43º"
+    ]
+  },
+  {
+    "id": "lezione-trentacinquesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentacinquesima",
+    "title": "δίδωμι, τίθημι e verbi in -μι",
+    "summary": "Approfondimento operativo sui principali verbi in -μι e sulle loro analogie.",
+    "contents": [
+      "170. Costruzione di τίθημι",
+      "171. Costruzione di δίδωμι",
+      "172. Congiuntivo e ottativo dei verbi in -μι",
+      "173. Aoristo debole dei verbi in -μι, -ημι",
+      "174. Perfetto e piuccheperfetto di δίδωμι",
+      "175. Futuro e perfetto dei verbi in -μι",
+      "176. Analogie dei verbi in -μι",
+      "177. Cenni sulla seconda classe di verbi in -μι",
+      "Vocabolario 44º"
+    ]
+  },
+  {
+    "id": "lezione-trentaseiesima",
+    "kind": "lesson",
+    "lessonLabel": "Lezione trentaseiesima",
+    "title": "Seconda classe dei verbi in -μι",
+    "summary": "Chiusura del percorso sui verbi in -μι con il loro sistema di tempi e valori.",
+    "contents": [
+      "178. Seconda classe dei verbi in -μι",
+      "179. Costruzione del perfetto e dei temi secondi",
+      "180. Valore dei tempi dei verbi in -μι della seconda classe",
+      "Vocabolario 45º"
+    ]
+  },
+  {
+    "id": "appendice",
+    "kind": "appendix",
+    "title": "Appendice",
+    "summary": "Strumenti finali di consultazione e prospetti riassuntivi.",
+    "contents": [
+      "I. Prospetto dei paradigmi",
+      "II. L'ottativo nel N.T.",
+      "III. Uso degli articoli, preposizioni e altre particelle nel N.T.",
+      "IV. Il duale",
+      "V. Congiunzioni, particelle, interiezioni",
+      "VI. Regole di lettura",
+      "VII. Presenza e uso di un'edizione scientifica del N.T. greco",
+      "Indice del lessico dei termini greci",
+      "Indice del lessico dei termini ebraici",
+      "Elenco delle citazioni bibliche",
+      "Indice dei passi"
     ]
   }
 ]
