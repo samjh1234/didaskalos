@@ -387,6 +387,7 @@ const buildWordData = (data, lemma) => {
     officialCandidate && Object.keys(officialCandidate.paradigms || {}).length
       ? officialCandidate
       : null;
+  const verbLemmaEntry = partOfSpeech === "verbo" ? data.verbLemmas?.[lemma] || null : null;
   const resolvedGloss = officialParadigm?.meaning_it || gloss;
 
   let morphology = null;
@@ -411,11 +412,12 @@ const buildWordData = (data, lemma) => {
     lemma,
     partOfSpeech,
     gloss: resolvedGloss,
-    pronunciation: pronounceGreek(greek),
+    pronunciation: verbLemmaEntry?.pronunciation || pronounceGreek(greek),
     notesIt: cleanVocabularyItalianNote(entry?.notesIt || ""),
     occurrences,
     stats,
     morphology,
+    principalParts: verbLemmaEntry?.principal_parts || [],
   };
 };
 
@@ -465,15 +467,22 @@ const renderWord = async () => {
         </article>
 
         <article class="panel">
-          <h3>Analisi morfologica</h3>
+          <div class="panel-head">
+            <h3>Analisi morfologica</h3>
+            ${
+              filledSections.length
+                ? `
+                  <div class="panel-actions">
+                    <button type="button" class="secondary-button print-button" data-print-paradigm-full><span class="print-icon" aria-hidden="true">⎙</span> Completa</button>
+                    <button type="button" class="secondary-button print-button" data-print-paradigm-current><span class="print-icon" aria-hidden="true">⎙</span> Attuale</button>
+                  </div>
+                `
+                : ""
+            }
+          </div>
           ${
             word.morphology && filledSections.length
               ? `<p>${escapeHtml([word.morphology.pattern, word.morphology.note].filter(Boolean).join(". "))}</p>`
-              : ""
-          }
-          ${
-            filledSections.length
-              ? `<div class="panel-actions"><button type="button" class="secondary-button" data-print-paradigm>Stampa scheda</button></div>`
               : ""
           }
           ${
@@ -561,23 +570,52 @@ const renderWord = async () => {
         mode: "default",
       });
     }
-    const printButton = result.querySelector("[data-print-paradigm]");
-    if (printButton) {
-      printButton.addEventListener("click", () => {
+    const printFullButton = result.querySelector("[data-print-paradigm-full]");
+    const printCurrentButton = result.querySelector("[data-print-paradigm-current]");
+    const allCardsHtml = filledSections
+      .map((section) =>
+        renderParadigmCard(section.title, section.forms, word.morphology.meaningIt || word.gloss, {
+          mode: word.partOfSpeech.startsWith("pronome")
+            ? "pronoun"
+            : word.partOfSpeech === "sostantivo"
+              ? "case"
+              : "default",
+          meanings: section.meanings,
+        }),
+      )
+      .join("");
+    const metadata = [
+      { label: "Lemma", value: word.lemma },
+      { label: "Categoria", value: word.partOfSpeech },
+      { label: "Significato", value: word.gloss || "Da definire nel lessico italiano" },
+      { label: "Pronuncia", value: word.pronunciation },
+      ...(word.principalParts?.length
+        ? [{ label: "Parti principali", value: word.principalParts.join(" · ") }]
+        : []),
+    ];
+
+    if (printCurrentButton) {
+      printCurrentButton.addEventListener("click", () => {
         const visibleCards = [...result.querySelectorAll(".paradigm-card")]
           .map((card) => card.outerHTML)
           .join("");
         openParadigmPrintView({
           title: word.greek,
           subtitle: `${word.partOfSpeech} · ${word.gloss || "significato da definire"}`,
-          metadata: [
-            { label: "Lemma", value: word.lemma },
-            { label: "Categoria", value: word.partOfSpeech },
-            { label: "Significato", value: word.gloss || "Da definire nel lessico italiano" },
-            { label: "Pronuncia", value: word.pronunciation },
-          ],
+          metadata,
           contentHtml: visibleCards,
           notes: "La stampa rispetta le sezioni attualmente visibili della scheda.",
+        });
+      });
+    }
+    if (printFullButton) {
+      printFullButton.addEventListener("click", () => {
+        openParadigmPrintView({
+          title: word.greek,
+          subtitle: `${word.partOfSpeech} · ${word.gloss || "significato da definire"}`,
+          metadata,
+          contentHtml: allCardsHtml,
+          notes: "La stampa include tutte le sezioni disponibili della scheda.",
         });
       });
     }

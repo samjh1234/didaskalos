@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!--
+      Pagina stampabile dedicata.
+      Riceve il contenuto della scheda da localStorage,
+      la rende in bianco e nero e apre direttamente la stampa del browser.
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stampa scheda | Didaskalos</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      :root {
+        --ink: #000;
+        --line: #000;
+        --soft: #f1f1f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 10.2pt;
+        line-height: 1.16;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      .sheet {
+        width: 100%;
+      }
+
+      .topbar {
+        border: 1px solid var(--line);
+        padding: 7px 10px;
+        margin-bottom: 6px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 22pt;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .subline {
+        margin-top: 4px;
+        text-align: center;
+        font-size: 10.2pt;
+      }
+
+      .meta-table,
+      .pronoun-table,
+      .mini-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .meta-table {
+        margin-bottom: 6px;
+      }
+
+      .meta-table td,
+      .pronoun-table th,
+      .pronoun-table td,
+      .mini-table th,
+      .mini-table td {
+        border: 1px solid var(--line);
+        padding: 5px 7px;
+        vertical-align: top;
+      }
+
+      .meta-label {
+        width: 14%;
+        font-weight: bold;
+      }
+
+      .parts {
+        font-size: 11pt;
+        letter-spacing: 0.01em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+
+      .block {
+        border: 1px solid var(--line);
+      }
+
+      .block-title {
+        padding: 5px 7px;
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 10pt;
+        letter-spacing: 0.02em;
+      }
+
+      .subblock + .subblock {
+        border-top: 1px solid var(--line);
+      }
+
+      .subblock-title {
+        padding: 4px 7px;
+        font-style: italic;
+        font-size: 10pt;
+      }
+
+      .mini-table th,
+      .mini-table td {
+        border-top: 1px solid var(--line);
+        padding: 3px 5px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .mini-table tr:first-child th,
+      .mini-table tr:first-child td {
+        border-top: 1px solid var(--line);
+      }
+
+      .mini-table th {
+        font-size: 9.4pt;
+      }
+
+      .col-person {
+        width: 17%;
+      }
+
+      .col-greek {
+        width: 29%;
+      }
+
+      .col-pron {
+        width: 24%;
+      }
+
+      .col-it {
+        width: 30%;
+      }
+
+      .notes {
+        margin-top: 6px;
+        border: 1px solid var(--line);
+      }
+
+      .notes .block-title {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .notes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .notes-grid > div {
+        padding: 6px 8px;
+      }
+
+      .notes-grid > div + div {
+        border-left: 1px solid var(--line);
+      }
+
+      ul {
+        margin: 5px 0 0 16px;
+        padding: 0;
+      }
+
+      li + li {
+        margin-top: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="print-sheet-root" class="sheet"></main>
+
+    <script type="module">
+      const root = document.querySelector("#print-sheet-root");
+      const raw = localStorage.getItem("didaskalos-print-payload");
+
+      const metadataValue = (metadata, label) =>
+        metadata.find((item) => item.label === label)?.value || "";
+
+      const normalize = (value = "") =>
+        value
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .trim();
+
+      const buildSynopticSection = (card, includeSubtitle = true) => {
+        const title = card.querySelector(".paradigm-header h4, h5")?.textContent?.trim() || "";
+        const subtitle = card.querySelector(".paradigm-subtitle")?.textContent?.trim() || "";
+
+        if (card.querySelector(".pronoun-table")) {
+          return `
+            <section class="subblock">
+              <div class="subblock-title">${includeSubtitle ? (title || subtitle) : ""}</div>
+              ${card.querySelector(".pronoun-table")?.outerHTML || ""}
+            </section>
+          `;
+        }
+
+        const rows = [...card.querySelectorAll(".paradigm-row")]
+          .map((row) => {
+            const cells = row.querySelectorAll(".paradigm-label, .paradigm-greek, .paradigm-pronunciation, .paradigm-meaning");
+            if (!cells.length) return "";
+            return `<tr>${[...cells].map((cell) => `<td>${cell.innerHTML}</td>`).join("")}</tr>`;
+          })
+          .filter(Boolean)
+          .join("");
+
+        return `
+          <section class="subblock">
+            <div class="subblock-title">${includeSubtitle ? (title || subtitle) : ""}</div>
+            <table class="mini-table">
+              <tr>
+                <th class="col-person">Pers.</th>
+                <th class="col-greek">Koine</th>
+                <th class="col-pron">Pronuncia</th>
+                <th class="col-it">Italiano</th>
+              </tr>
+              ${rows}
+            </table>
+          </section>
+        `;
+      };
+
+      try {
+        if (!raw) throw new Error("missing payload");
+        const payload = JSON.parse(raw);
+        const metadata = Array.isArray(payload.metadata) ? payload.metadata : [];
+        const partsEntry = metadata.find((item) => item.label === "Parti principali");
+        const parser = document.createElement("div");
+        parser.innerHTML = payload.contentHtml || "";
+        const cards = [...parser.children];
+
+        const finiteCards = cards.filter((card) => {
+          const title = card.querySelector(".paradigm-header h4, h5")?.textContent?.trim() || "";
+          const lowered = normalize(title);
+          return ["indicativo", "congiuntivo", "ottativo", "imperativo"].some((value) => lowered.includes(value));
+        });
+
+        const otherCards = cards.filter((card) => !finiteCards.includes(card));
+
+        const leftSections = finiteCards.map((card) => buildSynopticSection(card)).join("");
+        const rightSections = otherCards.map((card) => buildSynopticSection(card)).join("");
+
+        const notesMarkup = payload.notes
+          ? `
+            <section class="notes">
+              <div class="block-title">Note morfologiche</div>
+              <div class="notes-grid">
+                <div>
+                  <strong>${payload.notes}</strong>
+                </div>
+                <div></div>
+              </div>
+            </section>
+          `
+          : "";
+
+        root.innerHTML = `
+          <section class="topbar">
+            <h1>${payload.title || ""}</h1>
+            <div class="subline">${payload.subtitle || ""}</div>
+          </section>
+
+          <table class="meta-table">
+            <tr>
+              <td class="meta-label">Lemma</td>
+              <td>${metadataValue(metadata, "Lemma") || payload.title || ""}</td>
+              <td class="meta-label">Pronuncia</td>
+              <td>${metadataValue(metadata, "Pronuncia") || ""}</td>
+              <td class="meta-label">Classe</td>
+              <td>${metadataValue(metadata, "Classe") || metadataValue(metadata, "Categoria") || ""}</td>
+            </tr>
+            ${
+              partsEntry
+                ? `
+                  <tr>
+                    <td class="meta-label">Parti principali</td>
+                    <td colspan="5" class="parts">${partsEntry.value}</td>
+                  </tr>
+                `
+                : ""
+            }
+          </table>
+
+          <section class="grid">
+            <article class="block">
+              <div class="block-title">Modi finiti</div>
+              ${leftSections}
+            </article>
+
+            <article class="block">
+              <div class="block-title">Altri modi e forme</div>
+              ${rightSections}
+            </article>
+          </section>
+
+          ${notesMarkup}
+        `;
+      } catch {
+        root.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

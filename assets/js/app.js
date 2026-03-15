@@ -815,6 +815,8 @@ const renderMorphology = () => {
   views.morphology.replaceChildren(cloneTemplate(templates.morphology));
   const form = views.morphology.querySelector("#morphology-form");
   const lemmaInput = views.morphology.querySelector("#morph-lemma");
+  const printFullButton = views.morphology.querySelector("#morph-print-full");
+  const printCurrentButton = views.morphology.querySelector("#morph-print-current");
   const output = views.morphology.querySelector("#morphology-result");
 
   // Cerca il paradigma ufficiale nel dataset corretto in base al tipo di parola.
@@ -856,6 +858,11 @@ const renderMorphology = () => {
       lemma,
     });
     if (!lemma) {
+      [printFullButton, printCurrentButton].forEach((button) => {
+        button.hidden = true;
+        button.disabled = true;
+        button.onclick = null;
+      });
       output.innerHTML = `<article class="notice">Inserisci un lemma per visualizzare la scheda morfologica.</article>`;
       return;
     }
@@ -876,6 +883,7 @@ const renderMorphology = () => {
       (detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo");
     const title = official ? official.class : result.pattern;
     const note = official ? "" : result.note;
+    const verbLemmaEntry = detectedType === "verb" ? state.data.verbLemmas?.[lemma] || null : null;
     const sections = official
       ? Object.entries(official.paradigms).map(([sectionTitle, sectionData]) => ({
           title: sectionTitle,
@@ -883,6 +891,19 @@ const renderMorphology = () => {
         }))
       : [{ title: "Paradigma", forms: Object.entries(result.forms || {}), meanings: {} }];
     const filledSections = sections.filter((section) => section.forms.length);
+    const allCardsHtml = filledSections
+      .map((section) =>
+        renderParadigmCard(section.title, section.forms, meaning, {
+          mode:
+            detectedType === "pronoun"
+              ? "pronoun"
+              : detectedType === "noun"
+                ? "case"
+                : "default",
+          meanings: section.meanings,
+        }),
+      )
+      .join("");
     const verbSelectorId = `morph-${lemma}`;
     const verbEntries =
       detectedType === "verb" && official ? buildVerbSectionEntries(filledSections, verbSelectorId) : [];
@@ -891,11 +912,6 @@ const renderMorphology = () => {
       <article class="panel">
         <h2>${escapeHtml(title)}</h2>
         ${showTopNote ? `<p>${escapeHtml(note)}</p>` : ""}
-        ${
-          filledSections.length
-            ? `<div class="panel-actions"><button type="button" class="secondary-button" data-print-paradigm>Stampa scheda</button></div>`
-            : ""
-        }
         ${
           filledSections.length
             ? verbEntries.length
@@ -980,26 +996,54 @@ const renderMorphology = () => {
         mode: "default",
       });
     }
-    const printButton = output.querySelector("[data-print-paradigm]");
-    if (printButton) {
-      printButton.addEventListener("click", () => {
+    if (filledSections.length) {
+      const metadata = [
+        { label: "Lemma", value: verbLemmaEntry?.greek || official?.lemma || lemmaInput.value.trim() || lemma },
+        ...(verbLemmaEntry?.pronunciation ? [{ label: "Pronuncia", value: verbLemmaEntry.pronunciation }] : []),
+        { label: "Categoria", value: detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo" },
+        { label: "Classe", value: title },
+        { label: "Significato", value: meaning },
+        ...(verbLemmaEntry?.principal_parts?.length
+          ? [{ label: "Parti principali", value: verbLemmaEntry.principal_parts.join(" · ") }]
+          : []),
+      ];
+
+      [printFullButton, printCurrentButton].forEach((button) => {
+        button.hidden = false;
+        button.disabled = false;
+      });
+
+      printCurrentButton.onclick = () => {
         const visibleCards = [...output.querySelectorAll(".paradigm-card")]
           .map((card) => card.outerHTML)
           .join("");
         openParadigmPrintView({
-          title: official?.lemma || lemmaInput.value.trim() || lemma,
+          title: verbLemmaEntry?.greek || official?.lemma || lemmaInput.value.trim() || lemma,
           subtitle: `${title} · ${meaning}`,
-          metadata: [
-            { label: "Lemma", value: official?.lemma || lemmaInput.value.trim() || lemma },
-            { label: "Categoria", value: detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo" },
-            { label: "Classe", value: title },
-            { label: "Significato", value: meaning },
-          ],
+          metadata,
           contentHtml: visibleCards,
           notes: detectedType === "verb"
             ? "La stampa rispetta le sezioni attualmente visibili della scheda verbale."
             : "La stampa rispetta la scheda morfologica attualmente visibile.",
         });
+      };
+
+      printFullButton.onclick = () => {
+        openParadigmPrintView({
+          title: verbLemmaEntry?.greek || official?.lemma || lemmaInput.value.trim() || lemma,
+          subtitle: `${title} · ${meaning}`,
+          metadata,
+          contentHtml: allCardsHtml,
+          notes: detectedType === "verb"
+            ? "La stampa include tutte le sezioni disponibili della scheda verbale."
+            : "La stampa include tutta la scheda morfologica disponibile.",
+        });
+      };
+    } else {
+      [printFullButton, printCurrentButton].forEach((button) => {
+        button.hidden = true;
+        button.disabled = true;
+        button.onclick = null;
       });
     }
   };
@@ -1019,6 +1063,11 @@ const renderMorphology = () => {
     return;
   }
 
+  [printFullButton, printCurrentButton].forEach((button) => {
+    button.hidden = true;
+    button.disabled = true;
+    button.onclick = null;
+  });
   replaceRouteState("morphology", {
     lemma: "",
   });
