@@ -1127,10 +1127,15 @@ code {
   }
 
   .grammar-part-head,
-  .grammar-detail-nav,
   .grammar-breadcrumb {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .grammar-detail-nav {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .grammar-detail-nav .secondary-button {
