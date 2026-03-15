@@ -467,8 +467,15 @@ const renderWord = async () => {
         </article>
 
         <article class="panel">
-          <div class="panel-head">
-            <h3>Analisi morfologica</h3>
+          <div class="panel-head panel-head-split">
+            <div class="panel-head-copy">
+              <h3>Analisi morfologica</h3>
+              ${
+                word.morphology && filledSections.length
+                  ? `<p>${escapeHtml([word.morphology.pattern, word.morphology.note].filter(Boolean).join(". "))}</p>`
+                  : ""
+              }
+            </div>
             ${
               filledSections.length
                 ? `
@@ -480,11 +487,6 @@ const renderWord = async () => {
                 : ""
             }
           </div>
-          ${
-            word.morphology && filledSections.length
-              ? `<p>${escapeHtml([word.morphology.pattern, word.morphology.note].filter(Boolean).join(". "))}</p>`
-              : ""
-          }
           ${
             filledSections.length
               ? verbEntries.length > 1

@@ -439,6 +439,14 @@ button {
   margin: 0;
 }
 
+.panel-head-copy {
+  min-width: 0;
+}
+
+.panel-head-copy p {
+  margin: 0.32rem 0 0;
+}
+
 input,
 select {
   width: 100%;
@@ -588,6 +596,7 @@ select {
   color: var(--muted);
   min-width: 160px;
   flex: 1 1 180px;
+  align-content: start;
 }
 
 .paradigm-header {
@@ -1100,6 +1109,7 @@ code {
     min-width: 0;
     flex: 0 0 auto;
     font-size: 0.84rem;
+    gap: 0.28rem;
   }
 
   .paradigm-filters select {
@@ -1165,6 +1175,7 @@ code {
 
   .paradigm-filters label {
     font-size: 0.76rem;
+    gap: 0.22rem;
   }
 
   .paradigm-filters select {
@@ -1220,6 +1231,10 @@ code {
     align-items: start;
   }
 
+  #word-page-result .panel-head-copy {
+    align-self: start;
+  }
+
   #word-page-result .panel-actions {
     flex-direction: column;
     align-items: stretch;
@@ -1230,11 +1245,6 @@ code {
   #word-page-result .print-button {
     justify-content: center;
     min-width: 8.25rem;
-  }
-
-  #word-page-result .panel-head + p {
-    margin-top: 0.32rem;
-    margin-bottom: 0.48rem;
   }
 
   #word-page-result .paradigm-filters {
