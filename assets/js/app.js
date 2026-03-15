@@ -739,8 +739,15 @@ const renderVocabulary = (prefill = "") => {
       })
       .join("");
 
+    const rangeStart = start + 1;
+    const rangeEnd = Math.min(start + PAGE_SIZE, matches.length);
+    const resultsLabel = `
+      <div class="results-summary" aria-label="Riepilogo risultati vocabolario">
+        <span class="results-count">Mostra ${rangeStart}-${rangeEnd} di ${matches.length} ${matches.length === 1 ? "risultato" : "risultati"}</span>
+      </div>
+    `;
     const paginationHtml = renderVocabularyPagination(currentPage, totalPages, pageNumbers);
-    results.innerHTML = `${paginationHtml}${cardsHtml}${paginationHtml}`;
+    results.innerHTML = `${resultsLabel}${paginationHtml}${cardsHtml}${paginationHtml}`;
 
     results.querySelectorAll("[data-word-link]").forEach((link) => {
       link.addEventListener("click", (event) => {

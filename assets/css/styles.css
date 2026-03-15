@@ -323,6 +323,18 @@ main {
   font-weight: 500;
 }
 
+.results-summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.05rem 0 0.12rem;
+}
+
+.results-count {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .pagination-bar {
   /* Navigazione paginata del vocabolario */
   display: flex;
@@ -331,6 +343,10 @@ main {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 1.2rem;
+}
+
+#vocabulary-results .results-summary + .pagination-bar {
+  margin-top: 0.12rem;
 }
 
 .pagination-page,
