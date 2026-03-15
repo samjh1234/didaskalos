@@ -1232,6 +1232,19 @@ code {
     min-width: 8.25rem;
   }
 
+  #word-page-result .panel-head + p {
+    margin-top: 0.32rem;
+    margin-bottom: 0.48rem;
+  }
+
+  #word-page-result .paradigm-filters {
+    margin-top: 0.42rem;
+  }
+
+  #word-page-result .paradigm-card {
+    margin-top: 0.48rem;
+  }
+
   .summary-stat {
     font-size: 0.8rem;
   }
