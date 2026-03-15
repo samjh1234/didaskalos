@@ -617,6 +617,99 @@ select {
   font-size: 0.94rem;
 }
 
+.grammar-manual-intro h2,
+.grammar-detail-hero h2 {
+  margin: 0 0 0.65rem;
+}
+
+.grammar-manual-intro p,
+.grammar-detail-hero p,
+.grammar-section-card p {
+  margin: 0;
+}
+
+.grammar-index,
+.grammar-detail {
+  gap: 1rem;
+}
+
+.grammar-part-head,
+.grammar-detail-nav,
+.grammar-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.grammar-part-head h3,
+.grammar-section-card h3 {
+  margin: 0;
+}
+
+.grammar-chapter-list {
+  margin-top: 1rem;
+}
+
+.grammar-chapter-card {
+  display: grid;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 1rem 1.05rem;
+  border-radius: 18px;
+  border: 1px solid rgba(140, 76, 35, 0.18);
+  background: linear-gradient(180deg, rgba(255, 252, 244, 0.96), rgba(249, 240, 221, 0.88));
+  color: var(--ink);
+  text-align: left;
+  box-shadow: 0 12px 28px rgba(74, 51, 31, 0.08);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.grammar-chapter-card:hover,
+.grammar-chapter-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(74, 51, 31, 0.12);
+  border-color: rgba(140, 76, 35, 0.3);
+}
+
+.grammar-chapter-kicker {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.text-link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-link-button:hover,
+.text-link-button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.grammar-detail-hero {
+  background: linear-gradient(180deg, rgba(255, 250, 241, 0.96), rgba(246, 234, 206, 0.88));
+}
+
+.grammar-section-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.grammar-section-card .stack {
+  gap: 0.65rem;
+}
+
 .lexicon-head h2 {
   margin: 0;
   font-size: 1.45rem;
@@ -1024,6 +1117,13 @@ code {
   .hero-card,
   .hero-copy {
     padding: 0.9rem 0.95rem;
+  }
+
+  .grammar-part-head,
+  .grammar-detail-nav,
+  .grammar-breadcrumb {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .summary-grid {

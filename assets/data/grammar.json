@@ -1,33 +1,277 @@
 [
   {
+    "id": "alfabeto-e-pronuncia",
+    "part": "Parte I",
+    "chapter": "Capitolo 1",
+    "title": "Alfabeto e pronuncia",
+    "summary": "Le basi della lettura: alfabeto, vocali, dittonghi, spiriti e accenti del greco koine.",
+    "sections": [
+      {
+        "title": "Obiettivo del capitolo",
+        "paragraphs": [
+          "Questo capitolo introduce i segni fondamentali del greco koine e aiuta a leggere una parola biblica con maggiore sicurezza.",
+          "Nel progetto la pronuncia visualizzata nelle schede non pretende di sostituire uno studio fonetico completo, ma offre un appoggio pratico alla lettura."
+        ]
+      },
+      {
+        "title": "Temi principali",
+        "points": [
+          "Le 24 lettere dell'alfabeto greco.",
+          "La distinzione tra vocali brevi, lunghe e dittonghi più frequenti.",
+          "Il ruolo degli spiriti e degli accenti nella lettura.",
+          "La differenza tra il valore grafico della parola e la sua traslitterazione."
+        ]
+      },
+      {
+        "title": "Da ricordare",
+        "points": [
+          "Una buona lettura nasce prima dal riconoscimento della forma scritta.",
+          "Gli accenti aiutano a orientarsi, ma all'inizio contano soprattutto le lettere e le terminazioni.",
+          "Nel Nuovo Testamento ricorrono spesso forme che diventano familiari solo con la ripetizione."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "articolo-e-sostantivo",
+    "part": "Parte I",
+    "chapter": "Capitolo 2",
     "title": "Articolo e sostantivo",
-    "summary": "Accordo fra articolo, genere, numero e caso nel greco koine.",
-    "details": [
-      "Il nominativo esprime spesso il soggetto della frase.",
-      "Il genitivo segnala possesso, relazione o origine.",
-      "Il dativo copre funzione indiretta, mezzo o sfera.",
-      "L'articolo è frequente e lega sostantivi, aggettivi e participi."
+    "summary": "Accordo tra articolo, genere, numero e caso nel sistema nominale del greco koine.",
+    "sections": [
+      {
+        "title": "L'articolo",
+        "paragraphs": [
+          "L'articolo greco ricorre con grande frequenza e accompagna sostantivi, aggettivi, participi e altre costruzioni.",
+          "Imparare a riconoscerlo aiuta a individuare rapidamente i gruppi sintattici nella frase."
+        ],
+        "points": [
+          "L'articolo concorda con il nome in genere, numero e caso.",
+          "Può introdurre anche un participio con valore quasi nominale.",
+          "La sua presenza o assenza può avere rilievo esegetico, ma prima di tutto ha un ruolo strutturale."
+        ]
+      },
+      {
+        "title": "I casi principali",
+        "points": [
+          "Il nominativo esprime spesso il soggetto o il nome del predicato.",
+          "Il genitivo segnala possesso, origine, relazione o specificazione.",
+          "Il dativo copre funzione indiretta, mezzo, vantaggio o sfera.",
+          "L'accusativo indica spesso il complemento oggetto o il moto a luogo."
+        ]
+      }
     ]
   },
   {
-    "title": "Presente indicativo attivo",
-    "summary": "Paradigma di base dei verbi regolari in -ω.",
-    "details": [
-      "1a singolare: -ω",
-      "2a singolare: -εις",
-      "3a singolare: -ει",
-      "1a plurale: -ομεν",
-      "2a plurale: -ετε",
-      "3a plurale: -ουσι(ν)"
-    ]
-  },
-  {
+    "id": "declinazioni-prima-seconda",
+    "part": "Parte I",
+    "chapter": "Capitolo 3",
     "title": "Prima e seconda declinazione",
-    "summary": "I modelli più comuni per iniziare a leggere i Vangeli.",
-    "details": [
-      "Maschili in -ος e neutri in -ον seguono normalmente la seconda declinazione.",
-      "Femminili in -η e -α seguono la prima declinazione con piccole variazioni.",
-      "La terza declinazione richiede tabelle dedicate e sarà aggiunta in una fase successiva."
+    "summary": "I modelli nominali più comuni per iniziare a leggere i Vangeli e gli altri libri del Nuovo Testamento.",
+    "sections": [
+      {
+        "title": "Prima declinazione",
+        "points": [
+          "Comprende soprattutto femminili in -η e -α.",
+          "Le variazioni dipendono spesso dalla consonante precedente e dalla storia della parola.",
+          "Molti sostantivi frequenti del lessico biblico appartengono a questo gruppo."
+        ]
+      },
+      {
+        "title": "Seconda declinazione",
+        "points": [
+          "Comprende maschili in -ος e neutri in -ον.",
+          "I neutri hanno comportamento riconoscibile: nominativo, accusativo e vocativo coincidono.",
+          "È una delle declinazioni più utili per la lettura iniziale."
+        ]
+      },
+      {
+        "title": "Metodo di studio",
+        "paragraphs": [
+          "Conviene imparare la declinazione come schema di riconoscimento, non soltanto come tabella da memorizzare.",
+          "Nella lettura reale, il caso si riconosce dall'insieme di desinenza, articolo e contesto."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terza-declinazione",
+    "part": "Parte I",
+    "chapter": "Capitolo 4",
+    "title": "Terza declinazione",
+    "summary": "Introduzione alle forme nominali più variabili e ai temi consonantici e vocalici.",
+    "sections": [
+      {
+        "title": "Perché è importante",
+        "paragraphs": [
+          "La terza declinazione raccoglie molte parole fondamentali del Nuovo Testamento e richiede più attenzione rispetto ai modelli della prima e seconda declinazione."
+        ]
+      },
+      {
+        "title": "Punti chiave",
+        "points": [
+          "Il tema non coincide sempre con il nominativo.",
+          "Le alternanze fonetiche possono cambiare l'aspetto della parola.",
+          "Per riconoscere bene il lemma occorre guardare anche il genitivo.",
+          "Molti lessici presentano proprio nominativo e genitivo come coppia di riferimento."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aggettivi-e-pronomi",
+    "part": "Parte II",
+    "chapter": "Capitolo 5",
+    "title": "Aggettivi e pronomi",
+    "summary": "Accordo, valore attributivo e principali famiglie pronominali del greco del Nuovo Testamento.",
+    "sections": [
+      {
+        "title": "Aggettivi",
+        "points": [
+          "L'aggettivo concorda con il sostantivo in genere, numero e caso.",
+          "Può avere funzione attributiva o predicativa.",
+          "Con l'articolo si creano strutture molto importanti per la lettura."
+        ]
+      },
+      {
+        "title": "Pronomi",
+        "points": [
+          "Pronomi personali, dimostrativi, relativi e interrogativi hanno un ruolo centrale nella coesione del testo.",
+          "Molti pronomi mostrano paradigmi propri che conviene riconoscere come blocchi.",
+          "Il contesto sintattico è decisivo per il loro valore."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "verbo-presente-e-imperfetto",
+    "part": "Parte III",
+    "chapter": "Capitolo 6",
+    "title": "Presente e imperfetto",
+    "summary": "Le prime forme verbali da riconoscere: tema del presente, desinenze personali e uso dell'imperfetto.",
+    "sections": [
+      {
+        "title": "Presente indicativo attivo",
+        "points": [
+          "1a singolare: -ω",
+          "2a singolare: -εις",
+          "3a singolare: -ει",
+          "1a plurale: -ομεν",
+          "2a plurale: -ετε",
+          "3a plurale: -ουσι(ν)"
+        ]
+      },
+      {
+        "title": "Imperfetto",
+        "paragraphs": [
+          "L'imperfetto presenta normalmente l'aumento e descrive un'azione in corso nel passato o una situazione ripetuta.",
+          "Per la lettura del Nuovo Testamento è utile riconoscere l'imperfetto come tempo narrativo di sfondo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aoristo-futuro-perfetto",
+    "part": "Parte III",
+    "chapter": "Capitolo 7",
+    "title": "Aoristo, futuro e perfetto",
+    "summary": "Le principali forme verbali che ampliano la lettura narrativa e teologica del testo.",
+    "sections": [
+      {
+        "title": "Aoristo",
+        "points": [
+          "L'aoristo è una delle forme più frequenti del Nuovo Testamento.",
+          "Non coincide semplicemente con il passato remoto italiano.",
+          "Va compreso prima di tutto come valore aspettuale e narrativo."
+        ]
+      },
+      {
+        "title": "Futuro",
+        "points": [
+          "Il futuro presenta spesso il segno sigma.",
+          "Può avere valore temporale ma anche sfumature modali o promissive."
+        ]
+      },
+      {
+        "title": "Perfetto",
+        "points": [
+          "Il perfetto unisce il compimento dell'azione e il suo stato risultante.",
+          "Alcuni perfetti sono molto importanti teologicamente e lessicalmente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "modi-e-forme-non-finite",
+    "part": "Parte III",
+    "chapter": "Capitolo 8",
+    "title": "Congiuntivo, imperativo, infinito e participio",
+    "summary": "I modi e le forme non finite che strutturano periodo, comando, finalità e subordinazione.",
+    "sections": [
+      {
+        "title": "Congiuntivo e imperativo",
+        "points": [
+          "Il congiuntivo è frequente dopo particelle e costruzioni che esprimono possibilità, finalità o esortazione.",
+          "L'imperativo esprime comando, invito, richiesta o esortazione."
+        ]
+      },
+      {
+        "title": "Infinito e participio",
+        "points": [
+          "L'infinito può reggere costruzioni completive o avere valore finale.",
+          "Il participio è una delle forme più caratteristiche del greco e spesso concentra molte informazioni insieme.",
+          "Per leggerlo bene servono attenzione a caso, numero, genere, tempo e voce."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sintassi-della-frase",
+    "part": "Parte IV",
+    "chapter": "Capitolo 9",
+    "title": "Sintassi della frase",
+    "summary": "I primi strumenti per leggere proposizioni, subordinate e costruzioni coordinate nel testo del Nuovo Testamento.",
+    "sections": [
+      {
+        "title": "Ordine e funzione",
+        "paragraphs": [
+          "Il greco koine non segue sempre l'ordine tipico dell'italiano. Per questo è importante riconoscere i casi, le desinenze verbali e gli elementi che introducono le subordinate."
+        ]
+      },
+      {
+        "title": "Elementi da osservare",
+        "points": [
+          "Particelle coordinanti e avversative.",
+          "Costruzioni con articolo e participio.",
+          "Proposizioni relative e completive.",
+          "Valore dei casi nella struttura sintattica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "metodo-di-lettura-del-nt",
+    "part": "Parte IV",
+    "chapter": "Capitolo 10",
+    "title": "Metodo di lettura del Nuovo Testamento",
+    "summary": "Come passare dal paradigma alla frase, e dalla frase alla comprensione del testo biblico.",
+    "sections": [
+      {
+        "title": "Percorso consigliato",
+        "points": [
+          "Riconoscere prima la forma greca.",
+          "Identificare il lemma e la categoria grammaticale.",
+          "Verificare il caso o la forma verbale.",
+          "Leggere il versetto nel suo contesto immediato."
+        ]
+      },
+      {
+        "title": "Uso del progetto",
+        "paragraphs": [
+          "Didaskalos accompagna questo metodo unendo interlineare, vocabolario, morfologia e grammatica.",
+          "L'idea non è sostituire lo studio personale, ma renderlo più ordinato, continuo e consultabile."
+        ]
+      }
     ]
   }
 ]
