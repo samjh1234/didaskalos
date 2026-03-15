@@ -7,7 +7,6 @@
 import { loadData } from "./data-loader.js";
 import {
   buildVerbSectionEntries,
-  cleanVocabularyItalianNote,
   escapeHtml,
   normalize,
   normalizeParadigmSection,
@@ -15,7 +14,6 @@ import {
   pronounceGreek,
   renderParadigmCard,
   renderVerbSectionControls,
-  shouldShowItalianNote,
   wireVerbSectionControls,
 } from "./display-helpers.js";
 import { analyzeNoun, analyzeVerb } from "./morphology.js";
@@ -413,7 +411,6 @@ const buildWordData = (data, lemma) => {
     partOfSpeech,
     gloss: resolvedGloss,
     pronunciation: verbLemmaEntry?.pronunciation || pronounceGreek(greek),
-    notesIt: cleanVocabularyItalianNote(entry?.notesIt || ""),
     occurrences,
     stats,
     morphology,
@@ -446,11 +443,6 @@ const renderWord = async () => {
     const isVerb = word.partOfSpeech === "verbo";
     const verbSelectorId = `word-${word.lemma}`;
     const verbEntries = isVerb ? buildVerbSectionEntries(filledSections, verbSelectorId) : [];
-    const showItalianNote = shouldShowItalianNote(
-      { partOfSpeech: word.partOfSpeech },
-      word.notesIt,
-      word.gloss || "",
-    );
     result.innerHTML = `
       <section class="word-layout">
         <article class="panel word-hero">
@@ -459,11 +451,6 @@ const renderWord = async () => {
           <p><strong>Lemma:</strong> ${escapeHtml(word.lemma)}</p>
           <p><strong>Categoria:</strong> ${escapeHtml(word.partOfSpeech)}</p>
           <p><strong>Significato:</strong> ${escapeHtml(word.gloss || "Da definire nel lessico italiano privato")}</p>
-          ${
-            showItalianNote
-              ? `<p><strong>Nota italiana:</strong> ${escapeHtml(word.notesIt)}</p>`
-              : ""
-          }
         </article>
 
         <article class="panel">

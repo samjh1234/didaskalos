@@ -35,6 +35,7 @@ const state = {
     verse: "",
   },
   data: null,
+  vocabularyIndex: [],
 };
 
 // Riferimenti ai contenitori delle viste principali.
@@ -115,6 +116,27 @@ const goToWord = (lemma) => {
 
 // Link diretto alla scheda parola completa.
 const buildWordHref = (lemma) => `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
+
+// Prepara una versione gia normalizzata e ordinata del lessico.
+// In questo modo il Vocabolario non deve ricostruire tutto a ogni apertura
+// o a ogni tasto premuto nella ricerca.
+const prepareVocabularyIndex = (data) => {
+  const displayGlossForEntry = (entry) => getFixedLexiconGloss(entry.lemma) || entry.glossIt || "";
+  return [...data.lexicon]
+    .map((entry) => ({
+      entry,
+      displayGloss: displayGlossForEntry(entry),
+      normalizedLemma: normalize(entry.lemma),
+      normalizedGreek: normalize(entry.greek),
+      normalizedGloss: normalize(displayGlossForEntry(entry)),
+      normalizedNotes: normalize(entry.notes || ""),
+      hasDisplayGloss: Number(Boolean(displayGlossForEntry(entry))),
+    }))
+    .sort((left, right) => {
+      if (right.hasDisplayGloss !== left.hasDisplayGloss) return right.hasDisplayGloss - left.hasDisplayGloss;
+      return right.entry.occurrences - left.entry.occurrences;
+    });
+};
 
 // Legge lo stato dall'hash e ricostruisce la route corrente.
 const activateRouteFromHash = () => {
@@ -619,14 +641,8 @@ const renderVocabulary = (prefill = "") => {
   const results = views.vocabulary.querySelector("#vocabulary-results");
   const PAGE_SIZE = 10;
   let currentPage = Number(state.vocabularySelection.page || "1");
-  // Gloss mostrato all'utente: prima il lessico fisso, poi il gloss del lexicon.
-  const displayGlossForEntry = (entry) => getFixedLexiconGloss(entry.lemma) || entry.glossIt || "";
-  const entries = [...state.data.lexicon].sort((left, right) => {
-    const leftScore = Number(Boolean(displayGlossForEntry(left)));
-    const rightScore = Number(Boolean(displayGlossForEntry(right)));
-    if (rightScore !== leftScore) return rightScore - leftScore;
-    return right.occurrences - left.occurrences;
-  });
+  let drawTimer = null;
+  const entries = state.vocabularyIndex;
 
   // Render condiviso della barra di paginazione del vocabolario.
   // Viene mostrata sia sopra che sotto i risultati correnti.
@@ -657,10 +673,10 @@ const renderVocabulary = (prefill = "") => {
         return 0;
       }
 
-      const lemma = normalize(entry.lemma);
-      const greek = normalize(entry.greek);
-      const gloss = normalize(displayGlossForEntry(entry));
-      const notes = normalize(entry.notes || "");
+      const lemma = entry.normalizedLemma;
+      const greek = entry.normalizedGreek;
+      const gloss = entry.normalizedGloss;
+      const notes = entry.normalizedNotes;
 
       if (greek === needle) return 100;
       if (lemma === needle) return 95;
@@ -676,15 +692,15 @@ const renderVocabulary = (prefill = "") => {
     };
 
     const matches = !needle
-      ? entries
+      ? entries.map(({ entry }) => entry)
       : entries
-          .map((entry) => ({ entry, matchScore: scoreVocabularyMatch(entry) }))
+          .map((prepared) => ({ entry: prepared.entry, matchScore: scoreVocabularyMatch(prepared) }))
           .filter(({ matchScore }) => matchScore >= 0)
           .sort((left, right) => {
             if (right.matchScore !== left.matchScore) return right.matchScore - left.matchScore;
 
-            const rightDataScore = Number(Boolean(displayGlossForEntry(right.entry)));
-            const leftDataScore = Number(Boolean(displayGlossForEntry(left.entry)));
+            const rightDataScore = Number(Boolean(getFixedLexiconGloss(right.entry.lemma) || right.entry.glossIt || ""));
+            const leftDataScore = Number(Boolean(getFixedLexiconGloss(left.entry.lemma) || left.entry.glossIt || ""));
             if (rightDataScore !== leftDataScore) return rightDataScore - leftDataScore;
 
             return right.entry.occurrences - left.entry.occurrences;
@@ -711,6 +727,7 @@ const renderVocabulary = (prefill = "") => {
 
     const cardsHtml = pagedMatches
       .map((entry) => {
+        const displayGloss = getFixedLexiconGloss(entry.lemma) || entry.glossIt || "";
         return `
           <article class="panel lexicon-card">
             <div class="lexicon-head">
@@ -728,7 +745,7 @@ const renderVocabulary = (prefill = "") => {
               </div>
               <div class="lexicon-meta-cell lexicon-meta-cell-wide">
                 <strong>Significato</strong>
-                <span>${escapeHtml(displayGlossForEntry(entry) || "Da definire nel lessico italiano")}</span>
+                <span>${escapeHtml(displayGloss || "Da definire nel lessico italiano")}</span>
               </div>
             </div>
             <p class="lexicon-link-row"><a href="word.html?lemma=${encodeURIComponent(normalize(entry.lemma))}" data-word-link="${escapeHtml(
@@ -781,12 +798,15 @@ const renderVocabulary = (prefill = "") => {
 
   input.value = prefill;
   input.addEventListener("input", () => {
-    currentPage = 1;
-    replaceRouteState("vocabulary", {
-      q: input.value.trim(),
-      page: "1",
-    });
-    drawResults(input.value);
+    window.clearTimeout(drawTimer);
+    drawTimer = window.setTimeout(() => {
+      currentPage = 1;
+      replaceRouteState("vocabulary", {
+        q: input.value.trim(),
+        page: "1",
+      });
+      drawResults(input.value);
+    }, 120);
   });
   drawResults(prefill);
 };
@@ -882,7 +902,6 @@ const renderMorphology = () => {
       (detectedType === "noun" ? "sostantivo" : detectedType === "pronoun" ? "pronome" : "verbo");
     const title = official ? official.class : result.pattern;
     const note = official ? "" : result.note;
-    const morphologySummary = [title, note].filter(Boolean).join(". ");
     const verbLemmaEntry = detectedType === "verb" ? state.data.verbLemmas?.[lemma] || null : null;
     const sections = official
       ? Object.entries(official.paradigms).map(([sectionTitle, sectionData]) => ({
@@ -908,6 +927,7 @@ const renderMorphology = () => {
     const verbEntries =
       detectedType === "verb" && official ? buildVerbSectionEntries(filledSections, verbSelectorId) : [];
     const showTopNote = Boolean(note) && filledSections.length > 0;
+    const morphologySummary = filledSections.length ? [title, note].filter(Boolean).join(". ") : "";
     output.innerHTML = `
       <section class="word-layout">
         <article class="panel">
@@ -1114,6 +1134,7 @@ const render = (vocabularyPrefill = "") => {
 const bootstrap = async () => {
   try {
     state.data = await loadData();
+    state.vocabularyIndex = prepareVocabularyIndex(state.data);
     activateRouteFromHash();
     render();
   } catch (error) {
