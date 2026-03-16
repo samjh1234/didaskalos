@@ -68,17 +68,17 @@ main {
 }
 
 .main-nav {
-  /* Barra di navigazione desktop/tablet */
+  /* Barra desktop allineata al look leggero del mobile */
   display: flex;
-  gap: 0.55rem;
-  flex-wrap: wrap;
+  gap: 0.18rem;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0.7rem;
-  background: color-mix(in srgb, var(--accent-soft) 72%, white 28%);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
+  justify-content: center;
+  padding: 0.05rem 0 0.16rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
@@ -90,36 +90,39 @@ main {
 }
 
 .main-nav a {
-  /* Le voci del menu sono pensate come pulsanti morbidi */
+  /* Link lineari come sul mobile */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 40px;
-  padding: 0.65rem 0.95rem;
-  border-radius: 999px;
+  min-height: 0;
+  padding: 0.52rem 0.78rem 0.62rem;
+  border-radius: 0;
   background: transparent;
-  color: var(--accent);
-  border: 1px solid transparent;
-  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease, border-color 140ms ease;
-  line-height: 1;
+  color: var(--muted);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  transition: color 140ms ease, border-color 140ms ease;
+  line-height: 1.1;
   white-space: nowrap;
   font-weight: 600;
+  flex: 0 0 auto;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
-  transform: translateY(-2px);
-  background: rgba(140, 76, 35, 0.08);
+  transform: none;
+  background: transparent;
+  color: var(--accent);
   outline: none;
 }
 
 .main-nav a.active {
   font-weight: 700;
-  background: var(--accent);
-  color: #fff9f4;
+  background: transparent;
+  color: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 10px 22px rgba(140, 76, 35, 0.18);
+  box-shadow: none;
 }
 
 main {
@@ -294,12 +297,39 @@ main {
   min-width: 0;
   display: grid;
   align-content: start;
-  background: linear-gradient(180deg, rgba(255, 250, 243, 0.96), rgba(241, 228, 207, 0.92));
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    url("../graphics/bible1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-color: rgba(218, 200, 175, 0.96);
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(251, 246, 238, 0.68), rgba(242, 230, 210, 0.74));
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-card h2 {
   margin-bottom: 0.65rem;
+  color: #20170f;
+}
+
+.hero-card li {
+  color: #2f241a;
 }
 
 .summary-card {
