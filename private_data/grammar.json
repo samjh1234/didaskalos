@@ -531,6 +531,131 @@
             "text": "Queste indicazioni hanno carattere informativo, perché lo studente non sia sorpreso, trovando le modifiche apofoniche nello studio di alcuni verbi. A quel punto, però, il fenomeno apparirà con maggiore chiarezza."
           }
         ]
+      },
+      {
+        "heading": "7. Presente indicativo attivo",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Flessione tematica"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["Numero e persone", "Desinenze attive primarie"]
+              ],
+              "bodyRows": [
+                ["Sing. I pers.", "— (ω = voc. tem. allungata)"],
+                ["Sing. II pers.", "-ις"],
+                ["Sing. III pers.", "-ι"],
+                ["Plur. I pers.", "-μεν"],
+                ["Plur. II pers.", "-τε"],
+                ["Plur. III pers.", "-ντι > νσι > ουσι"]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["Numero e persone", "Forma", "Traduzione"]
+              ],
+              "bodyRows": [
+                ["Sing. I pers.", "λύ-ω", "(io) sciolgo"],
+                ["Sing. II pers.", "λύ-ε-ις", "(tu) sciogli"],
+                ["Sing. III pers.", "λύ-ε-ι", "(egli/ella) scioglie"],
+                ["Plur. I pers.", "λύ-ο-μεν", "(noi) sciogliamo"],
+                ["Plur. II pers.", "λύ-ε-τε", "(voi) sciogliete"],
+                ["Plur. III pers.", "λύ-ουσι/ν", "(essi) sciolgono"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "paragraph",
+            "text": "a) Se alla prima persona sing. del Presente Indicativo attivo si toglie l'omega (ω) finale, la parte rimanente costituisce il «tema temporale del Presente» che, nel caso di λύ-ω (cfr. quadro esplicativo), tolta la vocale tematica, coincide col tema verbale. Il «tema temporale» è la parte invariabile, a partire dalla quale si formano le altre persone del Presente, mediante l'aggiunta delle varie desinenze."
+          },
+          {
+            "type": "paragraph",
+            "text": "b) Le desinenze dei tempi principali, chiaramente indicate nello specchio introduttivo, sono congiunte al tema per mezzo di una vocale, detta «tematica»: in questo caso, una -ο, dinanzi a desinenze che cominciano con -μ o -ν; una -ε, dinanzi alle altre."
+          },
+          {
+            "type": "paragraph",
+            "text": "c) Nel Presente Indicativo, questo si vede chiaramente nella II e III pers. sing. e nella I e II pers. plur.; nella I pers. sing., l'ω non è altro che la vocale tematica ο allungata; nella III pers. plur. sono intervenuti alcuni fenomeni fonetici, che hanno prodotto il dittongo ου (cfr. quadro iniziale sulle desinenze e § 65)."
+          },
+          {
+            "type": "paragraph",
+            "text": "d) Il ν alla fine della III plurale è usato, in genere, alla fine della frase o davanti ad altra parola che comincia per vocale (cfr. § 4 C, III)."
+          },
+          {
+            "type": "paragraph",
+            "text": "e) Quasi tutti i verbi greci formano il Presente Indicativo secondo questo schema o paradigma, che è proprio del «Presente tematico» o «Presente in ω». Su circa 8000 verbi, usati nella letteratura greca, solo poche decine hanno un Presente diverso, chiamato «Presente atematico» o «in -μι» (cfr. § 167)."
+          },
+          {
+            "type": "paragraph",
+            "text": "f) Di regola, in greco, le forme verbali non sono accompagnate dal pronome personale, che indica chi fa o subisce l'azione (in italiano, invece, è corrente scrivere: «io dico», «tu vieni», «egli fu guarito» ecc.). Se qualche volta il verbo greco è accompagnato dal pronome-soggetto, è perché la persona che parla o scrive intende sottolineare in modo enfatico chi è che fa l'azione descritta dal verbo (cfr. Mt. 5,22: ἐγὼ δὲ λέγω = ma io vi dico...)."
+          },
+          {
+            "type": "paragraph",
+            "text": "g) Nei vocabolari, i verbi greci non sono elencati, come quelli italiani, nella forma dell'Infinito Presente (amare, temere, servire ecc.), bensì nella forma della I persona singolare del Presente Indicativo. Anche questa «Guida» si attiene a tale uso."
+          },
+          {
+            "type": "paragraph",
+            "text": "h) Accenniamo sin da ora al problema inerente il termine «Presente», che è usato per comodità, ma che indica in modo impreciso la natura e il significato delle forme ora studiate; la sua traduzione «io dico», «io faccio» ecc., è, dunque, approssimativa. Solo all'Indicativo, infatti, tale tempo fa riferimento al Presente; negli altri modi invece (Congiuntivo, Ottativo, Imperativo, Participio e Infinito), esso indica soltanto l'aspetto durativo dell'azione. Una definizione più precisa sarebbe: «Tempo (o forma) dell'azione continuata» e una traduzione più accurata dovrebbe somigliare alla forma inglese, detta «Presente progressivo» (I am saying = io sto dicendo)."
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 1º",
+        "paragraphs": [
+          "Una serie di «vocabolari», con numerazione progressiva ed esercizi di traduzione dal greco in italiano e/o dall'italiano in greco completeranno, d'ora in poi, la trattazione delle varie lezioni.",
+          "Per trarre il massimo profitto da questa «Guida», è indispensabile che lo studente impari a memoria tutte le parole elencate nei «Vocabolari».",
+          "Poiché queste parole vengono poi usate ancora, negli esercizi delle lezioni successive, è anche importante che le parole studiate non vengano dimenticate. Bisognerà, dunque, ripassare continuamente gli elenchi dei vari «vocabolari», man mano che si procede nello studio.",
+          "A chi ha difficoltà di memoria, suggeriamo di ricopiare le parole e il loro significato su un quaderno o su una rubrica alfabetica o su piccole schede, con la parola greca da un lato e il significato italiano dall'altro. Questo serve a facilitare il ripasso, mentre il lavoro materiale di trascrizione dei vocaboli aiuta la memorizzazione.",
+          "Come è noto, molte parole greche sono alla radice di parole italiane. Il lettore troverà, a volte, tra parentesi, l'indicazione di alcuni di questi termini derivati dal greco, nella speranza che lo aiutino a ricordare il significato della parola greca. Certo, molte volte si tratterà di parole italiane che non sono di uso comune. La segnalazione è fatta, però, non per creare nuovi problemi, ma come un piccolo aiuto e una piccola curiosità storica.",
+          "Via via che si procede nella trattazione dei vari argomenti, i vocabolari comprendono non solo termini relativi alla lezione immediatamente precedente, ma anche riferentisi ad argomenti già presentati."
+        ],
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Greco", "Italiano"]
+          ],
+          "bodyRows": [
+            ["ἀκούω", "ascolto (acustica)", "ἐσθίω", "mangio (commestibile)"],
+            ["ἀποθνῄσκω", "muoio", "εὑρίσκω", "trovo (euristico)"],
+            ["ἀποστέλλω", "mando (apostolo)", "ἔχω", "ho"],
+            ["βάλλω", "getto (balistica)", "κρίνω", "giudico (criterio, critico)"],
+            ["βλέπω", "guardo (blefarite)", "λαμβάνω", "prendo, ricevo (sillabo)"],
+            ["γινώσκω", "conosco", "λέγω", "dico (prolegomeni)"],
+            ["γράφω", "scrivo (grafia ecc.)", "μένω", "rimango"],
+            ["διδάσκω", "insegno (didattica)", "πιστεύω", "credo, ho fede"],
+            ["ἐγείρω", "sveglio, mi alzo, faccio alzare, risuscito", "σῴζω", "salvo"]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre in greco¹",
+            "paragraphs": [
+              "Noi ascoltiamo. Essi prendono. Tu dici. Voi trovate. Egli rimane. Essi stanno scrivendo. Essa sta giudicando. Egli trova. Io muoio. Egli getta. Voi fate alzare. Noi diciamo. Tu mandi. Voi state prendendo. Ella guarda. Io sto ascoltando. Tu credi. Tu insegni. Voi conoscete. Essi insegnano. Egli conosce."
+            ]
+          },
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "μένει, σῴζομεν, λαμβάνετε, ἀκούουσιν, ἀποστέλλουσιν², ἐσθίω, βάλλομεν, κρίνετε, ἐγείρουσιν, βλέπεις, ἀποθνῄσκει², βάλλετε, γράφει, εὑρίσκομεν, λέγεις, μένετε, γράφουσιν, ἀκούομεν, εὑρίσκει, διδάσκομεν, γινώσκουσιν, διδάσκει, γινώσκετε."
+            ]
+          },
+          {
+            "title": "Note",
+            "plainPoints": [
+              "1 I pronomi di queste frasi italiane non devono essere tradotti (cfr. § 7f).",
+              "2 Si tratta di due, fra i numerosi verbi dello stesso tipo largamente usati in greco, detti verbi composti, poiché il loro tema verbale è preceduto da un prefisso (che, in questo caso, prende il nome di preverbo), spesso costituito da una preposizione (p. es.: ἀπό, παρά, ἐπί, ἐν, πρό, κατά ecc.)."
+            ]
+          }
+        ]
       }
     ]
   },
