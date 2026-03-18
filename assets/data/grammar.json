@@ -287,6 +287,45 @@
       "6c. Allungamento di compenso",
       "7. Presente indicativo attivo",
       "Vocabolario 1º"
+    ],
+    "sections": [
+      {
+        "heading": "6. Nozioni generali sul verbo greco",
+        "paragraphs": [
+          "Cominciamo qui lo studio del verbo greco, iniziando dal Presente Indicativo attivo. Lo studio dei vari tempi del verbo procederà di pari passo con quello della flessione dei nomi (declinazioni), in modo che lo studente possa formare, fin dall'inizio, delle frasi in greco e leggere i passi più facili del N.T. Dobbiamo però premettere, al prospetto del Presente Indicativo attivo, alcune informazioni generali.",
+          "I) Forme (o diàtesi). Sono tre:",
+          "– forma attiva",
+          "– forma media",
+          "– forma passiva.",
+          "Per quanto riguarda le forme attiva e passiva, in linea di massima, dal punto di vista concettuale, non c'è differenza con l'italiano.",
+          "La forma media indica un'azione riflessiva, cioè un'azione che il soggetto compie su di sé o a suo favore. Alcuni verbi, che usano la forma media o la forma passiva con significato attivo, perché sono privi della forma attiva, vengono chiamati verbi deponenti.",
+          "Ess.: ἐργάζομαι = lavoro; ἀποκρίνομαι = rispondo.",
+          "La forma media e la forma passiva coincidono, nella maggior parte dei tempi (e sarebbe allora corretto parlare di forma medio-passiva). Ciò non accade, invece, nel Futuro e nell'Aoristo: in questi tempi, il Medio e il Passivo hanno forme distinte.",
+          "II) Tempi. Sono sette.",
+          "Si dicono tempi principali, il Presente, il Futuro, il Perfetto e il Futuro Perfetto.",
+          "Si dicono tempi storici, l'Imperfetto, l'Aoristo, il Piuccheperfetto.",
+          "I «tempi» costituiscono la struttura portante del verbo greco. In italiano, è possibile studiare uno per uno i vari modi (Indicativo, Congiuntivo, Condizionale ecc.), con i «tempi» in cui essi si articolano. In greco, invece, la coniugazione dei verbi è strutturata in base a sistemi temporali:",
+          "– il sistema del Presente",
+          "– il sistema del Futuro",
+          "– il sistema dell'Aoristo",
+          "– il sistema dell'Aoristo passivo",
+          "– il sistema del Perfetto attivo",
+          "– il sistema del Perfetto medio-passivo.",
+          "All'interno di questi sistemi verbali, si articolano i modi. Non tutti i tempi, però, hanno la stessa serie di modi.",
+          "Si deve dunque rilevare, con particolare attenzione, che in greco, al contrario di quanto avviene in latino e in italiano, i tempi risultano divisi in modi e non viceversa, come si potrà vedere in tutti i prospetti verbali presenti nel testo.",
+          "III) Modi. Sono sette: quattro coniugabili (Indicativo, Congiuntivo, Ottativo, Imperativo) e tre declinabili, detti nomi verbali (Infinito, Participio, Aggettivo verbale). Poiché l'Ottativo è usato nel N.T. solo pochissime volte, e degli Aggettivi verbali rimane soltanto qualche traccia, includeremo l'uno e gli altri nello studio dei vari tempi e modi solo per una maggiore completezza della trattazione. Per l'Ottativo, cfr. anche l'Appendice II.",
+          "IV) Coniugazioni. La lingua greca ha solo due coniugazioni: una, a cui appartiene la stragrande maggioranza dei verbi usati nel greco classico e nel N.T., è detta in -ω, perché la I persona sing. del Presente Indicativo termina, appunto, in omega; l'altra è detta in -μι, perché al Presente Indicativo ha serbato l'antica desinenza, appunto -μι, per la I persona (cfr. Lezione XXXII, §§ 167ss.).",
+          "V) Accenti. Il verbo tende a spostare il più possibile l'accento verso la terzultima sillaba.",
+          "I dittonghi αι e οι si considerano brevi, ai fini dell'accento (fuorché nell'Ottativo, dove sono lunghi)."
+        ]
+      },
+      {
+        "heading": "6a. Il tema verbale",
+        "paragraphs": [
+          "Tutte le forme dei verbi derivano dal cosiddetto tema verbale (T.V.). Esso è la base, da cui si formano tutti i tempi con i loro modi.",
+          "Il passaggio dal tema verbale al tema dei vari tempi può avvenire senza complicazioni: così il Presente si forma, per buona parte dei verbi, aggiungendo direttamente, al tema verbale, la vocale tematica, che funge da elemento di collegamento, e le desinenze dei tempi principali (cfr. § seguente). In questi casi, tema verbale e tema del Presente, tolta la vocale tematica, coincidono (è ciò che avviene nel verbo che useremo, spesso, come modello: λύω, sciolgo)."
+        ]
+      }
     ]
   },
   {
