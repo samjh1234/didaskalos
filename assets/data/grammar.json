@@ -321,9 +321,215 @@
       },
       {
         "heading": "6a. Il tema verbale",
-        "paragraphs": [
-          "Tutte le forme dei verbi derivano dal cosiddetto tema verbale (T.V.). Esso è la base, da cui si formano tutti i tempi con i loro modi.",
-          "Il passaggio dal tema verbale al tema dei vari tempi può avvenire senza complicazioni: così il Presente si forma, per buona parte dei verbi, aggiungendo direttamente, al tema verbale, la vocale tematica, che funge da elemento di collegamento, e le desinenze dei tempi principali (cfr. § seguente). In questi casi, tema verbale e tema del Presente, tolta la vocale tematica, coincidono (è ciò che avviene nel verbo che useremo, spesso, come modello: λύω, sciolgo)."
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Tutte le forme dei verbi derivano dal cosiddetto tema verbale (T.V.). Esso è la base, da cui si formano tutti i tempi con i loro modi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il passaggio dal tema verbale al tema dei vari tempi può avvenire senza complicazioni: così il Presente si forma, per buona parte dei verbi, aggiungendo direttamente, al tema verbale, la vocale tematica, che funge da elemento di collegamento, e le desinenze dei tempi principali (cfr. § seguente). In questi casi, tema verbale e tema del Presente, tolta la vocale tematica, coincidono (è ciò che avviene nel verbo che useremo, spesso, come modello: λύω, sciolgo)."
+          },
+          {
+            "type": "paragraph",
+            "text": "A volte, invece, avvengono modificazioni nel passaggio dal tema verbale al tema del Presente (T.P.). È importante conoscere le principali, perché, così, si potrà risalire facilmente, dal Presente di un verbo, al suo T. V., l'individuazione del quale consente di costruire gli altri tempi e modi, oppure di passare da un tempo qualsiasi - o dal T.V. - al Presente, la cui conoscenza permette di rintracciare ciascun verbo sul vocabolario. Le modifiche possono consistere soprattutto in: I) ampliamenti del tema; II) modifiche dell'aspetto vocalico."
+          },
+          {
+            "type": "paragraph",
+            "text": "I a) verbi con ampliamento del tema verbale mediante vocale (ε) o altri suffissi, nella formazione del Presente:"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["tema verbale", "ampliamento", "Pres. Indic.", ""]
+              ],
+              "bodyRows": [
+                ["δοκ-", "-ε-", "δοκέω", "penso"],
+                ["τεμ-", "-ν-", "τέμνω", "taglio"],
+                ["ἁμαρτ-", "-αν-", "ἁμαρτάνω", "pecco"],
+                ["γηρα-", "-σκ-", "γηράσκω", "invecchio"],
+                ["εὑρ-", "-ισκ-", "εὑρίσκω", "trovo"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "I b) verbi col tema del Presente ampliato mediante il suffisso j (jod), poi scomparso. Lo jod si è combinato, in vario modo, con la vocale finale del tema. Le risultanze appaiono negli esempi che seguono:"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["tipo", "esito", "T.V.", "Presente", ""]
+              ],
+              "bodyRows": [
+                ["Labiale + j", "πτ", "κλεπ-", "κλέπτω", "rubo"],
+                ["Dentale + j", "ζ", "κομιδ-", "κομίζω", "porto"],
+                ["Dentale + j", "σσ", "πλαθ-", "πλάσσω", "plasmo"],
+                ["Gutturale + j", "ζ", "κραγ-", "κράζω", "grido"],
+                ["Gutturale + j", "σσ", "ταγ-", "τάσσω", "ordino"],
+                ["Liquida + j", "λλ", "βαλ-", "βάλλω", "getto"],
+                ["-αν + j", "αιν", "φαν-", "φαίνω", "mostro"],
+                ["-αρ + j", "αιρ", "ἀρ-", "αἴρω", "alzo"],
+                ["-εν + j", "ειν", "κτεν-", "κτείνω", "uccido"],
+                ["-ερ + j", "ειρ", "φθερ-", "φθείρω", "rovino"],
+                ["-ῐν + j", "ῑν", "κλιν-", "κλίνω", "piego"],
+                ["-ῠν + j", "ῡν", "πλυν-", "πλύνω", "lavo"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "II. Modifiche dell'aspetto vocalico del tema (apofonia)"
+          },
+          {
+            "type": "paragraph",
+            "text": "L'apofonia è una variazione di qualità o quantità della vocale di una sillaba. Come, passando dal verbo λέγω (io dico) al nome λόγος (discorso), la vocale ε si modifica, diventando ο, così, all'interno di un verbo, può modificarsi la vocale del tema, nel passaggio dal tema verbale a quello del Presente o a quello di un altro tempo. Quando la gradazione vocalica è completa, possono apparire tre diversi gradi:"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "– grado ridotto, o zero (vocale assente o indebolita: ι, υ, α)",
+              "– grado normale, o medio (vocale ε)",
+              "– grado forte (vocale ο)"
+            ]
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "intro": "Ess.:",
+              "headerRows": [
+                ["grado zero", "grado normale", "grado forte"]
+              ],
+              "bodyRows": [
+                ["ἔλιπον\nlasciai", "λείπω\nlascio", "λέλοιπα\nho lasciato"],
+                ["ἔπαθον\npatii", "πένθος\ndolore", "πέπονθα\nho sofferto"],
+                ["ἰδεῖν\nvedere", "εἶδον\nvidi", "οἶδα\nso"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "6b. Prospetto dell'apofonia qualitativa (I) e quantitativa (II)",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-apophonia",
+              "headerRows": [
+                [
+                  { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
+                  { "label": "grado", "colspan": 3 },
+                  { "label": "Esempi", "colspan": 3 }
+                ],
+                [
+                  "ridotto",
+                  "normale",
+                  "forte",
+                  "ridotto",
+                  "normale",
+                  "forte"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "I", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "—",
+                  "ε",
+                  "ο",
+                  { "label": "γί-γν-ο-μαι,\nsono", "className": "grammar-table-stacked" },
+                  { "label": "ἐ-γεν-όμην,\nfui", "className": "grammar-table-stacked" },
+                  { "label": "γέ-γον-α,\nsono stato", "className": "grammar-table-stacked" }
+                ],
+                [
+                  "ι",
+                  "ει",
+                  "οι",
+                  { "label": "ἔ-λιπ-ον,\nlasciai", "className": "grammar-table-stacked" },
+                  { "label": "λείπ-ω,\nlascio", "className": "grammar-table-stacked" },
+                  { "label": "λέ-λοιπ-α,\nho lasciato", "className": "grammar-table-stacked" }
+                ],
+                [
+                  "υ",
+                  "ευ",
+                  "ευ (ου)",
+                  { "label": "ἔ-φυγ-ον,\nfuggii", "className": "grammar-table-stacked" },
+                  { "label": "φεύγ-ω,\nfuggo", "className": "grammar-table-stacked" },
+                  { "label": "πέ-φευγ-α,\nsono fuggito", "className": "grammar-table-stacked" }
+                ],
+                [
+                  { "label": "II", "className": "grammar-table-rowlabel" },
+                  "ᾰ",
+                  "η",
+                  "ω",
+                  { "label": "ἐρ-ράγ-ην,\nfui spezzato", "className": "grammar-table-stacked" },
+                  { "label": "ῥήγ-νυμι,\nspezzo", "className": "grammar-table-stacked" },
+                  { "label": "ἔ-ρρωγ-α,\nsono spezzato¹", "className": "grammar-table-stacked" }
+                ]
+              ],
+              "notes": [
+                "1 In alcuni casi, apofonia qualitativa e quantitativa coincidono."
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Per effetto dell'apofonia quantitativa (detta anche allungamento organico), si avrà, anche:"
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-apophonia-shifts",
+              "rows": [
+                ["α", ">", { "label": "η (oppure ᾱ, se è preceduta da ε, ι, ρ)", "className": "grammar-table-note-cell" }],
+                ["ε", ">", "η"],
+                ["ῐ", ">", "ῑ"],
+                ["ῠ", ">", "ῡ"],
+                ["ο", ">", "ω"]
+              ]
+            }
+          },
+          {
+            "type": "alignedExamples",
+            "block": {
+              "className": "grammar-example-apophonia",
+              "label": "Ess.:",
+              "rows": [
+                { "key": "(α/η) =", "value": "τιμάω (Pres.) - τιμήσω (Fut.) - ἐτίμησα (Aor.)" },
+                { "key": "(η/ε) =", "value": "πατήρ (NOM.) - πατέρα (ACC.)" }
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Il fenomeno ha analogie in molte lingue moderne. In italiano, si osservi la variazione vocalica in seppi/sapevo, devo/dovete, vieni/venite. In inglese: drink/drank/drunk. In tedesco: trinken/trank/getrunken."
+          }
+        ]
+      },
+      {
+        "heading": "6c. Allungamento di compenso",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Talora, all'interno di una parola, una vocale breve può allungarsi, per compensare la scomparsa di una consonante (ν, ad esempio) o un gruppo di consonanti (ντ/νδ/νθ oppure -σ preceduto da λ, μ, ν, ρ), con le seguenti modalità:"
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "rows": [
+                ["ᾰ", ">", { "label": "η / ᾱ", "className": "grammar-table-note-cell" }],
+                ["ε", ">", "ει"],
+                ["ο", ">", "ου"],
+                ["ῐ, ῠ", ">", "ῑ, ῡ"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste indicazioni hanno carattere informativo, perché lo studente non sia sorpreso, trovando le modifiche apofoniche nello studio di alcuni verbi. A quel punto, però, il fenomeno apparirà con maggiore chiarezza."
+          }
         ]
       }
     ]
@@ -379,9 +585,10 @@
     "title": "Nomi in -ις",
     "summary": "Approfondimento della terza declinazione con i principali gruppi di nomi in -ις.",
     "contents": [
-      "23. Nomi maschili in -ις (II declinazione)",
-      "24. Nomi femminili in -ις a dentale",
-      "25. Nomi femminili in -ις (in labiale e gutturale)",
+      "23. Nomi con il tema in -ιδ",
+      "24. Nomi in -ιδ con tema in dentale",
+      "25. Nomi in -ιδ con tema in liquida",
+      "26. Nomi in -ιδ con tema in nasale",
       "Vocabolario 6º"
     ]
   },
@@ -389,216 +596,171 @@
     "id": "lezione-settima",
     "kind": "lesson",
     "lessonLabel": "Lezione settima",
-    "title": "Altri nomi della terza declinazione e imperfetto",
-    "summary": "Nuovi gruppi nominali e introduzione all'indicativo imperfetto.",
+    "title": "Nomi in vocale e dittongo",
+    "summary": "Completamento dei principali gruppi della terza declinazione con temi vocalici.",
     "contents": [
-      "26. Nomi femminili in -υ breve",
-      "27. Nomi neutri in -ας e -ως",
-      "28. Vocabolario 7º con analisi",
-      "29. Indicativo imperfetto",
-      "30. Nomi propri di origine straniera della I declinazione"
+      "27. Nomi con il tema in vocale",
+      "28. Nomi con il tema in dittongo",
+      "29. Aggettivi della prima classe",
+      "30. Vocabolario 7º"
     ]
   },
   {
     "id": "lezione-ottava",
     "kind": "lesson",
     "lessonLabel": "Lezione ottava",
-    "title": "Aggettivi e pronomi personali",
-    "summary": "Prime classi di aggettivi e introduzione ai pronomi personali e riflessivi.",
+    "title": "Presente medio-passivo e aggettivi",
+    "summary": "Prime forme del presente medio-passivo e completamento della prima classe degli aggettivi.",
     "contents": [
-      "31. Declinazione degli aggettivi della prima classe",
-      "32. Pronomi personali e riflessivi",
-      "33. Gli aggettivi della II classe a due uscite",
-      "34. Aggettivi della II classe a tre uscite",
-      "Vocabolario 8º"
+      "31. Presente indicativo medio-passivo dei verbi in -ω",
+      "32. Aggettivi della prima classe",
+      "33. Vocabolario 8º"
     ]
   },
   {
     "id": "lezione-nona",
     "kind": "lesson",
     "lessonLabel": "Lezione nona",
-    "title": "Tempi storici, εἰμί e paratassi",
-    "summary": "Prime osservazioni sui tempi storici del verbo e sul presente di εἰμί.",
+    "title": "Contratti e complementi",
+    "summary": "Introduzione ai verbi contratti e ai principali complementi con il dativo.",
     "contents": [
-      "35. I tempi storici del verbo",
-      "36. Presente indicativo del verbo εἰμί",
-      "37. Le enclitiche e proclitiche",
-      "38. Paratassi",
-      "Vocabolario 9º"
+      "34. Verbi contratti in -αω",
+      "35. Verbi contratti in -εω",
+      "36. Verbi contratti in -οω",
+      "37. Dativo, complemento di termine e dativo di possesso",
+      "38. Vocabolario 9º"
     ]
   },
   {
     "id": "lezione-decima",
     "kind": "lesson",
     "lessonLabel": "Lezione decima",
-    "title": "εἰμί, φημί e usi di particelle",
-    "summary": "Imperativo e usi di εἰμί, forme di φημί e prime osservazioni su μή, γάρ e καί.",
+    "title": "Pronomi personali e imperfetto",
+    "summary": "Primi pronomi e introduzione all'imperfetto indicativo attivo e medio-passivo.",
     "contents": [
-      "39. Imperativo presente del verbo εἰμί",
-      "40. Imperfetto e imperfetto indicativo attivo",
-      "41. Perfetto indicativo attivo (con aumento sillabico)",
-      "42. Futuro attivo del verbo φημί, sommario temporale",
-      "43. Imperfetto indicativo del verbo φημί",
-      "44. Usi di εἰμί",
-      "45. Usi di μή",
-      "46. Usi di μή e οὐ",
-      "47. Usi di γάρ",
-      "48. Usi di καί",
-      "Vocabolario 10º"
+      "39. Pronomi personali e riflessivi",
+      "40. Imperfetto indicativo attivo e medio-passivo",
+      "41. Vocabolario 10º"
     ]
   },
   {
     "id": "lezione-undicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione undicesima",
-    "title": "Dimostrativi, relativi e passivo del presente",
-    "summary": "Pronomi e aggettivi dimostrativi e relativi con il presente-imperfetto passivo.",
+    "title": "Aoristo e numerali",
+    "summary": "Introduzione all'aoristo e ai principali numerali cardinali.",
     "contents": [
-      "49. Pronomi e aggettivi dimostrativi",
-      "50. Pronomi e aggettivi relativi, parte I",
-      "51. Sistema dei suffissi",
-      "52. Presente imperfetto passivo del verbo λύω",
-      "53. Imperfetto indicativo passivo",
-      "54. Futuro passivo",
-      "55. Usi di ἵνα e complemento d'agente",
-      "56. Usi di οὐ",
-      "57. Vocabolario 11º"
+      "42. Aoristo primo attivo e medio",
+      "43. Numerali cardinali",
+      "44. Vocabolario 11º"
     ]
   },
   {
     "id": "lezione-dodicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione dodicesima",
-    "title": "Relativi, comparazione e congiuntivo",
-    "summary": "Seconda parte dei relativi, comparazione degli aggettivi e primi usi del congiuntivo.",
+    "title": "Genitivo assoluto e infinito",
+    "summary": "Costrutti fondamentali della sintassi del participio e dell'infinito.",
     "contents": [
-      "58. Pronomi e aggettivi relativi, parte II",
-      "59. Comparazione degli aggettivi",
-      "60. Congiuntivo esortativo",
-      "61. Uso di μέν",
-      "62. Uso di πᾶς",
-      "63. Uso di οὐδέ",
-      "64. Uso del participio",
-      "Vocabolario 12º"
+      "45. Genitivo assoluto",
+      "46. Infinito presente e aoristo",
+      "47. Vocabolario 12º"
     ]
   },
   {
     "id": "lezione-tredicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione tredicesima",
-    "title": "Imperativo esortativo e quadro dell'azione",
-    "summary": "Valore dei tempi dell'azione e primi usi di ἄν nella struttura della frase.",
+    "title": "Participio e pronomi",
+    "summary": "Uso del participio e completamento del sistema pronominale di base.",
     "contents": [
-      "65. Imperativo esortativo",
-      "66. Sigma mobile",
-      "67. Usi di μή nella completiva o interrogativa",
-      "68. Quadro dei tempi dell'azione continuata o aperta",
-      "69. Quadro dei tempi dell'azione puntuale o compiuta",
-      "70. Usi di ἄν",
-      "71. La frase e il periodo",
-      "Vocabolario 13º"
+      "48. Participio presente e aoristo",
+      "49. Pronomi dimostrativi e relativi",
+      "50. Vocabolario 13º"
     ]
   },
   {
     "id": "lezione-quattordicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione quattordicesima",
-    "title": "Pronomi e proposizioni",
-    "summary": "Pronomi reciproci, possessivi e relativi, con avvio allo studio delle proposizioni.",
+    "title": "Perfetto e congiuntivo",
+    "summary": "Primi passi nel sistema del perfetto e nel congiuntivo.",
     "contents": [
-      "72. Pronome reciproco",
-      "73. Pronome possessivo",
-      "74. Pronome riflessivo",
-      "75. Pronome-aggettivo possessivo",
-      "76. Pronome relativo-oggettiva",
-      "77. La proposizione soggettiva",
-      "78. Il participio finale",
-      "79. Vocabolario 14º"
+      "51. Perfetto attivo e medio-passivo",
+      "52. Congiuntivo presente e aoristo",
+      "53. Vocabolario 14º"
     ]
   },
   {
     "id": "lezione-quindicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione quindicesima",
-    "title": "Futuro sigmatico e asigmatico",
-    "summary": "Studio del futuro nei suoi modelli principali e in alcuni verbi molto frequenti.",
+    "title": "Ottativo e pronomi indefiniti",
+    "summary": "Cenni all'ottativo e ai principali indefiniti e interrogativi.",
     "contents": [
-      "80. Il futuro sigmatico",
-      "81. Il futuro asigmatico",
-      "82. Il futuro del verbo μέλλω",
-      "83. Il futuro del verbo ἔχω",
-      "84. Il futuro di εἰμί e di γίνομαι",
-      "85. Il futuro del verbo deponente causale",
-      "86. Uso del λέγω",
-      "Vocabolario 15º"
+      "54. Ottativo presente e aoristo",
+      "55. Pronomi indefiniti e interrogativi",
+      "56. Vocabolario 15º"
     ]
   },
   {
     "id": "lezione-sedicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione sedicesima",
-    "title": "Aoristo forte e infinito",
-    "summary": "Ingresso nell'aoristo forte o secondo e prime osservazioni sull'infinito.",
+    "title": "Imperativo e comparativi",
+    "summary": "Imperativo e primi gradi dell'aggettivo.",
     "contents": [
-      "91. L'aoristo forte o secondo",
-      "92. L'infinito del verbo",
-      "93. Uso dell'infinito",
-      "Vocabolario 18º"
+      "57. Imperativo presente e aoristo",
+      "58. Comparativo e superlativo",
+      "59. Vocabolario 16º"
     ]
   },
   {
     "id": "lezione-diciassettesima",
     "kind": "lesson",
     "lessonLabel": "Lezione diciassettesima",
-    "title": "Aoristo I sigmatico e asigmatico",
-    "summary": "Forme deboli e forti dell'aoristo I, attive e passive.",
+    "title": "Verbi in -μι",
+    "summary": "Ingresso nella seconda coniugazione con i verbi in -μι più frequenti.",
     "contents": [
-      "87. L'aoristo I (debole) sigmatico",
-      "88. L'aoristo I (debole) sigmatico passivo",
-      "89. L'aoristo I forte asigmatico dell'azione puntuale",
-      "90. L'aoristo I (debole) asigmatico dell'azione puntuale",
-      "Vocabolario 16º"
+      "60. Verbi in -μι: quadro generale",
+      "61. δίδωμι e τίθημι",
+      "62. Vocabolario 17º"
     ]
   },
   {
     "id": "lezione-diciottesima",
     "kind": "lesson",
     "lessonLabel": "Lezione diciottesima",
-    "title": "Aoristo forte e verbi politematici",
-    "summary": "Aoristo forte o secondo, quadro delle forme puntuali e primi verbi politematici.",
+    "title": "Sintassi dei casi",
+    "summary": "Panoramica sintetica sui principali usi sintattici dei casi.",
     "contents": [
-      "91. L'aoristo forte o secondo",
-      "92. Quadro delle forme dell'azione puntuale: Aoristo forte (II)",
-      "93. I verbi politematici",
-      "Vocabolario 19º"
+      "63. Usi del nominativo e dell'accusativo",
+      "64. Usi del genitivo e del dativo",
+      "65. Vocabolario 18º"
     ]
   },
   {
     "id": "lezione-diciannovesima",
     "kind": "lesson",
     "lessonLabel": "Lezione diciannovesima",
-    "title": "Aoristo e significazione puntuale",
-    "summary": "Approfondimento del valore puntuale dell'aoristo.",
+    "title": "Periodo e subordinate",
+    "summary": "Primi elementi di costruzione del periodo e delle subordinate più frequenti.",
     "contents": [
-      "94. Aoristo e significazione puntuale. Aoristo forte (II)",
-      "95. Aoristo debole (III)",
-      "Vocabolario 20º"
+      "66. Proposizioni finali e consecutive",
+      "67. Proposizioni temporali e causali",
+      "68. Vocabolario 19º"
     ]
   },
   {
     "id": "lezione-ventesima",
     "kind": "lesson",
     "lessonLabel": "Lezione ventesima",
-    "title": "Terza declinazione: temi consonantici",
-    "summary": "Nuova serie di temi della terza declinazione con nomi e aggettivi.",
+    "title": "Condizionali e finali",
+    "summary": "Panoramica introduttiva sulle costruzioni ipotetiche e finali.",
     "contents": [
-      "96. Declinazione dei nomi con il tema in consonante",
-      "97. Contrazione della terza declinazione",
-      "98. Temi in dentale, gutturale, labiale",
-      "99. Temi in labiale",
-      "100. Nomi declinabili secondo il modello del βάσις",
-      "101. Temi in nasale. Aggettivi e sostantivi",
-      "Vocabolario 21º"
+      "69. Periodo ipotetico",
+      "70. Ripresa delle finali",
+      "71. Vocabolario 20º"
     ]
   },
   {

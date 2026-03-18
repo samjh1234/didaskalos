@@ -154,6 +154,13 @@ const getGrammarChapterItems = (chapter) =>
       ) || null,
   }));
 
+const getGrammarChildSections = (chapter, parentTitle) => {
+  const match = (parentTitle || "").match(/^(\d+)\./);
+  if (!match) return [];
+  const childPattern = new RegExp(`^${match[1]}[a-z]\\.`);
+  return (chapter?.sections || []).filter((section) => childPattern.test(section.heading || section.title || ""));
+};
+
 const renderGrammarItemNav = (previousItem, nextItem) => `
   <article class="panel grammar-detail-nav">
     ${
@@ -188,7 +195,20 @@ const renderGrammarSummaryTable = (table) => {
     .map((row) => `<tr>${row.map((cell) => renderGrammarTableCell(cell, "th")).join("")}</tr>`)
     .join("");
   const bodyRowsHtml = (table.bodyRows || [])
-    .map((row) => `<tr>${row.map((cell, index) => renderGrammarTableCell(cell, index === 0 ? "th" : "td")).join("")}</tr>`)
+    .map((row) => {
+      const firstCell = row[0];
+      const firstDescriptor =
+        typeof firstCell === "object" && firstCell !== null
+          ? firstCell
+          : {
+              label: firstCell ?? "",
+            };
+      const firstCellIsRowHeader = (firstDescriptor.className || "").includes("grammar-table-rowlabel");
+
+      return `<tr>${row
+        .map((cell, index) => renderGrammarTableCell(cell, index === 0 && firstCellIsRowHeader ? "th" : "td"))
+        .join("")}</tr>`;
+    })
     .join("");
 
   return `
@@ -269,7 +289,7 @@ const renderGrammarPlainPoints = (items) => {
 const renderGrammarAlignedExamples = (exampleBlock) => {
   if (!exampleBlock?.rows?.length) return "";
   return `
-    <div class="grammar-example-block">
+    <div class="grammar-example-block${exampleBlock.className ? ` ${escapeHtml(exampleBlock.className)}` : ""}">
       ${exampleBlock.label ? `<div class="grammar-example-label">${escapeHtml(exampleBlock.label)}</div>` : ""}
       <div class="grammar-example-rows">
         ${exampleBlock.rows
@@ -287,10 +307,21 @@ const renderGrammarAlignedExamples = (exampleBlock) => {
   `;
 };
 
+const renderGrammarContentBlock = (block) => {
+  if (!block || typeof block !== "object") return "";
+  if (block.type === "paragraph") return `<p>${escapeHtml(block.text || "")}</p>`;
+  if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
+  if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
+  if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
+  if (block.type === "alignedExamples") return renderGrammarAlignedExamples(block.block);
+  if (block.type === "underlineWords") return renderGrammarUnderlineWords(block.words);
+  return "";
+};
+
 // Rendering dei contenuti interni di una parte grammaticale.
 // Supporta paragrafi, elenchi, piccoli gruppi tematici, tabelle e blocchi di greco.
-const renderGrammarSection = (section, options = {}) => {
-  const { showHeading = true } = options;
+const renderGrammarSectionContent = (section, options = {}) => {
+  const { showHeading = true, headingLevel = "h3" } = options;
   const paragraphsHtml = (section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
   const plainPointsHtml = renderGrammarPlainPoints(section.plainPoints);
   const pointsHtml = section.points?.length
@@ -351,6 +382,10 @@ const renderGrammarSection = (section, options = {}) => {
       `
     : "";
   const summaryTableHtml = section.summaryTable ? renderGrammarSummaryTable(section.summaryTable) : "";
+  const postSummaryParagraphsHtml = (section.postSummaryParagraphs || [])
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+  const contentBlocksHtml = (section.contentBlocks || []).map((block) => renderGrammarContentBlock(block)).join("");
   const subsectionsHtml = section.subsections?.length
     ? section.subsections
         .map((item) => {
@@ -401,21 +436,40 @@ const renderGrammarSection = (section, options = {}) => {
         </div>
       `
     : "";
+  const headingTag = headingLevel === "h4" ? "h4" : "h3";
 
   return `
-    <article class="panel grammar-section-card">
-      ${showHeading ? `<h3>${escapeHtml(section.heading || section.title || "")}</h3>` : ""}
-      ${paragraphsHtml}
-      ${alphabetTableHtml}
-      ${plainPointsHtml}
-      ${groupsHtml}
-      ${pointsHtml}
-      ${summaryTableHtml}
-      ${subsectionsHtml}
-      ${versesHtml}
-    </article>
+    ${showHeading ? `<${headingTag}>${escapeHtml(section.heading || section.title || "")}</${headingTag}>` : ""}
+    <div class="grammar-section-body">
+      ${contentBlocksHtml || `${paragraphsHtml}${alphabetTableHtml}${plainPointsHtml}${groupsHtml}${pointsHtml}${summaryTableHtml}${postSummaryParagraphsHtml}${subsectionsHtml}${versesHtml}`}
+    </div>
   `;
 };
+
+const renderGrammarSection = (section, options = {}) => `
+  <article class="panel grammar-section-card">
+    ${renderGrammarSectionContent(section, options)}
+  </article>
+`;
+
+const renderGrammarCombinedSection = (section, childSections, options = {}) => `
+  <article class="panel grammar-section-card grammar-section-card-combined">
+    <div class="grammar-section-main">
+      ${renderGrammarSectionContent(section, options)}
+    </div>
+    <div class="grammar-inline-sections">
+      ${childSections
+        .map(
+          (childSection) => `
+            <section class="grammar-inline-section">
+              ${renderGrammarSectionContent(childSection, { showHeading: true, headingLevel: "h4" })}
+            </section>
+          `,
+        )
+        .join("")}
+    </div>
+  </article>
+`;
 
 // Prepara una versione gia normalizzata e ordinata del lessico.
 // In questo modo il Vocabolario non deve ricostruire tutto a ogni apertura
@@ -1206,6 +1260,7 @@ const renderGrammar = () => {
   }
 
   const selectedSection = selectedItem.section;
+  const childSections = getGrammarChildSections(selectedChapter, selectedItem.title);
   const previousItem = selectedItem.index > 0 ? chapterItems[selectedItem.index - 1] : null;
   const nextItem = selectedItem.index < chapterItems.length - 1 ? chapterItems[selectedItem.index + 1] : null;
   const navigationHtml = renderGrammarItemNav(previousItem, nextItem);
@@ -1227,7 +1282,9 @@ const renderGrammar = () => {
 
       ${
         selectedSection
-          ? renderGrammarSection(selectedSection, { showHeading: false })
+          ? childSections.length
+            ? renderGrammarCombinedSection(selectedSection, childSections, { showHeading: false })
+            : renderGrammarSection(selectedSection, { showHeading: false })
           : `
             <article class="panel grammar-section-card">
               <h3>${escapeHtml(selectedItem.title)}</h3>

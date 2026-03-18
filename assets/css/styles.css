@@ -864,6 +864,24 @@ select {
   white-space: nowrap;
 }
 
+.grammar-table-apophonia-shifts {
+  width: auto;
+}
+
+.grammar-table-apophonia-shifts td:nth-child(1) {
+  padding-right: 0.7rem;
+}
+
+.grammar-table-apophonia-shifts td:nth-child(2) {
+  padding-left: 0;
+  padding-right: 0.45rem;
+}
+
+.grammar-table-apophonia-shifts td:nth-child(3) {
+  padding-left: 0;
+  text-align: left;
+}
+
 .grammar-word-exercise {
   margin-top: 0.7rem;
   line-height: 1.9;
@@ -893,6 +911,11 @@ select {
   grid-template-columns: 7.6rem 1fr;
   gap: 0.5rem;
   align-items: baseline;
+}
+
+.grammar-example-apophonia .grammar-example-row {
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.18rem;
 }
 
 .grammar-example-key {
@@ -940,6 +963,12 @@ select {
   display: grid;
   gap: 0.65rem;
   margin-top: 1rem;
+}
+
+.grammar-inline-section {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(140, 76, 35, 0.12);
 }
 
 .grammar-subsection h4,
@@ -1017,6 +1046,57 @@ select {
 .grammar-section-card {
   display: grid;
   gap: 0.9rem;
+}
+
+.grammar-section-card > h3,
+.grammar-inline-section > h4 {
+  color: #b2332a;
+  text-align: center;
+}
+
+.grammar-section-body {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.grammar-section-body > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.grammar-section-card-combined {
+  gap: 1.1rem;
+}
+
+.grammar-section-main,
+.grammar-inline-sections {
+  display: grid;
+  gap: 1rem;
+}
+
+.grammar-section-card-combined .grammar-inline-section {
+  margin-top: 0;
+  padding-top: 1.15rem;
+}
+
+.grammar-section-card-combined .grammar-inline-section:first-child {
+  padding-top: 0.2rem;
+  border-top: 0;
+}
+
+.grammar-section-card-combined .grammar-inline-section .grammar-section-body {
+  gap: 0.8rem;
+}
+
+.grammar-section-card-combined .grammar-table-wrap-compact {
+  padding: 0.7rem 0.95rem;
+  border: 1px solid rgba(140, 76, 35, 0.14);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 252, 244, 0.96), rgba(249, 240, 221, 0.88));
+}
+
+.grammar-section-card-combined .grammar-table-compact {
+  width: 100%;
 }
 
 .grammar-section-card .stack {
