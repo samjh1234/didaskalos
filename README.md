@@ -37,7 +37,7 @@ Poi apri `http://localhost:8000`.
 - `assets/data/`: dataset runtime usati dal browser
 - `scripts/`: script di import e build
 - `source/`: sorgenti locali e file di supporto alla build
-- `private_data/`: dati locali privati opzionali
+- `private_data/`: dati locali separati dal resto dei dataset
 
 ## Logica del progetto
 
@@ -70,7 +70,7 @@ Regola importante:
 Questi file sono letti direttamente dal browser:
 
 - `assets/data/books.json`
-- `assets/data/grammar.json`
+- `private_data/grammar.json`
 - `assets/data/lexicon.json`
 - `assets/data/nt/*.json`
 - `assets/data/token_glosses_fixed.json`
@@ -143,8 +143,8 @@ python3 scripts/import_morphgnt.py
 
 Input:
 - `source/morphgnt`
-- opzionalmente `private_data/lexicon_it.json`
-- opzionalmente `private_data/contextual_glosses_it.json`
+- opzionalmente `assets/data/lexicon_it.json`
+- opzionalmente `assets/data/contextual_glosses_it.json`
 
 Output:
 - `assets/data/nt/*.json`
@@ -208,20 +208,12 @@ Output:
 - `assets/data/verb_metadata.json`
 - `assets/data/verb_non_finite.json`
 
-## Dati privati opzionali
-
-Cartella:
-- `private_data/`
-
-Uso principale:
-- gloss italiani privati per lemma
-- gloss contestuali privati per token
-- testo CEI 2008 locale
+## Dati locali opzionali
 
 File:
-- `private_data/lexicon_it.example.json`
-- `private_data/contextual_glosses_it.example.json`
-- `private_data/lexicon_it.json`
+- `assets/data/lexicon_it.example.json`
+- `assets/data/contextual_glosses_it.example.json`
+- `assets/data/lexicon_it.json`
 - `assets/data/cei2008_verses.json`
 
 Workflow minimo:

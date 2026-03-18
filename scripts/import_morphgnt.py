@@ -452,14 +452,14 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument(
         "--private-lexicon",
         type=Path,
-        default=Path("private_data/lexicon_it.json"),
-        help="Glossario italiano privato per lemma.",
+        default=Path("assets/data/lexicon_it.json"),
+        help="Glossario italiano per lemma.",
     )
     parser.add_argument(
         "--contextual-glosses",
         type=Path,
-        default=Path("private_data/contextual_glosses_it.json"),
-        help="Glossario italiano contestuale privato per token.",
+        default=Path("assets/data/contextual_glosses_it.json"),
+        help="Glossario italiano contestuale per token.",
     )
     return parser.parse_args(argv)
 

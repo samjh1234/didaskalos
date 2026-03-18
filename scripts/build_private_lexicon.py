@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera un lessico italiano privato completo partendo da lexicon.json."""
+"""Genera un lessico italiano completo partendo da lexicon.json."""
 
 from __future__ import annotations
 
@@ -34,13 +34,13 @@ def build_private_lexicon(entries: list[dict[str, object]], existing: dict[str, 
 
 def main(argv: list[str]) -> int:
     source = Path(argv[0]) if len(argv) > 0 else Path("assets/data/lexicon.json")
-    target = Path(argv[1]) if len(argv) > 1 else Path("private_data/lexicon_it.json")
+    target = Path(argv[1]) if len(argv) > 1 else Path("assets/data/lexicon_it.json")
 
     entries = read_json(source)
     existing = read_json(target) if target.exists() else {}
     output = build_private_lexicon(entries, existing)
     write_json(target, output)
-    print(f"Lessico privato generato: {len(output)} lemmi in {target}")
+    print(f"Lessico italiano generato: {len(output)} lemmi in {target}")
     return 0
 
 

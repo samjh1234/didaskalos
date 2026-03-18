@@ -40,7 +40,7 @@ const loadNtBooks = async (books) => {
 export const loadData = async () => {
   const [books, grammar, lexicon, fixedLexicon, tokenGlossesFixed, ceiVerses, verbParadigms, verbLemmas, verbNonFinite, verbMetadata, nounParadigms, pronounParadigms, functionGlosses, functionFormGlosses] = await Promise.all([
     loadJson("assets/data/books.json"),
-    loadJson("assets/data/grammar.json"),
+    loadJson("private_data/grammar.json"),
     loadJson("assets/data/lexicon.json"),
     loadJson("assets/data/fixed_lexicon.json"),
     loadJson("assets/data/token_glosses_fixed.json"),
