@@ -209,11 +209,90 @@ const renderGrammarSummaryTable = (table) => {
   `;
 };
 
+const renderGrammarCompactTable = (table) => {
+  if (!table?.rows?.length) return "";
+  const rowsHtml = table.rows
+    .map(
+      (row) => `
+        <tr>
+          ${row
+            .map((cell) => {
+              const descriptor =
+                typeof cell === "object" && cell !== null
+                  ? cell
+                  : {
+                      label: cell ?? "",
+                    };
+              const colspan = descriptor.colspan ? ` colspan="${descriptor.colspan}"` : "";
+              const className = descriptor.className ? ` class="${escapeHtml(descriptor.className)}"` : "";
+              return `<td${colspan}${className}>${escapeHtml(descriptor.label || "")}</td>`;
+            })
+            .join("")}
+        </tr>
+      `,
+    )
+    .join("");
+
+  return `
+    <div class="grammar-table-wrap grammar-table-wrap-compact">
+      <table class="grammar-table grammar-table-compact${table.className ? ` ${escapeHtml(table.className)}` : ""}">
+        <tbody>${rowsHtml}</tbody>
+      </table>
+    </div>
+  `;
+};
+
+const renderGrammarUnderlineWords = (words) => {
+  if (!words?.length) return "";
+  return `
+    <div class="grammar-word-exercise">
+      ${words
+        .map(
+          (word) => `
+            <span class="grammar-exercise-word">
+              ${word.before ? `<span>${escapeHtml(word.before)}</span>` : ""}
+              ${word.underline ? `<span class="grammar-exercise-underline">${escapeHtml(word.underline)}</span>` : ""}
+              ${word.after ? `<span>${escapeHtml(word.after)}</span>` : ""}
+            </span>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+};
+
+const renderGrammarPlainPoints = (items) => {
+  if (!items?.length) return "";
+  return items.map((item) => `<p>${escapeHtml(item)}</p>`).join("");
+};
+
+const renderGrammarAlignedExamples = (exampleBlock) => {
+  if (!exampleBlock?.rows?.length) return "";
+  return `
+    <div class="grammar-example-block">
+      ${exampleBlock.label ? `<div class="grammar-example-label">${escapeHtml(exampleBlock.label)}</div>` : ""}
+      <div class="grammar-example-rows">
+        ${exampleBlock.rows
+          .map(
+            (row) => `
+              <div class="grammar-example-row">
+                <span class="grammar-example-key">${escapeHtml(row.key || "")}</span>
+                <span class="grammar-example-value">${escapeHtml(row.value || "")}</span>
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+};
+
 // Rendering dei contenuti interni di una parte grammaticale.
 // Supporta paragrafi, elenchi, piccoli gruppi tematici, tabelle e blocchi di greco.
 const renderGrammarSection = (section, options = {}) => {
   const { showHeading = true } = options;
   const paragraphsHtml = (section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+  const plainPointsHtml = renderGrammarPlainPoints(section.plainPoints);
   const pointsHtml = section.points?.length
     ? `
         <div class="stack grammar-topic-list">
@@ -274,11 +353,32 @@ const renderGrammarSection = (section, options = {}) => {
   const summaryTableHtml = section.summaryTable ? renderGrammarSummaryTable(section.summaryTable) : "";
   const subsectionsHtml = section.subsections?.length
     ? section.subsections
-        .map(
-          (item) => `
+        .map((item) => {
+          const compactTableAfterParagraph =
+            Number.isInteger(item.compactTableAfterParagraph) && item.compactTableAfterParagraph >= 0
+              ? item.compactTableAfterParagraph
+              : null;
+          const compactTableHtml = item.compactTable ? renderGrammarCompactTable(item.compactTable) : "";
+          let compactTableInserted = false;
+          const subsectionParagraphsHtml = (item.paragraphs || [])
+            .map((paragraph, index) => {
+              const insertCompactTable = compactTableAfterParagraph === index ? compactTableHtml : "";
+              if (insertCompactTable) compactTableInserted = true;
+              return `<p>${escapeHtml(paragraph)}</p>${insertCompactTable}`;
+            })
+            .join("");
+          const trailingCompactTableHtml =
+            compactTableHtml && !compactTableInserted ? compactTableHtml : "";
+          const subsectionPlainPointsHtml = renderGrammarPlainPoints(item.plainPoints);
+
+          return `
             <div class="grammar-subsection">
               <h4>${escapeHtml(item.title)}</h4>
-              ${(item.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+              ${subsectionParagraphsHtml}
+              ${trailingCompactTableHtml}
+              ${subsectionPlainPointsHtml}
+              ${item.alignedExamples ? renderGrammarAlignedExamples(item.alignedExamples) : ""}
+              ${item.underlineWords ? renderGrammarUnderlineWords(item.underlineWords) : ""}
               ${
                 item.points?.length
                   ? `<div class="stack grammar-topic-list">${item.points
@@ -287,8 +387,8 @@ const renderGrammarSection = (section, options = {}) => {
                   : ""
               }
             </div>
-          `,
-        )
+          `;
+        })
         .join("")
     : "";
   const versesHtml = section.verses?.length
@@ -307,6 +407,7 @@ const renderGrammarSection = (section, options = {}) => {
       ${showHeading ? `<h3>${escapeHtml(section.heading || section.title || "")}</h3>` : ""}
       ${paragraphsHtml}
       ${alphabetTableHtml}
+      ${plainPointsHtml}
       ${groupsHtml}
       ${pointsHtml}
       ${summaryTableHtml}

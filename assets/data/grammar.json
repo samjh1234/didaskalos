@@ -60,7 +60,7 @@
           ["Psi", "Ψ", "ψ", "ps", ""],
           ["Omega", "Ω", "ω", "o", "lunga"]
         ],
-        "points": [
+        "plainPoints": [
           "1 All'inizio o nel corpo della parola.",
           "2 In fine di parola.",
           "3 Sigma lunato: C (maiuscolo) e ϲ (minuscolo). Puo essere usato indifferentemente, nel mezzo o in fine di parola."
@@ -68,7 +68,7 @@
         "subsections": [
           {
             "title": "Osservazioni",
-            "points": [
+            "plainPoints": [
               "a) Due lettere diverse corrispondono alla nostra e: ε per la e breve, η per la e lunga.",
               "b) Due lettere diverse corrispondono alla nostra o: ο per la o breve, ω per la o lunga.",
               "c) Tutte le maiuscole greche sono a livello del rigo e hanno l'altezza delle nostre maiuscole. Sei minuscole sono alte: beta, delta, zeta, theta, lambda, csi (β, δ, ζ, θ, λ, ξ); undici si prolungano al di sotto del rigo: gamma e chi (γ, χ), con meta del loro corpo; le altre, con una codina: beta, zeta, eta, mi, csi, rho, sigma finale, fi, psi (β, ζ, η, μ, ξ, ρ, ς, φ, ψ).",
@@ -200,6 +200,76 @@
           "—, —, ῀ : perispómeni (accento circonflesso sull'ultima). Es.: συκῆ, fico.",
           "—, ῀, — : properispómeni (accento circonflesso sulla penultima). Es.: κλῆσις, chiamata.",
           "Tutte le parole che non hanno l'accento sull'ultima sillaba sono dette baritone."
+        ]
+      },
+      {
+        "heading": "§ 4 - Incontri di vocali",
+        "subsections": [
+          {
+            "title": "A) Dittonghi e iota sottoscritto",
+            "paragraphs": [
+              "Le vocali possono essere aspre (α, ε, η, ο, ω) o dolci (ι, υ) e, quanto al timbro, chiare (ε, η, ι), medie (α) o scure (ο, ω, υ).",
+              "L'incontro delle vocali α, ε, ο con le vocali ι e υ forma i dittonghi propri (due vocali che formano un'unica sillaba):",
+              "Quando la υ e la ι si incontrano, formano il «dittongo dolce»: υι.",
+              "Quando le vocali ᾱ (lunga), η e ω incontrano la vocale ι, formano un dittongo che si chiama improprio. In realtà, il suono ι è scomparso dalla pronuncia nel secolo XII d.C., ma sopravvive nella scrittura; perciò un piccolo ι viene scritto sotto la vocale lunga, ma non si pronuncia; se però, quest'ultima è maiuscola, lo ι le viene segnato a fianco (ascritto), ma, come quando è sottoscritto, non è pronunziato."
+            ],
+            "compactTable": {
+              "className": "grammar-diphthong-table",
+              "rows": [
+                ["αι", "αυ"],
+                ["ει", "ευ"],
+                ["οι", "ου", { "label": "(pronuncia come u italiana)", "className": "grammar-table-note-cell", "colspan": 2 }]
+              ]
+            },
+            "compactTableAfterParagraph": 1,
+            "alignedExamples": {
+              "label": "Ess.:",
+              "rows": [
+                {
+                  "key": "minuscole =",
+                  "value": "ᾳ, ῃ, ῳ (cfr. μνᾷ, τῇ, τῷ)"
+                },
+                {
+                  "key": "maiuscole =",
+                  "value": "Αι, Ηι, Ωι (cfr. Ἅιδης)"
+                }
+              ]
+            }
+          },
+          {
+            "title": "B) Accento nei dittonghi",
+            "paragraphs": [
+              "Quando l'accento della parola cade su una sillaba che contiene un dittongo, l'accento viene segnato sulla seconda vocale del dittongo, ma viene pronunziato come se si trovasse sulla prima. Es.: καί (pronuncia kài).",
+              "Fanno eccezione, ovviamente, le maiuscole lunghe con lo iota ascritto, in cui questo, come abbiamo detto, non conta più e non può, quindi, portare accento, dato che non è pronunziato."
+            ]
+          },
+          {
+            "title": "C) Incontro di vocali che non formano dittongo («iato»)",
+            "paragraphs": [
+              "Quando due o più vocali si trovano ad essere consecutive (per esempio, se una parola finisce per vocale ed è seguita da altra che comincia per vocale, oppure anche all'interno di una singola parola, tranne il caso in cui le vocali costituiscano dittongo) la loro pronunzia può risultare sgradevole. A quest'incontro di vocali si dà il nome di iato. Gli scrittori più raffinati si adoperano per eliminarlo ovunque sia possibile (cfr. p. es. l'Epistola agli Ebrei).",
+              "Lo iato esterno (creato dalla vicinanza di vocali appartenenti a parole diverse) può essere eliminato con: I) l'elisione; II) la crasi; III) l'inserimento di una consonante mobile (efelcistica).",
+              "I) L'elisione è la sostituzione dell'ultima vocale (purché sia breve) di una parola con un apostrofo (come in italiano: l'acqua, invece di la acqua). La si pratica specialmente su preposizioni, congiunzioni e altre particelle (ἀπ' ἀρχῆς = da principio; δι' αὐτῆς = per mezzo di essa; μετ' ἐμοῦ = con me; ἐπ' αὐτῷ = su di lui; ἀλλ' εἰσίν = ma sono; ἀλλ' ἵνα = ma affinché). Quando, prima dell'apostrofo, c'è una consonante muta tenue (κ, π, τ) e la parola successiva ha lo spirito aspro, tale consonante muta, viene sostituita dalla corrispondente aspirata (χ, φ, θ): ὑφ' ἡμῶν = da noi, invece di ὑπὸ ἡμῶν; ἐφ' οὗ = su cui, al posto di ἐπὶ οὗ; ἀνθ' ὧν = per il fatto che, perché, invece di ἀντὶ ὧν.",
+              "II) La crasi è la contrazione della vocale finale di una parola con la vocale iniziale della parola successiva. Si forma, così, apparentemente, una parola sola, ma il suo carattere artificiale è indicato dal segno, chiamato coronide, identico per forma allo spirito dolce, posto sulla vocale risultante. La coronide non può confondersi con lo spirito dolce, perché non è mai all'inizio di una parola.",
+              "Ess.: κἄν = anche se, invece di καὶ ἄν; κἀγώ = e io, al posto di καὶ ἐγώ; ταὐτά = le stesse cose, invece di τὰ αὐτά; τοὐναντίον = al contrario, per τὸ ἐναντίον.",
+              "III) L'inserimento di una consonante mobile: un ν eufonico o efelcistico (= aggiunto) compare alla fine delle forme verbali di III pers. sing. in -ε, di quelle in -σι e alla fine dei dativi plurali in -σι, come anche in ἐστί(ν) (= è), quando queste forme siano seguite da parola che inizia con vocale, ovvero si trovino alla fine della frase. Nei prospetti delle declinazioni e coniugazioni, questo ν eufonico è segnato tra parentesi (ν) o separato da un trattino o da una barra obliqua. Ess.: λέγουσι(ν), λέγουσι-ν, λέγουσι/ν.",
+              "Quando lo iato si verifica all'interno di una parola (iato interno), il suono sgradevole può essere eliminato mediante contrazione: questa risolve l'incontro di due vocali aspre (cfr. § 21). Se però, non si verifica contrazione, le due vocali si pronunciano separatamente e quando la seconda ha l'accento, il tono della voce cade su di essa (e non sulla prima, come avviene nei dittonghi). Ess.: ἀετός, aquila, avvoltoio; ἀόρατος, invisibile; ἐάν, se; ἐάω, lascio; λαός, popolo.",
+              "Può accadere che una vocale aspra (α, ε, ο), seguita da una dolce (ι, υ), non formi, con essa, dittongo. Si pone allora, sulla seconda vocale, il segno detto dièresi (¨), per indicare che le vocali appartengono a due sillabe distinte e vanno pronunciate separatamente. Anche in questo caso, se la seconda vocale ha l'accento, il tono della voce cade su di essa e non sulla prima. Ess.: ἀΐδιος, eterno; πραΰς, mite, mansueto.",
+              "Quando la vocale dolce precede quella aspra (è il caso inverso del dittongo), le due vocali costituiscono due sillabe distinte. Ess.: λύομαι, mi sciolgo, sono sciolto; ἰάομαι (non ἰάομαι), curo; ὑετός (non ὑετός), pioggia."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 5 - Incontri di consonanti",
+        "paragraphs": [
+          "Quando si producono incontri di consonanti, p. es. nel corso della flessione dei nomi e dei verbi (declinazioni e coniugazioni), possono verificarsi alcuni fenomeni, come l'assimilazione di due consonanti fra loro, o la loro fusione in una consonante doppia, oppure anche la loro sparizione o «caduta», così sintetizzabili:"
+        ],
+        "plainPoints": [
+          "I) Una dentale (τ, δ, θ) che si trovi a precedere un'altra dentale, si trasforma in σ. Es.: dal tema verbale πειθ-, la III pers. sing. del Perfetto Medio-passivo, πέπειθται, diventa πέπεισται.",
+          "II) Una dentale che preceda un σ, cade. Il sostantivo della III declinazione ἐλπίς, ἐλπίδος, speranza, ha un DAT. plurale ἐλπίσι (non ἐλπίδ-σι).",
+          "III) Il σ può scomparire, nella flessione del nome o del verbo, se viene a trovarsi tra due vocali, specialmente quando una di esse appartenga ad un suffisso. La caduta del sigma intervocalico può avere, come conseguenza, la contrazione delle vocali che vengono a trovarsi a contatto. Es.: dal GEN. γένεσος, con la caduta del σ, si forma γένεος, contratto poi, in γένους (cfr. § 109, con altri esempi). Una situazione analoga si verifica nella II pers. sing. della coniugazione medio-passiva del Presente e dell'Imperfetto Indicativo (cfr. § 52).",
+          "IV) Il σ cade anche quando, nella flessione, verrebbe a trovarsi tra due consonanti. Es.: nel Perfetto medio-passivo, le desinenze -σθε, -σθαι perdono il σ, quando si uniscono a temi verbali che terminano in consonante (cfr. §§ 121 e 122).",
+          "V) Nella formazione del Futuro e dell'Aoristo, scompare il σ della caratteristica, nei verbi col tema verbale uscente in liquida (λ, ρ) o in nasale (μ, ν); cfr. §§ 82 e 89, che analizzano le modalità del fenomeno e le sue conseguenze."
         ]
       }
     ]
