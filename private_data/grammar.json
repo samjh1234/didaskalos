@@ -663,58 +663,950 @@
     "id": "lezione-terza",
     "kind": "lesson",
     "lessonLabel": "Lezione terza",
-    "title": "Declinazione, articolo, congiunzioni e negazioni",
-    "summary": "Ingresso nel sistema nominale del greco: articolo, declinazioni e primi elementi di collegamento della frase.",
+    "title": "Declinazione nominale, articolo e prime particelle",
+    "summary": "Ingresso nel sistema nominale del greco: casi, articolo determinativo, seconda declinazione e primi elementi sintattici di base.",
     "contents": [
-      "8. La declinazione dei nomi e dell'articolo. Norme generali",
-      "9. Quadro dell'articolo determinativo nei tre generi",
-      "10. I, II e III declinazione",
-      "11. Declinazione dei nomi maschili con il tema in -ο (II decl.)",
-      "12. Quadro dei mutamenti d'accento",
-      "13. Congiunzioni",
-      "14. Negazioni",
+      "§ 8 - La declinazione dei nomi e dell'articolo: norme generali",
+      "§ 9 - Quadro dell'articolo determinativo nei tre generi",
+      "§ 10 - I, II e III declinazione",
+      "§ 11 - Declinazione di nomi maschili col tema in -ο (II decl.)",
+      "§ 12 - Quadro dei mutamenti d'accento",
+      "§ 13 - Congiunzioni",
+      "§ 14 - Negazioni",
       "Vocabolario 2º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 8 - La declinazione dei nomi e dell'articolo: norme generali",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Nella lingua italiana, il significato di una proposizione è dato, in gran parte, dalla disposizione delle parole e dal tono della voce. Vi sono alcuni tipi di proposizione, in cui l'ordine delle parole è di rigore, per non alterare il pensiero di chi parla o scrive, mentre solo in misura molto limitata abbiamo conservato la flessione delle parole: questa si vede nel passaggio dal singolare al plurale (e non sempre). Ess.: gatto/gatti; cane/cani; mela/mele."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nella frase biblica «Dio ama un donatore gioioso» (II Cor. 9,7), è l'ordine delle parole che permette di capire il pensiero dell'apostolo. Non possiamo cambiare l'ordine, senza modificare il suo pensiero. Se dicessimo «un donatore gioioso ama Dio», diremmo un'altra cosa, diversa da quella che intendeva Paolo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nella lingua greca, invece, più che l'ordine delle parole, conta la loro flessione, cioè il modo in cui esse si modificano, soprattutto nelle desinenze (parte finale); ogni modificazione corrisponde a una funzione particolare della parola nella frase."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le principali «funzioni» della parola nella frase sono le seguenti: il soggetto è la persona o la cosa di cui si parla o che fa l'azione descritta nella frase. Un'altra funzione indica l'appartenenza (p. es. «la casa dell'uomo»): è il complemento di specificazione. Un'altra indica la provenienza o la separazione (p. es. «il padrone manda i servi dalla casa ai campi»: «dalla casa» è complemento di moto da luogo)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un'altra funzione indica a chi è rivolta l'azione («la maestra parla ai bambini»): è il complemento di termine."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ancora: la posizione è indicata dal complemento di «stato in luogo» («i bambini giocano nel giardino»); la strumentalità dice «per mezzo di che cosa» è fatta l'azione («il maestro insegna con gli esempi»): è il complemento di mezzo. Infine, un termine può servire a indicare chi (o che cosa) è oggetto dell'azione descritta dal verbo («l'uomo accarezza il gatto», «il bambino pronuncia parole»): è il complemento «oggetto»."
+          },
+          {
+            "type": "paragraph",
+            "text": "In greco (come in latino) queste funzioni si esprimono mediante la declinazione delle parole in varie forme o «casi»."
+          },
+          {
+            "type": "paragraph",
+            "text": "In questa «Guida», come in quasi tutte le grammatiche di uso scolastico, parleremo di cinque casi:"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["Caso", "Funzione principale", "Esempio"]
+              ],
+              "bodyRows": [
+                ["Nominativo", "per il soggetto.", "Es.: Dio (soggetto) è amore."],
+                ["Genitivo", "per il compl. di specificazione (ed altre funzioni).", "Es.: La parola del Maestro (compl. specificazione) è vera."],
+                ["Dativo", "per il compl. di termine (ed altre funzioni).", "Es.: Offriamo un sacrificio al Signore (compl. di termine)."],
+                ["Accusativo", "per il compl. oggetto (ed altre funzioni).", "Es.: Amiamo il prossimo (compl. oggetto)."],
+                ["Vocativo", "per il compl. di vocazione.", "Es.: O Dio (compl. di vocazione), noi ti invochiamo."]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "NOM., ACC. e VOC. sono detti casi diretti; GEN. e DAT. sono detti casi obliqui."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il Vocativo coincide, molto spesso, con il Nominativo. La distinzione si riscontra soltanto al singolare, maschile e femminile, dei nomi e degli aggettivi, anche se non sempre. Nel plurale, invece, non c'è distinzione fra i due casi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Genere dei nomi: In greco, i nomi che indicano persone, animali, oggetti, ecc. possono essere di tre generi: Maschile (abbr., M.); Femminile (abbr., F.); Neutro (abbr., N.)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Non ci sono regole precise per cui una parola debba appartenere al genere maschile o femminile o neutro. È bene, perciò, che chi studia il greco impari a memoria ogni nome col suo articolo, perché quest'ultimo permette di riconoscere a prima vista il genere del nome, anche nei casi dubbi. Infatti l'articolo deve concordare col genere del nome a cui si riferisce."
+          }
+        ]
+      },
+      {
+        "heading": "§ 9 - Quadro dell'articolo determinativo nei tre generi",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["Numero", "Caso", "M.", "F.", "N."]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 4, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "ὁ",
+                  "ἡ",
+                  "τό"
+                ],
+                ["GEN.", "τοῦ", "τῆς", "τοῦ"],
+                ["DAT.", "τῷ", "τῇ", "τῷ"],
+                ["ACC.", "τόν", "τήν", "τό"],
+                [
+                  { "label": "Plur.", "rowspan": 4, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "οἱ",
+                  "αἱ",
+                  "τά"
+                ],
+                ["GEN.", "τῶν", "τῶν", "τῶν"],
+                ["DAT.", "τοῖς", "ταῖς", "τοῖς"],
+                ["ACC.", "τούς", "τάς", "τά"]
+              ],
+              "notes": [
+                "1 Non sempre il genere di un nome greco corrisponde a quello del corrispettivo termine italiano.",
+                "Ess.: ὁ βίος (M.) = la vita (F.); ἡ ἔρημος (F.) = il deserto (M.)."
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "plainPoints": [
+              "a) Per il vocativo si usa, talora, la interiezione ὦ.",
+              "b) L'articolo concorda col nome a cui si riferisce, in genere, numero e caso.",
+              "c) Articolo indeterminativo. Il greco non ha articolo indeterminativo. Perciò, all'italiano «una casa», corrisponde, in greco, semplicemente οἶκος. Inversamente, οἶκος si può tradurre sia «una casa» che, semplicemente, «casa»."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 10 - I, II e III declinazione",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "I sostantivi greci seguono tre tipi di declinazione:"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "I) la prima declinazione, che è quella dei nomi il cui tema termina in -α: comprende prevalentemente femminili e pochi maschili. Il loro NOM. sing. termina, rispettivamente, in -α oppure in -η; in -ας oppure -ης (cfr. §§ 23-27 e 29);",
+              "II) la seconda declinazione, che è quella dei nomi il cui tema termina in -ο: comprende molti maschili e neutri, pochi femminili. Il loro NOM. sing. termina in -ος, quando sono masch. o femm.; in -ον, quando sono neutri;",
+              "III) la terza declinazione, che è quella dei nomi il cui tema termina in consonante, in vocale dolce (ι, υ) oppure in dittongo: comprende maschili, femminili o neutri; il NOM. sing. può avere varie forme (cfr. §§ 96-112)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Si è ritenuto opportuno iniziare la trattazione della flessione nominale dalla II declinazione (§ 11), perché questa appare la più semplice fra le tre."
+          }
+        ]
+      },
+      {
+        "heading": "§ 11 - Declinazione di nomi maschili col tema in -ο (II decl.)",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "intro": "Tema: ἱππο- (cavallo)",
+              "headerRows": [
+                ["Numero", "Caso", "Articolo", "Forma", "Valore"]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "ὁ",
+                  "ἵππος",
+                  "il cavallo (soggetto)"
+                ],
+                ["GEN.", "τοῦ", "ἵππου", "del cavallo"],
+                ["DAT.", "τῷ", "ἵππῳ", "al cavallo"],
+                ["ACC.", "τόν", "ἵππον", "il cavallo (complemento oggetto)"],
+                ["VOC.", "(ὦ)", "ἵππε", "o cavallo"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "οἱ",
+                  "ἵπποι",
+                  "i cavalli (soggetto)"
+                ],
+                ["GEN.", "τῶν", "ἵππων", "dei cavalli"],
+                ["DAT.", "τοῖς", "ἵπποις", "ai cavalli"],
+                ["ACC.", "τούς", "ἵππους", "i cavalli (complemento oggetto)"],
+                ["VOC.", "(ὦ)", "ἵπποι", "o cavalli"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "plainPoints": [
+              "a) Genere dei nomi - Lo schema si applica sia ai nomi maschili che ai femminili. Predominano i primi (nel greco extrabiblico, 7200 maschili, rispetto a 400 femminili circa). Un esempio di declinazione di nomi femminili col tema in -ο si trova al § 19.",
+              "b) Vocativo - Al sing., il VOC. prende la desinenza indicata nell'esempio. Il VOC. non è preceduto dall'articolo; può essere preceduto dalla particella ὦ, che corrisponde al nostro «o!» (p. es., «O Dio, aiutami!»). Al plur., il VOC. è sempre uguale al NOM.",
+              "c) Vocativi irregolari - Θεός può avere il VOC. regolare (cfr. Mt. 27,46), ma spesso usa la stessa forma del NOM. Ἀδελφός (fratello) ha il vocativo ἄδελφε (accento ritratto), ma non sempre questa accentazione è osservata (cfr. At. 9,17; 21,20). Da notare, in modo particolare, la declinazione del nome Ἰησοῦς, che ricorre nel N.T. ben 919 volte: NOM. Ἰησοῦς; GEN. Ἰησοῦ; DAT. Ἰησοῦ; ACC. Ἰησοῦν; VOC. Ἰησοῦ.",
+              "d) Accenti - I nomi che hanno l'accento acuto sulla penultima sillaba (come λόγος), lo conservano per tutto il sing. e il plur. I nomi che hanno l'accento acuto sull'ultima sillaba, lo mutano in circonflesso nel GEN. e DAT. sing. e plur. I nomi che hanno l'accento acuto sulla terzultima sillaba, lo spostano sulla penultima, nel GEN. e DAT. sing. e nel GEN., DAT. e ACC. plur., cioè, quando la desinenza è una sillaba lunga (cfr. § 3, II). La desinenza del NOM. plur. vale come sillaba breve. Nei medesimi casi, GEN. e DAT. sing. e GEN., DAT. e ACC. plur. (desinenza lunga), le parole che al NOM. hanno l'accento circonflesso sulla penultima, lo mutano in acuto. Tutto ciò avviene in applicazione delle regole sull'accento esposte al § 3. Si vedano gli esempi nel prospetto seguente (§ 12).",
+              "e) L'interiezione ὦ, generalmente usata nel greco classico, è, invece, quasi sempre omessa nel N.T. Pertanto, essa compare fra parentesi negli specchietti di questa Guida."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 12 - Quadro dei mutamenti d'accento",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
+                  { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
+                  { "label": "Nomi con accento acuto sull'ultima sillaba" },
+                  { "label": "Nomi con accento circonflesso sulla penultima" },
+                  { "label": "Nomi con accento acuto sulla terzultima" }
+                ],
+                [
+                  "Temi: λαο- (popolo)",
+                  "δουλο- (servo)",
+                  "ἀποστολο- (apostolo)"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "λαός",
+                  "δοῦλος",
+                  "ἀπόστολος"
+                ],
+                ["GEN.", "λαοῦ", "δούλου", "ἀποστόλου"],
+                ["DAT.", "λαῷ", "δούλῳ", "ἀποστόλῳ"],
+                ["ACC.", "λαόν", "δοῦλον", "ἀπόστολον"],
+                ["VOC.", "λαέ", "δοῦλε", "ἀπόστολε"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "λαοί",
+                  "δοῦλοι",
+                  "ἀπόστολοι"
+                ],
+                ["GEN.", "λαῶν", "δούλων", "ἀποστόλων"],
+                ["DAT.", "λαοῖς", "δούλοις", "ἀποστόλοις"],
+                ["ACC.", "λαούς", "δούλους", "ἀποστόλους"],
+                ["VOC.", "λαοί", "δοῦλοι", "ἀπόστολοι"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 13 - Congiunzioni",
+        "paragraphs": [
+          "Le congiunzioni più frequenti, nel greco classico ed ellenistico, sono: καί (e, anche); ἤ (o, oppure); ἀλλά (ma); δέ (ma, poi, e); γάρ (infatti), usata, di solito, non all'inizio di frase."
+        ]
+      },
+      {
+        "heading": "§ 14 - Negazioni",
+        "paragraphs": [
+          "Le negazioni più frequenti sono: οὐ (non: davanti a consonante); οὐκ (non: davanti a vocale o dittongo con spirito dolce); οὐχ (non: davanti a vocale o dittongo con spirito aspro); οὐδέ (e non, né, neppure); μή (non): in modo del tutto generale, si può dire che quest'ultima sia la negazione propria delle frasi che non comportano l'uso dell'Indicativo."
+        ]
+      },
+      {
+        "heading": "Vocabolario 2º",
+        "paragraphs": [
+          "Note sintattico-grammaticali"
+        ],
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            ["ὁ ἄγγελος, ου", "il messaggero, l'angelo", "(cfr. § 1 h)"],
+            ["ὁ ἀδελφός, οῦ", "il fratello", "(philadelphia)"],
+            ["ὁ ἄνθρωπος, ου", "l'uomo", "(antropologia)"],
+            ["ὁ ἀπόστολος, ου", "l'inviato, l'apostolo", ""],
+            ["ὁ ἄρτος, ου", "il pane", ""],
+            ["ὁ δοῦλος, ου", "il servo, lo schiavo", "(dulìa = culto dei santi)"],
+            ["ὁ θάνατος, ου", "la morte", "(eutanasia)"],
+            ["ὁ θεός, οῦ", "Dio", "(teologia - ingl. Theology)"],
+            ["ὁ Ἰησοῦς, οῦ", "Gesù", ""],
+            ["ὁ ἵππος, ου", "il cavallo", "(ippodromo, ippica)"],
+            ["ὁ κόσμος, ου", "il mondo", "(cosmonauta)"],
+            ["ὁ κύριος, ου", "il Signore, il padrone", ""],
+            ["ὁ λαός, οῦ", "il popolo", "(laico)"],
+            ["ὁ λόγος, ου", "la parola, il discorso", "(filologo)"],
+            ["ὁ νόμος, ου", "la legge", "(autonomo)"],
+            ["ὁ οἶκος, ου", "la casa, la famiglia", "(economia: οι, in italiano, «e»)"],
+            ["ὁ φίλος, ου", "l'amico", "(filantropo, filosofo, musicofilo ecc.)"]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Esercizio",
+            "paragraphs": [
+              "Declinare per iscritto, al sing. e al plur., alcuni nomi indicati nel Vocabolario 2º (seguendo i modelli del § 12). Per ciascun caso indicare anche l'articolo."
+            ]
+          },
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ὁ θεὸς σῴζει τὸν ἄνθρωπον. 2. ὁ ἄγγελος γράφει τοὺς λόγους. 3. οἱ κύριοι ἀποστέλλουσι τοὺς δούλους. 4. ἄρτον λαμβάνετε. 5. ὁ δοῦλος ἐγείρει τὸν κύριον. 6. ὁ ἀπόστολος τὸν οἶκον εὑρίσκει. 7. νόμον ἀνθρώπων ἔχομεν. 8. τὸν λόγον τοῦ θεοῦ πιστεύουσιν. 9. Τὸν ἀδελφὸν τοῦ ἀποστόλου βλέπομεν. 10. ἄγγελος τὸν δοῦλον ἐγείρει. 11. βλέπομεν τὸν θάνατον. 12. ὁ λόγος τοῦ θεοῦ τοὺς ἀνθρώπους σῴζει. 13. ὁ λαὸς εὑρίσκει τὸν νόμον. 14. ἄνθρωπος καὶ ἄγγελος ἐσθίουσιν ἄρτον. 15. γινώσκετε τὸν ἀδελφὸν τοῦ δούλου. 16. διδάσκει τὸν νόμον τοῦ θεοῦ."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
     "id": "lezione-quarta",
     "kind": "lesson",
     "lessonLabel": "Lezione quarta",
-    "title": "Nomi neutri, femminili, preposizioni e concordanza",
-    "summary": "Completamento dei primi modelli nominali e introduzione alle preposizioni e alla concordanza del predicato.",
+    "title": "Seconda declinazione: neutri, femminili e primi usi dei casi",
+    "summary": "Declinazione dei neutri e dei femminili della II declinazione, note su genitivo e dativo, determinazioni di tempo e vocabolari 3º e 4º.",
     "contents": [
-      "15. Declinazione dei nomi neutri della II decl.",
-      "16. Concordanza del predicato con il soggetto",
-      "17. Preposizioni",
-      "18. Vocabolario 3º con i tempi del verbo",
-      "19. Declinazione dei nomi femminili con il tema in -η",
-      "20. Nomi femminili con il tema in -α",
+      "§ 15 - Declinazione dei nomi neutri con il tema in -ο (II decl.)",
+      "§ 16 - Concordanza del predicato con il soggetto",
+      "§ 17 - Il genitivo e il dativo",
+      "§ 18 - Determinazioni di tempo",
+      "Vocabolario 3º",
+      "§ 19 - Declinazione dei nomi femminili con il tema in -ο (II decl.)",
+      "§ 20 - Nomi contratti",
       "Vocabolario 4º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 15 - Declinazione dei nomi neutri con il tema in -ο (II decl.)",
+        "summaryTable": {
+          "headerRows": [
+            [
+              { "label": "Temi:", "colspan": 2 },
+              "ἱερο- (tempio)",
+              "δωρο- (dono)",
+              "σκανδαλο- (inciampo)"
+            ]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+              "NOM.",
+              "τὸ ἱερόν",
+              "τὸ δῶρον",
+              "τὸ σκάνδαλον"
+            ],
+            ["GEN.", "τοῦ ἱεροῦ", "τοῦ δώρου", "τοῦ σκανδάλου"],
+            ["DAT.", "τῷ ἱερῷ", "τῷ δώρῳ", "τῷ σκανδάλῳ"],
+            ["ACC.", "τὸ ἱερόν", "τὸ δῶρον", "τὸ σκάνδαλον"],
+            ["VOC.", "(ὦ) ἱερόν", "(ὦ) δῶρον", "(ὦ) σκάνδαλον"],
+            [
+              { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+              "NOM.",
+              "τὰ ἱερά",
+              "τὰ δῶρα",
+              "τὰ σκάνδαλα"
+            ],
+            ["GEN.", "τῶν ἱερῶν", "τῶν δώρων", "τῶν σκανδάλων"],
+            ["DAT.", "τοῖς ἱεροῖς", "τοῖς δώροις", "τοῖς σκανδάλοις"],
+            ["ACC.", "τὰ ἱερά", "τὰ δῶρα", "τὰ σκάνδαλα"],
+            ["VOC.", "(ὦ) ἱερά", "(ὦ) δῶρα", "(ὦ) σκάνδαλα"]
+          ]
+        }
+      },
+      {
+        "heading": "§ 16 - Concordanza del predicato con il soggetto",
+        "paragraphs": [
+          "I nomi neutri plurali che siano soggetti di una proposizione, sono quasi sempre seguiti dal verbo al singolare, anziché al plurale (contro la regola per cui il verbo deve concordare, in numero, con il soggetto: se, infatti, il soggetto è singolare, il verbo è singolare; se il soggetto è plurale, lo è anche il verbo)."
+        ]
+      },
+      {
+        "heading": "§ 17 - Il genitivo e il dativo",
+        "paragraphs": [
+          "Nell'introduzione generale sui casi (cfr. § 8), si accenna genericamente alla funzione del complemento di specificazione. Nel greco classico, e con qualche variazione nella κοινή (koiné), il genitivo ha due funzioni fondamentali: quella di genitivo partitivo, in dipendenza da sostantivi, pronomi, aggettivi di grado superlativo, ecc. (Es.: qualcuno di noi; il più saggio degli uomini), e quella di genitivo ad-nominale, che si può suddistinguere in genitivo soggettivo e oggettivo (Es.: l'amore di Cristo = l'amore di Cristo per noi oppure il nostro amore per Cristo), genitivo possessivo (Es.: la casa di Paolo), genitivo di materia (Es.: una corona d'oro), genitivo di stima e prezzo (Es.: quella casa ha il costo di due mine), genitivo di tempo determinato (Es.: venne di notte).",
+          "Il genitivo può rappresentare, inoltre, un antico ablativo arioeuropeo ed esprimere il punto di partenza o l'origine dell'azione o l'allontanamento. Si può parlare, in questo caso, di genitivo di allontanamento (Es.: lo liberò dagli affanni), di privazione (Es.: fu privato della vista), di paragone (Es.: la giustizia è migliore della ricchezza).",
+          "Il caso dativo presenta due funzioni fondamentali: il dativo propriamente detto (complemento di termine; cfr. § 8), di cui il dativo di interesse (di vantaggio e svantaggio) è un'accezione particolare (Es.: ciò è utile per tutti) e il dativo strumentale, che comprende il dativo di strumento o mezzo (Es.: lo colpì con la lancia), il dativo di causa (Es.: si ribella per odio) e il dativo di modo (Es.: lo abbraccia con gioia)."
+        ]
+      },
+      {
+        "heading": "§ 18 - Determinazioni di tempo",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Il tempo determinato si esprime, in greco, con il genitivo o il dativo."
+          },
+          {
+            "type": "alignedExamples",
+            "block": {
+              "label": "Ess.:",
+              "rows": [
+                { "key": "ὄρθρου", "value": "all'alba" },
+                { "key": "σαββάτῳ", "value": "di sabato" }
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Per il tempo continuato si usa abitualmente l'accusativo."
+          },
+          {
+            "type": "alignedExamples",
+            "block": {
+              "label": "Es.:",
+              "rows": [
+                { "key": "νύκτα καὶ ἡμέραν", "value": "per una notte e un giorno" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 3º",
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            ["τὸ ἀργύριον, ου", "il denaro, l'argento", ""],
+            ["τὸ βιβλίον, ου", "il libro", "(biblioteca. Dal plurale: Biblia)"],
+            ["τὸ δαιμόνιον, ου", "il demonio, il diavolo", ""],
+            ["τὸ δένδρον, ου", "l'albero", "(rododendro)"],
+            ["τὸ δῶρον, ου", "il dono", ""],
+            ["τὸ ἔργον, ου", "l'opera, il lavoro", "(ergometro, energia)"],
+            ["τὸ εὐαγγέλιον, ου", "l'evangelo, il buon annunzio", "(per la pronuncia, § 1, h)"],
+            ["τὸ ἱερόν, οῦ", "il tempio", "(gerarchia, franc. hierarchie)"],
+            ["τὸ ἱμάτιον, ου", "il mantello, il vestito", ""],
+            ["τὸ παιδίον, ου", "il bambino (diminutivo)", "(pediatra ecc.)"],
+            ["τὸ πλοῖον, ου", "la barca, l'imbarcazione", ""],
+            ["τὸ πρόβατον, ου", "la pecora", ""],
+            ["τὸ πρόσωπον, ου", "la faccia, il volto, la persona", "(prosopopea)"],
+            ["τὸ σάββατον, ου", "il sabato", ""],
+            ["τὸ σημεῖον, ου", "il segno (i «miracoli» di Gv.)", "(semeiotica)"],
+            ["τὸ σκάνδαλον, ου", "l'inciampo, la seduzione, l'occasione di peccato", ""],
+            ["τὸ τέκνον, ου", "il bambino, il figlio", ""]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ὁ κύριος τὰ πρόβατα γινώσκει. 2. ὁ θεὸς τὰ ἔργα τοῦ νόμου κρίνει. 3. εὑρίσκομεν τὸ ἱερὸν τοῦ θεοῦ. 4. τὰ παιδία βλέπει τὸ δένδρον. 5. ἀκούουσι¹ τὸ εὐαγγέλιον. 6. λαμβάνεις τὰ βιβλία. 7. δαιμόνιον ἔχεις. 8. τὰ παιδία ἔχει τὰ βιβλία. 9. ὁ θεὸς τὸν κόσμον κρίνει καὶ σῴζει. 10. οἱ φίλοι τὰ ἱμάτια τοῦ παιδίου εὑρίσκουσιν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. I bambini conoscono gli amici del fratello. 2. Mandiamo i libri agli amici. 3. Egli vede il volto di Dio. 4. Non conoscono la legge del sabato. 5. Prendono e gettano i denari. 6. Insegnano la legge, ma non credono al Signore."
+            ]
+          },
+          {
+            "title": "Esercizio orale",
+            "paragraphs": [
+              "Declinare alcuni nomi neutri del Vocabolario 3º al singolare e al plurale, mettendo per ciascuno dei casi il relativo articolo (come nel quadro)."
+            ]
+          },
+          {
+            "title": "Nota",
+            "paragraphs": [
+              "1 Il verbo ἀκούω è seguito dall'accusativo o dal genitivo, senza differenza di significato. Di preferenza, l'ACC. si usa quando viene considerato l'oggetto diretto dell'udire (un suono, ciò che è detto), il GEN., quando è interessata la fonte di provenienza (la persona, la voce)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 19 - Declinazione dei nomi femminili con il tema in -ο (II decl.)",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "I nomi femminili in -ος si declinano in modo identico ai nomi maschili (§§ 11-12). L'unica avvertenza è quella di abbinare loro, quando occorra, l'articolo femminile, come si desume dal prospetto seguente:"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "Temi:", "colspan": 2 },
+                  "ὁδο- (via)",
+                  "ἐρημο- (deserto)"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "ἡ ὁδός",
+                  "ἡ ἔρημος"
+                ],
+                ["GEN.", "τῆς ὁδοῦ", "τῆς ἐρήμου"],
+                ["DAT.", "τῇ ὁδῷ", "τῇ ἐρήμῳ"],
+                ["ACC.", "τὴν ὁδόν", "τὴν ἔρημον"],
+                ["VOC.", "(ὦ) ὁδέ", "(ὦ) ἔρημε"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "αἱ ὁδοί",
+                  "αἱ ἔρημοι"
+                ],
+                ["GEN.", "τῶν ὁδῶν", "τῶν ἐρήμων"],
+                ["DAT.", "ταῖς ὁδοῖς", "ταῖς ἐρήμοις"],
+                ["ACC.", "τὰς ὁδούς", "τὰς ἐρήμους"],
+                ["VOC.", "(ὦ) ὁδοί", "(ὦ) ἔρημοι"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 20 - Nomi contratti",
+        "paragraphs": [
+          "In alcuni nomi, la cui -ο finale del tema è preceduta da una vocale aspra (-ε od -ο), è avvenuta la contrazione (§ 4). Il Nuovo Testamento impiega un solo contratto della II declinazione, il neutro τὸ ὀστοῦν (< ὀστέον), l'osso, in Gv. 19,36 (cfr. Appendice I, 10)."
+        ]
+      },
+      {
+        "heading": "Vocabolario 4º",
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            ["ὁ ἀγρός, οῦ", "il campo", "(agricoltura)"],
+            ["ἡ ἄμπελος, ου", "la vite", ""],
+            ["ὁ ἄνεμος, ου", "il vento", "(anemometro)"],
+            ["ὁ βίος, ου", "la vita", "(biologia)"],
+            ["τὸ δάκρυον, ου", "la lacrima", ""],
+            ["τὸ δεῖπνον, ου", "il pranzo, il banchetto", ""],
+            ["ἡ ἔρημος, ου¹", "il deserto", "(eremita)"],
+            ["τὸ ζῷον, ου", "l'animale", "(zoologia)"],
+            ["ὁ καρπός, οῦ", "il frutto", ""],
+            ["ὁ μισθός, οῦ", "la mercede, il salario", ""],
+            ["ἡ νῆσος, ου", "l'isola", "(Dodecaneso)"],
+            ["ἡ ὁδός, οῦ", "la via", ""],
+            ["ἡ παρθένος, ου", "la fanciulla, la vergine", ""],
+            ["ὁ πόλεμος, ου", "la guerra", "(polemico)"],
+            ["ἡ ῥάβδος, ου", "il bastone", "(rabdomante)"],
+            ["ὁ τόπος, ου", "il luogo", "(topografia)"],
+            ["ὁ φόβος, ου", "la paura", "(fobia e i suoi composti)"]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ὁ Ἰησοῦς τὴν ὁδὸν τοῦ θεοῦ διδάσκει. 2. αἱ παρθένοι τῷ κυρίῳ πιστεύουσιν². 3. βλέπομεν τὰ δάκρυα τῶν παρθένων. 4. ἄδελφε, ὁ θεὸς ἀποστέλλει τοὺς ἀγγέλους τοῖς ἀνθρώποις. 5. ὁ δοῦλος λαμβάνει τὸν μισθὸν τοῦ ἔργου. 6. οἱ ἄνθρωποι ἀκούουσι τὸν λόγον τοῦ εὐαγγελίου, ἀλλὰ οὐ πιστεύουσιν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Voi non conoscete le vie del Signore. 2. I bambini non trovano la via della casa. 3. Il messaggero sveglia le fanciulle. 4. Agli amici non mandano il libro; non hanno infatti danaro. 5. Non conosciamo i segni dell'apostolo. 6. Gli uomini non conoscono le vie del deserto, ma Dio manda un angelo e (li) salva."
+            ]
+          },
+          {
+            "title": "Note",
+            "paragraphs": [
+              "1 Si tratta, in realtà, di un aggettivo sostantivato.",
+              "2 Il verbo πιστεύω ha, dopo di sé, i casi dativo o accusativo. Nel N.T. si trova, spesso, anche seguito dalle preposizioni εἰς o ἐπί con il caso accusativo."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
     "id": "lezione-quinta",
     "kind": "lesson",
     "lessonLabel": "Lezione quinta",
-    "title": "Terza declinazione: veri consonanti",
-    "summary": "Primo ingresso nella terza declinazione con i nomi della serie consonantica.",
+    "title": "Verbi contratti in vocale aspra",
+    "summary": "Introduzione ai verbi contratti e paradigma del presente indicativo dei verbi in -εω.",
     "contents": [
-      "21. Declinazione dei nomi della terza classe (veri consonanti)",
-      "22. Vocabolario 5º"
+      "§ 21 - Verbi col tema in vocale aspra (verbi contratti)",
+      "§ 22 - Verbi contratti in -εω",
+      "Vocabolario 5º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 21 - Verbi col tema in vocale aspra (verbi contratti)",
+        "paragraphs": [
+          "Più di 5.500 verbi greci hanno il tema verbale o la radice, che finisce in vocale (dolce, cioè -ι e -υ; oppure aspra, cioè -α, -ε, -ο). I verbi in vocale dolce non presentano alcun problema. Nei verbi in vocale aspra, invece, avviene una contrazione: la vocale finale della radice e la vocale tematica, che collega la radice alla desinenza, si fondono secondo alcune precise regole.",
+          "Perciò a questi verbi si dà il nome di verbi contratti: sono i verbi in -αω, in -εω e in -οω.",
+          "Esempi: σιγάω, taccio; καλέω, chiamo; δουλόω, servo.",
+          "Le principali norme che regolano la contrazione sono:"
+        ],
+        "plainPoints": [
+          "1. Due vocali uguali si fondono nella lunga corrispondente, eccetto ε + ε > ει e ο + ο > ου.",
+          "2. Nell'incontro di vocali di suono scuro (ο) con vocali di suono chiaro (ε) e medio (α), vince il suono scuro: la lunga risultante è ω, salvo ε + ο ed ο + ε, che formano il dittongo ου.",
+          "3. Tra vocali di suono chiaro (ε) e suono medio (α), prevale il suono che precede: la risultante è la lunga corrispondente della vocale che viene per prima.",
+          "4. Quando la vocale lunga risultante da una contrazione fosse seguita da uno ι, questo si sottoscrive.",
+          "5. Quando un dittongo è preceduto da una vocale uguale al suo primo elemento, questa vocale sparisce.",
+          "6. Per quanto riguarda l'accento nella contrazione, esso risulta circonflesso se era accentata la prima delle vocali da contrarre; acuto, invece, se era accentata la seconda; infine, se nessuna delle due vocali da contrarre era accentata, neppure la vocale o il dittongo risultanti dalla contrazione avranno l'accento."
+        ],
+        "subsections": [
+          {
+            "title": "Prospetto delle contrazioni più comuni",
+            "alignedExamples": {
+              "rows": [
+                { "key": "α + ε", "value": "α" },
+                { "key": "α + ει", "value": "ᾳ" },
+                { "key": "α + ο / ω / ου", "value": "ω" },
+                { "key": "ε + ε", "value": "ει" },
+                { "key": "ε + ο / ου", "value": "ου" },
+                { "key": "ο + ε / ο / ου", "value": "ου" },
+                { "key": "ο + η / ω", "value": "ω" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 22 - Verbi contratti in -εω",
+        "paragraphs": [
+          "Diamo un esempio del presente indicativo dei verbi in -εω, che sono i più numerosi."
+        ],
+        "summaryTable": {
+          "headerRows": [
+            ["Persona", "Forma non contratta", "Forma contratta", "Italiano"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. I pers.", "className": "grammar-table-rowlabel" },
+              "φιλέ-ω",
+              "φιλῶ",
+              "io amo"
+            ],
+            [
+              { "label": "Sing. II pers.", "className": "grammar-table-rowlabel" },
+              "φιλέ-ε-ις",
+              "φιλεῖς",
+              "tu ami"
+            ],
+            [
+              { "label": "Sing. III pers.", "className": "grammar-table-rowlabel" },
+              "φιλέ-ε-ι",
+              "φιλεῖ",
+              "egli, ella ama"
+            ],
+            [
+              { "label": "Plur. I pers.", "className": "grammar-table-rowlabel" },
+              "φιλέ-ο-μεν",
+              "φιλοῦμεν",
+              "noi amiamo"
+            ],
+            [
+              { "label": "Plur. II pers.", "className": "grammar-table-rowlabel" },
+              "φιλέ-ε-τε",
+              "φιλεῖτε",
+              "voi amate"
+            ],
+            [
+              { "label": "Plur. III pers.", "className": "grammar-table-rowlabel" },
+              "φιλέ-ου-σι(ν)",
+              "φιλοῦσι(ν)",
+              "essi/e amano"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "plainPoints": [
+              "a) Il N.T. usa normalmente le forme contratte, ma con qualche eccezione. Così, in Ap 16,1 troviamo ἐκχέετε, invece del contratto ἐκχεῖτε (da ἐκχέω, verso). La forma non contratta della I pers. del presente indicativo è usata, di regola, nei vocabolari, ogni volta che si menziona il verbo: questo avviene perché si possa riconoscere immediatamente se un verbo è in -εω, in -αω o in -οω.",
+              "b) Nel N.T., a volte, c'è anche qualche confusione: verbi in -έω, contratti come se fossero in -άω, e viceversa. Così, in Gd 22 e 23 leggiamo ἐλεᾶτε, invece del corretto ἐλεεῖτε (da ἐλεέω, ho pietà). Alcuni dei manoscritti meno antichi hanno corretto il testo, scrivendo quest'ultima forma."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 5º",
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            ["αἰτέω", "chiedo", "(eziologia, aitiology)"],
+            ["δοκέω", "credo, sembro", ""],
+            ["ζητέω", "cerco", ""],
+            ["θεωρέω", "guardo", "(teorema, teoria)"],
+            ["καλέω", "chiamo, invito", "(ecclesia ecc.)"],
+            ["λαλέω", "parlo, dico", "(glossolalia, il «parlare in lingue»)"],
+            ["μαρτυρέω (ACC. e DAT.)", "io testimonio, do testimonianza a", "(martirio)"],
+            ["παρακαλέω", "esorto, incoraggio, conforto", "(Paracleto)"],
+            ["ποιέω", "faccio", "(emopoietico)"],
+            ["τηρέω", "osservo, conservo, custodisco", ""],
+            ["φιλέω", "amo", "(musicòfilo, esteròfilo, filodrammatica, filantropo)"]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. οἱ ἄνθρωποι ζητοῦσι τὸν λόγον τοῦ κυρίου. 2. ὁ κύριος φιλεῖ δούλους. 3. ποιεῖτε ὁδὸν τῷ κυρίῳ. 4. οἱ ἄγγελοι τηροῦσι τὸν νόμον τοῦ θεοῦ. 5. καλεῖς τοὺς ἀδελφούς. 6. λαλῶ τοὺς λόγους τῷ λαῷ. 7. οἱ ἄνθρωποι ζητοῦσι τὰ σημεῖα τοῦ θεοῦ, ἀλλὰ οὐχ εὑρίσκουσιν. 8. θεωροῦμεν τὰ ἔργα τοῦ Ἰησοῦ."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Gli schiavi fanno pane per il popolo. 2. Voi osservate la legge del Signore. 3. Un uomo guarda la casa di Dio. 4. Gli schiavi del fratello dell'apostolo chiamano il Signore. 5. Un uomo fa un banchetto e chiama gli amici."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
     "id": "lezione-sesta",
     "kind": "lesson",
     "lessonLabel": "Lezione sesta",
-    "title": "Nomi in -ις",
-    "summary": "Approfondimento della terza declinazione con i principali gruppi di nomi in -ις.",
+    "title": "I declinazione: nomi femminili con il tema in -α",
+    "summary": "Classificazione dei nomi femminili della prima declinazione e primi paradigmi in -ᾱ e -η.",
     "contents": [
-      "23. Nomi con il tema in -ιδ",
-      "24. Nomi in -ιδ con tema in dentale",
-      "25. Nomi in -ιδ con tema in liquida",
-      "26. Nomi in -ιδ con tema in nasale",
+      "§ 23 - Nomi femminili",
+      "§ 24 - Nomi femminili in -ᾱ pura lunga",
+      "§ 25 - Nomi femminili in -η (ᾱ impura lunga > η)",
       "Vocabolario 6º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 23 - Nomi femminili",
+        "paragraphs": [
+          "Appartengono a questa declinazione i nomi il cui tema termina in -α. A questa -α finale del tema, comune a tutti, non corrisponde, però, una medesima finale del nominativo singolare, e quindi un medesimo paradigma per i casi del singolare.",
+          "I femminili col tema in -α possono essere classificati e suddivisi nei quattro gruppi seguenti:"
+        ],
+        "groups": [
+          {
+            "title": "I. Tema in -ᾱ pura",
+            "items": ["cioè preceduta da ε, ι, ρ"]
+          },
+          {
+            "title": "II. Tema in -ᾱ impura",
+            "items": ["cioè preceduta da consonanti diverse da ρ"]
+          },
+          {
+            "title": "III. Tema in -ᾰ pura",
+            "items": ["cioè preceduta da ε, ι, ρ"]
+          },
+          {
+            "title": "IV. Tema in -ᾰ impura",
+            "items": ["cioè preceduta da consonanti diverse da ρ"]
+          }
+        ],
+        "postSummaryParagraphs": [
+          "Questi quattro gruppi formano il singolare in tale modo:"
+        ],
+        "plainPoints": [
+          "I. Temi in -ᾱ pura: l'α lunga pura resta, immutata, in tutti i casi del singolare, prendendo le relative desinenze.",
+          "II. Temi in -ᾱ impura: l'α lunga impura si trasforma in η in tutti i casi del singolare, prendendo le relative desinenze.",
+          "III. Temi in -ᾰ pura: l'α breve pura si mantiene in tutta la declinazione.",
+          "IV. Temi in -ᾰ impura: l'α breve impura rimane immutata solo all'accusativo e al vocativo del singolare, mentre si trasforma in η al genitivo e al dativo singolari.",
+          "Il plurale è uguale per tutti i nomi dei quattro gruppi e si forma sempre con la vocale tematica -α.",
+          "Tutti i nomi della prima declinazione spostano l'accento sulla desinenza del genitivo plurale, qualunque sia la sua posizione al nominativo singolare, e tale accento è sempre circonflesso. Questa regola non si applica agli aggettivi."
+        ]
+      },
+      {
+        "heading": "§ 24 - Nomi femminili in -ᾱ pura lunga",
+        "summaryTable": {
+          "headerRows": [
+            ["Caso", "χώρα (paese)", "ἡμέρα (giorno)", "γενεά (generazione)"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              "ἡ χώρα",
+              "ἡ ἡμέρα",
+              "ἡ γενεά"
+            ],
+            [
+              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              "τῆς χώρας",
+              "τῆς ἡμέρας",
+              "τῆς γενεᾶς"
+            ],
+            [
+              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              "τῇ χώρᾳ",
+              "τῇ ἡμέρᾳ",
+              "τῇ γενεᾷ"
+            ],
+            [
+              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              "τὴν χώραν",
+              "τὴν ἡμέραν",
+              "τὴν γενεάν"
+            ],
+            [
+              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) χώρα",
+              "(ὦ) ἡμέρα",
+              "(ὦ) γενεά"
+            ],
+            [
+              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              "αἱ χῶραι",
+              "αἱ ἡμέραι",
+              "αἱ γενεαί"
+            ],
+            [
+              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              "τῶν χωρῶν",
+              "τῶν ἡμερῶν",
+              "τῶν γενεῶν"
+            ],
+            [
+              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              "ταῖς χώραις",
+              "ταῖς ἡμέραις",
+              "ταῖς γενεαῖς"
+            ],
+            [
+              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              "τὰς χώρας",
+              "τὰς ἡμέρας",
+              "τὰς γενεάς"
+            ],
+            [
+              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) χῶραι",
+              "(ὦ) ἡμέραι",
+              "(ὦ) γενεαί"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Il vocativo dei nomi femminili della prima declinazione è uguale al nominativo, tanto al singolare quanto al plurale.",
+          "Gli accenti sono regolati da quanto detto al § 3, ad eccezione del genitivo plurale."
+        ]
+      },
+      {
+        "heading": "§ 25 - Nomi femminili in -η (ᾱ impura lunga > η)",
+        "paragraphs": [
+          "Tema: γραφα- (scrittura). Nei temi in -ᾱ impura lunga, l'α del tema passa a η nei casi del singolare."
+        ],
+        "summaryTable": {
+          "headerRows": [
+            ["Caso", "Greco", "Italiano"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              "ἡ γραφή",
+              "la scrittura (soggetto)"
+            ],
+            [
+              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              "τῆς γραφῆς",
+              "della scrittura"
+            ],
+            [
+              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              "τῇ γραφῇ",
+              "alla scrittura, mediante la scrittura"
+            ],
+            [
+              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              "τὴν γραφήν",
+              "la scrittura (complemento oggetto)"
+            ],
+            [
+              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) γραφή",
+              "o scrittura!"
+            ],
+            [
+              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              "αἱ γραφαί",
+              "le scritture (soggetto)"
+            ],
+            [
+              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              "τῶν γραφῶν",
+              "delle scritture"
+            ],
+            [
+              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              "ταῖς γραφαῖς",
+              "alle scritture, mediante le scritture"
+            ],
+            [
+              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              "τὰς γραφάς",
+              "le scritture (complemento oggetto)"
+            ],
+            [
+              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) γραφαί",
+              "o scritture!"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Vocabolario 6º",
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            [
+              {
+                "label": "Nomi in -ας",
+                "colspan": 3,
+                "className": "grammar-table-rowlabel"
+              }
+            ],
+            ["ἡ ἁμαρτία, ας", "il peccato", "(amartologia)"],
+            ["ἡ βασιλεία, ας", "il regno", ""],
+            ["ἡ γενεά, ᾶς", "la generazione", "(genealogia)"],
+            ["ἡ ἐκκλησία, ας", "la chiesa, l'assemblea", "(ecclesiastico)"],
+            ["ἡ ἐξουσία, ας", "il potere, l'autorità", ""],
+            ["ἡ ἐπαγγελία, ας", "la promessa", ""],
+            ["ἡ ἡμέρα, ας", "il giorno", ""],
+            ["ἡ χώρα, ας", "il paese", ""],
+            [
+              {
+                "label": "Nomi in -ης",
+                "colspan": 3,
+                "className": "grammar-table-rowlabel"
+              }
+            ],
+            ["ἡ ἀγάπη, ης", "l'amore", ""],
+            ["ἡ ἀρχή, ης", "il principio, l'impero, le potenze, le autorità", "(archetipo = primo tipo, modello)"],
+            ["ἡ γραφή, ῆς", "la scrittura", "(grafico; grafomane, ecc.)"],
+            ["ἡ δικαιοσύνη, ης", "la giustizia", ""],
+            ["ἡ εἰρήνη, ης", "la pace", "(irenico; Irene, nome femm.)"],
+            ["ἡ ἐντολή, ης", "il comandamento", ""],
+            ["ἡ ἐπιστολή, ης", "la lettera, l'epistola", ""],
+            ["ἡ ζωή, ης", "la vita", ""],
+            ["ἡ κεφαλή, ης", "la testa, il capo", "(acefalo = senza capo)"],
+            ["ἡ παραβολή, ης", "la parabola, il confronto", ""],
+            ["ἡ συναγωγή, ης", "la sinagoga, l'adunanza", ""],
+            ["ἡ φωνή, ης", "la voce", "(fonico; eufonia; foniatria)"],
+            ["ἡ ψυχή, ης", "la vita, l'alito vitale, l'anima", "(psicologia)"]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ποιοῦσιν εἰρήνην καὶ τοὺς καρποὺς τῆς δικαιοσύνης λαμβάνουσιν. 2. ὁ κύριος κρίνει τὰς ψυχὰς τῶν ἀνθρώπων. 3. αἱ γραφαὶ τῇ δικαιοσύνῃ τοῦ θεοῦ μαρτυροῦσιν. 4. οἱ ἄνθρωποι γινώσκουσι τὰς ἐπαγγελίας τοῦ θεοῦ. 5. βλέπετε τὴν συναγωγὴν τῶν ἀδελφῶν. 6. ὁ θεὸς τοὺς δούλους τῆς ἁμαρτίας κρίνει. 7. τὰς ἐντολὰς τῶν ἀγγέλων τηρεῖτε. 8. ὁ θεὸς τὰς ἀρχὰς καὶ τὰς ἐξουσίας τοῦ κόσμου οὐ σώζει. 9. οἱ ἀδελφοὶ ἀποστέλλουσι τὰς γραφάς. 10. τὰ τέκνα τοῦ θεοῦ τὴν γενεὰν τῆς ἁμαρτίας κρίνει. 11. ὁ Ἰησοῦς τὴν παραβολὴν τῷ λαῷ λέγει. 12. οἱ ἄνθρωποι τῆς ἐκκλησίας τοῦ θεοῦ τὴν ἀγάπην τηροῦσιν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Essi hanno i comandamenti del Signore, ma non li osservano. 2. Dio giudica i poteri del mondo. 3. L'amore del Signore salva la vita dell'uomo. 4. I fratelli credono alla promessa del regno di Dio. 5. Essi cercano la pace e la giustizia. 6. Tu ascolti la voce di Dio. 7. Gli uomini amano la parola della scrittura e conoscono l'amore di Dio. 8. Non hanno fede in Dio e muoiono nel peccato."
+            ]
+          }
+        ]
+      }
     ]
   },
   {

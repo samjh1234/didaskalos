@@ -437,11 +437,14 @@ const renderGrammarSectionContent = (section, options = {}) => {
       `
     : "";
   const headingTag = headingLevel === "h4" ? "h4" : "h3";
+  const bodyHtml = contentBlocksHtml
+    ? `${contentBlocksHtml}${subsectionsHtml}${versesHtml}`
+    : `${paragraphsHtml}${alphabetTableHtml}${plainPointsHtml}${groupsHtml}${pointsHtml}${summaryTableHtml}${postSummaryParagraphsHtml}${subsectionsHtml}${versesHtml}`;
 
   return `
     ${showHeading ? `<${headingTag}>${escapeHtml(section.heading || section.title || "")}</${headingTag}>` : ""}
     <div class="grammar-section-body">
-      ${contentBlocksHtml || `${paragraphsHtml}${alphabetTableHtml}${plainPointsHtml}${groupsHtml}${pointsHtml}${summaryTableHtml}${postSummaryParagraphsHtml}${subsectionsHtml}${versesHtml}`}
+      ${bodyHtml}
     </div>
   `;
 };
