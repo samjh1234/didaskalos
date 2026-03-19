@@ -143,15 +143,26 @@ const getGrammarDisplayLabel = (chapter) => {
 const getGrammarOverviewContents = (chapter) =>
   (chapter?.contents || []).filter((item) => !/^\d+[a-z]\.|^[A-ZΑ-Ω]\)/.test(item));
 
+const findGrammarSectionForTitle = (chapter, title) => {
+  const normalizedTitle = normalize(title);
+  const sections = chapter?.sections || [];
+  const exactMatch = sections.find(
+    (section) => normalize(section.heading || section.title || "") === normalizedTitle,
+  );
+  if (exactMatch) return exactMatch;
+
+  const prefixMatches = sections.filter((section) =>
+    normalize(section.heading || section.title || "").startsWith(normalizedTitle),
+  );
+  return prefixMatches.length === 1 ? prefixMatches[0] : null;
+};
+
 const getGrammarChapterItems = (chapter) =>
   getGrammarOverviewContents(chapter).map((title, index) => ({
     id: String(index),
     index,
     title,
-    section:
-      (chapter?.sections || []).find(
-        (section) => normalize(section.heading || section.title || "") === normalize(title),
-      ) || null,
+    section: findGrammarSectionForTitle(chapter, title),
   }));
 
 const getGrammarChildSections = (chapter, parentTitle) => {
@@ -307,9 +318,32 @@ const renderGrammarAlignedExamples = (exampleBlock) => {
   `;
 };
 
-const renderGrammarContentBlock = (block) => {
+const isTranslationExerciseTitle = (value = "") => normalize(value).startsWith("tradurre ");
+
+const splitNumberedExerciseParagraph = (paragraph = "") => {
+  const trimmed = String(paragraph).trim();
+  if (!/^\d+\.\s/.test(trimmed)) return null;
+  const lines = trimmed.split(/\s+(?=\d+\.\s)/).filter(Boolean);
+  return lines.length > 1 ? lines : null;
+};
+
+const renderGrammarParagraph = (paragraph, options = {}) => {
+  const { splitNumbered = false } = options;
+  const lines = splitNumbered ? splitNumberedExerciseParagraph(paragraph) : null;
+  if (!lines?.length) return `<p>${escapeHtml(paragraph)}</p>`;
+  return `
+    <div class="stack grammar-exercise-lines">
+      ${lines.map((line) => `<p class="grammar-exercise-line">${escapeHtml(line)}</p>`).join("")}
+    </div>
+  `;
+};
+
+const renderGrammarParagraphs = (paragraphs = [], options = {}) =>
+  paragraphs.map((paragraph) => renderGrammarParagraph(paragraph, options)).join("");
+
+const renderGrammarContentBlock = (block, options = {}) => {
   if (!block || typeof block !== "object") return "";
-  if (block.type === "paragraph") return `<p>${escapeHtml(block.text || "")}</p>`;
+  if (block.type === "paragraph") return renderGrammarParagraph(block.text || "", options);
   if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
   if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
   if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
@@ -322,7 +356,10 @@ const renderGrammarContentBlock = (block) => {
 // Supporta paragrafi, elenchi, piccoli gruppi tematici, tabelle e blocchi di greco.
 const renderGrammarSectionContent = (section, options = {}) => {
   const { showHeading = true, headingLevel = "h3" } = options;
-  const paragraphsHtml = (section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+  const sectionIsTranslationExercise = isTranslationExerciseTitle(section.heading || section.title || "");
+  const paragraphsHtml = renderGrammarParagraphs(section.paragraphs || [], {
+    splitNumbered: sectionIsTranslationExercise,
+  });
   const plainPointsHtml = renderGrammarPlainPoints(section.plainPoints);
   const pointsHtml = section.points?.length
     ? `
@@ -382,13 +419,14 @@ const renderGrammarSectionContent = (section, options = {}) => {
       `
     : "";
   const summaryTableHtml = section.summaryTable ? renderGrammarSummaryTable(section.summaryTable) : "";
-  const postSummaryParagraphsHtml = (section.postSummaryParagraphs || [])
-    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+  const postSummaryParagraphsHtml = renderGrammarParagraphs(section.postSummaryParagraphs || []);
+  const contentBlocksHtml = (section.contentBlocks || [])
+    .map((block) => renderGrammarContentBlock(block, { splitNumbered: sectionIsTranslationExercise }))
     .join("");
-  const contentBlocksHtml = (section.contentBlocks || []).map((block) => renderGrammarContentBlock(block)).join("");
   const subsectionsHtml = section.subsections?.length
     ? section.subsections
         .map((item) => {
+          const subsectionIsTranslationExercise = isTranslationExerciseTitle(item.title || "");
           const compactTableAfterParagraph =
             Number.isInteger(item.compactTableAfterParagraph) && item.compactTableAfterParagraph >= 0
               ? item.compactTableAfterParagraph
@@ -399,7 +437,7 @@ const renderGrammarSectionContent = (section, options = {}) => {
             .map((paragraph, index) => {
               const insertCompactTable = compactTableAfterParagraph === index ? compactTableHtml : "";
               if (insertCompactTable) compactTableInserted = true;
-              return `<p>${escapeHtml(paragraph)}</p>${insertCompactTable}`;
+              return `${renderGrammarParagraph(paragraph, { splitNumbered: subsectionIsTranslationExercise })}${insertCompactTable}`;
             })
             .join("");
           const trailingCompactTableHtml =

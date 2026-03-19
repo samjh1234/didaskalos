@@ -793,8 +793,8 @@ select {
 .grammar-table td {
   padding: 0.8rem 0.9rem;
   border-bottom: 1px solid rgba(140, 76, 35, 0.1);
-  text-align: left;
-  vertical-align: top;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .grammar-table th {
@@ -823,7 +823,7 @@ select {
 
 .grammar-table-summary tbody th,
 .grammar-table-summary .grammar-table-rowlabel {
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -860,7 +860,7 @@ select {
 
 .grammar-table-compact .grammar-table-note-cell {
   padding-left: 0.6rem;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -879,7 +879,15 @@ select {
 
 .grammar-table-apophonia-shifts td:nth-child(3) {
   padding-left: 0;
-  text-align: left;
+  text-align: center;
+}
+
+.grammar-exercise-lines {
+  gap: 0.45rem;
+}
+
+.grammar-exercise-line {
+  line-height: 1.65;
 }
 
 .grammar-word-exercise {

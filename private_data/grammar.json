@@ -1415,7 +1415,7 @@
         "heading": "§ 24 - Nomi femminili in -ᾱ pura lunga",
         "summaryTable": {
           "headerRows": [
-            ["Caso", "χώρα (paese)", "ἡμέρα (giorno)", "γενεά (generazione)"]
+            ["Temi:", "χωρα- (paese)", "ἡμερα- (giorno)", "γενεα- (generazione)"]
           ],
           "bodyRows": [
             [
@@ -1492,7 +1492,7 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Caso", "Greco", "Italiano"]
+            ["Tema:", "γραφα- (scrittura)", ""]
           ],
           "bodyRows": [
             [
@@ -1613,13 +1613,369 @@
     "id": "lezione-settima",
     "kind": "lesson",
     "lessonLabel": "Lezione settima",
-    "title": "Nomi in vocale e dittongo",
-    "summary": "Completamento dei principali gruppi della terza declinazione con temi vocalici.",
+    "title": "I declinazione: femminili in -ᾰ, contratti e maschili in -α",
+    "summary": "Femminili in -ᾰ pura e impura breve, prima declinazione contratta, maschili in -α e principali nomi propri stranieri.",
     "contents": [
-      "27. Nomi con il tema in vocale",
-      "28. Nomi con il tema in dittongo",
-      "29. Aggettivi della prima classe",
-      "30. Vocabolario 7º"
+      "§ 26 - Nomi femminili in -ᾰ pura breve (I decl.)",
+      "§ 27 - Nomi femminili in -ᾰ impura breve (I decl.)",
+      "§ 28 - I declinazione contratta",
+      "§ 29 - Nomi maschili con il tema in -α",
+      "§ 30 - Nomi propri di origine straniera della I declinazione",
+      "Vocabolario 7º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 26 - Nomi femminili in -ᾰ pura breve (I decl.)",
+        "paragraphs": [
+          "Alcuni nomi uscenti in -αιρα, -ειρα, -οιρα ed -εια hanno l'-α finale breve; pertanto, possono anche essere proparossìtoni (cioè recare l'accento sulla terzultima sillaba). Quando, però, le desinenze sono lunghe, l'accento si sposta sulla penultima sillaba (al genitivo e dativo singolari e al dativo e accusativo plurali). Il genitivo plurale, invece, ha l'accento circonflesso sull'ultima sillaba, come sempre nella prima declinazione."
+        ],
+        "summaryTable": {
+          "headerRows": [
+            ["Temi:", "ἀληθεια- (verità)", "μαχαιρα- (spada)"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              "ἡ ἀλήθεια",
+              "ἡ μάχαιρα"
+            ],
+            [
+              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              "τῆς ἀληθείας",
+              "τῆς μαχαίρας"
+            ],
+            [
+              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              "τῇ ἀληθείᾳ",
+              "τῇ μαχαίρᾳ"
+            ],
+            [
+              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              "τὴν ἀλήθειαν",
+              "τὴν μάχαιραν"
+            ],
+            [
+              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) ἀλήθεια",
+              "(ὦ) μάχαιρα"
+            ],
+            [
+              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              "αἱ ἀλήθειαι",
+              "αἱ μάχαιραι"
+            ],
+            [
+              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              "τῶν ἀληθειῶν",
+              "τῶν μαχαιρῶν"
+            ],
+            [
+              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              "ταῖς ἀληθείαις",
+              "ταῖς μαχαίραις"
+            ],
+            [
+              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              "τὰς ἀληθείας",
+              "τὰς μαχαίρας"
+            ],
+            [
+              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) ἀλήθειαι",
+              "(ὦ) μάχαιραι"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "§ 27 - Nomi femminili in -ᾰ impura breve (I decl.)",
+        "summaryTable": {
+          "headerRows": [
+            ["Temi:", "δοξα- (gloria)", "γλωσσα- (lingua)", "θαλασσα- (mare)"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              "ἡ δόξα",
+              "ἡ γλῶσσα",
+              "ἡ θάλασσα"
+            ],
+            [
+              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              "τῆς δόξης",
+              "τῆς γλώσσης",
+              "τῆς θαλάσσης"
+            ],
+            [
+              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              "τῇ δόξῃ",
+              "τῇ γλώσσῃ",
+              "τῇ θαλάσσῃ"
+            ],
+            [
+              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              "τὴν δόξαν",
+              "τὴν γλῶσσαν",
+              "τὴν θάλασσαν"
+            ],
+            [
+              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) δόξα",
+              "(ὦ) γλῶσσα",
+              "(ὦ) θάλασσα"
+            ],
+            [
+              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              "αἱ δόξαι",
+              "αἱ γλῶσσαι",
+              "αἱ θάλασσαι"
+            ],
+            [
+              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              "τῶν δοξῶν",
+              "τῶν γλωσσῶν",
+              "τῶν θαλασσῶν"
+            ],
+            [
+              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              "ταῖς δόξαις",
+              "ταῖς γλώσσαις",
+              "ταῖς θαλάσσαις"
+            ],
+            [
+              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              "τὰς δόξας",
+              "τὰς γλώσσας",
+              "τὰς θαλάσσας"
+            ],
+            [
+              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) δόξαι",
+              "(ὦ) γλῶσσαι",
+              "(ὦ) θάλασσαι"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Osservazione del N.T.",
+            "paragraphs": [
+              "Nel N.T., alcuni nomi in -α pura, come μάχαιρα, seguono il paradigma dei nomi in -α impura, mutando l'α in η al genitivo e dativo singolare (cfr. Lc 6,48; At 5,2; 10,1; 12,2; 27,30). Viceversa, il nome Μάρθα, in Gv 11,1, ha il genitivo Μάρθας."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 28 - I declinazione contratta",
+        "paragraphs": [
+          "Alla I declinazione appartengono alcuni nomi, nei quali la -ᾱ del tema era preceduta da altra α o da ε. Il gruppo -αα si e contratto in -α; il gruppo -εα si e contratto in -η (cfr. § 21, 1 e 3).",
+          "Nel N.T. i nomi contratti della I declinazione sono pochissimi: vi sono i femminili μνᾶ (< μνάα), mina; γῆ (< γέα), terra; συκῆ (< συκέα), fico; e due maschili: βορρᾶς (< βορρέας), Borea, quindi anche nel senso di Nord, e Ἑρμῆς (< Ἑρμέας), Hermes o Mercurio. In βορρᾶς permane la finale -ας, come in tutti i nomi maschili in cui -α e preceduta da ε, ι, ρ.",
+          "I contratti hanno tutti il plurale che esce in -αι, -ῶν, -αις, -ας, ossia essi seguono il paradigma della I declinazione, anche se vengono da un tema in -εα (come γῆ, συκῆ)."
+        ],
+        "summaryTable": {
+          "headerRows": [
+            ["Temi:", "μναα- (mina)", "συκεα- (fico)", "Ἑρμεα- (Ermes)"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              "ἡ μνᾶ",
+              "ἡ συκῆ",
+              "ὁ Ἑρμῆς"
+            ],
+            [
+              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              "τῆς μνᾶς",
+              "τῆς συκῆς",
+              "τοῦ Ἑρμοῦ"
+            ],
+            [
+              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              "τῇ μνᾷ",
+              "τῇ συκῇ",
+              "τῷ Ἑρμῇ"
+            ],
+            [
+              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              "τὴν μνᾶν",
+              "τὴν συκῆν",
+              "τὸν Ἑρμῆν"
+            ],
+            [
+              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) μνᾶ",
+              "(ὦ) συκῆ",
+              "(ὦ) Ἑρμῆ"
+            ],
+            [
+              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              "αἱ μναῖ",
+              "αἱ συκαῖ",
+              "οἱ Ἑρμαῖ"
+            ],
+            [
+              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              "τῶν μνῶν",
+              "τῶν συκῶν",
+              "τῶν Ἑρμῶν"
+            ],
+            [
+              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              "ταῖς μναῖς",
+              "ταῖς συκαῖς",
+              "τοῖς Ἑρμαῖς"
+            ],
+            [
+              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              "τὰς μνᾶς",
+              "τὰς συκᾶς",
+              "τοὺς Ἑρμᾶς"
+            ],
+            [
+              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) μναῖ",
+              "(ὦ) συκαῖ",
+              "(ὦ) Ἑρμαῖ"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Nota",
+            "paragraphs": [
+              "Ἑρμῆς (masch. sing.) = Ermes; αἱ Ἑρμαῖ (femm. plur.) = le erme (statue di Hermes)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 29 - Nomi maschili con il tema in -α (per i femm. cfr. §§ 24-27)",
+        "summaryTable": {
+          "headerRows": [
+            ["Temi:", "νεανια- (giovane)", "πολιτα- (cittadino)"]
+          ],
+          "bodyRows": [
+            [
+              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              "ὁ νεανίας",
+              "ὁ πολίτης"
+            ],
+            [
+              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              "τοῦ νεανίου",
+              "τοῦ πολίτου"
+            ],
+            [
+              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              "τῷ νεανίᾳ",
+              "τῷ πολίτῃ"
+            ],
+            [
+              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              "τὸν νεανίαν",
+              "τὸν πολίτην"
+            ],
+            [
+              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) νεανία",
+              "(ὦ) πολῖτα"
+            ],
+            [
+              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              "οἱ νεανίαι",
+              "οἱ πολῖται"
+            ],
+            [
+              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              "τῶν νεανιῶν",
+              "τῶν πολιτῶν"
+            ],
+            [
+              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              "τοῖς νεανίαις",
+              "τοῖς πολίταις"
+            ],
+            [
+              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              "τοὺς νεανίας",
+              "τοὺς πολίτας"
+            ],
+            [
+              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              "(ὦ) νεανίαι",
+              "(ὦ) πολῖται"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "plainPoints": [
+              "a) I nomi maschili seguono il paradigma di quelli femminili, con due varianti: al nominativo singolare prendono una desinenza caratteristica del maschile, cioe -ς (nominativo sigmatico); in particolare, quelli col tema in -ᾱ impura, mutano tale α in η, come avviene nei nomi femminili dello stesso tipo (cfr. δίκη). Al genitivo singolare prendono la desinenza -ου.",
+              "b) Il vocativo singolare dei maschili in -ας presenta, come desinenza, una -α lunga; quello dei maschili in -ης, quasi sempre una -α breve. La brevità della desinenza permette a vocaboli come δεσπότης di avere il vocativo singolare con accento retratto: δέσποτα.",
+              "c) Il genitivo plurale ha, come i femminili, l'accento circonflesso sulla desinenza, qualunque sia la posizione dell'accento al nominativo singolare."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 30 - Nomi propri di origine straniera della I declinazione",
+        "paragraphs": [
+          "Nel N.T. questi nomi sono numerosi, a causa dell'origine giudaica del movimento cristiano. E evidente il tentativo di grecizzarli, quando sia possibile; ma molti rimangono invariati e invariabili.",
+          "I nomi semitici in -α vengono grecizzati con l'aggiunta di una desinenza -ς al nominativo, mentre al genitivo rimane la semplice -α, a imitazione di βορρᾶς, che si declina: nominativo βορρᾶς, genitivo βορρᾶ, dativo βορρᾷ, accusativo βορρᾶν.",
+          "Analogo e il paradigma del nome latino Ἀγρίππας (genitivo Ἀγρίππα)."
+        ],
+        "subsections": [
+          {
+            "title": "Esempi invariabili",
+            "paragraphs": [
+              "Ἀδάμ, Ἀαρών, Ἀβραάμ, Δαυίδ, Ἰακώβ, Ἰσραήλ, Ἰωσήφ, Ναθαναήλ, Φαραώ."
+            ]
+          },
+          {
+            "title": "Esempi grecizzati",
+            "paragraphs": [
+              "Βαραββᾶς, Βαρναβᾶς, Σιλᾶς, Καιαφᾶς, Σατανᾶς."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 7º",
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            ["ἡ ἀλήθεια, ας", "la verità", ""],
+            ["ἡ ἀσέβεια, ας", "l'empietà", ""],
+            ["ἡ γῆ, ῆς", "la terra", "(geografia)"],
+            ["ἡ γλῶσσα, ης", "la lingua", "(glossario)"],
+            ["ἡ διάνοια, ας", "la mente, il sentimento", ""],
+            ["ἡ δόξα, ης", "la gloria", "(dossologia)"],
+            ["ἡ θάλασσα, ης", "il mare, il lago", ""],
+            ["ἡ μάχαιρα, ας (-ης)", "la spada", ""],
+            ["ἡ μέριμνα, ης", "la preoccupazione, la pena", ""],
+            ["ἡ ῥίζα, ης", "la radice", "(rizoma)"],
+            ["ἡ συκῆ, ῆς", "il fico", ""],
+            ["ἡ τράπεζα, ης", "la tavola, la banca", ""]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. γινώσκουσι τὴν ἀλήθειαν, καὶ δόξαν καὶ εἰρήνην λαμβάνουσιν. 2. ὁ ἀπόστολος ἀκούει τὸν Ἰησοῦν καὶ τὴν μάχαιραν βάλλει. 3. ὁ θεὸς τὴν ἀσέβειαν τῶν ἀνθρώπων γινώσκει. 4. ὁ κόσμος τῇ δόξῃ τοῦ θεοῦ οὐ πιστεύει. 5. οἱ ἀπόστολοι γλώσσαις λαλοῦσι καὶ ὁ λαὸς ἀκούει. 6. ὁ Ἰησοῦς τὴν ὁδὸν τῆς βασιλείας διδάσκει καὶ οἱ ἄνθρωποι τῇ ἀληθείᾳ μαρτυροῦσιν. 7. τὰ τέκνα ἐν ταῖς τραπέζαις τοῦ κυρίου ἐσθίει. 8. ἀκούουσι τὸν λόγον τοῦ θεοῦ, ἀλλὰ ῥίζαν οὐκ ἔχουσιν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Le Scritture danno testimonianza alla verità della parola di Dio. 2. Le autorità della terra non osservano i comandamenti della legge di Dio. 3. L'apostolo scrive alle chiese le (sue) preoccupazioni per i fratelli (GEN.). 4. Cercano la verità, ma non (la) trovano e rimangono nella morte."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
