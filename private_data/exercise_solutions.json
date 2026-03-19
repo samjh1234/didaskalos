@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "updatedAt": "2026-03-19",
+  "description": "Prime soluzioni trascritte dalle pagine fotografate del manuale. Il file contiene solo le soluzioni, separate dal testo degli esercizi.",
+  "exercises": [
+    {
+      "id": "esercizio-2",
+      "label": "Esercizio 2",
+      "page": 31,
+      "lessonId": "lezione-seconda",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "ἀκούομεν",
+            "λαμβάνουσιν",
+            "λέγεις",
+            "εὑρίσκετε",
+            "μένει",
+            "γράφουσιν",
+            "κρίνει",
+            "εὑρίσκει",
+            "ἀποθνῄσκω",
+            "βάλλει",
+            "ἐγείρετε",
+            "λέγομεν",
+            "ἀποστέλλεις",
+            "λαμβάνετε",
+            "βλέπει",
+            "ἀκούω",
+            "πιστεύεις",
+            "διδάσκεις",
+            "γινώσκετε",
+            "διδάσκουσιν",
+            "γινώσκει"
+          ]
+        },
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Egli rimane",
+            "noi salviamo",
+            "voi prendete",
+            "essi ascoltano",
+            "essi inviano",
+            "io mangio",
+            "noi gettiamo",
+            "voi giudicate",
+            "essi svegliano",
+            "tu guardi",
+            "egli muore",
+            "voi gettate",
+            "lei sta scrivendo",
+            "noi troviamo",
+            "tu stai dicendo",
+            "voi rimanete",
+            "essi scrivono",
+            "noi ascoltiamo",
+            "lei trova",
+            "noi insegniamo",
+            "essi conoscono",
+            "egli insegna",
+            "voi conoscete"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-3",
+      "label": "Esercizio 3",
+      "page": 37,
+      "lessonId": "lezione-terza",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Dio salva l'uomo.",
+            "L'angelo scrive le parole.",
+            "I padroni inviano i servi.",
+            "Ricevete il pane.",
+            "Il servo sveglia il padrone.",
+            "L'apostolo trova la casa.",
+            "Abbiamo la legge degli uomini.",
+            "Credono alla parola di Dio.",
+            "Guardiamo il fratello dell'apostolo.",
+            "Un angelo sveglia il servo.",
+            "Vediamo la morte.",
+            "La parola di Dio salva gli uomini.",
+            "Il popolo trova la legge.",
+            "Uomo e angelo mangiano pane.",
+            "Conoscete il fratello del servo.",
+            "Insegna la legge di Dio."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-4",
+      "label": "Esercizio 4",
+      "page": 41,
+      "lessonId": "lezione-quarta",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Gesù insegna la via di Dio.",
+            "Le fanciulle credono al Signore.",
+            "Vediamo le lacrime delle fanciulle.",
+            "Fratello, Dio manda gli angeli agli uomini.",
+            "Il servo riceve la ricompensa del lavoro.",
+            "Gli uomini ascoltano la parola del vangelo, ma non credono."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Οὐκ γινώσκετε τὰς ὁδοὺς τοῦ κυρίου.",
+            "Τὰ τέκνα οὐχ εὑρίσκουσι τὴν ὁδὸν τῆς οἰκίας.",
+            "Ὁ ἄγγελος ἐγείρει τὰς παρθένους.",
+            "Οὐκ στέλλουσι τὸ βιβλίον τοῖς φίλοις· οὐκ ἔχουσιν ἀργύριον.",
+            "Οὐκ γινώσκομεν τὰ σημεῖα τοῦ ἀποστόλου.",
+            "Οἱ ἄνθρωποι οὐκ γινώσκουσι τὰς ὁδοὺς τῆς ἐρήμου ἀλλὰ ὁ Θεὸς ἀποστέλλει ἄγγελον καὶ σώζει."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-5",
+      "label": "Esercizio 5",
+      "page": 44,
+      "lessonId": "lezione-quinta",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Gli uomini cercano la parola del Signore.",
+            "Il padrone ama i servi.",
+            "Preparate una via al Signore.",
+            "Gli angeli osservano la legge di Dio.",
+            "Tu chiami i fratelli.",
+            "Dico le parole al popolo.",
+            "Gli uomini cercano i segni di Dio, ma non li trovano.",
+            "Vediamo le opere di Gesù."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Οἱ δοῦλοι ποιοῦσιν ἄρτον τῷ λαῷ.",
+            "Τηρεῖτε τὸν νόμον τοῦ κυρίου.",
+            "Ἄνθρωπος θεωρεῖ τὸν οἶκον τοῦ θεοῦ.",
+            "Οἱ δοῦλοι τοῦ ἀδελφοῦ τοῦ ἀποστόλου καλοῦσι τὸν κύριον.",
+            "Ἄνθρωπος ποιεῖ δεῖπνον καὶ καλεῖ τοὺς φίλους."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-6",
+      "label": "Esercizio 6",
+      "page": 47,
+      "lessonId": "lezione-sesta",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Essi operano pace e ricevono i frutti della giustizia.",
+            "Il Signore giudica le anime degli uomini.",
+            "Le Scritture rendono testimonianza alla giustizia di Dio.",
+            "Gli uomini conoscono le promesse di Dio.",
+            "Vedete l'adunanza dei fratelli.",
+            "Dio giudica i servi del peccato.",
+            "Osservate i comandamenti degli angeli.",
+            "Dio non salva le autorità e le potenze del mondo.",
+            "I fratelli inviano le scritture.",
+            "I figli di Dio giudicano la generazione del peccato.",
+            "Gesù racconta la parabola al popolo.",
+            "Gli uomini dell'assemblea osservano l'amore di Dio."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ἔχουσι τὰς ἐντολὰς τοῦ κυρίου ἀλλὰ οὐκ τηροῦσιν.",
+            "Ὁ θεὸς κρίνει τὰς ἐξουσίας τοῦ κόσμου.",
+            "Ἡ ἀγάπη τοῦ κυρίου σώζει τὴν ψυχὴν τοῦ ἀνθρώπου.",
+            "Οἱ ἀδελφοὶ πιστεύουσι τῇ ἐπαγγελίᾳ τῆς βασιλείας τοῦ Θεοῦ.",
+            "Ζητοῦσι τὴν εἰρήνην καὶ τὴν δικαιοσύνην.",
+            "Ἀκούεις τὴν φωνὴν τοῦ Θεοῦ.",
+            "Οἱ ἄνθρωποι ἀγαπῶσι τὸν λόγον τῆς γραφῆς καὶ γινώσκουσι τὴν ἀγάπην τοῦ Θεοῦ.",
+            "Οὐκ πιστεύουσι Θεῷ καὶ ἀποθνῄσκουσιν ἐν τῇ ἁμαρτίᾳ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-7a",
+      "label": "Esercizio 7a",
+      "page": 50,
+      "lessonId": "lezione-settima",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Conoscono la verità e ricevono gloria e pace.",
+            "L'apostolo ascolta Gesù e getta via la spada.",
+            "Dio conosce l'empietà degli uomini.",
+            "Il mondo non crede nella gloria di Dio.",
+            "Gli apostoli parlano nelle lingue e il popolo ascolta.",
+            "Gesù insegna la via del Regno e gli uomini testimoniano con la verità.",
+            "I figli mangiano alla tavola del Signore.",
+            "Ascoltano la parola di Dio, ma non hanno radici."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Αἱ γραφαὶ μαρτυροῦσιν τὴν ἀλήθειαν τοῦ λόγου τοῦ Θεοῦ.",
+            "Αἱ ἀρχαὶ τῆς γῆς οὐκ τηροῦσι τὰς ἐντολὰς τοῦ νόμου τοῦ Θεοῦ.",
+            "Ὁ ἀπόστολος γράφει ταῖς ἐκκλησίαις τὰς μερίμνας τῶν ἀδελφῶν.",
+            "Ζητοῦσι τὴν ἀλήθειαν ἀλλὰ οὐκ εὑρίσκουσι καὶ μένουσιν ἐν τῷ θανάτῳ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-7b",
+      "label": "Esercizio 7b",
+      "page": 52,
+      "lessonId": null,
+      "status": "complete",
+      "notes": "Riferimento alla lezione da confermare in una seconda fase.",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Il discepolo crede a Dio.",
+            "Il Battista parla con lingua profetica.",
+            "Il mondo cerca la salvezza nella parola della legge di Dio.",
+            "Il Signore giudica gli uomini e i peccati dei figli degli uomini nell'ora della morte.",
+            "Nella casa del padrone troviamo i vestiti dei servi.",
+            "I discepoli del Battista ricevono le promesse del Regno.",
+            "La voce degli apostoli testimonia al popolo la via del Signore.",
+            "Il padrone non ha vino per gli amici."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Οἱ προφῆται παρακαλοῦσι τοὺς ἀδελφοὺς τοῦ λαοῦ.",
+            "Ὁ Βαπτιστὴς καὶ οἱ μαθηταὶ μένουσιν ἐν τῇ συναγωγῇ.",
+            "Ἡ ἐκκλησία οὐκ τηρεῖ τὰς ἐντολὰς τοῦ προφήτου τοῦ Θεοῦ.",
+            "Ὁ ἄγγελος τοῦ κυρίου θεωρεῖ τὴν χαρὰν ἐν τῷ προσώπῳ τῶν νεανιῶν.",
+            "Οἱ μαθηταὶ τῶν προφητῶν λαλούσι τοῖς ἀγγέλοις ἐν τῇ ἐρήμῳ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-8",
+      "label": "Esercizio 8",
+      "page": 57,
+      "lessonId": "lezione-ottava",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Altri uomini rimangono nella prima barca.",
+            "I santi osservano i sabati santi di Dio.",
+            "Chiamiamo gli altri giovani.",
+            "I discepoli rimangono sotto l'autorità del padrone.",
+            "Il giovane conosce le proprie pecore.",
+            "Nel deserto il popolo ascolta le parole del profeta.",
+            "I giusti credono al Figlio di Dio e hanno la vita eterna.",
+            "Servo buono e fedele, ricevi il tuo compenso."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ὁ κύριος ἐγείρει τοὺς νεκρούς.",
+            "Ὁ ἀδελφὸς τοῦ ἀποστόλου ἀκούει τὴν φωνὴν τοῦ προφήτου τοῦ ἁγίου.",
+            "Ὁ κύριος γινώσκει καὶ κρίνει τὰ πονηρὰ τοῦ νεανίου.",
+            "Ἐν τῇ βασιλείᾳ τοῦ Θεοῦ οἱ δίκαιοι θεωροῦσιν τὴν δόξαν τοῦ υἱοῦ τοῦ Θεοῦ.",
+            "Ὁ ἀπόστολος γράφει τοῖς ἀγαπητοῖς υἱοῖς τῆς ἐκκλησίας."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-9",
+      "label": "Esercizio 9",
+      "page": 61,
+      "lessonId": "lezione-nona",
+      "status": "partial",
+      "notes": "La foto copre solo il primo blocco dell'esercizio.",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Gli uomini sono profeti.",
+            "Il regno è cattivo.",
+            "L'assemblea è fedele.",
+            "Il comandamento dell'eterno Dio è giusto.",
+            "Ma essi non sono Giudei bensì adunanza del maligno (cfr. Ap 2,9).",
+            "Noi siamo figli diletti di Dio.",
+            "Il primo è l'ultimo e l'ultimo è il primo.",
+            "La lingua è cattiva.",
+            "Dio è giudice giusto e forte.",
+            "Ma ci sono alcuni fra di voi che non credono, dice il Signore.",
+            "Non c'è profeta privo di onore se non nella sua patria e nella sua casa."
+          ]
+        }
+      ]
+    }
+  ]
+}
