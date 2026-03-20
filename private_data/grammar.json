@@ -2421,12 +2421,459 @@
     "id": "lezione-decima",
     "kind": "lesson",
     "lessonLabel": "Lezione decima",
-    "title": "Pronomi personali e imperfetto",
-    "summary": "Primi pronomi e introduzione all'imperfetto indicativo attivo e medio-passivo.",
+    "title": "Imperfetto indicativo e preposizioni",
+    "summary": "Quadri dell'imperfetto con aumento sillabico e temporale, forme di εἰμί, uso di alcune preposizioni e Vocabolario 11º.",
     "contents": [
-      "39. Pronomi personali e riflessivi",
-      "40. Imperfetto indicativo attivo e medio-passivo",
-      "41. Vocabolario 10º"
+      "§ 39 - Formazione dell'Imperfetto Indicativo attivo",
+      "§ 40 - Imperfetto Indicativo contratto (verbi in -εω) con aumento sillabico",
+      "§ 41 - Tabella dell'aumento temporale",
+      "§ 42 - Quadro dell'Imperfetto Indicativo con aumento temporale",
+      "§ 43 - Imperfetto Indicativo del verbo εἰμί (sono)",
+      "Note sintattico-grammaticali - Le preposizioni",
+      "§ 44 - Uso di ἀπό",
+      "§ 45 - Uso di εἰς",
+      "§ 46 - Uso di ἐκ/ἐξ",
+      "§ 47 - Uso di ἐν",
+      "§ 48 - Uso di κατά",
+      "Vocabolario 11º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 39 - Formazione dell'Imperfetto Indicativo attivo",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "In greco, i tempi hanno, come si è chiarito nella Lez. II, § 6/II e III, diversi modi (Indicativo, Congiuntivo, Ottativo, Imperativo, Infinito e Participio). L'Imperfetto, invece, ha solo il modo Indicativo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Esso si costruisce secondo tale formula:"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-formula",
+              "headerRows": [
+                [
+                  "Aumento",
+                  "Tema del presente",
+                  "Vocale tematica",
+                  "Desinenze dei tempi storici"
+                ]
+              ],
+              "bodyRows": [
+                ["ἐ-", "λυ-", "ο-", "ν"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "paragraphs": [
+              "a) Per l'aumento e le desinenze, cfr. § 35. Per il tema del Presente e per la vocale tematica, cfr. § 7a, b.",
+              "b) Le desinenze da usare, per l'Imperfetto, sono quelle dei tempi storici.",
+              "c) I verbi greci mantengono, normalmente, l'accento là dove si trova nella I pers. sing. del Pres. Indic., purché lo consentano la quantità dell'ultima sillaba e la legge del trisillabismo1; all'Imperfetto, l'accento si ritrae indietro di una sillaba, rispetto al Presente Indicativo. Nei verbi composti, però, non può retrocedere al di là dell'aumento (è il caso dei verbi bisillabici, come ἄγω, che nei composti, per es. ὑπάγω, non ha come Imperfetto ὕπηγον, bensì ὑπῆγον).",
+              "d) Il Presente indica un'azione durativa, ovviamente nel Presente (cfr. § 7h); l'Imperfetto, che deriva direttamente dal tema del Presente, indica anch'esso un'azione durativa, ma nel passato. Il tema, comune al Presente e all'Imperfetto, caratterizza la qualità dell'azione (durativa); l'aumento e le desinenze indicano, invece, il riferimento al passato.",
+              "e) L'Imperfetto è molto usato nelle narrazioni descrittive. Anche i verbi che significano «dire, narrare, domandare, pregare» sono di largo uso all'Imperfetto, mentre in italiano si usa, più spesso, il Passato Remoto.",
+              "f) L'Imperfetto può anche indicare un'azione abitudinaria o ripetuta nel passato (cfr. Mc. 12,41; Gv. 11,36; At. 3,2; Mc. 15,6; Lc. 17,27).",
+              "g) L'Imperfetto di conato è quello che indica un'azione desiderata o tentata, ma non compiuta (cfr. Lc. 1,59; Mc. 9,38; 15,23; At. 7,26). Tale tempo può anche essere usato per esprimere un desiderio irrealizzabile (cfr. Rm. 9,3; Gal. 4,20).",
+              "1 Mai, però, oltre la terzultima sillaba; cfr. Lez. I, § 3."
+            ]
+          },
+          {
+            "title": "Imperfetto Indicativo con aumento sillabico",
+            "contentBlocks": [
+              {
+                "type": "summaryTable",
+                "table": {
+                  "className": "grammar-table-conjugation",
+                  "intro": "λύ-ω, sciolgo. T.P. λυ-.",
+                  "headerRows": [
+                    ["Numero", "Persona", "Greco", "Italiano"]
+                  ],
+                  "bodyRows": [
+                    [
+                      { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      "I pers.",
+                      "ἔ-λυ-ο-ν",
+                      "io scioglievo"
+                    ],
+                    ["II pers.", "ἔ-λυ-ε-ς", "tu scioglievi"],
+                    ["III pers.", "ἔ-λυ-ε(ν)", "egli scioglieva"],
+                    [
+                      { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      "I pers.",
+                      "ἐ-λύ-ο-μεν",
+                      "noi scioglievamo"
+                    ],
+                    ["II pers.", "ἐ-λύ-ε-τε", "voi scioglievate"],
+                    ["III pers.", "ἔ-λυ-ο-ν", "essi scioglievano"]
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 40 - Imperfetto Indicativo contratto (verbi in -εω) con aumento sillabico",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "φιλέ-ω, amo. T.P. φιλε-.",
+              "headerRows": [
+                ["Numero", "Persona", "Forma non contratta", "Forma contratta", "Italiano"]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "I pers.",
+                  "ἐ-φίλε-ο-ν",
+                  "ἐ-φίλου-ν",
+                  "io amavo"
+                ],
+                ["II pers.", "ἐ-φίλε-ε-ς", "ἐ-φίλει-ς", "tu amavi"],
+                ["III pers.", "ἐ-φίλε-ε", "ἐ-φίλει", "egli amava"],
+                [
+                  { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "I pers.",
+                  "ἐ-φιλέ-ο-μεν",
+                  "ἐ-φιλοῦ-μεν",
+                  "noi amavamo"
+                ],
+                ["II pers.", "ἐ-φιλέ-ε-τε", "ἐ-φιλεῖ-τε", "voi amavate"],
+                ["III pers.", "ἐ-φίλε-ο-ν", "ἐ-φίλου-ν", "essi amavano"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 41 - Tabella dell'aumento temporale",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "L'aumento temporale (cfr. § 35) consiste nell'allungamento della vocale iniziale del tema del Presente, secondo le norme seguenti:"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-aumento",
+              "headerRows": [
+                ["Vocale", "", "Aumento", "Esempio", "Italiano", "Imperfetto"]
+              ],
+              "bodyRows": [
+                ["α", ">", "η", "ἀκούω", "odo", "ἤκουον"],
+                ["α", ">", "η", "ᾄδω", "canto", "ᾖδον"],
+                ["ε", ">", "η", "ἐγείρω", "sveglio", "ἤγειρον"],
+                ["ι", ">", "ῑ", "ἱματίζω", "vesto", "ἱμάτιζον"],
+                ["ο", ">", "ω", "ὁμολογέω", "confesso", "ὡμολόγουν"],
+                ["υ", ">", "ῡ", "ὑστερέω", "manco", "ὑστέρουν"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "contentBlocks": [
+              {
+                "type": "paragraph",
+                "text": "a) I dittonghi ευ, ου e talvolta anche gli altri, si possono trovare senza aumento oppure possono avere l'aumento temporale, consistente nell'allungamento della loro vocale iniziale, che diventa, rispettivamente, η oppure ω. Inoltre:"
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "className": "grammar-table-aumento",
+                  "headerRows": [
+                    ["Dittongo", "", "Aumento", "Esempio", "Italiano", "Imperfetto"]
+                  ],
+                  "bodyRows": [
+                    ["οι", ">", "ῳ", "οἰκέω", "abito", "ᾤκουν"],
+                    ["αι", ">", "ῃ", "αἰτέω", "chiedo", "ᾔτουν"],
+                    ["αυ", ">", "ηυ", "αὐξάνω", "cresco", "ηὔξανον"]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "b) Le vocali η e ω, già lunghe, restano immutate."
+              },
+              {
+                "type": "paragraph",
+                "text": "c) Nei verbi composti (cfr. nota 2, pag. 31), di regola l'aumento viene inserito fra la preposizione e il verbo semplice. Se la preposizione termina in vocale, questa scompare davanti all'aumento1."
+              },
+              {
+                "type": "paragraph",
+                "text": "d) Se la preposizione termina in consonante, possono avvenire modificazioni eufoniche; oppure, talora, scompaiono quelle modificazioni eufoniche avvenute nel formarsi del verbo composto, le quali non avrebbero ragion d'essere davanti a una vocale (l'ἐ- dell'aumento)."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ess.: 1) prefissi che terminano in vocale:"
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "className": "grammar-table-conjugation",
+                  "headerRows": [
+                    ["Presente", "Italiano", "Imperfetto"]
+                  ],
+                  "bodyRows": [
+                    ["ἀπο-θνῄσκω", "muoio", "ἀπ-έθνῃσκον"],
+                    ["παρα-καλέω", "esorto", "παρ-εκάλουν"],
+                    ["προ-πέμπω", "mando innanzi", "προ-ἔπεμπον"],
+                    ["περι-πατέω", "passeggio", "περι-επάτουν"]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "2) prefissi che terminano in consonante:"
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "className": "grammar-table-conjugation",
+                  "headerRows": [
+                    ["Presente", "Italiano", "Imperfetto"]
+                  ],
+                  "bodyRows": [
+                    ["ἐκ-βάλλω", "espello", "ἐξ-έβαλλον"],
+                    ["συν-λέγω", "raccolgo", "συν-ἔλεγον"],
+                    ["συγ-γράφω", "redigo", "συν-ἔγραφον"],
+                    ["ἐμ-βαίνω", "salgo, entro", "ἐν-έβαινον"]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "e) Alcuni verbi che iniziano con vocale ε-, hanno come aumento non η-, bensì il dittongo ει-. Storicamente ciò può essere spiegato, ricordando che, in origine, essi cominciavano con una consonante (sigma o altra) che, trovandosi in posizione intervocalica fra due ε, è caduta e le due ε si sono contratte, formando il dittongo. I più importanti di questi verbi sono i seguenti:"
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "className": "grammar-table-conjugation",
+                  "headerRows": [
+                    ["Verbo", "Italiano", "Imperfetto"]
+                  ],
+                  "bodyRows": [
+                    ["ἐάω", "lascio (cfr. Lc. 4,41; At. 19,30)", "εἴων (< εἴαον)"],
+                    ["ἕλκω, ἑλκύω", "tiro (cfr. Gv. 18,10: Aor.)", "εἷλκον, εἵλκυον"],
+                    ["ἐργάζομαι", "opero/lavoro (cfr. II Gv. 8: Aor.)", "εἰργαζόμην"],
+                    ["ἔχω", "ho (cfr. Mt. 13,5; 21,28)", "εἶχον"]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "1 Fanno eccezione a questa regola le preposizioni περί, πρό e ἀμφί, che mantengono la loro vocale finale. Nel greco classico, la ο finale di πρό talvolta si fonde con la vocale iniziale del verbo in una specie di contrazione, chiamata «crasi»: si può trovare προὔβαλλον (per προέβαλλον), προὔπεμπον (per προέπεμπον) ecc., ma nel N.T. non accade mai (Bl/D § 18,3)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 42 - Quadro dell'Imperfetto Indicativo con aumento temporale",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "ἀκού-ω, ascolto. T.P. ἀκου-.",
+              "headerRows": [
+                ["Numero", "Persona", "Greco", "Italiano"]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "I pers.",
+                  "ἤκου-ο-ν",
+                  "io ascoltavo"
+                ],
+                ["II pers.", "ἤκου-ε-ς", "tu ascoltavi"],
+                ["III pers.", "ἤκου-ε(-ν)", "egli ascoltava"],
+                [
+                  { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "I pers.",
+                  "ἠκού-ο-μεν",
+                  "noi ascoltavamo"
+                ],
+                ["II pers.", "ἠκού-ε-τε", "voi ascoltavate"],
+                ["III pers.", "ἤκου-ο-ν", "essi ascoltavano"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Quadro dell'Imperfetto Indicativo contratto (verbi in -εω) con aumento temporale",
+            "contentBlocks": [
+              {
+                "type": "summaryTable",
+                "table": {
+                  "className": "grammar-table-conjugation",
+                  "intro": "αἰτέ-ω, chiedo. T.P. αἰτε-.",
+                  "headerRows": [
+                    ["Numero", "Persona", "Forma non contratta", "Forma contratta", "Italiano"]
+                  ],
+                  "bodyRows": [
+                    [
+                      { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      "I pers.",
+                      "ᾔτε-ο-ν",
+                      "ᾔτουν",
+                      "io chiedevo"
+                    ],
+                    ["II pers.", "ᾔτε-ε-ς", "ᾔτεις", "tu chiedevi"],
+                    ["III pers.", "ᾔτε-ε", "ᾔτει", "egli chiedeva"],
+                    [
+                      { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      "I pers.",
+                      "ᾐτέ-ο-μεν",
+                      "ᾐτοῦμεν",
+                      "noi chiedevamo"
+                    ],
+                    ["II pers.", "ᾐτέ-ε-τε", "ᾐτεῖτε", "voi chiedevate"],
+                    ["III pers.", "ᾔτε-ο-ν", "ᾔτουν", "essi chiedevano"]
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 43 - Imperfetto Indicativo del verbo εἰμί (sono)",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "Cfr. § 36, per il Presente.",
+              "headerRows": [
+                ["Numero", "Persona", "Greco", "Italiano"]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "I pers.",
+                  "ἤμην (classico: ἦν)",
+                  "io ero"
+                ],
+                ["II pers.", "ἦς (raro: ἦσθα)", "tu eri"],
+                ["III pers.", "ἦν", "egli era"],
+                [
+                  { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "I pers.",
+                  "ἦμεν (anche ἤμεθα)",
+                  "noi eravamo"
+                ],
+                ["II pers.", "ἦτε", "voi eravate"],
+                ["III pers.", "ἦσαν", "essi erano"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Note sintattico-grammaticali - Le preposizioni",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Secondo uno sviluppo che si ritrova anche in altre lingue indoeuropee, nel greco della «koinè» le preposizioni hanno un uso molto più esteso che nel greco classico, ma subiscono una riduzione di numero, per processi sincretici. Nella traduzione dei LXX e nel N.T., l'uso amplissimo della preposizione è anche dovuto alle risonanze semitiche. Presentiamo, di seguito, una breve trattazione sull'uso di alcune preposizioni, precisando che altre, largamente usate nella lingua greca, verranno prese in esame in lezioni successive."
+          },
+          {
+            "type": "alignedExamples",
+            "block": {
+              "className": "grammar-example-prepositions",
+              "rows": [
+                { "key": "ἀπό", "value": "= da (regge il GEN.)" },
+                { "key": "εἰς", "value": "= a/in (regge l'ACC.)" },
+                { "key": "κατά", "value": "= giù/contro/secondo... (regge il GEN. e l'ACC.)" },
+                { "key": "ἐκ/ἐξ", "value": "= da/fuori da... (regge il GEN.)" },
+                { "key": "ἐν", "value": "= in (regge il DAT.)" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 44 - Uso di ἀπό",
+        "paragraphs": [
+          "Ἀπό indica soprattutto allontanamento, in senso locale (moto da luogo), ma anche in senso temporale (cfr. Mt. 9,22; ἀπὸ κτίσεως κόσμου = dalla creazione del mondo, Rm. 1,20; Lc. 1,48). Si trova, inoltre, per indicare origine, dove sarebbe classico l'uso di ἐκ, (cfr., per es., Gv. 1,44s.: Φίλιππος ἀπὸ Βηθσαϊδά = Filippo da Betsaida; At. 21,27); causa: κοιμωμένους ἀπὸ τῆς λύπης = addormentati per la tristezza, Lc. 22,45; a volte anche il complemento di agente: ἐνοχλούμενοι ἀπὸ πνευμάτων ἀκαθάρτων = tormentati da spiriti impuri, At. 2,22; Lc. 6,18; 17,25; II Cor. 7,13; ma a volte si tratta di confusione dei copisti e la documentazione testuale è incerta. In Gal. 2,12; 3,2; I Cor. 11,23; Gv. 3,2; 13,3; 16,30 può significare «da parte di...». "
+        ]
+      },
+      {
+        "heading": "§ 45 - Uso di εἰς",
+        "paragraphs": [
+          "Εἰς indica il moto a luogo (la direzione verso, o l'entrata in un determinato luogo), ma può anche usarsi per il tempo: εἰς ἐκείνην τὴν ἡμέραν = fino a quel giorno, II Tm. 1,12; per lo scopo o fine: εἰς τὴν ἐμὴν ἀνάμνησιν = in memoria di me / per ricordare me, I Cor. 11,24. Un uso caratteristico è quello chiamato predicativo: un accusativo preceduto da εἰς, al posto di un predicato nominale o di un complemento predicativo del soggetto; p. es.: καὶ ἔσομαι ὑμῖν εἰς πατέρα = e vi sarò come (per) padre (II Cor. 6,18; cfr. Mt. 19,5; 21,42; Lc. 13,19; I Ts. 3,5). Probabilmente, nel N.T., si tratta di un semitismo, ed εἰς corrisponde alla preposizione ebraica lᵉ."
+        ]
+      },
+      {
+        "heading": "§ 46 - Uso di ἐκ/ἐξ",
+        "paragraphs": [
+          "Ἐκ (davanti a vocale diventa ἐξ) indica il movimento, nel senso di origine o provenienza o fuori da qualcosa (luogo); parlando di tempo, indica la decorrenza: ἐκ νεότητός μου = dalla mia giovinezza, Mc. 10,20 (cfr. anche Lc. 23,8; Gv. 6,64). Corrisponde all'uso classico, quando esprime il complemento di materia: σκεῦος ἐκ ξύλου τιμιωτάτου = recipienti di legno preziosissimo, Ap. 18,12 (cfr. anche Mt. 27,29) e quello di origine (cfr. Mt. 1,3; Gv. 1,13). A volte indica la causa o lo strumento: ζῇ ἐκ δυνάμεως θεοῦ = vive per (o grazie alla) potenza di Dio, II Cor. 13,4 (cfr. anche I Pt. 2,12; Ap. 16,10.21)."
+        ]
+      },
+      {
+        "heading": "§ 47 - Uso di ἐν",
+        "paragraphs": [
+          "Ἐν è usata per indicare lo stato in luogo. Però si trova anche per indicare il complemento di tempo determinato: ἐν τῇ ἐσχάτῃ ἡμέρᾳ = nell'ultimo giorno, Gv. 6,44; tuttavia, in questo significato, può anche essere omessa (cfr. Gv. 6,54). Con nomi collettivi e con il plurale può avere la sfumatura di significato «in mezzo»: ἐν τοῖς ἔθνεσιν = tra i pagani, Gal. 1,16. Un uso particolare è quello strumentale, frequente nel N.T., che rispecchia uno dei significati della preposizione ebraica bᵉ.",
+          "Così, può indicare strumenti o mezzi di morte (cfr. Mt. 26,52; Lc. 22,49), condimenti (cfr. Mt. 5,13), il fuoco (cfr. Ap. 14,10; 16,8), l'acqua e il fuoco del battesimo (cfr. Mt. 3,11), il mezzo della giustificazione (cfr. Gal. 5,4; Rm. 5,9) ecc. Nel N.T. troviamo, a volte, εἰς al posto di ἐν, per indicare lo stato in luogo, come nel greco moderno (cfr. Mc. 1,9; Lc. 11,7; At. 8,40; Gv. 1,18). Più raro è ἐν al posto di εἰς, per indicare il moto a luogo (cfr. Lc. 4,1)."
+        ]
+      },
+      {
+        "heading": "§ 48 - Uso di κατά",
+        "paragraphs": [
+          "Questa proposizione può essere usata con il GEN. e con l'ACC. Con il GEN., ha significati collegati all'idea di «giù» e di «contro». Nel senso di «giù», è presente specialmente nei composti dei verbi di movimento come καταβαίνω, scendo, e altri. Inoltre, cfr. Mt. 8,32: ὥρμησεν πᾶσα ἡ ἀγέλη κατὰ τοῦ κρημνοῦ εἰς τὴν θάλασσαν = tutto il gregge si gettò giù per il precipizio nel mare; I Cor. 11,4: πᾶς ἀνὴρ προσευχόμενος κατὰ κεφαλῆς = ogni uomo che prega avendo un copricapo giù sulla testa, cioè in modo da coprire i capelli, e non soltanto posato sopra.",
+          "Nel senso di «contro», è di uso molto frequente, p. es. dopo i seguenti verbi: accusare (τίς ἐγκαλέσει κατὰ ἐκλεκτῶν θεοῦ; = chi lancerà accuse contro gli eletti di Dio?, Rm. 8,33), mormorare (ἐγόγγυζον κατὰ τοῦ οἰκοδεσπότου = mormoravano contro il padron di casa, Mc. 3,6), aver qualcosa contro qualcuno (ὁ ἀδελφός σου ἔχει τι κατὰ σοῦ = tuo fratello ha qualcosa contro di te, Mt. 5,23; cfr. anche Ap. 2,4.14.20).",
+          "Con l'ACC., serve a indicare il tempo, spesso in senso distributivo. In questa accezione di significato si trova, appunto, in Mt. 27,15: κατὰ δὲ ἑορτήν = ad ogni Festa (cioè, ogni Pasqua); Lc. 11,3: καθ' ἡμέραν = ogni giorno. È usata, però, anche in senso locale; cfr. Mc. 13,8: ἔσονται σεισμοὶ κατὰ τόπους = vi saranno terremoti in ogni luogo.",
+          "In senso traslato implica (come del resto negli esempi precedenti) una connessione molto stretta: κατὰ σάρκα = secondo la carne; κατὰ φύσιν = secondo natura; κατὰ θεόν = secondo Dio, conformemente al pensiero di Dio, ecc.; κατὰ τὰς γραφάς = secondo le Scritture; κατὰ Ματθαῖον, Μάρκον ecc. = secondo Matteo, Marco ecc."
+        ]
+      },
+      {
+        "heading": "Vocabolario 11º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary",
+              "headerRows": [
+                ["Greco", "Italiano", "Greco", "Italiano"]
+              ],
+              "bodyRows": [
+                ["ἄγω", "conduco", "κράζω", "grido, esclamo"],
+                ["ἀναγιγνώσκω", "leggo (classico)", "λύω", "sciolgo"],
+                ["ἀναγινώσκω", "leggo (Gr. biblico)", "πείθω", "persuado"],
+                ["ἀποκτείνω", "uccido", "πέμπω", "mando"],
+                ["ἀπολύω", "mando via, libero", "περιπατέω", "passeggio, cammino"],
+                ["βαπτίζω", "battezzo", "πίπτω", "cado"],
+                ["διαφέρω", "porto, diffondo, mi distinguo", "συνάγω", "riunisco, porto insieme"],
+                ["δοξάζω", "glorifico", "ὑπάγω", "metto sotto, sottraggo, mi ritiro"],
+                ["ἐκβάλλω", "getto fuori, espello", "φέρω", "porto"],
+                ["κηρύσσω", "proclamo, prèdico", "χαίρω", "mi rallegro"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. αἱ πισταὶ μένουσιν ἐν τῷ ἱερῷ. 2. μαθηταί ἐστε τοῦ κυρίου. 3. ἅγιος εἶ κύριε. 4. ἐκαλοῦμεν τοὺς νεανίας. 5. ἀπεκτείνετε τοὺς προφήτας τοῦ κυρίου. 6. ὁ θεὸς ἔπεμπε τοὺς ἀγγέλους τοῦ κυρίου εἰς τὸν κόσμον. 7. ὁ διδάσκαλος ἦγε τοὺς μαθητὰς ἀπὸ τῆς θαλάσσης. 8. οἱ νεανίαι ἔχαιρον. 9. τὰ πρόβατα ὑπῆγε ἐκ τῆς ἐρήμου. 10. ὁ βαπτιστὴς βαπτίζει τὰς παρθένους. 11. ὁ ἄγγελος ἀπέλυε τὸν ἀπόστολον. 12. οἱ μαθηταὶ ἐδόξαζον τὸν κύριον. 13. οἱ ἀγαθοὶ δοῦλοι συνῆγον τὰ πρόβατα. 14. οἱ ἀδελφοὶ ἀνεγίνωσκον ἐν τῇ ἐκκλησίᾳ τὴν ἐπιστολὴν τοῦ ἀποστόλου. 15. καὶ οἱ μαθηταὶ τοῦ Ἰησοῦ τὰ δαιμόνια ἐξέβαλλον. 16. τὰ ψιχία (briciole) ἔπιπτεν ἀπὸ τῆς τραπέζης τοῦ κυρίου."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Un uomo cattivo è nella prima barca. 2. L'uomo cattivo è nella prima barca. 3. Egli faceva i proprii mantelli. 4. Il Battista esortava gli uomini cattivi. 5. I santi rimanevano nella casa di Dio. 6. I servi portavano il pane al Signore. 7. Il discepolo proclamava, nelle sinagoghe, Gesù, figlio di Dio. 8. Gesù camminava verso la Giudea e predicava al popolo."
+            ]
+          }
+        ]
+      }
     ]
   },
   {

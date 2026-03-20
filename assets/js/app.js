@@ -252,7 +252,7 @@ const renderGrammarSummaryTable = (table) => {
   return `
     ${table.intro ? `<p>${escapeHtml(table.intro)}</p>` : ""}
     <div class="grammar-table-wrap">
-      <table class="grammar-table grammar-table-summary">
+      <table class="grammar-table grammar-table-summary${table.className ? ` ${escapeHtml(table.className)}` : ""}">
         <thead>${headerRowsHtml}</thead>
         <tbody>${bodyRowsHtml}</tbody>
       </table>
@@ -454,6 +454,12 @@ const renderGrammarSectionContent = (section, options = {}) => {
     ? section.subsections
         .map((item) => {
           const subsectionIsTranslationExercise = isTranslationExerciseTitle(item.title || "");
+          const subsectionHasContentBlocks = Boolean(item.contentBlocks?.length);
+          const subsectionContentBlocksHtml = subsectionHasContentBlocks
+            ? item.contentBlocks
+                .map((block) => renderGrammarContentBlock(block, { splitNumbered: subsectionIsTranslationExercise }))
+                .join("")
+            : "";
           const compactTableAfterParagraph =
             Number.isInteger(item.compactTableAfterParagraph) && item.compactTableAfterParagraph >= 0
               ? item.compactTableAfterParagraph
@@ -470,13 +476,14 @@ const renderGrammarSectionContent = (section, options = {}) => {
           const trailingCompactTableHtml =
             compactTableHtml && !compactTableInserted ? compactTableHtml : "";
           const subsectionPlainPointsHtml = renderGrammarPlainPoints(item.plainPoints);
+          const subsectionBodyHtml = subsectionHasContentBlocks
+            ? subsectionContentBlocksHtml
+            : `${subsectionParagraphsHtml}${trailingCompactTableHtml}${subsectionPlainPointsHtml}`;
 
           return `
             <div class="grammar-subsection">
               <h4>${escapeHtml(item.title)}</h4>
-              ${subsectionParagraphsHtml}
-              ${trailingCompactTableHtml}
-              ${subsectionPlainPointsHtml}
+              ${subsectionBodyHtml}
               ${item.alignedExamples ? renderGrammarAlignedExamples(item.alignedExamples) : ""}
               ${item.underlineWords ? renderGrammarUnderlineWords(item.underlineWords) : ""}
               ${

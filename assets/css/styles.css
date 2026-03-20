@@ -835,6 +835,42 @@ select {
   vertical-align: middle;
 }
 
+.grammar-table-formula {
+  min-width: 0;
+  width: auto;
+  margin: 0 auto;
+}
+
+.grammar-table-formula th,
+.grammar-table-formula td {
+  white-space: nowrap;
+}
+
+.grammar-table-conjugation td,
+.grammar-table-conjugation th,
+.grammar-table-aumento td,
+.grammar-table-aumento th {
+  white-space: nowrap;
+}
+
+.grammar-table-conjugation td:last-child,
+.grammar-table-aumento td:nth-child(5),
+.grammar-table-aumento td:nth-child(6) {
+  text-align: left;
+}
+
+.grammar-table-vocabulary th,
+.grammar-table-vocabulary td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.grammar-table-vocabulary td:nth-child(1),
+.grammar-table-vocabulary td:nth-child(3) {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
 .grammar-table-summary tbody th,
 .grammar-table-summary .grammar-table-rowlabel {
   text-align: center;
@@ -938,6 +974,10 @@ select {
 .grammar-example-apophonia .grammar-example-row {
   grid-template-columns: 5.5rem 1fr;
   gap: 0.18rem;
+}
+
+.grammar-example-prepositions .grammar-example-row {
+  grid-template-columns: 7rem 1fr;
 }
 
 .grammar-example-key {
