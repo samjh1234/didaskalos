@@ -1982,26 +1982,439 @@
     "id": "lezione-ottava",
     "kind": "lesson",
     "lessonLabel": "Lezione ottava",
-    "title": "Presente medio-passivo e aggettivi",
-    "summary": "Prime forme del presente medio-passivo e completamento della prima classe degli aggettivi.",
+    "title": "Aggettivi della prima classe",
+    "summary": "Declinazione degli aggettivi della prima classe, paradigmi a tre e due uscite, con Vocabolario 8º.",
     "contents": [
-      "31. Presente indicativo medio-passivo dei verbi in -ω",
-      "32. Aggettivi della prima classe",
-      "33. Vocabolario 8º"
+      "§ 31 - Declinazione degli aggettivi della prima classe",
+      "§ 32 - Gli aggettivi della I classe a tre uscite",
+      "§ 33 - Aggettivi della I classe a due uscite",
+      "Vocabolario 8º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 31 - Declinazione degli aggettivi della prima classe",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Alcuni aggettivi greci seguono il modello della I e II declinazione, come gli aggettivi latini del tipo bonus, -a, -um (I classe), altri, quello della III declinazione, come gli aggettivi latini brevis, breve; audax, audacis (II classe; cfr. lez. XXVII, §§ 131-136)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli aggettivi che seguono la I e la II declinazione sono generalmente a tre uscite, cioè il loro NOM. ha una terminazione per il maschile, che segue la II decl.; una per il femminile, che segue la I decl.; una per il neutro, che segue la II decl."
+          },
+          {
+            "type": "paragraph",
+            "text": "Alcuni, però, hanno due uscite soltanto: una, che vale per il maschile e per il femminile, in -ος (II decl.), e una per il neutro, in -ον (pure II decl.). Quindi, la loro flessione non riguarda la I declinazione."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "intro": "Ess.:",
+              "headerRows": [
+                ["Greco", "Italiano", "Uscite"]
+              ],
+              "bodyRows": [
+                ["ἰσχυρός, ἰσχυρά, ἰσχυρόν", "forte", "aggettivo a tre uscite"],
+                ["ἄδικος, ἄδικον", "ingiusto", "aggettivo a due uscite"],
+                ["βάρβαρος, βάρβαρον", "barbaro", "aggettivo a due uscite"],
+                ["αἰώνιος, αἰώνιον", "eterno", "aggettivo a due uscite"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Non sempre il greco classico e il N.T. coincidono, sul numero di uscite degli aggettivi. Si possono trovare, nel N.T., tre terminazioni, quando la lingua classica ne ha due, e viceversa."
+          }
+        ]
+      },
+      {
+        "heading": "§ 32 - Gli aggettivi della I classe a tre uscite",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Paradigma col femm. in ᾱ pura lunga."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "Tema:", "colspan": 2 },
+                  { "label": "δικαιο-/δικαια-/δικαιο- (giusto)", "colspan": 3 }
+                ],
+                [
+                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "δίκαιος",
+                  "δικαία",
+                  "δίκαιον"
+                ],
+                ["GEN.", "δικαίου", "δικαίας", "δικαίου"],
+                ["DAT.", "δικαίῳ", "δικαίᾳ", "δικαίῳ"],
+                ["ACC.", "δίκαιον", "δικαίαν", "δίκαιον"],
+                ["VOC.", "δίκαιε", "δικαία", "δίκαιον"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "δίκαιοι",
+                  "δίκαιαι",
+                  "δίκαια"
+                ],
+                ["GEN.", "δικαίων", "δικαίων", "δικαίων"],
+                ["DAT.", "δικαίοις", "δικαίαις", "δικαίοις"],
+                ["ACC.", "δικαίους", "δικαίας", "δίκαια"],
+                ["VOC.", "δίκαιοι", "δίκαιαι", "δίκαια"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Paradigma col femm. in ᾱ impura lunga (> η)."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "Tema:", "colspan": 2 },
+                  { "label": "φαυλο-/φαυλα-/φαυλο- (cattivo)", "colspan": 3 }
+                ],
+                [
+                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "φαῦλος",
+                  "φαύλη",
+                  "φαῦλον"
+                ],
+                ["GEN.", "φαύλου", "φαύλης", "φαύλου"],
+                ["DAT.", "φαύλῳ", "φαύλῃ", "φαύλῳ"],
+                ["ACC.", "φαῦλον", "φαύλην", "φαῦλον"],
+                ["VOC.", "φαῦλε", "φαύλη", "φαῦλον"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "φαῦλοι",
+                  "φαῦλαι",
+                  "φαῦλα"
+                ],
+                ["GEN.", "φαύλων", "φαύλων", "φαύλων"],
+                ["DAT.", "φαύλοις", "φαύλαις", "φαύλοις"],
+                ["ACC.", "φαύλους", "φαύλας", "φαῦλα"],
+                ["VOC.", "φαῦλοι", "φαῦλαι", "φαῦλα"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 33 - Aggettivi della I classe a due uscite",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "Temi:", "colspan": 2 },
+                  { "label": "ἄδηλο-/ἄδηλο- (poco chiaro)", "colspan": 2 }
+                ],
+                [
+                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  "M./F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "ἄδηλος",
+                  "ἄδηλον"
+                ],
+                ["GEN.", "ἀδήλου", "ἀδήλου"],
+                ["DAT.", "ἀδήλῳ", "ἀδήλῳ"],
+                ["ACC.", "ἄδηλον", "ἄδηλον"],
+                ["VOC.", "ἄδηλε", "ἄδηλον"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "ἄδηλοι",
+                  "ἄδηλα"
+                ],
+                ["GEN.", "ἀδήλων", "ἀδήλων"],
+                ["DAT.", "ἀδήλοις", "ἀδήλοις"],
+                ["ACC.", "ἀδήλους", "ἄδηλα"],
+                ["VOC.", "ἄδηλοι", "ἄδηλα"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "paragraphs": [
+              "a) Il femminile degli aggettivi a tre uscite termina in -α, quando questa è pura (preceduta da ε, ι, ρ); altrimenti si ha la trasformazione di -ᾱ impura (cioè preceduta da consonante diversa da ρ) in -η, come avviene nei nomi della I declinazione, dello stesso tipo. La terminazione in -ᾱ è sempre lunga, ma il NOM. e GEN. plurali adeguano il loro accento al maschile, per analogia (NOM.: δίκαιαι; GEN.: δικαίων).",
+              "b) Al GEN. plurale, l'accento nei tre generi è sulla penultima sillaba, a meno che l'aggettivo porti l'accento sull'ultima sillaba già nel singolare. In questo caso, lo conserva nella stessa posizione in tutte le forme."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 8º",
+        "summaryTable": {
+          "headerRows": [
+            ["Greco", "Italiano", "Note"]
+          ],
+          "bodyRows": [
+            ["ὁ βαπτιστής, οῦ", "il Battista", ""],
+            ["ὁ δεσπότης, ου", "il padrone", "(dispotismo, dispotico)"],
+            ["ὁ Ἰωάννης, ου", "Giovanni", ""],
+            ["ὁ μαθητής, οῦ", "il discepolo", ""],
+            ["ὁ νεανίας, ου", "il giovane", ""],
+            ["ὁ προφήτης, ου", "il profeta", ""],
+            ["ὁ ὑπηρέτης, ου", "il servitore", ""],
+            ["ὁ οἶνος, ου", "il vino", "(enologia, enologico)"],
+            ["ὁ πόνος, ου", "la fatica", ""],
+            ["ὁ υἱός, οῦ", "il figlio", ""],
+            ["ἡ ἑορτή, ῆς", "la festa", ""],
+            ["ἡ πηγή, ῆς", "la fonte", ""],
+            ["ἡ τιμή, ῆς", "l'onore, il valore, la carica", ""],
+            ["ἡ τροφή, ῆς", "il cibo", ""],
+            ["ἡ Ἰουδαία, ας", "la Giudea", ""],
+            ["ἡ καρδία, ας", "il cuore", "(cardiaco, cardiologia)"],
+            ["ἡ λαλιά, ας", "la conversazione", "(glossolalia)"],
+            ["ἡ σωτηρία, ας", "la salvezza", "(soteriologia)"],
+            ["ἡ χαρά, ᾶς", "la gioia", ""],
+            ["ἡ ὥρα, ας", "l'ora, il momento, il tempo", ""]
+          ]
+        },
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ἡ καρδία τοῦ μαθητοῦ πιστεύει τῷ θεῷ. 2. ὁ βαπτιστὴς λαλεῖ γλώσσῃ προφήτου. 3. ὁ κόσμος ζητεῖ τὴν σωτηρίαν ἐν τῷ λόγῳ τοῦ νόμου τοῦ θεοῦ. 4. ὁ κύριος κρίνει τοὺς ἀνθρώπους καὶ τὰς ἁμαρτίας τῶν υἱῶν τῶν ἀνθρώπων ἐν τῇ ὥρᾳ τοῦ θανάτου. 5. ἐν τῷ οἴκῳ τοῦ δεσπότου εὑρίσκομεν τὰ ἱμάτια τῶν δούλων. 6. οἱ μαθηταὶ τοῦ βαπτιστοῦ λαμβάνουσι τὰς ἐπαγγελίας τῆς βασιλείας. 7. ἡ φωνὴ τῶν ἀποστόλων μαρτυρεῖ τῷ λαῷ τὴν ὁδὸν τοῦ κυρίου. 8. ὁ δεσπότης οἶνον οὐκ ἔχει τοῖς φίλοις."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. I profeti esortano i fratelli del popolo. 2. Il Battista e i discepoli rimangono nella sinagoga. 3. La chiesa non osserva i comandamenti del profeta di Dio. 4. L'angelo del Signore vede la gioia nel volto dei giovani. 5. I discepoli dei profeti parlano agli angeli nel deserto."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
     "id": "lezione-nona",
     "kind": "lesson",
     "lessonLabel": "Lezione nona",
-    "title": "Contratti e complementi",
-    "summary": "Introduzione ai verbi contratti e ai principali complementi con il dativo.",
+    "title": "Aggettivi contratti",
+    "summary": "Aggettivi contratti, osservazioni sulla contrazione e Vocabolario 9º.",
     "contents": [
-      "34. Verbi contratti in -αω",
-      "35. Verbi contratti in -εω",
-      "36. Verbi contratti in -οω",
-      "37. Dativo, complemento di termine e dativo di possesso",
-      "38. Vocabolario 9º"
+      "§ 34 - Aggettivi contratti",
+      "Vocabolario 9º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 34 - Aggettivi contratti",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Un caso particolare, è quello degli aggettivi contratti (temi in -εος -εᾱ -εον; -οος -οη -οον; -οος -οον, se a due terminazioni): sono gli aggettivi che indicano materie e colori, i moltiplicativi (doppio ecc.) e i composti di νόος, mente, e di πλοος, navigazione:"
+          },
+          {
+            "type": "paragraph",
+            "text": "a) - Paradigma con il femm. in ᾱ pura lunga."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "Temi:", "colspan": 2 },
+                  { "label": "χρυσεο-/χρυσεα-/χρυσεο- (d'oro)", "colspan": 3 }
+                ],
+                [
+                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "χρυσοῦς",
+                  "χρυσῆ",
+                  "χρυσοῦν"
+                ],
+                ["GEN.", "χρυσοῦ", "χρυσῆς", "χρυσοῦ"],
+                ["DAT.", "χρυσῷ", "χρυσῇ", "χρυσῷ"],
+                ["ACC.", "χρυσοῦν", "χρυσῆν", "χρυσοῦν"],
+                ["VOC.", "χρυσοῦς", "χρυσῆ", "χρυσοῦν"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "χρυσοί",
+                  "χρυσαῖ",
+                  "χρυσᾶ"
+                ],
+                ["GEN.", "χρυσῶν", "χρυσῶν", "χρυσῶν"],
+                ["DAT.", "χρυσοῖς", "χρυσαῖς", "χρυσοῖς"],
+                ["ACC.", "χρυσοῦς", "χρυσᾶς", "χρυσᾶ"],
+                ["VOC.", "χρυσοί", "χρυσαῖ", "χρυσᾶ"]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "b) - Paradigma con il femm. in ᾱ impura lunga (> η)."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  { "label": "Temi:", "colspan": 2 },
+                  { "label": "διπλοο-/διπλοα-/διπλοο- (doppio)", "colspan": 3 }
+                ],
+                [
+                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "διπλοῦς",
+                  "διπλῆ",
+                  "διπλοῦν"
+                ],
+                ["GEN.", "διπλοῦ", "διπλῆς", "διπλοῦ"],
+                ["DAT.", "διπλῷ", "διπλῇ", "διπλῷ"],
+                ["ACC.", "διπλοῦν", "διπλῆν", "διπλοῦν"],
+                ["VOC.", "διπλοῦς", "διπλῆ", "διπλοῦν"],
+                [
+                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "NOM.",
+                  "διπλοί",
+                  "διπλαῖ",
+                  "διπλᾶ"
+                ],
+                ["GEN.", "διπλῶν", "διπλῶν", "διπλῶν"],
+                ["DAT.", "διπλοῖς", "διπλαῖς", "διπλοῖς"],
+                ["ACC.", "διπλοῦς", "διπλᾶς", "διπλᾶ"],
+                ["VOC.", "διπλοί", "διπλαῖ", "διπλᾶ"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "paragraphs": [
+              "a) Gli aggettivi non composti diventano sempre perispomeni, nella contrazione, qualunque sia stata, precedentemente, la posizione dell'accento.",
+              "b) Negli aggettivi composti, parossitoni al NOM. sing., l'accento, in contraddizione con le relative norme, si mantiene inalterato sulla penultima sillaba.",
+              "c) Il femminile degli aggettivi in -οο/-οη/-οο presenta una contrazione irregolare in -η.",
+              "d) Nel femminile degli aggettivi in -εο/-εᾱ/-εο, l'uscita -εα > -ᾱ, se è preceduta da ε, ι, ρ; -εα > -η, in tutti gli altri casi; tuttavia, l'uscita -εαι (NOM./VOC. plur.) > -αι, per analogia.",
+              "e) Nel neutro plurale: -οα > -ᾶ, per analogia; -εα > -ᾶ, per analogia."
+            ]
+          },
+          {
+            "title": "Declinazione attica",
+            "paragraphs": [
+              "Meno importante, per il N.T., è il paradigma degli aggettivi che seguono la declinazione attica (temi uscenti in -ω). Essa, infatti, è rappresentata da un solo aggettivo a due uscite (ma nessun sostantivo): ἵλεως, ἵλεων (cfr. Mt. 16,22 Eb. 8,12) = propizio, misericordioso."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 9º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["Greco", "Italiano", "Note"]
+              ],
+              "bodyRows": [
+                ["ἀγαθός, ή, όν", "buono", ""],
+                ["ἀγαπητός, ή, όν", "diletto", ""],
+                ["ἅγιος, ἁγία, ἅγιον", "santo", ""],
+                ["ἄδηλος, ον", "oscuro", ""],
+                ["ἄδικος, ον", "ingiusto", ""],
+                ["αἰώνιος, ον", "eterno", ""],
+                ["ἄπιστος, ον", "incredulo, non credente", ""],
+                ["βάρβαρος, ον", "barbaro", ""],
+                ["δίκαιος, α, ον", "giusto", ""],
+                ["ἔσχατος, η, ον", "ultimo", ""],
+                ["ἴδιος, ία, ον", "proprio", ""],
+                ["Ἰουδαῖος, α, ον", "giudeo", ""],
+                ["ἰσχυρός, ά, όν", "forte", ""],
+                ["κακός, ή, όν", "cattivo", ""],
+                ["καλός, ή, όν", "bello", ""],
+                ["λοιπός, ή, όν", "rimanente", ""],
+                ["νεκρός, ά, όν", "morto", ""],
+                ["πιστός, ή, όν", "fedele", ""],
+                ["πονηρός, ά, όν", "malvagio", ""],
+                ["πρῶτος, η, ον", "primo", ""],
+                ["φαῦλος, η, ον", "cattivo, senza valore", ""]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Pronomi e aggettivi indefiniti (cfr. § 163)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                ["Greco", "Italiano", "Note"]
+              ],
+              "bodyRows": [
+                ["ἕκαστος, η, ον", "ciascuno", ""],
+                ["ἕτερος, α, ον", "altro (fra due)", ""],
+                ["ἄλλος, η, ο", "altro", "(si declina come un dimostrativo; cfr. § 49)"]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ἕτεροι ἄνθρωποι μένουσιν ἐν τῷ πρώτῳ πλοίῳ. 2. οἱ ἅγιοι τηροῦσιν τὰ ἅγια σάββατα τοῦ θεοῦ. 3. καλοῦμεν τοὺς ἑτέρους νεανίας. 4. οἱ μαθηταὶ μένουσιν ἐν τῇ ἐξουσίᾳ τοῦ δεσπότου. 5. ὁ νεανίας γινώσκει τὰ ἴδια πρόβατα. 6. ἐν τῇ ἐρήμῳ ὁ λαὸς ἀκούει τοὺς λόγους τοῦ προφήτου. 7. οἱ δίκαιοι πιστεύουσι τῷ υἱῷ τοῦ θεοῦ καὶ ζωὴν αἰώνιον ἔχουσιν. 8. δοῦλε ἀγαθὲ καὶ πιστέ, λαμβάνεις τὸν ἴδιον μισθόν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Il Signore fa alzare (risuscita) i morti. 2. Il fratello dell'apostolo ascolta la voce del santo profeta. 3. Il Signore conosce e giudica le azioni malvagie del giovane. 4. Nel regno di Dio i giusti guardano la gloria del figlio di Dio. 5. L'apostolo scrive ai figli diletti della Chiesa."
+            ]
+          }
+        ]
+      }
     ]
   },
   {

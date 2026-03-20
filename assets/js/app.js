@@ -187,6 +187,33 @@ const renderGrammarItemNav = (previousItem, nextItem) => `
   </article>
 `;
 
+const renderGrammarChapterNav = (previousChapter, nextChapter) => {
+  if (!previousChapter && !nextChapter) return "";
+  return `
+    <div class="grammar-breadcrumb-nav">
+      ${
+        previousChapter
+          ? `<button type="button" class="text-link-button" data-grammar-prev-chapter="${escapeHtml(previousChapter.id)}">&larr; ${escapeHtml(getGrammarDisplayLabel(previousChapter))}</button>`
+          : `<span class="grammar-breadcrumb-placeholder" aria-hidden="true"></span>`
+      }
+      ${
+        nextChapter
+          ? `<button type="button" class="text-link-button" data-grammar-next-chapter="${escapeHtml(nextChapter.id)}">${escapeHtml(getGrammarDisplayLabel(nextChapter))} &rarr;</button>`
+          : `<span class="grammar-breadcrumb-placeholder" aria-hidden="true"></span>`
+      }
+    </div>
+  `;
+};
+
+const renderGrammarHeroItemNavButton = (direction, item) => {
+  if (!item) return `<span class="grammar-hero-arrow grammar-hero-arrow-placeholder" aria-hidden="true"></span>`;
+  const isPrevious = direction === "previous";
+  const dataAttribute = isPrevious ? "data-grammar-prev-item" : "data-grammar-next-item";
+  const label = isPrevious ? "Sezione precedente" : "Sezione successiva";
+  const arrow = isPrevious ? "&larr;" : "&rarr;";
+  return `<button type="button" class="secondary-button grammar-hero-arrow" ${dataAttribute}="${escapeHtml(item.id)}" aria-label="${label}">${arrow}</button>`;
+};
+
 const renderGrammarTableCell = (cell, tagName = "td") => {
   const descriptor =
     typeof cell === "object" && cell !== null
@@ -1228,6 +1255,13 @@ const renderGrammar = () => {
   const selectedChapter = navigableChapters.find((item) => item.id === state.grammarSelection.chapter) || null;
   const chapterItems = selectedChapter ? getGrammarChapterItems(selectedChapter) : [];
   const selectedItem = chapterItems.find((item) => item.id === state.grammarSelection.item) || null;
+  const selectedChapterIndex = selectedChapter ? navigableChapters.findIndex((item) => item.id === selectedChapter.id) : -1;
+  const previousChapter = selectedChapterIndex > 0 ? navigableChapters[selectedChapterIndex - 1] : null;
+  const nextChapter =
+    selectedChapterIndex >= 0 && selectedChapterIndex < navigableChapters.length - 1
+      ? navigableChapters[selectedChapterIndex + 1]
+      : null;
+  const chapterNavigationHtml = renderGrammarChapterNav(previousChapter, nextChapter);
 
   if (!selectedChapter) {
     container.innerHTML = `
@@ -1260,7 +1294,7 @@ const renderGrammar = () => {
       <section class="stack grammar-detail">
         <article class="panel grammar-breadcrumb">
           <button type="button" class="text-link-button" data-grammar-back-index>&larr; Torna all'indice</button>
-          <span class="meta">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</span>
+          ${chapterNavigationHtml}
         </article>
 
         <article class="panel grammar-detail-hero">
@@ -1289,6 +1323,18 @@ const renderGrammar = () => {
     container.querySelector("[data-grammar-back-index]")?.addEventListener("click", () => {
       setRoute("grammar");
     });
+    container.querySelectorAll("[data-grammar-prev-chapter]").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const target = event.currentTarget.dataset.grammarPrevChapter || "";
+        setRoute("grammar", { chapter: target });
+      });
+    });
+    container.querySelectorAll("[data-grammar-next-chapter]").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const target = event.currentTarget.dataset.grammarNextChapter || "";
+        setRoute("grammar", { chapter: target });
+      });
+    });
     container.querySelectorAll("[data-grammar-item]").forEach((button) => {
       button.addEventListener("click", () => {
         setRoute("grammar", {
@@ -1304,22 +1350,18 @@ const renderGrammar = () => {
   const childSections = getGrammarChildSections(selectedChapter, selectedItem.title);
   const previousItem = selectedItem.index > 0 ? chapterItems[selectedItem.index - 1] : null;
   const nextItem = selectedItem.index < chapterItems.length - 1 ? chapterItems[selectedItem.index + 1] : null;
-  const navigationHtml = renderGrammarItemNav(previousItem, nextItem);
-
   container.innerHTML = `
     <section class="stack grammar-detail">
       <article class="panel grammar-breadcrumb">
-        <button type="button" class="text-link-button" data-grammar-back-chapter>&larr; Torna alla parte</button>
-        <span class="meta">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</span>
+        <button type="button" class="text-link-button" data-grammar-back-chapter>&larr; Indice della parte</button>
+        ${chapterNavigationHtml}
       </article>
 
-      <article class="panel grammar-detail-hero">
-        <p class="grammar-chapter-kicker">${escapeHtml(getGrammarDisplayLabel(selectedChapter))}</p>
+      <article class="panel grammar-detail-hero grammar-detail-hero-item">
+        ${renderGrammarHeroItemNavButton("previous", previousItem)}
         <h2>${escapeHtml(selectedItem.title)}</h2>
-        <p>${escapeHtml(selectedChapter.title)}</p>
+        ${renderGrammarHeroItemNavButton("next", nextItem)}
       </article>
-
-      ${navigationHtml}
 
       ${
         selectedSection
@@ -1333,13 +1375,23 @@ const renderGrammar = () => {
             </article>
           `
       }
-
-      ${navigationHtml}
     </section>
   `;
 
   container.querySelector("[data-grammar-back-chapter]")?.addEventListener("click", () => {
     setRoute("grammar", { chapter: selectedChapter.id });
+  });
+  container.querySelectorAll("[data-grammar-prev-chapter]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.currentTarget.dataset.grammarPrevChapter || "";
+      setRoute("grammar", { chapter: target });
+    });
+  });
+  container.querySelectorAll("[data-grammar-next-chapter]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.currentTarget.dataset.grammarNextChapter || "";
+      setRoute("grammar", { chapter: target });
+    });
   });
   container.querySelectorAll("[data-grammar-prev-item]").forEach((button) => {
     button.addEventListener("click", (event) => {

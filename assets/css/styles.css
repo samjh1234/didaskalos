@@ -708,6 +708,20 @@ select {
   gap: 0.75rem;
 }
 
+.grammar-breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.grammar-breadcrumb-placeholder {
+  display: inline-block;
+  min-width: 1px;
+}
+
 .grammar-part-head h3,
 .grammar-section-card h3 {
   margin: 0;
@@ -1049,6 +1063,30 @@ select {
 
 .grammar-detail-hero {
   background: linear-gradient(180deg, rgba(255, 250, 241, 0.96), rgba(246, 234, 206, 0.88));
+}
+
+.grammar-detail-hero-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grammar-detail-hero-item h2 {
+  margin: 0;
+  text-align: center;
+  grid-column: 2;
+}
+
+.grammar-hero-arrow {
+  min-width: 2.75rem;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.grammar-hero-arrow-placeholder {
+  visibility: hidden;
 }
 
 .grammar-section-card {
@@ -1533,6 +1571,17 @@ code {
   .grammar-breadcrumb {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .grammar-breadcrumb-nav {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .grammar-detail-hero-item {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.7rem;
   }
 
   .grammar-part-actions {
