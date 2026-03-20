@@ -35,30 +35,174 @@
           "Per iniziare bene la lettura conviene imparare insieme nome, forma maiuscola, forma minuscola e pronunzia di ogni lettera."
         ],
         "alphabetTable": [
-          ["Alfa", "Α", "α", "a", ""],
-          ["Beta", "Β", "β", "b", ""],
-          ["Gamma", "Γ", "γ", "g", "davanti a gutturale ha valore nasale"],
-          ["Delta", "Δ", "δ", "d", ""],
-          ["Epsilon", "Ε", "ε", "e", "breve"],
-          ["Zeta", "Ζ", "ζ", "z (ds)", "dolce"],
-          ["Eta", "Η", "η", "e", "lunga"],
-          ["Theta", "Θ", "θ", "th", "simile al th inglese"],
-          ["Iota", "Ι", "ι", "i", ""],
-          ["Kappa", "Κ", "κ", "k", ""],
-          ["Lambda", "Λ", "λ", "l", ""],
-          ["Mi", "Μ", "μ", "m", ""],
-          ["Ni", "Ν", "ν", "n", ""],
-          ["Xi (Csi)", "Ξ", "ξ", "x (cs)", ""],
-          ["Omicron", "Ο", "ο", "o", "breve"],
-          ["Pi", "Π", "π", "p", ""],
-          ["Rho", "Ρ", "ρ", "r (rh)", "rh all'inizio di parola"],
-          ["Sigma", "Σ", "σ / ς", "s", ""],
-          ["Tau", "Τ", "τ", "t", ""],
-          ["Ypsilon", "Υ", "υ", "u", "u francese / ü tedesca"],
-          ["Phi (Fi)", "Φ", "φ", "ph (f)", ""],
-          ["Chi", "Χ", "χ", "ch", "aspirata"],
-          ["Psi", "Ψ", "ψ", "ps", ""],
-          ["Omega", "Ω", "ω", "o", "lunga"]
+          [
+            "Alfa",
+            "Α",
+            "α",
+            "a",
+            ""
+          ],
+          [
+            "Beta",
+            "Β",
+            "β",
+            "b",
+            ""
+          ],
+          [
+            "Gamma",
+            "Γ",
+            "γ",
+            "g",
+            "davanti a gutturale ha valore nasale"
+          ],
+          [
+            "Delta",
+            "Δ",
+            "δ",
+            "d",
+            ""
+          ],
+          [
+            "Epsilon",
+            "Ε",
+            "ε",
+            "e",
+            "breve"
+          ],
+          [
+            "Zeta",
+            "Ζ",
+            "ζ",
+            "z (ds)",
+            "dolce"
+          ],
+          [
+            "Eta",
+            "Η",
+            "η",
+            "e",
+            "lunga"
+          ],
+          [
+            "Theta",
+            "Θ",
+            "θ",
+            "th",
+            "simile al th inglese"
+          ],
+          [
+            "Iota",
+            "Ι",
+            "ι",
+            "i",
+            ""
+          ],
+          [
+            "Kappa",
+            "Κ",
+            "κ",
+            "k",
+            ""
+          ],
+          [
+            "Lambda",
+            "Λ",
+            "λ",
+            "l",
+            ""
+          ],
+          [
+            "Mi",
+            "Μ",
+            "μ",
+            "m",
+            ""
+          ],
+          [
+            "Ni",
+            "Ν",
+            "ν",
+            "n",
+            ""
+          ],
+          [
+            "Xi (Csi)",
+            "Ξ",
+            "ξ",
+            "x (cs)",
+            ""
+          ],
+          [
+            "Omicron",
+            "Ο",
+            "ο",
+            "o",
+            "breve"
+          ],
+          [
+            "Pi",
+            "Π",
+            "π",
+            "p",
+            ""
+          ],
+          [
+            "Rho",
+            "Ρ",
+            "ρ",
+            "r (rh)",
+            "rh all'inizio di parola"
+          ],
+          [
+            "Sigma",
+            "Σ",
+            "σ / ς",
+            "s",
+            ""
+          ],
+          [
+            "Tau",
+            "Τ",
+            "τ",
+            "t",
+            ""
+          ],
+          [
+            "Ypsilon",
+            "Υ",
+            "υ",
+            "u",
+            "u francese / ü tedesca"
+          ],
+          [
+            "Phi (Fi)",
+            "Φ",
+            "φ",
+            "ph (f)",
+            ""
+          ],
+          [
+            "Chi",
+            "Χ",
+            "χ",
+            "ch",
+            "aspirata"
+          ],
+          [
+            "Psi",
+            "Ψ",
+            "ψ",
+            "ps",
+            ""
+          ],
+          [
+            "Omega",
+            "Ω",
+            "ω",
+            "o",
+            "lunga"
+          ]
         ],
         "plainPoints": [
           "1 All'inizio o nel corpo della parola.",
@@ -119,10 +263,22 @@
           "intro": "Si osservi, per chiarezza, il seguente specchietto riassuntivo:",
           "headerRows": [
             [
-              { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
-              { "label": "MUTE", "colspan": 3 },
-              { "label": "DOPPIE" },
-              { "label": "SONANTI", "colspan": 3 }
+              {
+                "label": "",
+                "rowspan": 2,
+                "className": "grammar-table-corner"
+              },
+              {
+                "label": "MUTE",
+                "colspan": 3
+              },
+              {
+                "label": "DOPPIE"
+              },
+              {
+                "label": "SONANTI",
+                "colspan": 3
+              }
             ],
             [
               "tenui",
@@ -136,17 +292,27 @@
           ],
           "bodyRows": [
             [
-              { "label": "Gutturali", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Gutturali",
+                "className": "grammar-table-rowlabel"
+              },
               "κ",
               "γ",
               "χ",
               "ξ",
               "σ, ς",
               "μ",
-              { "label": "λ\nρ", "rowspan": 3, "className": "grammar-table-stacked" }
+              {
+                "label": "λ\nρ",
+                "rowspan": 3,
+                "className": "grammar-table-stacked"
+              }
             ],
             [
-              { "label": "Labiali", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Labiali",
+                "className": "grammar-table-rowlabel"
+              },
               "π",
               "β",
               "φ",
@@ -155,7 +321,10 @@
               "ν"
             ],
             [
-              { "label": "Dentali", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Dentali",
+                "className": "grammar-table-rowlabel"
+              },
               "τ",
               "δ",
               "θ",
@@ -175,12 +344,12 @@
         "verses": [
           "1. Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς ἦν ὁ λόγος.",
           "2. οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν θεόν.",
-          "3. \u03c0\u03ac\u03bd\u03c4\u03b1 \u03b4\u03b9\u2019 \u03b1\u1f50\u03c4\u03bf\u1fe6 \u1f10\u03b3\u03ad\u03bd\u03b5\u03c4\u03bf, \u03ba\u03b1\u1f76 \u03c7\u03c9\u03c1\u1f76\u03c2 \u03b1\u1f50\u03c4\u03bf\u1fe6 \u1f10\u03b3\u03ad\u03bd\u03b5\u03c4\u03bf \u03bf\u1f50\u03b4\u1f72 \u1f15\u03bd. \u1f43 \u03b3\u03ad\u03b3\u03bf\u03bd\u03b5\u03bd",
-          "4. \u1f10\u03bd \u03b1\u1f50\u03c4\u1ff7 \u03b6\u03c9\u1f74 \u1f26\u03bd, \u03ba\u03b1\u1f76 \u1f21 \u03b6\u03c9\u1f74 \u1f26\u03bd \u03c4\u1f78 \u03c6\u1ff6\u03c2 \u03c4\u1ff6\u03bd \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03c9\u03bd\u00b7",
-          "5. \u03ba\u03b1\u1f76 \u03c4\u1f78 \u03c6\u1ff6\u03c2 \u1f10\u03bd \u03c4\u1fc7 \u03c3\u03ba\u03bf\u03c4\u03af\u1fb3 \u03c6\u03b1\u03af\u03bd\u03b5\u03b9, \u03ba\u03b1\u1f76 \u1f21 \u03c3\u03ba\u03bf\u03c4\u03af\u03b1 \u03b1\u1f50\u03c4\u1f78 \u03bf\u1f50 \u03ba\u03b1\u03c4\u03ad\u03bb\u03b1\u03b2\u03b5\u03bd.",
-          "6. \u1f18\u03b3\u03ad\u03bd\u03b5\u03c4\u03bf \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f00\u03c0\u03b5\u03c3\u03c4\u03b1\u03bb\u03bc\u03ad\u03bd\u03bf\u03c2 \u03c0\u03b1\u03c1\u1f70 \u03b8\u03b5\u03bf\u1fe6, \u1f44\u03bd\u03bf\u03bc\u03b1 \u03b1\u1f50\u03c4\u1ff7 \u1f38\u03c9\u03ac\u03bd\u03bd\u03b7\u03c2\u00b7",
-          "7. \u03bf\u1f57\u03c4\u03bf\u03c2 \u1f26\u03bb\u03b8\u03b5\u03bd \u03b5\u1f30\u03c2 \u03bc\u03b1\u03c1\u03c4\u03c5\u03c1\u03af\u03b1\u03bd, \u1f35\u03bd\u03b1 \u03bc\u03b1\u03c1\u03c4\u03c5\u03c1\u03ae\u03c3\u1fc3 \u03c0\u03b5\u03c1\u1f76 \u03c4\u03bf\u1fe6 \u03c6\u03c9\u03c4\u03cc\u03c2, \u1f35\u03bd\u03b1 \u03c0\u03ac\u03bd\u03c4\u03b5\u03c2 \u03c0\u03b9\u03c3\u03c4\u03b5\u03cd\u03c3\u03c9\u03c3\u03b9\u03bd \u03b4\u03b9\u2019 \u03b1\u1f50\u03c4\u03bf\u1fe6.",
-          "8. \u03bf\u1f50\u03ba \u1f26\u03bd \u1f10\u03ba\u03b5\u1fd6\u03bd\u03bf\u03c2 \u03c4\u1f78 \u03c6\u1ff6\u03c2, \u1f00\u03bb\u03bb\u2019 \u1f35\u03bd\u03b1 \u03bc\u03b1\u03c1\u03c4\u03c5\u03c1\u03ae\u03c3\u1fc3 \u03c0\u03b5\u03c1\u1f76 \u03c4\u03bf\u1fe6 \u03c6\u03c9\u03c4\u03cc\u03c2."
+          "3. πάντα δι’ αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν. ὃ γέγονεν",
+          "4. ἐν αὐτῷ ζωὴ ἦν, καὶ ἡ ζωὴ ἦν τὸ φῶς τῶν ἀνθρώπων·",
+          "5. καὶ τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν.",
+          "6. Ἐγένετο ἄνθρωπος ἀπεσταλμένος παρὰ θεοῦ, ὄνομα αὐτῷ Ἰωάννης·",
+          "7. οὗτος ἦλθεν εἰς μαρτυρίαν, ἵνα μαρτυρήσῃ περὶ τοῦ φωτός, ἵνα πάντες πιστεύσωσιν δι’ αὐτοῦ.",
+          "8. οὐκ ἦν ἐκεῖνος τὸ φῶς, ἀλλ’ ἵνα μαρτυρήσῃ περὶ τοῦ φωτός."
         ]
       },
       {
@@ -216,9 +385,23 @@
             "compactTable": {
               "className": "grammar-diphthong-table",
               "rows": [
-                ["αι", "αυ"],
-                ["ει", "ευ"],
-                ["οι", "ου", { "label": "(pronuncia come u italiana)", "className": "grammar-table-note-cell", "colspan": 2 }]
+                [
+                  "αι",
+                  "αυ"
+                ],
+                [
+                  "ει",
+                  "ευ"
+                ],
+                [
+                  "οι",
+                  "ου",
+                  {
+                    "label": "(pronuncia come u italiana)",
+                    "className": "grammar-table-note-cell",
+                    "colspan": 2
+                  }
+                ]
               ]
             },
             "compactTableAfterParagraph": 1,
@@ -342,14 +525,44 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["tema verbale", "ampliamento", "Pres. Indic.", ""]
+                [
+                  "tema verbale",
+                  "ampliamento",
+                  "Pres. Indic.",
+                  ""
+                ]
               ],
               "bodyRows": [
-                ["δοκ-", "-ε-", "δοκέω", "penso"],
-                ["τεμ-", "-ν-", "τέμνω", "taglio"],
-                ["ἁμαρτ-", "-αν-", "ἁμαρτάνω", "pecco"],
-                ["γηρα-", "-σκ-", "γηράσκω", "invecchio"],
-                ["εὑρ-", "-ισκ-", "εὑρίσκω", "trovo"]
+                [
+                  "δοκ-",
+                  "-ε-",
+                  "δοκέω",
+                  "penso"
+                ],
+                [
+                  "τεμ-",
+                  "-ν-",
+                  "τέμνω",
+                  "taglio"
+                ],
+                [
+                  "ἁμαρτ-",
+                  "-αν-",
+                  "ἁμαρτάνω",
+                  "pecco"
+                ],
+                [
+                  "γηρα-",
+                  "-σκ-",
+                  "γηράσκω",
+                  "invecchio"
+                ],
+                [
+                  "εὑρ-",
+                  "-ισκ-",
+                  "εὑρίσκω",
+                  "trovo"
+                ]
               ]
             }
           },
@@ -361,21 +574,99 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["tipo", "esito", "T.V.", "Presente", ""]
+                [
+                  "tipo",
+                  "esito",
+                  "T.V.",
+                  "Presente",
+                  ""
+                ]
               ],
               "bodyRows": [
-                ["Labiale + j", "πτ", "κλεπ-", "κλέπτω", "rubo"],
-                ["Dentale + j", "ζ", "κομιδ-", "κομίζω", "porto"],
-                ["Dentale + j", "σσ", "πλαθ-", "πλάσσω", "plasmo"],
-                ["Gutturale + j", "ζ", "κραγ-", "κράζω", "grido"],
-                ["Gutturale + j", "σσ", "ταγ-", "τάσσω", "ordino"],
-                ["Liquida + j", "λλ", "βαλ-", "βάλλω", "getto"],
-                ["-αν + j", "αιν", "φαν-", "φαίνω", "mostro"],
-                ["-αρ + j", "αιρ", "ἀρ-", "αἴρω", "alzo"],
-                ["-εν + j", "ειν", "κτεν-", "κτείνω", "uccido"],
-                ["-ερ + j", "ειρ", "φθερ-", "φθείρω", "rovino"],
-                ["-ῐν + j", "ῑν", "κλιν-", "κλίνω", "piego"],
-                ["-ῠν + j", "ῡν", "πλυν-", "πλύνω", "lavo"]
+                [
+                  "Labiale + j",
+                  "πτ",
+                  "κλεπ-",
+                  "κλέπτω",
+                  "rubo"
+                ],
+                [
+                  "Dentale + j",
+                  "ζ",
+                  "κομιδ-",
+                  "κομίζω",
+                  "porto"
+                ],
+                [
+                  "Dentale + j",
+                  "σσ",
+                  "πλαθ-",
+                  "πλάσσω",
+                  "plasmo"
+                ],
+                [
+                  "Gutturale + j",
+                  "ζ",
+                  "κραγ-",
+                  "κράζω",
+                  "grido"
+                ],
+                [
+                  "Gutturale + j",
+                  "σσ",
+                  "ταγ-",
+                  "τάσσω",
+                  "ordino"
+                ],
+                [
+                  "Liquida + j",
+                  "λλ",
+                  "βαλ-",
+                  "βάλλω",
+                  "getto"
+                ],
+                [
+                  "-αν + j",
+                  "αιν",
+                  "φαν-",
+                  "φαίνω",
+                  "mostro"
+                ],
+                [
+                  "-αρ + j",
+                  "αιρ",
+                  "ἀρ-",
+                  "αἴρω",
+                  "alzo"
+                ],
+                [
+                  "-εν + j",
+                  "ειν",
+                  "κτεν-",
+                  "κτείνω",
+                  "uccido"
+                ],
+                [
+                  "-ερ + j",
+                  "ειρ",
+                  "φθερ-",
+                  "φθείρω",
+                  "rovino"
+                ],
+                [
+                  "-ῐν + j",
+                  "ῑν",
+                  "κλιν-",
+                  "κλίνω",
+                  "piego"
+                ],
+                [
+                  "-ῠν + j",
+                  "ῡν",
+                  "πλυν-",
+                  "πλύνω",
+                  "lavo"
+                ]
               ]
             }
           },
@@ -400,12 +691,28 @@
             "table": {
               "intro": "Ess.:",
               "headerRows": [
-                ["grado zero", "grado normale", "grado forte"]
+                [
+                  "grado zero",
+                  "grado normale",
+                  "grado forte"
+                ]
               ],
               "bodyRows": [
-                ["ἔλιπον\nlasciai", "λείπω\nlascio", "λέλοιπα\nho lasciato"],
-                ["ἔπαθον\npatii", "πένθος\ndolore", "πέπονθα\nho sofferto"],
-                ["ἰδεῖν\nvedere", "εἶδον\nvidi", "οἶδα\nso"]
+                [
+                  "ἔλιπον\nlasciai",
+                  "λείπω\nlascio",
+                  "λέλοιπα\nho lasciato"
+                ],
+                [
+                  "ἔπαθον\npatii",
+                  "πένθος\ndolore",
+                  "πέπονθα\nho sofferto"
+                ],
+                [
+                  "ἰδεῖν\nvedere",
+                  "εἶδον\nvidi",
+                  "οἶδα\nso"
+                ]
               ]
             }
           }
@@ -420,9 +727,19 @@
               "className": "grammar-table-apophonia",
               "headerRows": [
                 [
-                  { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
-                  { "label": "grado", "colspan": 3 },
-                  { "label": "Esempi", "colspan": 3 }
+                  {
+                    "label": "",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "grado",
+                    "colspan": 3
+                  },
+                  {
+                    "label": "Esempi",
+                    "colspan": 3
+                  }
                 ],
                 [
                   "ridotto",
@@ -435,38 +752,81 @@
               ],
               "bodyRows": [
                 [
-                  { "label": "I", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "I",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "—",
                   "ε",
                   "ο",
-                  { "label": "γί-γν-ο-μαι,\nsono", "className": "grammar-table-stacked" },
-                  { "label": "ἐ-γεν-όμην,\nfui", "className": "grammar-table-stacked" },
-                  { "label": "γέ-γον-α,\nsono stato", "className": "grammar-table-stacked" }
+                  {
+                    "label": "γί-γν-ο-μαι,\nsono",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ἐ-γεν-όμην,\nfui",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "γέ-γον-α,\nsono stato",
+                    "className": "grammar-table-stacked"
+                  }
                 ],
                 [
                   "ι",
                   "ει",
                   "οι",
-                  { "label": "ἔ-λιπ-ον,\nlasciai", "className": "grammar-table-stacked" },
-                  { "label": "λείπ-ω,\nlascio", "className": "grammar-table-stacked" },
-                  { "label": "λέ-λοιπ-α,\nho lasciato", "className": "grammar-table-stacked" }
+                  {
+                    "label": "ἔ-λιπ-ον,\nlasciai",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "λείπ-ω,\nlascio",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "λέ-λοιπ-α,\nho lasciato",
+                    "className": "grammar-table-stacked"
+                  }
                 ],
                 [
                   "υ",
                   "ευ",
                   "ευ (ου)",
-                  { "label": "ἔ-φυγ-ον,\nfuggii", "className": "grammar-table-stacked" },
-                  { "label": "φεύγ-ω,\nfuggo", "className": "grammar-table-stacked" },
-                  { "label": "πέ-φευγ-α,\nsono fuggito", "className": "grammar-table-stacked" }
+                  {
+                    "label": "ἔ-φυγ-ον,\nfuggii",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "φεύγ-ω,\nfuggo",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "πέ-φευγ-α,\nsono fuggito",
+                    "className": "grammar-table-stacked"
+                  }
                 ],
                 [
-                  { "label": "II", "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "II",
+                    "className": "grammar-table-rowlabel"
+                  },
                   "ᾰ",
                   "η",
                   "ω",
-                  { "label": "ἐρ-ράγ-ην,\nfui spezzato", "className": "grammar-table-stacked" },
-                  { "label": "ῥήγ-νυμι,\nspezzo", "className": "grammar-table-stacked" },
-                  { "label": "ἔ-ρρωγ-α,\nsono spezzato¹", "className": "grammar-table-stacked" }
+                  {
+                    "label": "ἐρ-ράγ-ην,\nfui spezzato",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ῥήγ-νυμι,\nspezzo",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ἔ-ρρωγ-α,\nsono spezzato¹",
+                    "className": "grammar-table-stacked"
+                  }
                 ]
               ],
               "notes": [
@@ -483,11 +843,34 @@
             "table": {
               "className": "grammar-table-apophonia-shifts",
               "rows": [
-                ["α", ">", { "label": "η (oppure ᾱ, se è preceduta da ε, ι, ρ)", "className": "grammar-table-note-cell" }],
-                ["ε", ">", "η"],
-                ["ῐ", ">", "ῑ"],
-                ["ῠ", ">", "ῡ"],
-                ["ο", ">", "ω"]
+                [
+                  "α",
+                  ">",
+                  {
+                    "label": "η (oppure ᾱ, se è preceduta da ε, ι, ρ)",
+                    "className": "grammar-table-note-cell"
+                  }
+                ],
+                [
+                  "ε",
+                  ">",
+                  "η"
+                ],
+                [
+                  "ῐ",
+                  ">",
+                  "ῑ"
+                ],
+                [
+                  "ῠ",
+                  ">",
+                  "ῡ"
+                ],
+                [
+                  "ο",
+                  ">",
+                  "ω"
+                ]
               ]
             }
           },
@@ -497,8 +880,14 @@
               "className": "grammar-example-apophonia",
               "label": "Ess.:",
               "rows": [
-                { "key": "(α/η) =", "value": "τιμάω (Pres.) - τιμήσω (Fut.) - ἐτίμησα (Aor.)" },
-                { "key": "(η/ε) =", "value": "πατήρ (NOM.) - πατέρα (ACC.)" }
+                {
+                  "key": "(α/η) =",
+                  "value": "τιμάω (Pres.) - τιμήσω (Fut.) - ἐτίμησα (Aor.)"
+                },
+                {
+                  "key": "(η/ε) =",
+                  "value": "πατήρ (NOM.) - πατέρα (ACC.)"
+                }
               ]
             }
           },
@@ -519,10 +908,29 @@
             "type": "compactTable",
             "table": {
               "rows": [
-                ["ᾰ", ">", { "label": "η / ᾱ", "className": "grammar-table-note-cell" }],
-                ["ε", ">", "ει"],
-                ["ο", ">", "ου"],
-                ["ῐ, ῠ", ">", "ῑ, ῡ"]
+                [
+                  "ᾰ",
+                  ">",
+                  {
+                    "label": "η / ᾱ",
+                    "className": "grammar-table-note-cell"
+                  }
+                ],
+                [
+                  "ε",
+                  ">",
+                  "ει"
+                ],
+                [
+                  "ο",
+                  ">",
+                  "ου"
+                ],
+                [
+                  "ῐ, ῠ",
+                  ">",
+                  "ῑ, ῡ"
+                ]
               ]
             }
           },
@@ -543,15 +951,36 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["Numero e persone", "Desinenze attive primarie"]
+                [
+                  "Numero e persone",
+                  "Desinenze attive primarie"
+                ]
               ],
               "bodyRows": [
-                ["Sing. I pers.", "— (ω = voc. tem. allungata)"],
-                ["Sing. II pers.", "-ις"],
-                ["Sing. III pers.", "-ι"],
-                ["Plur. I pers.", "-μεν"],
-                ["Plur. II pers.", "-τε"],
-                ["Plur. III pers.", "-ντι > νσι > ουσι"]
+                [
+                  "Sing. I pers.",
+                  "— (ω = voc. tem. allungata)"
+                ],
+                [
+                  "Sing. II pers.",
+                  "-ις"
+                ],
+                [
+                  "Sing. III pers.",
+                  "-ι"
+                ],
+                [
+                  "Plur. I pers.",
+                  "-μεν"
+                ],
+                [
+                  "Plur. II pers.",
+                  "-τε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "-ντι > νσι > ουσι"
+                ]
               ]
             }
           },
@@ -559,15 +988,43 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["Numero e persone", "Forma", "Traduzione"]
+                [
+                  "Numero e persone",
+                  "Forma",
+                  "Traduzione"
+                ]
               ],
               "bodyRows": [
-                ["Sing. I pers.", "λύ-ω", "(io) sciolgo"],
-                ["Sing. II pers.", "λύ-ε-ις", "(tu) sciogli"],
-                ["Sing. III pers.", "λύ-ε-ι", "(egli/ella) scioglie"],
-                ["Plur. I pers.", "λύ-ο-μεν", "(noi) sciogliamo"],
-                ["Plur. II pers.", "λύ-ε-τε", "(voi) sciogliete"],
-                ["Plur. III pers.", "λύ-ουσι/ν", "(essi) sciolgono"]
+                [
+                  "Sing. I pers.",
+                  "λύ-ω",
+                  "(io) sciolgo"
+                ],
+                [
+                  "Sing. II pers.",
+                  "λύ-ε-ις",
+                  "(tu) sciogli"
+                ],
+                [
+                  "Sing. III pers.",
+                  "λύ-ε-ι",
+                  "(egli/ella) scioglie"
+                ],
+                [
+                  "Plur. I pers.",
+                  "λύ-ο-μεν",
+                  "(noi) sciogliamo"
+                ],
+                [
+                  "Plur. II pers.",
+                  "λύ-ε-τε",
+                  "(voi) sciogliete"
+                ],
+                [
+                  "Plur. III pers.",
+                  "λύ-ουσι/ν",
+                  "(essi) sciolgono"
+                ]
               ]
             }
           },
@@ -621,18 +1078,68 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Greco", "Italiano"]
+            [
+              "Greco",
+              "Italiano",
+              "Greco",
+              "Italiano"
+            ]
           ],
           "bodyRows": [
-            ["ἀκούω", "ascolto (acustica)", "ἐσθίω", "mangio (commestibile)"],
-            ["ἀποθνῄσκω", "muoio", "εὑρίσκω", "trovo (euristico)"],
-            ["ἀποστέλλω", "mando (apostolo)", "ἔχω", "ho"],
-            ["βάλλω", "getto (balistica)", "κρίνω", "giudico (criterio, critico)"],
-            ["βλέπω", "guardo (blefarite)", "λαμβάνω", "prendo, ricevo (sillabo)"],
-            ["γινώσκω", "conosco", "λέγω", "dico (prolegomeni)"],
-            ["γράφω", "scrivo (grafia ecc.)", "μένω", "rimango"],
-            ["διδάσκω", "insegno (didattica)", "πιστεύω", "credo, ho fede"],
-            ["ἐγείρω", "sveglio, mi alzo, faccio alzare, risuscito", "σῴζω", "salvo"]
+            [
+              "ἀκούω",
+              "ascolto (acustica)",
+              "ἐσθίω",
+              "mangio (commestibile)"
+            ],
+            [
+              "ἀποθνῄσκω",
+              "muoio",
+              "εὑρίσκω",
+              "trovo (euristico)"
+            ],
+            [
+              "ἀποστέλλω",
+              "mando (apostolo)",
+              "ἔχω",
+              "ho"
+            ],
+            [
+              "βάλλω",
+              "getto (balistica)",
+              "κρίνω",
+              "giudico (criterio, critico)"
+            ],
+            [
+              "βλέπω",
+              "guardo (blefarite)",
+              "λαμβάνω",
+              "prendo, ricevo (sillabo)"
+            ],
+            [
+              "γινώσκω",
+              "conosco",
+              "λέγω",
+              "dico (prolegomeni)"
+            ],
+            [
+              "γράφω",
+              "scrivo (grafia ecc.)",
+              "μένω",
+              "rimango"
+            ],
+            [
+              "διδάσκω",
+              "insegno (didattica)",
+              "πιστεύω",
+              "credo, ho fede"
+            ],
+            [
+              "ἐγείρω",
+              "sveglio, mi alzo, faccio alzare, risuscito",
+              "σῴζω",
+              "salvo"
+            ]
           ]
         },
         "subsections": [
@@ -715,14 +1222,38 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["Caso", "Funzione principale", "Esempio"]
+                [
+                  "Caso",
+                  "Funzione principale",
+                  "Esempio"
+                ]
               ],
               "bodyRows": [
-                ["Nominativo", "per il soggetto.", "Es.: Dio (soggetto) è amore."],
-                ["Genitivo", "per il compl. di specificazione (ed altre funzioni).", "Es.: La parola del Maestro (compl. specificazione) è vera."],
-                ["Dativo", "per il compl. di termine (ed altre funzioni).", "Es.: Offriamo un sacrificio al Signore (compl. di termine)."],
-                ["Accusativo", "per il compl. oggetto (ed altre funzioni).", "Es.: Amiamo il prossimo (compl. oggetto)."],
-                ["Vocativo", "per il compl. di vocazione.", "Es.: O Dio (compl. di vocazione), noi ti invochiamo."]
+                [
+                  "Nominativo",
+                  "per il soggetto.",
+                  "Es.: Dio (soggetto) è amore."
+                ],
+                [
+                  "Genitivo",
+                  "per il compl. di specificazione (ed altre funzioni).",
+                  "Es.: La parola del Maestro (compl. specificazione) è vera."
+                ],
+                [
+                  "Dativo",
+                  "per il compl. di termine (ed altre funzioni).",
+                  "Es.: Offriamo un sacrificio al Signore (compl. di termine)."
+                ],
+                [
+                  "Accusativo",
+                  "per il compl. oggetto (ed altre funzioni).",
+                  "Es.: Amiamo il prossimo (compl. oggetto)."
+                ],
+                [
+                  "Vocativo",
+                  "per il compl. di vocazione.",
+                  "Es.: O Dio (compl. di vocazione), noi ti invochiamo."
+                ]
               ]
             }
           },
@@ -751,29 +1282,73 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["Numero", "Caso", "M.", "F.", "N."]
+                [
+                  "Numero",
+                  "Caso",
+                  "M.",
+                  "F.",
+                  "N."
+                ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 4, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "ὁ",
                   "ἡ",
                   "τό"
                 ],
-                ["GEN.", "τοῦ", "τῆς", "τοῦ"],
-                ["DAT.", "τῷ", "τῇ", "τῷ"],
-                ["ACC.", "τόν", "τήν", "τό"],
                 [
-                  { "label": "Plur.", "rowspan": 4, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "τοῦ",
+                  "τῆς",
+                  "τοῦ"
+                ],
+                [
+                  "DAT.",
+                  "τῷ",
+                  "τῇ",
+                  "τῷ"
+                ],
+                [
+                  "ACC.",
+                  "τόν",
+                  "τήν",
+                  "τό"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "οἱ",
                   "αἱ",
                   "τά"
                 ],
-                ["GEN.", "τῶν", "τῶν", "τῶν"],
-                ["DAT.", "τοῖς", "ταῖς", "τοῖς"],
-                ["ACC.", "τούς", "τάς", "τά"]
+                [
+                  "GEN.",
+                  "τῶν",
+                  "τῶν",
+                  "τῶν"
+                ],
+                [
+                  "DAT.",
+                  "τοῖς",
+                  "ταῖς",
+                  "τοῖς"
+                ],
+                [
+                  "ACC.",
+                  "τούς",
+                  "τάς",
+                  "τά"
+                ]
               ],
               "notes": [
                 "1 Non sempre il genere di un nome greco corrisponde a quello del corrispettivo termine italiano.",
@@ -822,31 +1397,85 @@
             "table": {
               "intro": "Tema: ἱππο- (cavallo)",
               "headerRows": [
-                ["Numero", "Caso", "Articolo", "Forma", "Valore"]
+                [
+                  "Numero",
+                  "Caso",
+                  "Articolo",
+                  "Forma",
+                  "Valore"
+                ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "ὁ",
                   "ἵππος",
                   "il cavallo (soggetto)"
                 ],
-                ["GEN.", "τοῦ", "ἵππου", "del cavallo"],
-                ["DAT.", "τῷ", "ἵππῳ", "al cavallo"],
-                ["ACC.", "τόν", "ἵππον", "il cavallo (complemento oggetto)"],
-                ["VOC.", "(ὦ)", "ἵππε", "o cavallo"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "τοῦ",
+                  "ἵππου",
+                  "del cavallo"
+                ],
+                [
+                  "DAT.",
+                  "τῷ",
+                  "ἵππῳ",
+                  "al cavallo"
+                ],
+                [
+                  "ACC.",
+                  "τόν",
+                  "ἵππον",
+                  "il cavallo (complemento oggetto)"
+                ],
+                [
+                  "VOC.",
+                  "(ὦ)",
+                  "ἵππε",
+                  "o cavallo"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "οἱ",
                   "ἵπποι",
                   "i cavalli (soggetto)"
                 ],
-                ["GEN.", "τῶν", "ἵππων", "dei cavalli"],
-                ["DAT.", "τοῖς", "ἵπποις", "ai cavalli"],
-                ["ACC.", "τούς", "ἵππους", "i cavalli (complemento oggetto)"],
-                ["VOC.", "(ὦ)", "ἵπποι", "o cavalli"]
+                [
+                  "GEN.",
+                  "τῶν",
+                  "ἵππων",
+                  "dei cavalli"
+                ],
+                [
+                  "DAT.",
+                  "τοῖς",
+                  "ἵπποις",
+                  "ai cavalli"
+                ],
+                [
+                  "ACC.",
+                  "τούς",
+                  "ἵππους",
+                  "i cavalli (complemento oggetto)"
+                ],
+                [
+                  "VOC.",
+                  "(ὦ)",
+                  "ἵπποι",
+                  "o cavalli"
+                ]
               ]
             }
           }
@@ -872,11 +1501,25 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
-                  { "label": "", "rowspan": 2, "className": "grammar-table-corner" },
-                  { "label": "Nomi con accento acuto sull'ultima sillaba" },
-                  { "label": "Nomi con accento circonflesso sulla penultima" },
-                  { "label": "Nomi con accento acuto sulla terzultima" }
+                  {
+                    "label": "",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "Nomi con accento acuto sull'ultima sillaba"
+                  },
+                  {
+                    "label": "Nomi con accento circonflesso sulla penultima"
+                  },
+                  {
+                    "label": "Nomi con accento acuto sulla terzultima"
+                  }
                 ],
                 [
                   "Temi: λαο- (popolo)",
@@ -886,27 +1529,75 @@
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "λαός",
                   "δοῦλος",
                   "ἀπόστολος"
                 ],
-                ["GEN.", "λαοῦ", "δούλου", "ἀποστόλου"],
-                ["DAT.", "λαῷ", "δούλῳ", "ἀποστόλῳ"],
-                ["ACC.", "λαόν", "δοῦλον", "ἀπόστολον"],
-                ["VOC.", "λαέ", "δοῦλε", "ἀπόστολε"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "λαοῦ",
+                  "δούλου",
+                  "ἀποστόλου"
+                ],
+                [
+                  "DAT.",
+                  "λαῷ",
+                  "δούλῳ",
+                  "ἀποστόλῳ"
+                ],
+                [
+                  "ACC.",
+                  "λαόν",
+                  "δοῦλον",
+                  "ἀπόστολον"
+                ],
+                [
+                  "VOC.",
+                  "λαέ",
+                  "δοῦλε",
+                  "ἀπόστολε"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "λαοί",
                   "δοῦλοι",
                   "ἀπόστολοι"
                 ],
-                ["GEN.", "λαῶν", "δούλων", "ἀποστόλων"],
-                ["DAT.", "λαοῖς", "δούλοις", "ἀποστόλοις"],
-                ["ACC.", "λαούς", "δούλους", "ἀποστόλους"],
-                ["VOC.", "λαοί", "δοῦλοι", "ἀπόστολοι"]
+                [
+                  "GEN.",
+                  "λαῶν",
+                  "δούλων",
+                  "ἀποστόλων"
+                ],
+                [
+                  "DAT.",
+                  "λαοῖς",
+                  "δούλοις",
+                  "ἀποστόλοις"
+                ],
+                [
+                  "ACC.",
+                  "λαούς",
+                  "δούλους",
+                  "ἀποστόλους"
+                ],
+                [
+                  "VOC.",
+                  "λαοί",
+                  "δοῦλοι",
+                  "ἀπόστολοι"
+                ]
               ]
             }
           }
@@ -931,26 +1622,98 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
-            ["ὁ ἄγγελος, ου", "il messaggero, l'angelo", "(cfr. § 1 h)"],
-            ["ὁ ἀδελφός, οῦ", "il fratello", "(philadelphia)"],
-            ["ὁ ἄνθρωπος, ου", "l'uomo", "(antropologia)"],
-            ["ὁ ἀπόστολος, ου", "l'inviato, l'apostolo", ""],
-            ["ὁ ἄρτος, ου", "il pane", ""],
-            ["ὁ δοῦλος, ου", "il servo, lo schiavo", "(dulìa = culto dei santi)"],
-            ["ὁ θάνατος, ου", "la morte", "(eutanasia)"],
-            ["ὁ θεός, οῦ", "Dio", "(teologia - ingl. Theology)"],
-            ["ὁ Ἰησοῦς, οῦ", "Gesù", ""],
-            ["ὁ ἵππος, ου", "il cavallo", "(ippodromo, ippica)"],
-            ["ὁ κόσμος, ου", "il mondo", "(cosmonauta)"],
-            ["ὁ κύριος, ου", "il Signore, il padrone", ""],
-            ["ὁ λαός, οῦ", "il popolo", "(laico)"],
-            ["ὁ λόγος, ου", "la parola, il discorso", "(filologo)"],
-            ["ὁ νόμος, ου", "la legge", "(autonomo)"],
-            ["ὁ οἶκος, ου", "la casa, la famiglia", "(economia: οι, in italiano, «e»)"],
-            ["ὁ φίλος, ου", "l'amico", "(filantropo, filosofo, musicofilo ecc.)"]
+            [
+              "ὁ ἄγγελος, ου",
+              "il messaggero, l'angelo",
+              "(cfr. § 1 h)"
+            ],
+            [
+              "ὁ ἀδελφός, οῦ",
+              "il fratello",
+              "(philadelphia)"
+            ],
+            [
+              "ὁ ἄνθρωπος, ου",
+              "l'uomo",
+              "(antropologia)"
+            ],
+            [
+              "ὁ ἀπόστολος, ου",
+              "l'inviato, l'apostolo",
+              ""
+            ],
+            [
+              "ὁ ἄρτος, ου",
+              "il pane",
+              ""
+            ],
+            [
+              "ὁ δοῦλος, ου",
+              "il servo, lo schiavo",
+              "(dulìa = culto dei santi)"
+            ],
+            [
+              "ὁ θάνατος, ου",
+              "la morte",
+              "(eutanasia)"
+            ],
+            [
+              "ὁ θεός, οῦ",
+              "Dio",
+              "(teologia - ingl. Theology)"
+            ],
+            [
+              "ὁ Ἰησοῦς, οῦ",
+              "Gesù",
+              ""
+            ],
+            [
+              "ὁ ἵππος, ου",
+              "il cavallo",
+              "(ippodromo, ippica)"
+            ],
+            [
+              "ὁ κόσμος, ου",
+              "il mondo",
+              "(cosmonauta)"
+            ],
+            [
+              "ὁ κύριος, ου",
+              "il Signore, il padrone",
+              ""
+            ],
+            [
+              "ὁ λαός, οῦ",
+              "il popolo",
+              "(laico)"
+            ],
+            [
+              "ὁ λόγος, ου",
+              "la parola, il discorso",
+              "(filologo)"
+            ],
+            [
+              "ὁ νόμος, ου",
+              "la legge",
+              "(autonomo)"
+            ],
+            [
+              "ὁ οἶκος, ου",
+              "la casa, la famiglia",
+              "(economia: οι, in italiano, «e»)"
+            ],
+            [
+              "ὁ φίλος, ου",
+              "l'amico",
+              "(filantropo, filosofo, musicofilo ecc.)"
+            ]
           ]
         },
         "subsections": [
@@ -992,7 +1755,10 @@
         "summaryTable": {
           "headerRows": [
             [
-              { "label": "Temi:", "colspan": 2 },
+              {
+                "label": "Temi:",
+                "colspan": 2
+              },
               "ἱερο- (tempio)",
               "δωρο- (dono)",
               "σκανδαλο- (inciampo)"
@@ -1000,27 +1766,75 @@
           ],
           "bodyRows": [
             [
-              { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing.",
+                "rowspan": 5,
+                "className": "grammar-table-rowlabel"
+              },
               "NOM.",
               "τὸ ἱερόν",
               "τὸ δῶρον",
               "τὸ σκάνδαλον"
             ],
-            ["GEN.", "τοῦ ἱεροῦ", "τοῦ δώρου", "τοῦ σκανδάλου"],
-            ["DAT.", "τῷ ἱερῷ", "τῷ δώρῳ", "τῷ σκανδάλῳ"],
-            ["ACC.", "τὸ ἱερόν", "τὸ δῶρον", "τὸ σκάνδαλον"],
-            ["VOC.", "(ὦ) ἱερόν", "(ὦ) δῶρον", "(ὦ) σκάνδαλον"],
             [
-              { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+              "GEN.",
+              "τοῦ ἱεροῦ",
+              "τοῦ δώρου",
+              "τοῦ σκανδάλου"
+            ],
+            [
+              "DAT.",
+              "τῷ ἱερῷ",
+              "τῷ δώρῳ",
+              "τῷ σκανδάλῳ"
+            ],
+            [
+              "ACC.",
+              "τὸ ἱερόν",
+              "τὸ δῶρον",
+              "τὸ σκάνδαλον"
+            ],
+            [
+              "VOC.",
+              "(ὦ) ἱερόν",
+              "(ὦ) δῶρον",
+              "(ὦ) σκάνδαλον"
+            ],
+            [
+              {
+                "label": "Plur.",
+                "rowspan": 5,
+                "className": "grammar-table-rowlabel"
+              },
               "NOM.",
               "τὰ ἱερά",
               "τὰ δῶρα",
               "τὰ σκάνδαλα"
             ],
-            ["GEN.", "τῶν ἱερῶν", "τῶν δώρων", "τῶν σκανδάλων"],
-            ["DAT.", "τοῖς ἱεροῖς", "τοῖς δώροις", "τοῖς σκανδάλοις"],
-            ["ACC.", "τὰ ἱερά", "τὰ δῶρα", "τὰ σκάνδαλα"],
-            ["VOC.", "(ὦ) ἱερά", "(ὦ) δῶρα", "(ὦ) σκάνδαλα"]
+            [
+              "GEN.",
+              "τῶν ἱερῶν",
+              "τῶν δώρων",
+              "τῶν σκανδάλων"
+            ],
+            [
+              "DAT.",
+              "τοῖς ἱεροῖς",
+              "τοῖς δώροις",
+              "τοῖς σκανδάλοις"
+            ],
+            [
+              "ACC.",
+              "τὰ ἱερά",
+              "τὰ δῶρα",
+              "τὰ σκάνδαλα"
+            ],
+            [
+              "VOC.",
+              "(ὦ) ἱερά",
+              "(ὦ) δῶρα",
+              "(ὦ) σκάνδαλα"
+            ]
           ]
         }
       },
@@ -1050,8 +1864,14 @@
             "block": {
               "label": "Ess.:",
               "rows": [
-                { "key": "ὄρθρου", "value": "all'alba" },
-                { "key": "σαββάτῳ", "value": "di sabato" }
+                {
+                  "key": "ὄρθρου",
+                  "value": "all'alba"
+                },
+                {
+                  "key": "σαββάτῳ",
+                  "value": "di sabato"
+                }
               ]
             }
           },
@@ -1064,7 +1884,10 @@
             "block": {
               "label": "Es.:",
               "rows": [
-                { "key": "νύκτα καὶ ἡμέραν", "value": "per una notte e un giorno" }
+                {
+                  "key": "νύκτα καὶ ἡμέραν",
+                  "value": "per una notte e un giorno"
+                }
               ]
             }
           }
@@ -1074,26 +1897,98 @@
         "heading": "Vocabolario 3º",
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
-            ["τὸ ἀργύριον, ου", "il denaro, l'argento", ""],
-            ["τὸ βιβλίον, ου", "il libro", "(biblioteca. Dal plurale: Biblia)"],
-            ["τὸ δαιμόνιον, ου", "il demonio, il diavolo", ""],
-            ["τὸ δένδρον, ου", "l'albero", "(rododendro)"],
-            ["τὸ δῶρον, ου", "il dono", ""],
-            ["τὸ ἔργον, ου", "l'opera, il lavoro", "(ergometro, energia)"],
-            ["τὸ εὐαγγέλιον, ου", "l'evangelo, il buon annunzio", "(per la pronuncia, § 1, h)"],
-            ["τὸ ἱερόν, οῦ", "il tempio", "(gerarchia, franc. hierarchie)"],
-            ["τὸ ἱμάτιον, ου", "il mantello, il vestito", ""],
-            ["τὸ παιδίον, ου", "il bambino (diminutivo)", "(pediatra ecc.)"],
-            ["τὸ πλοῖον, ου", "la barca, l'imbarcazione", ""],
-            ["τὸ πρόβατον, ου", "la pecora", ""],
-            ["τὸ πρόσωπον, ου", "la faccia, il volto, la persona", "(prosopopea)"],
-            ["τὸ σάββατον, ου", "il sabato", ""],
-            ["τὸ σημεῖον, ου", "il segno (i «miracoli» di Gv.)", "(semeiotica)"],
-            ["τὸ σκάνδαλον, ου", "l'inciampo, la seduzione, l'occasione di peccato", ""],
-            ["τὸ τέκνον, ου", "il bambino, il figlio", ""]
+            [
+              "τὸ ἀργύριον, ου",
+              "il denaro, l'argento",
+              ""
+            ],
+            [
+              "τὸ βιβλίον, ου",
+              "il libro",
+              "(biblioteca. Dal plurale: Biblia)"
+            ],
+            [
+              "τὸ δαιμόνιον, ου",
+              "il demonio, il diavolo",
+              ""
+            ],
+            [
+              "τὸ δένδρον, ου",
+              "l'albero",
+              "(rododendro)"
+            ],
+            [
+              "τὸ δῶρον, ου",
+              "il dono",
+              ""
+            ],
+            [
+              "τὸ ἔργον, ου",
+              "l'opera, il lavoro",
+              "(ergometro, energia)"
+            ],
+            [
+              "τὸ εὐαγγέλιον, ου",
+              "l'evangelo, il buon annunzio",
+              "(per la pronuncia, § 1, h)"
+            ],
+            [
+              "τὸ ἱερόν, οῦ",
+              "il tempio",
+              "(gerarchia, franc. hierarchie)"
+            ],
+            [
+              "τὸ ἱμάτιον, ου",
+              "il mantello, il vestito",
+              ""
+            ],
+            [
+              "τὸ παιδίον, ου",
+              "il bambino (diminutivo)",
+              "(pediatra ecc.)"
+            ],
+            [
+              "τὸ πλοῖον, ου",
+              "la barca, l'imbarcazione",
+              ""
+            ],
+            [
+              "τὸ πρόβατον, ου",
+              "la pecora",
+              ""
+            ],
+            [
+              "τὸ πρόσωπον, ου",
+              "la faccia, il volto, la persona",
+              "(prosopopea)"
+            ],
+            [
+              "τὸ σάββατον, ου",
+              "il sabato",
+              ""
+            ],
+            [
+              "τὸ σημεῖον, ου",
+              "il segno (i «miracoli» di Gv.)",
+              "(semeiotica)"
+            ],
+            [
+              "τὸ σκάνδαλον, ου",
+              "l'inciampo, la seduzione, l'occasione di peccato",
+              ""
+            ],
+            [
+              "τὸ τέκνον, ου",
+              "il bambino, il figlio",
+              ""
+            ]
           ]
         },
         "subsections": [
@@ -1135,32 +2030,75 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "Temi:", "colspan": 2 },
+                  {
+                    "label": "Temi:",
+                    "colspan": 2
+                  },
                   "ὁδο- (via)",
                   "ἐρημο- (deserto)"
                 ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "ἡ ὁδός",
                   "ἡ ἔρημος"
                 ],
-                ["GEN.", "τῆς ὁδοῦ", "τῆς ἐρήμου"],
-                ["DAT.", "τῇ ὁδῷ", "τῇ ἐρήμῳ"],
-                ["ACC.", "τὴν ὁδόν", "τὴν ἔρημον"],
-                ["VOC.", "(ὦ) ὁδέ", "(ὦ) ἔρημε"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "τῆς ὁδοῦ",
+                  "τῆς ἐρήμου"
+                ],
+                [
+                  "DAT.",
+                  "τῇ ὁδῷ",
+                  "τῇ ἐρήμῳ"
+                ],
+                [
+                  "ACC.",
+                  "τὴν ὁδόν",
+                  "τὴν ἔρημον"
+                ],
+                [
+                  "VOC.",
+                  "(ὦ) ὁδέ",
+                  "(ὦ) ἔρημε"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "αἱ ὁδοί",
                   "αἱ ἔρημοι"
                 ],
-                ["GEN.", "τῶν ὁδῶν", "τῶν ἐρήμων"],
-                ["DAT.", "ταῖς ὁδοῖς", "ταῖς ἐρήμοις"],
-                ["ACC.", "τὰς ὁδούς", "τὰς ἐρήμους"],
-                ["VOC.", "(ὦ) ὁδοί", "(ὦ) ἔρημοι"]
+                [
+                  "GEN.",
+                  "τῶν ὁδῶν",
+                  "τῶν ἐρήμων"
+                ],
+                [
+                  "DAT.",
+                  "ταῖς ὁδοῖς",
+                  "ταῖς ἐρήμοις"
+                ],
+                [
+                  "ACC.",
+                  "τὰς ὁδούς",
+                  "τὰς ἐρήμους"
+                ],
+                [
+                  "VOC.",
+                  "(ὦ) ὁδοί",
+                  "(ὦ) ἔρημοι"
+                ]
               ]
             }
           }
@@ -1176,26 +2114,98 @@
         "heading": "Vocabolario 4º",
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
-            ["ὁ ἀγρός, οῦ", "il campo", "(agricoltura)"],
-            ["ἡ ἄμπελος, ου", "la vite", ""],
-            ["ὁ ἄνεμος, ου", "il vento", "(anemometro)"],
-            ["ὁ βίος, ου", "la vita", "(biologia)"],
-            ["τὸ δάκρυον, ου", "la lacrima", ""],
-            ["τὸ δεῖπνον, ου", "il pranzo, il banchetto", ""],
-            ["ἡ ἔρημος, ου¹", "il deserto", "(eremita)"],
-            ["τὸ ζῷον, ου", "l'animale", "(zoologia)"],
-            ["ὁ καρπός, οῦ", "il frutto", ""],
-            ["ὁ μισθός, οῦ", "la mercede, il salario", ""],
-            ["ἡ νῆσος, ου", "l'isola", "(Dodecaneso)"],
-            ["ἡ ὁδός, οῦ", "la via", ""],
-            ["ἡ παρθένος, ου", "la fanciulla, la vergine", ""],
-            ["ὁ πόλεμος, ου", "la guerra", "(polemico)"],
-            ["ἡ ῥάβδος, ου", "il bastone", "(rabdomante)"],
-            ["ὁ τόπος, ου", "il luogo", "(topografia)"],
-            ["ὁ φόβος, ου", "la paura", "(fobia e i suoi composti)"]
+            [
+              "ὁ ἀγρός, οῦ",
+              "il campo",
+              "(agricoltura)"
+            ],
+            [
+              "ἡ ἄμπελος, ου",
+              "la vite",
+              ""
+            ],
+            [
+              "ὁ ἄνεμος, ου",
+              "il vento",
+              "(anemometro)"
+            ],
+            [
+              "ὁ βίος, ου",
+              "la vita",
+              "(biologia)"
+            ],
+            [
+              "τὸ δάκρυον, ου",
+              "la lacrima",
+              ""
+            ],
+            [
+              "τὸ δεῖπνον, ου",
+              "il pranzo, il banchetto",
+              ""
+            ],
+            [
+              "ἡ ἔρημος, ου¹",
+              "il deserto",
+              "(eremita)"
+            ],
+            [
+              "τὸ ζῷον, ου",
+              "l'animale",
+              "(zoologia)"
+            ],
+            [
+              "ὁ καρπός, οῦ",
+              "il frutto",
+              ""
+            ],
+            [
+              "ὁ μισθός, οῦ",
+              "la mercede, il salario",
+              ""
+            ],
+            [
+              "ἡ νῆσος, ου",
+              "l'isola",
+              "(Dodecaneso)"
+            ],
+            [
+              "ἡ ὁδός, οῦ",
+              "la via",
+              ""
+            ],
+            [
+              "ἡ παρθένος, ου",
+              "la fanciulla, la vergine",
+              ""
+            ],
+            [
+              "ὁ πόλεμος, ου",
+              "la guerra",
+              "(polemico)"
+            ],
+            [
+              "ἡ ῥάβδος, ου",
+              "il bastone",
+              "(rabdomante)"
+            ],
+            [
+              "ὁ τόπος, ου",
+              "il luogo",
+              "(topografia)"
+            ],
+            [
+              "ὁ φόβος, ου",
+              "la paura",
+              "(fobia e i suoi composti)"
+            ]
           ]
         },
         "subsections": [
@@ -1255,13 +2265,34 @@
             "title": "Prospetto delle contrazioni più comuni",
             "alignedExamples": {
               "rows": [
-                { "key": "α + ε", "value": "α" },
-                { "key": "α + ει", "value": "ᾳ" },
-                { "key": "α + ο / ω / ου", "value": "ω" },
-                { "key": "ε + ε", "value": "ει" },
-                { "key": "ε + ο / ου", "value": "ου" },
-                { "key": "ο + ε / ο / ου", "value": "ου" },
-                { "key": "ο + η / ω", "value": "ω" }
+                {
+                  "key": "α + ε",
+                  "value": "α"
+                },
+                {
+                  "key": "α + ει",
+                  "value": "ᾳ"
+                },
+                {
+                  "key": "α + ο / ω / ου",
+                  "value": "ω"
+                },
+                {
+                  "key": "ε + ε",
+                  "value": "ει"
+                },
+                {
+                  "key": "ε + ο / ου",
+                  "value": "ου"
+                },
+                {
+                  "key": "ο + ε / ο / ου",
+                  "value": "ου"
+                },
+                {
+                  "key": "ο + η / ω",
+                  "value": "ω"
+                }
               ]
             }
           }
@@ -1274,41 +2305,64 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Persona", "Forma non contratta", "Forma contratta", "Italiano"]
+            [
+              "Persona",
+              "Forma non contratta",
+              "Forma contratta",
+              "Italiano"
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. I pers.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. I pers.",
+                "className": "grammar-table-rowlabel"
+              },
               "φιλέ-ω",
               "φιλῶ",
               "io amo"
             ],
             [
-              { "label": "Sing. II pers.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. II pers.",
+                "className": "grammar-table-rowlabel"
+              },
               "φιλέ-ε-ις",
               "φιλεῖς",
               "tu ami"
             ],
             [
-              { "label": "Sing. III pers.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. III pers.",
+                "className": "grammar-table-rowlabel"
+              },
               "φιλέ-ε-ι",
               "φιλεῖ",
               "egli, ella ama"
             ],
             [
-              { "label": "Plur. I pers.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. I pers.",
+                "className": "grammar-table-rowlabel"
+              },
               "φιλέ-ο-μεν",
               "φιλοῦμεν",
               "noi amiamo"
             ],
             [
-              { "label": "Plur. II pers.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. II pers.",
+                "className": "grammar-table-rowlabel"
+              },
               "φιλέ-ε-τε",
               "φιλεῖτε",
               "voi amate"
             ],
             [
-              { "label": "Plur. III pers.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. III pers.",
+                "className": "grammar-table-rowlabel"
+              },
               "φιλέ-ου-σι(ν)",
               "φιλοῦσι(ν)",
               "essi/e amano"
@@ -1329,20 +2383,68 @@
         "heading": "Vocabolario 5º",
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
-            ["αἰτέω", "chiedo", "(eziologia, aitiology)"],
-            ["δοκέω", "credo, sembro", ""],
-            ["ζητέω", "cerco", ""],
-            ["θεωρέω", "guardo", "(teorema, teoria)"],
-            ["καλέω", "chiamo, invito", "(ecclesia ecc.)"],
-            ["λαλέω", "parlo, dico", "(glossolalia, il «parlare in lingue»)"],
-            ["μαρτυρέω (ACC. e DAT.)", "io testimonio, do testimonianza a", "(martirio)"],
-            ["παρακαλέω", "esorto, incoraggio, conforto", "(Paracleto)"],
-            ["ποιέω", "faccio", "(emopoietico)"],
-            ["τηρέω", "osservo, conservo, custodisco", ""],
-            ["φιλέω", "amo", "(musicòfilo, esteròfilo, filodrammatica, filantropo)"]
+            [
+              "αἰτέω",
+              "chiedo",
+              "(eziologia, aitiology)"
+            ],
+            [
+              "δοκέω",
+              "credo, sembro",
+              ""
+            ],
+            [
+              "ζητέω",
+              "cerco",
+              ""
+            ],
+            [
+              "θεωρέω",
+              "guardo",
+              "(teorema, teoria)"
+            ],
+            [
+              "καλέω",
+              "chiamo, invito",
+              "(ecclesia ecc.)"
+            ],
+            [
+              "λαλέω",
+              "parlo, dico",
+              "(glossolalia, il «parlare in lingue»)"
+            ],
+            [
+              "μαρτυρέω (ACC. e DAT.)",
+              "io testimonio, do testimonianza a",
+              "(martirio)"
+            ],
+            [
+              "παρακαλέω",
+              "esorto, incoraggio, conforto",
+              "(Paracleto)"
+            ],
+            [
+              "ποιέω",
+              "faccio",
+              "(emopoietico)"
+            ],
+            [
+              "τηρέω",
+              "osservo, conservo, custodisco",
+              ""
+            ],
+            [
+              "φιλέω",
+              "amo",
+              "(musicòfilo, esteròfilo, filodrammatica, filantropo)"
+            ]
           ]
         },
         "subsections": [
@@ -1384,19 +2486,27 @@
         "groups": [
           {
             "title": "I. Tema in -ᾱ pura",
-            "items": ["cioè preceduta da ε, ι, ρ"]
+            "items": [
+              "cioè preceduta da ε, ι, ρ"
+            ]
           },
           {
             "title": "II. Tema in -ᾱ impura",
-            "items": ["cioè preceduta da consonanti diverse da ρ"]
+            "items": [
+              "cioè preceduta da consonanti diverse da ρ"
+            ]
           },
           {
             "title": "III. Tema in -ᾰ pura",
-            "items": ["cioè preceduta da ε, ι, ρ"]
+            "items": [
+              "cioè preceduta da ε, ι, ρ"
+            ]
           },
           {
             "title": "IV. Tema in -ᾰ impura",
-            "items": ["cioè preceduta da consonanti diverse da ρ"]
+            "items": [
+              "cioè preceduta da consonanti diverse da ρ"
+            ]
           }
         ],
         "postSummaryParagraphs": [
@@ -1415,65 +2525,100 @@
         "heading": "§ 24 - Nomi femminili in -ᾱ pura lunga",
         "summaryTable": {
           "headerRows": [
-            ["Temi:", "χωρα- (paese)", "ἡμερα- (giorno)", "γενεα- (generazione)"]
+            [
+              "Temi:",
+              "χωρα- (paese)",
+              "ἡμερα- (giorno)",
+              "γενεα- (generazione)"
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "ἡ χώρα",
               "ἡ ἡμέρα",
               "ἡ γενεά"
             ],
             [
-              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῆς χώρας",
               "τῆς ἡμέρας",
               "τῆς γενεᾶς"
             ],
             [
-              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῇ χώρᾳ",
               "τῇ ἡμέρᾳ",
               "τῇ γενεᾷ"
             ],
             [
-              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὴν χώραν",
               "τὴν ἡμέραν",
               "τὴν γενεάν"
             ],
             [
-              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) χώρα",
               "(ὦ) ἡμέρα",
               "(ὦ) γενεά"
             ],
             [
-              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "αἱ χῶραι",
               "αἱ ἡμέραι",
               "αἱ γενεαί"
             ],
             [
-              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῶν χωρῶν",
               "τῶν ἡμερῶν",
               "τῶν γενεῶν"
             ],
             [
-              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "ταῖς χώραις",
               "ταῖς ἡμέραις",
               "ταῖς γενεαῖς"
             ],
             [
-              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὰς χώρας",
               "τὰς ἡμέρας",
               "τὰς γενεάς"
             ],
             [
-              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) χῶραι",
               "(ὦ) ἡμέραι",
               "(ὦ) γενεαί"
@@ -1492,56 +2637,90 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Tema:", "γραφα- (scrittura)", ""]
+            [
+              "Tema:",
+              "γραφα- (scrittura)",
+              ""
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "ἡ γραφή",
               "la scrittura (soggetto)"
             ],
             [
-              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῆς γραφῆς",
               "della scrittura"
             ],
             [
-              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῇ γραφῇ",
               "alla scrittura, mediante la scrittura"
             ],
             [
-              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὴν γραφήν",
               "la scrittura (complemento oggetto)"
             ],
             [
-              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) γραφή",
               "o scrittura!"
             ],
             [
-              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "αἱ γραφαί",
               "le scritture (soggetto)"
             ],
             [
-              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῶν γραφῶν",
               "delle scritture"
             ],
             [
-              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "ταῖς γραφαῖς",
               "alle scritture, mediante le scritture"
             ],
             [
-              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὰς γραφάς",
               "le scritture (complemento oggetto)"
             ],
             [
-              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) γραφαί",
               "o scritture!"
             ]
@@ -1552,7 +2731,11 @@
         "heading": "Vocabolario 6º",
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
             [
@@ -1562,14 +2745,46 @@
                 "className": "grammar-table-rowlabel"
               }
             ],
-            ["ἡ ἁμαρτία, ας", "il peccato", "(amartologia)"],
-            ["ἡ βασιλεία, ας", "il regno", ""],
-            ["ἡ γενεά, ᾶς", "la generazione", "(genealogia)"],
-            ["ἡ ἐκκλησία, ας", "la chiesa, l'assemblea", "(ecclesiastico)"],
-            ["ἡ ἐξουσία, ας", "il potere, l'autorità", ""],
-            ["ἡ ἐπαγγελία, ας", "la promessa", ""],
-            ["ἡ ἡμέρα, ας", "il giorno", ""],
-            ["ἡ χώρα, ας", "il paese", ""],
+            [
+              "ἡ ἁμαρτία, ας",
+              "il peccato",
+              "(amartologia)"
+            ],
+            [
+              "ἡ βασιλεία, ας",
+              "il regno",
+              ""
+            ],
+            [
+              "ἡ γενεά, ᾶς",
+              "la generazione",
+              "(genealogia)"
+            ],
+            [
+              "ἡ ἐκκλησία, ας",
+              "la chiesa, l'assemblea",
+              "(ecclesiastico)"
+            ],
+            [
+              "ἡ ἐξουσία, ας",
+              "il potere, l'autorità",
+              ""
+            ],
+            [
+              "ἡ ἐπαγγελία, ας",
+              "la promessa",
+              ""
+            ],
+            [
+              "ἡ ἡμέρα, ας",
+              "il giorno",
+              ""
+            ],
+            [
+              "ἡ χώρα, ας",
+              "il paese",
+              ""
+            ],
             [
               {
                 "label": "Nomi in -ης",
@@ -1577,19 +2792,71 @@
                 "className": "grammar-table-rowlabel"
               }
             ],
-            ["ἡ ἀγάπη, ης", "l'amore", ""],
-            ["ἡ ἀρχή, ης", "il principio, l'impero, le potenze, le autorità", "(archetipo = primo tipo, modello)"],
-            ["ἡ γραφή, ῆς", "la scrittura", "(grafico; grafomane, ecc.)"],
-            ["ἡ δικαιοσύνη, ης", "la giustizia", ""],
-            ["ἡ εἰρήνη, ης", "la pace", "(irenico; Irene, nome femm.)"],
-            ["ἡ ἐντολή, ης", "il comandamento", ""],
-            ["ἡ ἐπιστολή, ης", "la lettera, l'epistola", ""],
-            ["ἡ ζωή, ης", "la vita", ""],
-            ["ἡ κεφαλή, ης", "la testa, il capo", "(acefalo = senza capo)"],
-            ["ἡ παραβολή, ης", "la parabola, il confronto", ""],
-            ["ἡ συναγωγή, ης", "la sinagoga, l'adunanza", ""],
-            ["ἡ φωνή, ης", "la voce", "(fonico; eufonia; foniatria)"],
-            ["ἡ ψυχή, ης", "la vita, l'alito vitale, l'anima", "(psicologia)"]
+            [
+              "ἡ ἀγάπη, ης",
+              "l'amore",
+              ""
+            ],
+            [
+              "ἡ ἀρχή, ης",
+              "il principio, l'impero, le potenze, le autorità",
+              "(archetipo = primo tipo, modello)"
+            ],
+            [
+              "ἡ γραφή, ῆς",
+              "la scrittura",
+              "(grafico; grafomane, ecc.)"
+            ],
+            [
+              "ἡ δικαιοσύνη, ης",
+              "la giustizia",
+              ""
+            ],
+            [
+              "ἡ εἰρήνη, ης",
+              "la pace",
+              "(irenico; Irene, nome femm.)"
+            ],
+            [
+              "ἡ ἐντολή, ης",
+              "il comandamento",
+              ""
+            ],
+            [
+              "ἡ ἐπιστολή, ης",
+              "la lettera, l'epistola",
+              ""
+            ],
+            [
+              "ἡ ζωή, ης",
+              "la vita",
+              ""
+            ],
+            [
+              "ἡ κεφαλή, ης",
+              "la testa, il capo",
+              "(acefalo = senza capo)"
+            ],
+            [
+              "ἡ παραβολή, ης",
+              "la parabola, il confronto",
+              ""
+            ],
+            [
+              "ἡ συναγωγή, ης",
+              "la sinagoga, l'adunanza",
+              ""
+            ],
+            [
+              "ἡ φωνή, ης",
+              "la voce",
+              "(fonico; eufonia; foniatria)"
+            ],
+            [
+              "ἡ ψυχή, ης",
+              "la vita, l'alito vitale, l'anima",
+              "(psicologia)"
+            ]
           ]
         },
         "subsections": [
@@ -1631,56 +2898,90 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Temi:", "ἀληθεια- (verità)", "μαχαιρα- (spada)"]
+            [
+              "Temi:",
+              "ἀληθεια- (verità)",
+              "μαχαιρα- (spada)"
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "ἡ ἀλήθεια",
               "ἡ μάχαιρα"
             ],
             [
-              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῆς ἀληθείας",
               "τῆς μαχαίρας"
             ],
             [
-              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῇ ἀληθείᾳ",
               "τῇ μαχαίρᾳ"
             ],
             [
-              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὴν ἀλήθειαν",
               "τὴν μάχαιραν"
             ],
             [
-              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) ἀλήθεια",
               "(ὦ) μάχαιρα"
             ],
             [
-              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "αἱ ἀλήθειαι",
               "αἱ μάχαιραι"
             ],
             [
-              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῶν ἀληθειῶν",
               "τῶν μαχαιρῶν"
             ],
             [
-              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "ταῖς ἀληθείαις",
               "ταῖς μαχαίραις"
             ],
             [
-              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὰς ἀληθείας",
               "τὰς μαχαίρας"
             ],
             [
-              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) ἀλήθειαι",
               "(ὦ) μάχαιραι"
             ]
@@ -1691,65 +2992,100 @@
         "heading": "§ 27 - Nomi femminili in -ᾰ impura breve (I decl.)",
         "summaryTable": {
           "headerRows": [
-            ["Temi:", "δοξα- (gloria)", "γλωσσα- (lingua)", "θαλασσα- (mare)"]
+            [
+              "Temi:",
+              "δοξα- (gloria)",
+              "γλωσσα- (lingua)",
+              "θαλασσα- (mare)"
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "ἡ δόξα",
               "ἡ γλῶσσα",
               "ἡ θάλασσα"
             ],
             [
-              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῆς δόξης",
               "τῆς γλώσσης",
               "τῆς θαλάσσης"
             ],
             [
-              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῇ δόξῃ",
               "τῇ γλώσσῃ",
               "τῇ θαλάσσῃ"
             ],
             [
-              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὴν δόξαν",
               "τὴν γλῶσσαν",
               "τὴν θάλασσαν"
             ],
             [
-              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) δόξα",
               "(ὦ) γλῶσσα",
               "(ὦ) θάλασσα"
             ],
             [
-              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "αἱ δόξαι",
               "αἱ γλῶσσαι",
               "αἱ θάλασσαι"
             ],
             [
-              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῶν δοξῶν",
               "τῶν γλωσσῶν",
               "τῶν θαλασσῶν"
             ],
             [
-              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "ταῖς δόξαις",
               "ταῖς γλώσσαις",
               "ταῖς θαλάσσαις"
             ],
             [
-              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὰς δόξας",
               "τὰς γλώσσας",
               "τὰς θαλάσσας"
             ],
             [
-              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) δόξαι",
               "(ὦ) γλῶσσαι",
               "(ὦ) θάλασσαι"
@@ -1774,65 +3110,100 @@
         ],
         "summaryTable": {
           "headerRows": [
-            ["Temi:", "μναα- (mina)", "συκεα- (fico)", "Ἑρμεα- (Ermes)"]
+            [
+              "Temi:",
+              "μναα- (mina)",
+              "συκεα- (fico)",
+              "Ἑρμεα- (Ermes)"
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "ἡ μνᾶ",
               "ἡ συκῆ",
               "ὁ Ἑρμῆς"
             ],
             [
-              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῆς μνᾶς",
               "τῆς συκῆς",
               "τοῦ Ἑρμοῦ"
             ],
             [
-              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῇ μνᾷ",
               "τῇ συκῇ",
               "τῷ Ἑρμῇ"
             ],
             [
-              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὴν μνᾶν",
               "τὴν συκῆν",
               "τὸν Ἑρμῆν"
             ],
             [
-              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) μνᾶ",
               "(ὦ) συκῆ",
               "(ὦ) Ἑρμῆ"
             ],
             [
-              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "αἱ μναῖ",
               "αἱ συκαῖ",
               "οἱ Ἑρμαῖ"
             ],
             [
-              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῶν μνῶν",
               "τῶν συκῶν",
               "τῶν Ἑρμῶν"
             ],
             [
-              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "ταῖς μναῖς",
               "ταῖς συκαῖς",
               "τοῖς Ἑρμαῖς"
             ],
             [
-              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὰς μνᾶς",
               "τὰς συκᾶς",
               "τοὺς Ἑρμᾶς"
             ],
             [
-              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) μναῖ",
               "(ὦ) συκαῖ",
               "(ὦ) Ἑρμαῖ"
@@ -1852,56 +3223,90 @@
         "heading": "§ 29 - Nomi maschili con il tema in -α (per i femm. cfr. §§ 24-27)",
         "summaryTable": {
           "headerRows": [
-            ["Temi:", "νεανια- (giovane)", "πολιτα- (cittadino)"]
+            [
+              "Temi:",
+              "νεανια- (giovane)",
+              "πολιτα- (cittadino)"
+            ]
           ],
           "bodyRows": [
             [
-              { "label": "Sing. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "ὁ νεανίας",
               "ὁ πολίτης"
             ],
             [
-              { "label": "Sing. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τοῦ νεανίου",
               "τοῦ πολίτου"
             ],
             [
-              { "label": "Sing. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῷ νεανίᾳ",
               "τῷ πολίτῃ"
             ],
             [
-              { "label": "Sing. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τὸν νεανίαν",
               "τὸν πολίτην"
             ],
             [
-              { "label": "Sing. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Sing. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) νεανία",
               "(ὦ) πολῖτα"
             ],
             [
-              { "label": "Plur. NOM.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. NOM.",
+                "className": "grammar-table-rowlabel"
+              },
               "οἱ νεανίαι",
               "οἱ πολῖται"
             ],
             [
-              { "label": "Plur. GEN.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. GEN.",
+                "className": "grammar-table-rowlabel"
+              },
               "τῶν νεανιῶν",
               "τῶν πολιτῶν"
             ],
             [
-              { "label": "Plur. DAT.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. DAT.",
+                "className": "grammar-table-rowlabel"
+              },
               "τοῖς νεανίαις",
               "τοῖς πολίταις"
             ],
             [
-              { "label": "Plur. ACC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. ACC.",
+                "className": "grammar-table-rowlabel"
+              },
               "τοὺς νεανίας",
               "τοὺς πολίτας"
             ],
             [
-              { "label": "Plur. VOC.", "className": "grammar-table-rowlabel" },
+              {
+                "label": "Plur. VOC.",
+                "className": "grammar-table-rowlabel"
+              },
               "(ὦ) νεανίαι",
               "(ὦ) πολῖται"
             ]
@@ -1944,21 +3349,73 @@
         "heading": "Vocabolario 7º",
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
-            ["ἡ ἀλήθεια, ας", "la verità", ""],
-            ["ἡ ἀσέβεια, ας", "l'empietà", ""],
-            ["ἡ γῆ, ῆς", "la terra", "(geografia)"],
-            ["ἡ γλῶσσα, ης", "la lingua", "(glossario)"],
-            ["ἡ διάνοια, ας", "la mente, il sentimento", ""],
-            ["ἡ δόξα, ης", "la gloria", "(dossologia)"],
-            ["ἡ θάλασσα, ης", "il mare, il lago", ""],
-            ["ἡ μάχαιρα, ας (-ης)", "la spada", ""],
-            ["ἡ μέριμνα, ης", "la preoccupazione, la pena", ""],
-            ["ἡ ῥίζα, ης", "la radice", "(rizoma)"],
-            ["ἡ συκῆ, ῆς", "il fico", ""],
-            ["ἡ τράπεζα, ης", "la tavola, la banca", ""]
+            [
+              "ἡ ἀλήθεια, ας",
+              "la verità",
+              ""
+            ],
+            [
+              "ἡ ἀσέβεια, ας",
+              "l'empietà",
+              ""
+            ],
+            [
+              "ἡ γῆ, ῆς",
+              "la terra",
+              "(geografia)"
+            ],
+            [
+              "ἡ γλῶσσα, ης",
+              "la lingua",
+              "(glossario)"
+            ],
+            [
+              "ἡ διάνοια, ας",
+              "la mente, il sentimento",
+              ""
+            ],
+            [
+              "ἡ δόξα, ης",
+              "la gloria",
+              "(dossologia)"
+            ],
+            [
+              "ἡ θάλασσα, ης",
+              "il mare, il lago",
+              ""
+            ],
+            [
+              "ἡ μάχαιρα, ας (-ης)",
+              "la spada",
+              ""
+            ],
+            [
+              "ἡ μέριμνα, ης",
+              "la preoccupazione, la pena",
+              ""
+            ],
+            [
+              "ἡ ῥίζα, ης",
+              "la radice",
+              "(rizoma)"
+            ],
+            [
+              "ἡ συκῆ, ῆς",
+              "il fico",
+              ""
+            ],
+            [
+              "ἡ τράπεζα, ης",
+              "la tavola, la banca",
+              ""
+            ]
           ]
         },
         "subsections": [
@@ -2011,13 +3468,33 @@
             "table": {
               "intro": "Ess.:",
               "headerRows": [
-                ["Greco", "Italiano", "Uscite"]
+                [
+                  "Greco",
+                  "Italiano",
+                  "Uscite"
+                ]
               ],
               "bodyRows": [
-                ["ἰσχυρός, ἰσχυρά, ἰσχυρόν", "forte", "aggettivo a tre uscite"],
-                ["ἄδικος, ἄδικον", "ingiusto", "aggettivo a due uscite"],
-                ["βάρβαρος, βάρβαρον", "barbaro", "aggettivo a due uscite"],
-                ["αἰώνιος, αἰώνιον", "eterno", "aggettivo a due uscite"]
+                [
+                  "ἰσχυρός, ἰσχυρά, ἰσχυρόν",
+                  "forte",
+                  "aggettivo a tre uscite"
+                ],
+                [
+                  "ἄδικος, ἄδικον",
+                  "ingiusto",
+                  "aggettivo a due uscite"
+                ],
+                [
+                  "βάρβαρος, βάρβαρον",
+                  "barbaro",
+                  "aggettivo a due uscite"
+                ],
+                [
+                  "αἰώνιος, αἰώνιον",
+                  "eterno",
+                  "aggettivo a due uscite"
+                ]
               ]
             }
           },
@@ -2039,11 +3516,21 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "Tema:", "colspan": 2 },
-                  { "label": "δικαιο-/δικαια-/δικαιο- (giusto)", "colspan": 3 }
+                  {
+                    "label": "Tema:",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "δικαιο-/δικαια-/δικαιο- (giusto)",
+                    "colspan": 3
+                  }
                 ],
                 [
-                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
                   "M.",
                   "F.",
                   "N."
@@ -2051,27 +3538,75 @@
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "δίκαιος",
                   "δικαία",
                   "δίκαιον"
                 ],
-                ["GEN.", "δικαίου", "δικαίας", "δικαίου"],
-                ["DAT.", "δικαίῳ", "δικαίᾳ", "δικαίῳ"],
-                ["ACC.", "δίκαιον", "δικαίαν", "δίκαιον"],
-                ["VOC.", "δίκαιε", "δικαία", "δίκαιον"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "δικαίου",
+                  "δικαίας",
+                  "δικαίου"
+                ],
+                [
+                  "DAT.",
+                  "δικαίῳ",
+                  "δικαίᾳ",
+                  "δικαίῳ"
+                ],
+                [
+                  "ACC.",
+                  "δίκαιον",
+                  "δικαίαν",
+                  "δίκαιον"
+                ],
+                [
+                  "VOC.",
+                  "δίκαιε",
+                  "δικαία",
+                  "δίκαιον"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "δίκαιοι",
                   "δίκαιαι",
                   "δίκαια"
                 ],
-                ["GEN.", "δικαίων", "δικαίων", "δικαίων"],
-                ["DAT.", "δικαίοις", "δικαίαις", "δικαίοις"],
-                ["ACC.", "δικαίους", "δικαίας", "δίκαια"],
-                ["VOC.", "δίκαιοι", "δίκαιαι", "δίκαια"]
+                [
+                  "GEN.",
+                  "δικαίων",
+                  "δικαίων",
+                  "δικαίων"
+                ],
+                [
+                  "DAT.",
+                  "δικαίοις",
+                  "δικαίαις",
+                  "δικαίοις"
+                ],
+                [
+                  "ACC.",
+                  "δικαίους",
+                  "δικαίας",
+                  "δίκαια"
+                ],
+                [
+                  "VOC.",
+                  "δίκαιοι",
+                  "δίκαιαι",
+                  "δίκαια"
+                ]
               ]
             }
           },
@@ -2084,11 +3619,21 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "Tema:", "colspan": 2 },
-                  { "label": "φαυλο-/φαυλα-/φαυλο- (cattivo)", "colspan": 3 }
+                  {
+                    "label": "Tema:",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "φαυλο-/φαυλα-/φαυλο- (cattivo)",
+                    "colspan": 3
+                  }
                 ],
                 [
-                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
                   "M.",
                   "F.",
                   "N."
@@ -2096,27 +3641,75 @@
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "φαῦλος",
                   "φαύλη",
                   "φαῦλον"
                 ],
-                ["GEN.", "φαύλου", "φαύλης", "φαύλου"],
-                ["DAT.", "φαύλῳ", "φαύλῃ", "φαύλῳ"],
-                ["ACC.", "φαῦλον", "φαύλην", "φαῦλον"],
-                ["VOC.", "φαῦλε", "φαύλη", "φαῦλον"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "φαύλου",
+                  "φαύλης",
+                  "φαύλου"
+                ],
+                [
+                  "DAT.",
+                  "φαύλῳ",
+                  "φαύλῃ",
+                  "φαύλῳ"
+                ],
+                [
+                  "ACC.",
+                  "φαῦλον",
+                  "φαύλην",
+                  "φαῦλον"
+                ],
+                [
+                  "VOC.",
+                  "φαῦλε",
+                  "φαύλη",
+                  "φαῦλον"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "φαῦλοι",
                   "φαῦλαι",
                   "φαῦλα"
                 ],
-                ["GEN.", "φαύλων", "φαύλων", "φαύλων"],
-                ["DAT.", "φαύλοις", "φαύλαις", "φαύλοις"],
-                ["ACC.", "φαύλους", "φαύλας", "φαῦλα"],
-                ["VOC.", "φαῦλοι", "φαῦλαι", "φαῦλα"]
+                [
+                  "GEN.",
+                  "φαύλων",
+                  "φαύλων",
+                  "φαύλων"
+                ],
+                [
+                  "DAT.",
+                  "φαύλοις",
+                  "φαύλαις",
+                  "φαύλοις"
+                ],
+                [
+                  "ACC.",
+                  "φαύλους",
+                  "φαύλας",
+                  "φαῦλα"
+                ],
+                [
+                  "VOC.",
+                  "φαῦλοι",
+                  "φαῦλαι",
+                  "φαῦλα"
+                ]
               ]
             }
           }
@@ -2130,36 +3723,86 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "Temi:", "colspan": 2 },
-                  { "label": "ἄδηλο-/ἄδηλο- (poco chiaro)", "colspan": 2 }
+                  {
+                    "label": "Temi:",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "ἄδηλο-/ἄδηλο- (poco chiaro)",
+                    "colspan": 2
+                  }
                 ],
                 [
-                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
                   "M./F.",
                   "N."
                 ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "ἄδηλος",
                   "ἄδηλον"
                 ],
-                ["GEN.", "ἀδήλου", "ἀδήλου"],
-                ["DAT.", "ἀδήλῳ", "ἀδήλῳ"],
-                ["ACC.", "ἄδηλον", "ἄδηλον"],
-                ["VOC.", "ἄδηλε", "ἄδηλον"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "ἀδήλου",
+                  "ἀδήλου"
+                ],
+                [
+                  "DAT.",
+                  "ἀδήλῳ",
+                  "ἀδήλῳ"
+                ],
+                [
+                  "ACC.",
+                  "ἄδηλον",
+                  "ἄδηλον"
+                ],
+                [
+                  "VOC.",
+                  "ἄδηλε",
+                  "ἄδηλον"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "ἄδηλοι",
                   "ἄδηλα"
                 ],
-                ["GEN.", "ἀδήλων", "ἀδήλων"],
-                ["DAT.", "ἀδήλοις", "ἀδήλοις"],
-                ["ACC.", "ἀδήλους", "ἄδηλα"],
-                ["VOC.", "ἄδηλοι", "ἄδηλα"]
+                [
+                  "GEN.",
+                  "ἀδήλων",
+                  "ἀδήλων"
+                ],
+                [
+                  "DAT.",
+                  "ἀδήλοις",
+                  "ἀδήλοις"
+                ],
+                [
+                  "ACC.",
+                  "ἀδήλους",
+                  "ἄδηλα"
+                ],
+                [
+                  "VOC.",
+                  "ἄδηλοι",
+                  "ἄδηλα"
+                ]
               ]
             }
           }
@@ -2178,29 +3821,113 @@
         "heading": "Vocabolario 8º",
         "summaryTable": {
           "headerRows": [
-            ["Greco", "Italiano", "Note"]
+            [
+              "Greco",
+              "Italiano",
+              "Note"
+            ]
           ],
           "bodyRows": [
-            ["ὁ βαπτιστής, οῦ", "il Battista", ""],
-            ["ὁ δεσπότης, ου", "il padrone", "(dispotismo, dispotico)"],
-            ["ὁ Ἰωάννης, ου", "Giovanni", ""],
-            ["ὁ μαθητής, οῦ", "il discepolo", ""],
-            ["ὁ νεανίας, ου", "il giovane", ""],
-            ["ὁ προφήτης, ου", "il profeta", ""],
-            ["ὁ ὑπηρέτης, ου", "il servitore", ""],
-            ["ὁ οἶνος, ου", "il vino", "(enologia, enologico)"],
-            ["ὁ πόνος, ου", "la fatica", ""],
-            ["ὁ υἱός, οῦ", "il figlio", ""],
-            ["ἡ ἑορτή, ῆς", "la festa", ""],
-            ["ἡ πηγή, ῆς", "la fonte", ""],
-            ["ἡ τιμή, ῆς", "l'onore, il valore, la carica", ""],
-            ["ἡ τροφή, ῆς", "il cibo", ""],
-            ["ἡ Ἰουδαία, ας", "la Giudea", ""],
-            ["ἡ καρδία, ας", "il cuore", "(cardiaco, cardiologia)"],
-            ["ἡ λαλιά, ας", "la conversazione", "(glossolalia)"],
-            ["ἡ σωτηρία, ας", "la salvezza", "(soteriologia)"],
-            ["ἡ χαρά, ᾶς", "la gioia", ""],
-            ["ἡ ὥρα, ας", "l'ora, il momento, il tempo", ""]
+            [
+              "ὁ βαπτιστής, οῦ",
+              "il Battista",
+              ""
+            ],
+            [
+              "ὁ δεσπότης, ου",
+              "il padrone",
+              "(dispotismo, dispotico)"
+            ],
+            [
+              "ὁ Ἰωάννης, ου",
+              "Giovanni",
+              ""
+            ],
+            [
+              "ὁ μαθητής, οῦ",
+              "il discepolo",
+              ""
+            ],
+            [
+              "ὁ νεανίας, ου",
+              "il giovane",
+              ""
+            ],
+            [
+              "ὁ προφήτης, ου",
+              "il profeta",
+              ""
+            ],
+            [
+              "ὁ ὑπηρέτης, ου",
+              "il servitore",
+              ""
+            ],
+            [
+              "ὁ οἶνος, ου",
+              "il vino",
+              "(enologia, enologico)"
+            ],
+            [
+              "ὁ πόνος, ου",
+              "la fatica",
+              ""
+            ],
+            [
+              "ὁ υἱός, οῦ",
+              "il figlio",
+              ""
+            ],
+            [
+              "ἡ ἑορτή, ῆς",
+              "la festa",
+              ""
+            ],
+            [
+              "ἡ πηγή, ῆς",
+              "la fonte",
+              ""
+            ],
+            [
+              "ἡ τιμή, ῆς",
+              "l'onore, il valore, la carica",
+              ""
+            ],
+            [
+              "ἡ τροφή, ῆς",
+              "il cibo",
+              ""
+            ],
+            [
+              "ἡ Ἰουδαία, ας",
+              "la Giudea",
+              ""
+            ],
+            [
+              "ἡ καρδία, ας",
+              "il cuore",
+              "(cardiaco, cardiologia)"
+            ],
+            [
+              "ἡ λαλιά, ας",
+              "la conversazione",
+              "(glossolalia)"
+            ],
+            [
+              "ἡ σωτηρία, ας",
+              "la salvezza",
+              "(soteriologia)"
+            ],
+            [
+              "ἡ χαρά, ᾶς",
+              "la gioia",
+              ""
+            ],
+            [
+              "ἡ ὥρα, ας",
+              "l'ora, il momento, il tempo",
+              ""
+            ]
           ]
         },
         "subsections": [
@@ -2247,11 +3974,21 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "Temi:", "colspan": 2 },
-                  { "label": "χρυσεο-/χρυσεα-/χρυσεο- (d'oro)", "colspan": 3 }
+                  {
+                    "label": "Temi:",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "χρυσεο-/χρυσεα-/χρυσεο- (d'oro)",
+                    "colspan": 3
+                  }
                 ],
                 [
-                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
                   "M.",
                   "F.",
                   "N."
@@ -2259,27 +3996,75 @@
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "χρυσοῦς",
                   "χρυσῆ",
                   "χρυσοῦν"
                 ],
-                ["GEN.", "χρυσοῦ", "χρυσῆς", "χρυσοῦ"],
-                ["DAT.", "χρυσῷ", "χρυσῇ", "χρυσῷ"],
-                ["ACC.", "χρυσοῦν", "χρυσῆν", "χρυσοῦν"],
-                ["VOC.", "χρυσοῦς", "χρυσῆ", "χρυσοῦν"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "χρυσοῦ",
+                  "χρυσῆς",
+                  "χρυσοῦ"
+                ],
+                [
+                  "DAT.",
+                  "χρυσῷ",
+                  "χρυσῇ",
+                  "χρυσῷ"
+                ],
+                [
+                  "ACC.",
+                  "χρυσοῦν",
+                  "χρυσῆν",
+                  "χρυσοῦν"
+                ],
+                [
+                  "VOC.",
+                  "χρυσοῦς",
+                  "χρυσῆ",
+                  "χρυσοῦν"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "χρυσοί",
                   "χρυσαῖ",
                   "χρυσᾶ"
                 ],
-                ["GEN.", "χρυσῶν", "χρυσῶν", "χρυσῶν"],
-                ["DAT.", "χρυσοῖς", "χρυσαῖς", "χρυσοῖς"],
-                ["ACC.", "χρυσοῦς", "χρυσᾶς", "χρυσᾶ"],
-                ["VOC.", "χρυσοί", "χρυσαῖ", "χρυσᾶ"]
+                [
+                  "GEN.",
+                  "χρυσῶν",
+                  "χρυσῶν",
+                  "χρυσῶν"
+                ],
+                [
+                  "DAT.",
+                  "χρυσοῖς",
+                  "χρυσαῖς",
+                  "χρυσοῖς"
+                ],
+                [
+                  "ACC.",
+                  "χρυσοῦς",
+                  "χρυσᾶς",
+                  "χρυσᾶ"
+                ],
+                [
+                  "VOC.",
+                  "χρυσοί",
+                  "χρυσαῖ",
+                  "χρυσᾶ"
+                ]
               ]
             }
           },
@@ -2292,11 +4077,21 @@
             "table": {
               "headerRows": [
                 [
-                  { "label": "Temi:", "colspan": 2 },
-                  { "label": "διπλοο-/διπλοα-/διπλοο- (doppio)", "colspan": 3 }
+                  {
+                    "label": "Temi:",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "διπλοο-/διπλοα-/διπλοο- (doppio)",
+                    "colspan": 3
+                  }
                 ],
                 [
-                  { "label": "", "colspan": 2, "className": "grammar-table-corner" },
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
                   "M.",
                   "F.",
                   "N."
@@ -2304,27 +4099,75 @@
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "διπλοῦς",
                   "διπλῆ",
                   "διπλοῦν"
                 ],
-                ["GEN.", "διπλοῦ", "διπλῆς", "διπλοῦ"],
-                ["DAT.", "διπλῷ", "διπλῇ", "διπλῷ"],
-                ["ACC.", "διπλοῦν", "διπλῆν", "διπλοῦν"],
-                ["VOC.", "διπλοῦς", "διπλῆ", "διπλοῦν"],
                 [
-                  { "label": "Plur.", "rowspan": 5, "className": "grammar-table-rowlabel" },
+                  "GEN.",
+                  "διπλοῦ",
+                  "διπλῆς",
+                  "διπλοῦ"
+                ],
+                [
+                  "DAT.",
+                  "διπλῷ",
+                  "διπλῇ",
+                  "διπλῷ"
+                ],
+                [
+                  "ACC.",
+                  "διπλοῦν",
+                  "διπλῆν",
+                  "διπλοῦν"
+                ],
+                [
+                  "VOC.",
+                  "διπλοῦς",
+                  "διπλῆ",
+                  "διπλοῦν"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "NOM.",
                   "διπλοί",
                   "διπλαῖ",
                   "διπλᾶ"
                 ],
-                ["GEN.", "διπλῶν", "διπλῶν", "διπλῶν"],
-                ["DAT.", "διπλοῖς", "διπλαῖς", "διπλοῖς"],
-                ["ACC.", "διπλοῦς", "διπλᾶς", "διπλᾶ"],
-                ["VOC.", "διπλοί", "διπλαῖ", "διπλᾶ"]
+                [
+                  "GEN.",
+                  "διπλῶν",
+                  "διπλῶν",
+                  "διπλῶν"
+                ],
+                [
+                  "DAT.",
+                  "διπλοῖς",
+                  "διπλαῖς",
+                  "διπλοῖς"
+                ],
+                [
+                  "ACC.",
+                  "διπλοῦς",
+                  "διπλᾶς",
+                  "διπλᾶ"
+                ],
+                [
+                  "VOC.",
+                  "διπλοί",
+                  "διπλαῖ",
+                  "διπλᾶ"
+                ]
               ]
             }
           }
@@ -2355,30 +4198,118 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["Greco", "Italiano", "Note"]
+                [
+                  "Greco",
+                  "Italiano",
+                  "Note"
+                ]
               ],
               "bodyRows": [
-                ["ἀγαθός, ή, όν", "buono", ""],
-                ["ἀγαπητός, ή, όν", "diletto", ""],
-                ["ἅγιος, ἁγία, ἅγιον", "santo", ""],
-                ["ἄδηλος, ον", "oscuro", ""],
-                ["ἄδικος, ον", "ingiusto", ""],
-                ["αἰώνιος, ον", "eterno", ""],
-                ["ἄπιστος, ον", "incredulo, non credente", ""],
-                ["βάρβαρος, ον", "barbaro", ""],
-                ["δίκαιος, α, ον", "giusto", ""],
-                ["ἔσχατος, η, ον", "ultimo", ""],
-                ["ἴδιος, ία, ον", "proprio", ""],
-                ["Ἰουδαῖος, α, ον", "giudeo", ""],
-                ["ἰσχυρός, ά, όν", "forte", ""],
-                ["κακός, ή, όν", "cattivo", ""],
-                ["καλός, ή, όν", "bello", ""],
-                ["λοιπός, ή, όν", "rimanente", ""],
-                ["νεκρός, ά, όν", "morto", ""],
-                ["πιστός, ή, όν", "fedele", ""],
-                ["πονηρός, ά, όν", "malvagio", ""],
-                ["πρῶτος, η, ον", "primo", ""],
-                ["φαῦλος, η, ον", "cattivo, senza valore", ""]
+                [
+                  "ἀγαθός, ή, όν",
+                  "buono",
+                  ""
+                ],
+                [
+                  "ἀγαπητός, ή, όν",
+                  "diletto",
+                  ""
+                ],
+                [
+                  "ἅγιος, ἁγία, ἅγιον",
+                  "santo",
+                  ""
+                ],
+                [
+                  "ἄδηλος, ον",
+                  "oscuro",
+                  ""
+                ],
+                [
+                  "ἄδικος, ον",
+                  "ingiusto",
+                  ""
+                ],
+                [
+                  "αἰώνιος, ον",
+                  "eterno",
+                  ""
+                ],
+                [
+                  "ἄπιστος, ον",
+                  "incredulo, non credente",
+                  ""
+                ],
+                [
+                  "βάρβαρος, ον",
+                  "barbaro",
+                  ""
+                ],
+                [
+                  "δίκαιος, α, ον",
+                  "giusto",
+                  ""
+                ],
+                [
+                  "ἔσχατος, η, ον",
+                  "ultimo",
+                  ""
+                ],
+                [
+                  "ἴδιος, ία, ον",
+                  "proprio",
+                  ""
+                ],
+                [
+                  "Ἰουδαῖος, α, ον",
+                  "giudeo",
+                  ""
+                ],
+                [
+                  "ἰσχυρός, ά, όν",
+                  "forte",
+                  ""
+                ],
+                [
+                  "κακός, ή, όν",
+                  "cattivo",
+                  ""
+                ],
+                [
+                  "καλός, ή, όν",
+                  "bello",
+                  ""
+                ],
+                [
+                  "λοιπός, ή, όν",
+                  "rimanente",
+                  ""
+                ],
+                [
+                  "νεκρός, ά, όν",
+                  "morto",
+                  ""
+                ],
+                [
+                  "πιστός, ή, όν",
+                  "fedele",
+                  ""
+                ],
+                [
+                  "πονηρός, ά, όν",
+                  "malvagio",
+                  ""
+                ],
+                [
+                  "πρῶτος, η, ον",
+                  "primo",
+                  ""
+                ],
+                [
+                  "φαῦλος, η, ον",
+                  "cattivo, senza valore",
+                  ""
+                ]
               ]
             }
           },
@@ -2390,12 +4321,28 @@
             "type": "summaryTable",
             "table": {
               "headerRows": [
-                ["Greco", "Italiano", "Note"]
+                [
+                  "Greco",
+                  "Italiano",
+                  "Note"
+                ]
               ],
               "bodyRows": [
-                ["ἕκαστος, η, ον", "ciascuno", ""],
-                ["ἕτερος, α, ον", "altro (fra due)", ""],
-                ["ἄλλος, η, ο", "altro", "(si declina come un dimostrativo; cfr. § 49)"]
+                [
+                  "ἕκαστος, η, ον",
+                  "ciascuno",
+                  ""
+                ],
+                [
+                  "ἕτερος, α, ον",
+                  "altro (fra due)",
+                  ""
+                ],
+                [
+                  "ἄλλος, η, ο",
+                  "altro",
+                  "(si declina come un dimostrativo; cfr. § 49)"
+                ]
               ]
             }
           }
@@ -2462,7 +4409,12 @@
                 ]
               ],
               "bodyRows": [
-                ["ἐ-", "λυ-", "ο-", "ν"]
+                [
+                  "ἐ-",
+                  "λυ-",
+                  "ο-",
+                  "ν"
+                ]
               ]
             }
           }
@@ -2490,25 +4442,54 @@
                   "className": "grammar-table-conjugation",
                   "intro": "λύ-ω, sciolgo. T.P. λυ-.",
                   "headerRows": [
-                    ["Numero", "Persona", "Greco", "Italiano"]
+                    [
+                      "Numero",
+                      "Persona",
+                      "Greco",
+                      "Italiano"
+                    ]
                   ],
                   "bodyRows": [
                     [
-                      { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      {
+                        "label": "Sing.",
+                        "rowspan": 3,
+                        "className": "grammar-table-rowlabel"
+                      },
                       "I pers.",
                       "ἔ-λυ-ο-ν",
                       "io scioglievo"
                     ],
-                    ["II pers.", "ἔ-λυ-ε-ς", "tu scioglievi"],
-                    ["III pers.", "ἔ-λυ-ε(ν)", "egli scioglieva"],
                     [
-                      { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      "II pers.",
+                      "ἔ-λυ-ε-ς",
+                      "tu scioglievi"
+                    ],
+                    [
+                      "III pers.",
+                      "ἔ-λυ-ε(ν)",
+                      "egli scioglieva"
+                    ],
+                    [
+                      {
+                        "label": "Plur.",
+                        "rowspan": 3,
+                        "className": "grammar-table-rowlabel"
+                      },
                       "I pers.",
                       "ἐ-λύ-ο-μεν",
                       "noi scioglievamo"
                     ],
-                    ["II pers.", "ἐ-λύ-ε-τε", "voi scioglievate"],
-                    ["III pers.", "ἔ-λυ-ο-ν", "essi scioglievano"]
+                    [
+                      "II pers.",
+                      "ἐ-λύ-ε-τε",
+                      "voi scioglievate"
+                    ],
+                    [
+                      "III pers.",
+                      "ἔ-λυ-ο-ν",
+                      "essi scioglievano"
+                    ]
                   ]
                 }
               }
@@ -2525,27 +4506,61 @@
               "className": "grammar-table-conjugation",
               "intro": "φιλέ-ω, amo. T.P. φιλε-.",
               "headerRows": [
-                ["Numero", "Persona", "Forma non contratta", "Forma contratta", "Italiano"]
+                [
+                  "Numero",
+                  "Persona",
+                  "Forma non contratta",
+                  "Forma contratta",
+                  "Italiano"
+                ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "I pers.",
                   "ἐ-φίλε-ο-ν",
                   "ἐ-φίλου-ν",
                   "io amavo"
                 ],
-                ["II pers.", "ἐ-φίλε-ε-ς", "ἐ-φίλει-ς", "tu amavi"],
-                ["III pers.", "ἐ-φίλε-ε", "ἐ-φίλει", "egli amava"],
                 [
-                  { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "II pers.",
+                  "ἐ-φίλε-ε-ς",
+                  "ἐ-φίλει-ς",
+                  "tu amavi"
+                ],
+                [
+                  "III pers.",
+                  "ἐ-φίλε-ε",
+                  "ἐ-φίλει",
+                  "egli amava"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "I pers.",
                   "ἐ-φιλέ-ο-μεν",
                   "ἐ-φιλοῦ-μεν",
                   "noi amavamo"
                 ],
-                ["II pers.", "ἐ-φιλέ-ε-τε", "ἐ-φιλεῖ-τε", "voi amavate"],
-                ["III pers.", "ἐ-φίλε-ο-ν", "ἐ-φίλου-ν", "essi amavano"]
+                [
+                  "II pers.",
+                  "ἐ-φιλέ-ε-τε",
+                  "ἐ-φιλεῖ-τε",
+                  "voi amavate"
+                ],
+                [
+                  "III pers.",
+                  "ἐ-φίλε-ο-ν",
+                  "ἐ-φίλου-ν",
+                  "essi amavano"
+                ]
               ]
             }
           }
@@ -2563,15 +4578,64 @@
             "table": {
               "className": "grammar-table-aumento",
               "headerRows": [
-                ["Vocale", "", "Aumento", "Esempio", "Italiano", "Imperfetto"]
+                [
+                  "Vocale",
+                  "",
+                  "Aumento",
+                  "Esempio",
+                  "Italiano",
+                  "Imperfetto"
+                ]
               ],
               "bodyRows": [
-                ["α", ">", "η", "ἀκούω", "odo", "ἤκουον"],
-                ["α", ">", "η", "ᾄδω", "canto", "ᾖδον"],
-                ["ε", ">", "η", "ἐγείρω", "sveglio", "ἤγειρον"],
-                ["ι", ">", "ῑ", "ἱματίζω", "vesto", "ἱμάτιζον"],
-                ["ο", ">", "ω", "ὁμολογέω", "confesso", "ὡμολόγουν"],
-                ["υ", ">", "ῡ", "ὑστερέω", "manco", "ὑστέρουν"]
+                [
+                  "α",
+                  ">",
+                  "η",
+                  "ἀκούω",
+                  "odo",
+                  "ἤκουον"
+                ],
+                [
+                  "α",
+                  ">",
+                  "η",
+                  "ᾄδω",
+                  "canto",
+                  "ᾖδον"
+                ],
+                [
+                  "ε",
+                  ">",
+                  "η",
+                  "ἐγείρω",
+                  "sveglio",
+                  "ἤγειρον"
+                ],
+                [
+                  "ι",
+                  ">",
+                  "ῑ",
+                  "ἱματίζω",
+                  "vesto",
+                  "ἱμάτιζον"
+                ],
+                [
+                  "ο",
+                  ">",
+                  "ω",
+                  "ὁμολογέω",
+                  "confesso",
+                  "ὡμολόγουν"
+                ],
+                [
+                  "υ",
+                  ">",
+                  "ῡ",
+                  "ὑστερέω",
+                  "manco",
+                  "ὑστέρουν"
+                ]
               ]
             }
           }
@@ -2589,12 +4653,40 @@
                 "table": {
                   "className": "grammar-table-aumento",
                   "headerRows": [
-                    ["Dittongo", "", "Aumento", "Esempio", "Italiano", "Imperfetto"]
+                    [
+                      "Dittongo",
+                      "",
+                      "Aumento",
+                      "Esempio",
+                      "Italiano",
+                      "Imperfetto"
+                    ]
                   ],
                   "bodyRows": [
-                    ["οι", ">", "ῳ", "οἰκέω", "abito", "ᾤκουν"],
-                    ["αι", ">", "ῃ", "αἰτέω", "chiedo", "ᾔτουν"],
-                    ["αυ", ">", "ηυ", "αὐξάνω", "cresco", "ηὔξανον"]
+                    [
+                      "οι",
+                      ">",
+                      "ῳ",
+                      "οἰκέω",
+                      "abito",
+                      "ᾤκουν"
+                    ],
+                    [
+                      "αι",
+                      ">",
+                      "ῃ",
+                      "αἰτέω",
+                      "chiedo",
+                      "ᾔτουν"
+                    ],
+                    [
+                      "αυ",
+                      ">",
+                      "ηυ",
+                      "αὐξάνω",
+                      "cresco",
+                      "ηὔξανον"
+                    ]
                   ]
                 }
               },
@@ -2619,13 +4711,33 @@
                 "table": {
                   "className": "grammar-table-conjugation",
                   "headerRows": [
-                    ["Presente", "Italiano", "Imperfetto"]
+                    [
+                      "Presente",
+                      "Italiano",
+                      "Imperfetto"
+                    ]
                   ],
                   "bodyRows": [
-                    ["ἀπο-θνῄσκω", "muoio", "ἀπ-έθνῃσκον"],
-                    ["παρα-καλέω", "esorto", "παρ-εκάλουν"],
-                    ["προ-πέμπω", "mando innanzi", "προ-ἔπεμπον"],
-                    ["περι-πατέω", "passeggio", "περι-επάτουν"]
+                    [
+                      "ἀπο-θνῄσκω",
+                      "muoio",
+                      "ἀπ-έθνῃσκον"
+                    ],
+                    [
+                      "παρα-καλέω",
+                      "esorto",
+                      "παρ-εκάλουν"
+                    ],
+                    [
+                      "προ-πέμπω",
+                      "mando innanzi",
+                      "προ-ἔπεμπον"
+                    ],
+                    [
+                      "περι-πατέω",
+                      "passeggio",
+                      "περι-επάτουν"
+                    ]
                   ]
                 }
               },
@@ -2638,13 +4750,33 @@
                 "table": {
                   "className": "grammar-table-conjugation",
                   "headerRows": [
-                    ["Presente", "Italiano", "Imperfetto"]
+                    [
+                      "Presente",
+                      "Italiano",
+                      "Imperfetto"
+                    ]
                   ],
                   "bodyRows": [
-                    ["ἐκ-βάλλω", "espello", "ἐξ-έβαλλον"],
-                    ["συν-λέγω", "raccolgo", "συν-ἔλεγον"],
-                    ["συγ-γράφω", "redigo", "συν-ἔγραφον"],
-                    ["ἐμ-βαίνω", "salgo, entro", "ἐν-έβαινον"]
+                    [
+                      "ἐκ-βάλλω",
+                      "espello",
+                      "ἐξ-έβαλλον"
+                    ],
+                    [
+                      "συν-λέγω",
+                      "raccolgo",
+                      "συν-ἔλεγον"
+                    ],
+                    [
+                      "συγ-γράφω",
+                      "redigo",
+                      "συν-ἔγραφον"
+                    ],
+                    [
+                      "ἐμ-βαίνω",
+                      "salgo, entro",
+                      "ἐν-έβαινον"
+                    ]
                   ]
                 }
               },
@@ -2657,13 +4789,33 @@
                 "table": {
                   "className": "grammar-table-conjugation",
                   "headerRows": [
-                    ["Verbo", "Italiano", "Imperfetto"]
+                    [
+                      "Verbo",
+                      "Italiano",
+                      "Imperfetto"
+                    ]
                   ],
                   "bodyRows": [
-                    ["ἐάω", "lascio (cfr. Lc. 4,41; At. 19,30)", "εἴων (< εἴαον)"],
-                    ["ἕλκω, ἑλκύω", "tiro (cfr. Gv. 18,10: Aor.)", "εἷλκον, εἵλκυον"],
-                    ["ἐργάζομαι", "opero/lavoro (cfr. II Gv. 8: Aor.)", "εἰργαζόμην"],
-                    ["ἔχω", "ho (cfr. Mt. 13,5; 21,28)", "εἶχον"]
+                    [
+                      "ἐάω",
+                      "lascio (cfr. Lc. 4,41; At. 19,30)",
+                      "εἴων (< εἴαον)"
+                    ],
+                    [
+                      "ἕλκω, ἑλκύω",
+                      "tiro (cfr. Gv. 18,10: Aor.)",
+                      "εἷλκον, εἵλκυον"
+                    ],
+                    [
+                      "ἐργάζομαι",
+                      "opero/lavoro (cfr. II Gv. 8: Aor.)",
+                      "εἰργαζόμην"
+                    ],
+                    [
+                      "ἔχω",
+                      "ho (cfr. Mt. 13,5; 21,28)",
+                      "εἶχον"
+                    ]
                   ]
                 }
               },
@@ -2684,25 +4836,54 @@
               "className": "grammar-table-conjugation",
               "intro": "ἀκού-ω, ascolto. T.P. ἀκου-.",
               "headerRows": [
-                ["Numero", "Persona", "Greco", "Italiano"]
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "I pers.",
                   "ἤκου-ο-ν",
                   "io ascoltavo"
                 ],
-                ["II pers.", "ἤκου-ε-ς", "tu ascoltavi"],
-                ["III pers.", "ἤκου-ε(-ν)", "egli ascoltava"],
                 [
-                  { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "II pers.",
+                  "ἤκου-ε-ς",
+                  "tu ascoltavi"
+                ],
+                [
+                  "III pers.",
+                  "ἤκου-ε(-ν)",
+                  "egli ascoltava"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "I pers.",
                   "ἠκού-ο-μεν",
                   "noi ascoltavamo"
                 ],
-                ["II pers.", "ἠκού-ε-τε", "voi ascoltavate"],
-                ["III pers.", "ἤκου-ο-ν", "essi ascoltavano"]
+                [
+                  "II pers.",
+                  "ἠκού-ε-τε",
+                  "voi ascoltavate"
+                ],
+                [
+                  "III pers.",
+                  "ἤκου-ο-ν",
+                  "essi ascoltavano"
+                ]
               ]
             }
           }
@@ -2717,27 +4898,61 @@
                   "className": "grammar-table-conjugation",
                   "intro": "αἰτέ-ω, chiedo. T.P. αἰτε-.",
                   "headerRows": [
-                    ["Numero", "Persona", "Forma non contratta", "Forma contratta", "Italiano"]
+                    [
+                      "Numero",
+                      "Persona",
+                      "Forma non contratta",
+                      "Forma contratta",
+                      "Italiano"
+                    ]
                   ],
                   "bodyRows": [
                     [
-                      { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      {
+                        "label": "Sing.",
+                        "rowspan": 3,
+                        "className": "grammar-table-rowlabel"
+                      },
                       "I pers.",
                       "ᾔτε-ο-ν",
                       "ᾔτουν",
                       "io chiedevo"
                     ],
-                    ["II pers.", "ᾔτε-ε-ς", "ᾔτεις", "tu chiedevi"],
-                    ["III pers.", "ᾔτε-ε", "ᾔτει", "egli chiedeva"],
                     [
-                      { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                      "II pers.",
+                      "ᾔτε-ε-ς",
+                      "ᾔτεις",
+                      "tu chiedevi"
+                    ],
+                    [
+                      "III pers.",
+                      "ᾔτε-ε",
+                      "ᾔτει",
+                      "egli chiedeva"
+                    ],
+                    [
+                      {
+                        "label": "Plur.",
+                        "rowspan": 3,
+                        "className": "grammar-table-rowlabel"
+                      },
                       "I pers.",
                       "ᾐτέ-ο-μεν",
                       "ᾐτοῦμεν",
                       "noi chiedevamo"
                     ],
-                    ["II pers.", "ᾐτέ-ε-τε", "ᾐτεῖτε", "voi chiedevate"],
-                    ["III pers.", "ᾔτε-ο-ν", "ᾔτουν", "essi chiedevano"]
+                    [
+                      "II pers.",
+                      "ᾐτέ-ε-τε",
+                      "ᾐτεῖτε",
+                      "voi chiedevate"
+                    ],
+                    [
+                      "III pers.",
+                      "ᾔτε-ο-ν",
+                      "ᾔτουν",
+                      "essi chiedevano"
+                    ]
                   ]
                 }
               }
@@ -2754,25 +4969,54 @@
               "className": "grammar-table-conjugation",
               "intro": "Cfr. § 36, per il Presente.",
               "headerRows": [
-                ["Numero", "Persona", "Greco", "Italiano"]
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
               ],
               "bodyRows": [
                 [
-                  { "label": "Sing.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "I pers.",
                   "ἤμην (classico: ἦν)",
                   "io ero"
                 ],
-                ["II pers.", "ἦς (raro: ἦσθα)", "tu eri"],
-                ["III pers.", "ἦν", "egli era"],
                 [
-                  { "label": "Plur.", "rowspan": 3, "className": "grammar-table-rowlabel" },
+                  "II pers.",
+                  "ἦς (raro: ἦσθα)",
+                  "tu eri"
+                ],
+                [
+                  "III pers.",
+                  "ἦν",
+                  "egli era"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
                   "I pers.",
                   "ἦμεν (anche ἤμεθα)",
                   "noi eravamo"
                 ],
-                ["II pers.", "ἦτε", "voi eravate"],
-                ["III pers.", "ἦσαν", "essi erano"]
+                [
+                  "II pers.",
+                  "ἦτε",
+                  "voi eravate"
+                ],
+                [
+                  "III pers.",
+                  "ἦσαν",
+                  "essi erano"
+                ]
               ]
             }
           }
@@ -2790,11 +5034,26 @@
             "block": {
               "className": "grammar-example-prepositions",
               "rows": [
-                { "key": "ἀπό", "value": "= da (regge il GEN.)" },
-                { "key": "εἰς", "value": "= a/in (regge l'ACC.)" },
-                { "key": "κατά", "value": "= giù/contro/secondo... (regge il GEN. e l'ACC.)" },
-                { "key": "ἐκ/ἐξ", "value": "= da/fuori da... (regge il GEN.)" },
-                { "key": "ἐν", "value": "= in (regge il DAT.)" }
+                {
+                  "key": "ἀπό",
+                  "value": "= da (regge il GEN.)"
+                },
+                {
+                  "key": "εἰς",
+                  "value": "= a/in (regge l'ACC.)"
+                },
+                {
+                  "key": "κατά",
+                  "value": "= giù/contro/secondo... (regge il GEN. e l'ACC.)"
+                },
+                {
+                  "key": "ἐκ/ἐξ",
+                  "value": "= da/fuori da... (regge il GEN.)"
+                },
+                {
+                  "key": "ἐν",
+                  "value": "= in (regge il DAT.)"
+                }
               ]
             }
           }
@@ -2842,19 +5101,74 @@
             "table": {
               "className": "grammar-table-vocabulary",
               "headerRows": [
-                ["Greco", "Italiano", "Greco", "Italiano"]
+                [
+                  "Greco",
+                  "Italiano",
+                  "Greco",
+                  "Italiano"
+                ]
               ],
               "bodyRows": [
-                ["ἄγω", "conduco", "κράζω", "grido, esclamo"],
-                ["ἀναγιγνώσκω", "leggo (classico)", "λύω", "sciolgo"],
-                ["ἀναγινώσκω", "leggo (Gr. biblico)", "πείθω", "persuado"],
-                ["ἀποκτείνω", "uccido", "πέμπω", "mando"],
-                ["ἀπολύω", "mando via, libero", "περιπατέω", "passeggio, cammino"],
-                ["βαπτίζω", "battezzo", "πίπτω", "cado"],
-                ["διαφέρω", "porto, diffondo, mi distinguo", "συνάγω", "riunisco, porto insieme"],
-                ["δοξάζω", "glorifico", "ὑπάγω", "metto sotto, sottraggo, mi ritiro"],
-                ["ἐκβάλλω", "getto fuori, espello", "φέρω", "porto"],
-                ["κηρύσσω", "proclamo, prèdico", "χαίρω", "mi rallegro"]
+                [
+                  "ἄγω",
+                  "conduco",
+                  "κράζω",
+                  "grido, esclamo"
+                ],
+                [
+                  "ἀναγιγνώσκω",
+                  "leggo (classico)",
+                  "λύω",
+                  "sciolgo"
+                ],
+                [
+                  "ἀναγινώσκω",
+                  "leggo (Gr. biblico)",
+                  "πείθω",
+                  "persuado"
+                ],
+                [
+                  "ἀποκτείνω",
+                  "uccido",
+                  "πέμπω",
+                  "mando"
+                ],
+                [
+                  "ἀπολύω",
+                  "mando via, libero",
+                  "περιπατέω",
+                  "passeggio, cammino"
+                ],
+                [
+                  "βαπτίζω",
+                  "battezzo",
+                  "πίπτω",
+                  "cado"
+                ],
+                [
+                  "διαφέρω",
+                  "porto, diffondo, mi distinguo",
+                  "συνάγω",
+                  "riunisco, porto insieme"
+                ],
+                [
+                  "δοξάζω",
+                  "glorifico",
+                  "ὑπάγω",
+                  "metto sotto, sottraggo, mi ritiro"
+                ],
+                [
+                  "ἐκβάλλω",
+                  "getto fuori, espello",
+                  "φέρω",
+                  "porto"
+                ],
+                [
+                  "κηρύσσω",
+                  "proclamo, prèdico",
+                  "χαίρω",
+                  "mi rallegro"
+                ]
               ]
             }
           }
@@ -2880,12 +5194,702 @@
     "id": "lezione-undicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione undicesima",
-    "title": "Aoristo e numerali",
-    "summary": "Introduzione all'aoristo e ai principali numerali cardinali.",
+    "title": "Pronomi e aggettivi dimostrativi",
+    "summary": "Quadro dei principali dimostrativi, posizione attributiva e predicativa dell'aggettivo, con Vocabolario 12º.",
     "contents": [
-      "42. Aoristo primo attivo e medio",
-      "43. Numerali cardinali",
-      "44. Vocabolario 11º"
+      "§ 49 - Pronomi e aggettivi dimostrativi",
+      "§ 50 - Posizione dell'aggettivo nella frase",
+      "Vocabolario 12º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 49 - Pronomi e aggettivi dimostrativi",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "I pronomi o aggettivi dimostrativi più frequentemente usati sono:"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "1) ἐκεῖνος - ἐκείνη - ἐκεῖνο = quello",
+              "2) οὗτος - αὕτη - τοῦτο = questi/questo/colui/il precedente",
+              "3) αὐτός - αὐτή - αὐτό = stesso/quello/egli/esso",
+              "4) ὅδε - ἥδε - τόδε = questo/questi/il seguente",
+              "5) ὁ - ἡ - τό (l'articolo, originariamente un antico dimostrativo, irrigiditosi successivamente in pronome)."
+            ]
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "ἐκεῖνος, -η, -ο (quello)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "ἐκεῖνος",
+                  "ἐκείνη",
+                  "ἐκεῖνο"
+                ],
+                [
+                  "GEN.",
+                  "ἐκείνου",
+                  "ἐκείνης",
+                  "ἐκείνου"
+                ],
+                [
+                  "DAT.",
+                  "ἐκείνῳ",
+                  "ἐκείνῃ",
+                  "ἐκείνῳ"
+                ],
+                [
+                  "ACC.",
+                  "ἐκεῖνον",
+                  "ἐκείνην",
+                  "ἐκεῖνο"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "ἐκεῖνοι",
+                  "ἐκεῖναι",
+                  "ἐκεῖνα"
+                ],
+                [
+                  "GEN.",
+                  "ἐκείνων",
+                  "ἐκείνων",
+                  "ἐκείνων"
+                ],
+                [
+                  "DAT.",
+                  "ἐκείνοις",
+                  "ἐκείναις",
+                  "ἐκείνοις"
+                ],
+                [
+                  "ACC.",
+                  "ἐκείνους",
+                  "ἐκείνας",
+                  "ἐκεῖνα"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "οὗτος, αὕτη, τοῦτο (questo)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "οὗτος",
+                  "αὕτη",
+                  "τοῦτο"
+                ],
+                [
+                  "GEN.",
+                  "τούτου",
+                  "ταύτης",
+                  "τούτου"
+                ],
+                [
+                  "DAT.",
+                  "τούτῳ",
+                  "ταύτῃ",
+                  "τούτῳ"
+                ],
+                [
+                  "ACC.",
+                  "τοῦτον",
+                  "ταύτην",
+                  "τοῦτο"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "οὗτοι",
+                  "αὗται",
+                  "ταῦτα"
+                ],
+                [
+                  "GEN.",
+                  "τούτων",
+                  "τούτων",
+                  "τούτων"
+                ],
+                [
+                  "DAT.",
+                  "τούτοις",
+                  "ταύταις",
+                  "τούτοις"
+                ],
+                [
+                  "ACC.",
+                  "τούτους",
+                  "ταύτας",
+                  "ταῦτα"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "paragraph",
+            "text": "a) Tutti i pronomi mancano, nella declinazione, del vocativo singolare e plurale."
+          },
+          {
+            "type": "paragraph",
+            "text": "b) Quando οὗτος e ἐκεῖνος («questo» e «quello») accompagnano, in funzione di aggettivi, un nome, vanno nello stesso genere, numero e caso di esso; in tal caso, il nome è sempre accompagnato dall'articolo (diversamente da quanto avviene nelle lingue moderne); cfr. § 50."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "intro": "Es.:",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "οὗτος ὁ ἄνθρωπος",
+                  "quest'uomo"
+                ],
+                [
+                  "ὁ ἄνθρωπος οὗτος",
+                  "quest'uomo"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "c) Quando οὗτος sta da solo, cioè ha funzione di pronome, significa «costui» (femm. «costei», neutro «ciò»); il neutro plurale, NOM. e ACC., ταῦτα = «queste cose»."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "intro": "Es.:",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "οὗτος ἦλθεν εἰς μαρτυρίαν",
+                  "questi (o costui) venne a testimonianza"
+                ],
+                [
+                  "ταῦτα ἔλεγεν Ἰησοῦς",
+                  "Gesù diceva queste cose"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "La stessa declinazione di ἐκεῖνος e οὗτος, con il NOM. e ACC. neutro singolare senza -ν, è seguita anche da αὐτός, αὐτή, αὐτό (stesso/quello/egli/esso). Per l'uso di tale pronome, cfr. § 50."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "αὐτός, αὐτή, αὐτό (stesso/quello/egli)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "αὐτός",
+                  "αὐτή",
+                  "αὐτό"
+                ],
+                [
+                  "GEN.",
+                  "αὐτοῦ",
+                  "αὐτῆς",
+                  "αὐτοῦ"
+                ],
+                [
+                  "DAT.",
+                  "αὐτῷ",
+                  "αὐτῇ",
+                  "αὐτῷ"
+                ],
+                [
+                  "ACC.",
+                  "αὐτόν",
+                  "αὐτήν",
+                  "αὐτό"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "αὐτοί",
+                  "αὐταί",
+                  "αὐτά"
+                ],
+                [
+                  "GEN.",
+                  "αὐτῶν",
+                  "αὐτῶν",
+                  "αὐτῶν"
+                ],
+                [
+                  "DAT.",
+                  "αὐτοῖς",
+                  "αὐταῖς",
+                  "αὐτοῖς"
+                ],
+                [
+                  "ACC.",
+                  "αὐτούς",
+                  "αὐτάς",
+                  "αὐτά"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Un altro pronome dimostrativo è ὅδε, ἥδε, τόδε (questo), riferito a ciò che segue. Esso è formato dall'articolo determinativo, con l'aggiunta della particella indeclinabile -δε. L'accento è sempre sulla prima sillaba ed è quello dell'articolo; le forme prive d'accento prendono, in questo pronome, l'accento acuto. Nel N.T. esso è usato solo 10 volte (rispetto alle circa 1400 di οὗτος). Ricordiamo la formula di inizio delle sette lettere dell'Apocalisse (capitoli 2 e 3), ripetuta 7 volte: τάδε λέγει..."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "ὅδε, ἥδε, τόδε (questo)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "ὅδε",
+                  "ἥδε",
+                  "τόδε"
+                ],
+                [
+                  "GEN.",
+                  "τοῦδε",
+                  "τῆσδε",
+                  "τοῦδε"
+                ],
+                [
+                  "DAT.",
+                  "τῷδε",
+                  "τῇδε",
+                  "τῷδε"
+                ],
+                [
+                  "ACC.",
+                  "τόνδε",
+                  "τήνδε",
+                  "τόδε"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "οἵδε",
+                  "αἵδε",
+                  "τάδε"
+                ],
+                [
+                  "GEN.",
+                  "τῶνδε",
+                  "τῶνδε",
+                  "τῶνδε"
+                ],
+                [
+                  "DAT.",
+                  "τοῖσδε",
+                  "ταῖσδε",
+                  "τοῖσδε"
+                ],
+                [
+                  "ACC.",
+                  "τούσδε",
+                  "τάσδε",
+                  "τάδε"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 50 - Posizione dell'aggettivo nella frase",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Quando l'aggettivo è usato come attributo di un nome con l'articolo, se segue il nome, dev'essere anch'esso preceduto dall'articolo. Se, invece l'aggettivo precede il nome, l'articolo anteposto all'attributo vale anche per il nome."
+          },
+          {
+            "type": "paragraph",
+            "text": "In definitiva, si può avere una di queste due costruzioni:"
+          }
+        ],
+        "subsections": [
+          {
+            "title": "1) attributiva",
+            "contentBlocks": [
+              {
+                "type": "summaryTable",
+                "table": {
+                  "headerRows": [
+                    [
+                      "Costruzione",
+                      "Greco",
+                      "Italiano"
+                    ]
+                  ],
+                  "bodyRows": [
+                    [
+                      "articolo + attributo + nome",
+                      "ὁ πρῶτος λόγος",
+                      "il primo discorso"
+                    ],
+                    [
+                      "articolo + nome + articolo + aggettivo",
+                      "ὁ λόγος ὁ πρῶτος",
+                      "il primo discorso"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Se il sostantivo è indeterminato (cioè senza articolo), anche il suo attributo sarà senza articolo."
+              },
+              {
+                "type": "paragraph",
+                "text": "Es.: δένδρον ἀγαθόν = un albero buono."
+              }
+            ]
+          },
+          {
+            "title": "2) predicativa",
+            "contentBlocks": [
+              {
+                "type": "summaryTable",
+                "table": {
+                  "intro": "Ess.:",
+                  "headerRows": [
+                    [
+                      "Greco",
+                      "Italiano"
+                    ]
+                  ],
+                  "bodyRows": [
+                    [
+                      "πρῶτος ὁ λόγος",
+                      "primo, il discorso; il discorso (è) primo"
+                    ],
+                    [
+                      "ὁ λόγος πρῶτος",
+                      "primo, il discorso; il discorso (è) primo"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Se l'aggettivo non è preceduto dall'articolo, ma il sostantivo sì, l'aggettivo ha valore di predicato."
+              },
+              {
+                "type": "paragraph",
+                "text": "Distinguere la posizione predicativa da quella attributiva è particolarmente importante per alcuni aggettivi, come, p. es., μέσος. In posizione attributiva, significa «che sta in mezzo», «centrale». In posizione predicativa significa «il centro di...», «in mezzo a...». Il latino, che non ha l'articolo, ha espressioni di significato ambiguo: in medio monte, infatti, vuol dire sia «nel monte di mezzo» che «a metà del monte»."
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "intro": "Ess.:",
+                  "headerRows": [
+                    [
+                      "Greco",
+                      "Italiano"
+                    ]
+                  ],
+                  "bodyRows": [
+                    [
+                      "τὸ καταπέτασμα μέσον",
+                      "il mezzo della cortina del tempio (Lc. 23,45)"
+                    ],
+                    [
+                      "μέσον δὲ τὸν Ἰησοῦν",
+                      "in mezzo, Gesù (Gv. 19,18)"
+                    ],
+                    [
+                      "μέσης νυκτός",
+                      "a mezzanotte (Mt. 25,6)"
+                    ],
+                    [
+                      "ἡμέρας μέσης",
+                      "a mezzogiorno (At. 26,13)"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Lo stesso discorso vale per αὐτός, αὐτή, αὐτό; infatti, quando è in posizione attributiva, è un aggettivo e significa «il medesimo» (lat. idem)."
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "intro": "Ess.:",
+                  "headerRows": [
+                    [
+                      "Greco",
+                      "Italiano"
+                    ]
+                  ],
+                  "bodyRows": [
+                    [
+                      "ὁ αὐτὸς ἀπόστολος",
+                      "il medesimo apostolo"
+                    ],
+                    [
+                      "ὁ ἀπόστολος ὁ αὐτός",
+                      "il medesimo apostolo"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Quando è in posizione predicativa, significa «stesso» (lat. ipse)."
+              },
+              {
+                "type": "summaryTable",
+                "table": {
+                  "intro": "Ess.:",
+                  "headerRows": [
+                    [
+                      "Greco",
+                      "Italiano"
+                    ]
+                  ],
+                  "bodyRows": [
+                    [
+                      "αὐτὸς ὁ ἀπόστολος",
+                      "l'apostolo stesso, in persona"
+                    ],
+                    [
+                      "ὁ ἀπόστολος αὐτός",
+                      "l'apostolo stesso, in persona"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Nel N.T. αὐτός comincia anche ad essere usato come pronome di III persona. Al NOM., significa «egli/ella/esso»; al GEN., «di lui, di lei», cioè «suo/sua»."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 12º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ἡ ἀδικία, ας",
+                  "l'iniquità, l'ingiustizia"
+                ],
+                [
+                  "ὁ/ἡ ἁμαρτωλός, οῦ",
+                  "il peccatore, la peccatrice"
+                ],
+                [
+                  "ὁ διάβολος, ου",
+                  "il diavolo, il calunniatore"
+                ],
+                [
+                  "ἡ διάλεκτος, ου",
+                  "la lingua (di un paese)"
+                ],
+                [
+                  "ὁ λίθος, ου",
+                  "la pietra (monolito; litografia)"
+                ],
+                [
+                  "ὁ οἰκοδεσπότης, ου",
+                  "il padrone di casa"
+                ],
+                [
+                  "ὁ οὐρανός, οῦ",
+                  "il cielo"
+                ],
+                [
+                  "ὁ ὄχλος, ου",
+                  "la folla"
+                ],
+                [
+                  "ὁ τελώνης, ου",
+                  "il pubblicano, l'esattore"
+                ],
+                [
+                  "ὁ ὑποκριτής, οῦ",
+                  "l'ipocrita, il recitatore"
+                ],
+                [
+                  "ἁμαρτάνω",
+                  "pecco"
+                ],
+                [
+                  "καθαρίζω",
+                  "purifico, pulisco"
+                ],
+                [
+                  "κελεύω",
+                  "ordino, comando"
+                ],
+                [
+                  "οἰκοδομέω",
+                  "edifico, costruisco"
+                ],
+                [
+                  "πειράζω",
+                  "tento, metto alla prova"
+                ]
+              ],
+              "notes": [
+                "ὑποκριτής: originariamente «risponditore», da ὑποκρίνομαι; quindi «interprete», «attore»; da cui, nel N.T.: «ipocrita», «simulatore»."
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. οἰκοδεσπότης ἐπείραζε τοὺς δούλους. 2. ὁ κύριος γινώσκει τὸν καρπὸν τῆς ἀδικίας. 3. ὁ τελώνης λαμβάνει τὸν μισθὸν τοῦ κόσμου. 4. ὁ διάβολος πειράζει τοὺς ὄχλους καὶ τοὺς ἀποστόλους. 5. ἡ ὁδὸς τῶν ὑποκριτῶν πονηρά ἐστι τῷ κυρίῳ. 6. ὁ μαθητὴς ἀγαπητὸς ἐστι τῷ διδασκάλῳ. 7. ὁ νεανίας ὁ πιστὸς ἀναγινώσκει τὰς ἁγίας γραφάς. 8. φέρετε οἶνον τῷ οἰκοδεσπότῃ. 9. ἦν δὲ σάββατον ἐν ἐκείνῃ τῇ ἡμέρᾳ. 10. καὶ ἤκουον τῆς φωνῆς ταύτης τῇ ἰδίᾳ διαλέκτῳ. 11. τάδε λέγει ὁ πρῶτος καὶ ὁ ἔσχατος. 12. ὁ θεὸς ποιεῖ τὸν οὐρανὸν καὶ τὴν γῆν καὶ τὴν θάλασσαν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. La folla ascoltava le parole del maestro e le conservava nel cuore. 2. In quella casa c'era la pace del Signore. 3. I discepoli portavano un pane e un bastone nella (loro) via. 4. Gli parlava un angelo e lo incoraggiava. 5. Gli uomini vedono i segni del maestro e credono in lui. 6. Ascoltavano Gesù pubblicani e peccatori."
+            ]
+          }
+        ]
+      }
     ]
   },
   {

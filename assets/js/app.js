@@ -193,16 +193,31 @@ const renderGrammarChapterNav = (previousChapter, nextChapter) => {
     <div class="grammar-breadcrumb-nav">
       ${
         previousChapter
-          ? `<button type="button" class="text-link-button" data-grammar-prev-chapter="${escapeHtml(previousChapter.id)}">&larr; ${escapeHtml(getGrammarDisplayLabel(previousChapter))}</button>`
+          ? `<button type="button" class="text-link-button" data-grammar-prev-chapter="${escapeHtml(previousChapter.id)}">&larr; ${escapeHtml(getGrammarChapterNumber(previousChapter))}</button>`
           : `<span class="grammar-breadcrumb-placeholder" aria-hidden="true"></span>`
       }
       ${
         nextChapter
-          ? `<button type="button" class="text-link-button" data-grammar-next-chapter="${escapeHtml(nextChapter.id)}">${escapeHtml(getGrammarDisplayLabel(nextChapter))} &rarr;</button>`
+          ? `<button type="button" class="text-link-button" data-grammar-next-chapter="${escapeHtml(nextChapter.id)}">${escapeHtml(getGrammarChapterNumber(nextChapter))} &rarr;</button>`
           : `<span class="grammar-breadcrumb-placeholder" aria-hidden="true"></span>`
       }
     </div>
   `;
+};
+
+const renderGrammarChapterNumber = (chapterIndex) =>
+  Number.isInteger(chapterIndex) && chapterIndex >= 0
+    ? `<span class="grammar-breadcrumb-page">${chapterIndex + 1}</span>`
+    : `<span class="grammar-breadcrumb-page" aria-hidden="true"></span>`;
+
+const getGrammarChapterNumber = (chapter) => {
+  const label = chapter?.lessonLabel || "";
+  const match = label.match(/(\d+)/);
+  if (match) return match[1];
+  const index = (state.data?.grammar || [])
+    .filter((item) => item.kind === "lesson" || item.kind === "appendix")
+    .findIndex((item) => item.id === chapter?.id);
+  return index >= 0 ? String(index + 1) : "";
 };
 
 const renderGrammarHeroItemNavButton = (direction, item) => {
@@ -371,6 +386,7 @@ const renderGrammarParagraphs = (paragraphs = [], options = {}) =>
 const renderGrammarContentBlock = (block, options = {}) => {
   if (!block || typeof block !== "object") return "";
   if (block.type === "paragraph") return renderGrammarParagraph(block.text || "", options);
+  if (block.type === "subheading") return `<h4 class="grammar-inline-heading">${escapeHtml(block.text || "")}</h4>`;
   if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
   if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
   if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
@@ -1301,6 +1317,7 @@ const renderGrammar = () => {
       <section class="stack grammar-detail">
         <article class="panel grammar-breadcrumb">
           <button type="button" class="text-link-button" data-grammar-back-index>&larr; Torna all'indice</button>
+          ${renderGrammarChapterNumber(selectedChapterIndex)}
           ${chapterNavigationHtml}
         </article>
 
@@ -1361,6 +1378,7 @@ const renderGrammar = () => {
     <section class="stack grammar-detail">
       <article class="panel grammar-breadcrumb">
         <button type="button" class="text-link-button" data-grammar-back-chapter>&larr; Indice della parte</button>
+        ${renderGrammarChapterNumber(selectedChapterIndex)}
         ${chapterNavigationHtml}
       </article>
 
