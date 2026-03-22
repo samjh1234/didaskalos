@@ -127,7 +127,14 @@ const getCeiVerseText = (data, occurrence) => {
 };
 
 // Link diretto alla scheda lessicale completa di una parola.
-const buildWordHref = (lemma) => `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
+const buildWordHref = (lemma, options = {}) => {
+  const params = new URLSearchParams({
+    lemma: normalize(lemma),
+  });
+  if (options.form) params.set("form", options.form);
+  if (options.bcv) params.set("bcv", options.bcv);
+  return `word.html?${params.toString()}`;
+};
 
 // Link diretto dalla scheda parola all'Interlineare sul versetto preciso.
 const buildInterlinearHref = (occurrence) => {
@@ -369,10 +376,33 @@ const getOfficialParadigmForWord = (data, lemma, partOfSpeech) => {
 };
 
 // Costruisce il modello dati completo della parola da renderizzare nella pagina.
-const buildWordData = (data, lemma) => {
+const buildWordData = (data, lemma, focus = {}) => {
   const entry = data.lexicon.find((item) => normalize(item.lemma) === normalize(lemma));
-  const occurrences = collectOccurrences(data.gospels, lemma);
-  const fallbackSurface = occurrences[0]?.surface || lemma;
+  const occurrences = collectOccurrences(data.gospels, lemma).sort((left, right) => {
+    const leftScore = Number(
+      Boolean(
+        focus.bcv &&
+          left.bcv === focus.bcv &&
+          (!focus.form || normalize(left.surface) === normalize(focus.form)),
+      ),
+    );
+    const rightScore = Number(
+      Boolean(
+        focus.bcv &&
+          right.bcv === focus.bcv &&
+          (!focus.form || normalize(right.surface) === normalize(focus.form)),
+      ),
+    );
+    return rightScore - leftScore;
+  });
+  const fallbackSurface = focus.form || occurrences[0]?.surface || lemma;
+  const focusedOccurrence =
+    occurrences.find(
+      (item) =>
+        focus.bcv &&
+        item.bcv === focus.bcv &&
+        (!focus.form || normalize(item.surface) === normalize(focus.form)),
+    ) || null;
   const greek = entry?.greek || fallbackSurface;
   const partOfSpeech = entry?.partOfSpeech || inferPartOfSpeech(lemma);
   const gloss =
@@ -408,9 +438,14 @@ const buildWordData = (data, lemma) => {
   return {
     greek,
     lemma,
+    focusForm: focus.form || "",
+    focusBcv: focus.bcv || "",
     partOfSpeech,
     gloss: resolvedGloss,
-    pronunciation: verbLemmaEntry?.pronunciation || pronounceGreek(greek),
+    pronunciation:
+      focusedOccurrence?.pronunciation ||
+      verbLemmaEntry?.pronunciation ||
+      pronounceGreek(fallbackSurface || greek),
     occurrences,
     stats,
     morphology,
@@ -426,6 +461,8 @@ const buildWordData = (data, lemma) => {
 const renderWord = async () => {
   const params = new URLSearchParams(window.location.search);
   const lemma = normalize(params.get("lemma") || "");
+  const focusForm = params.get("form") || "";
+  const focusBcv = params.get("bcv") || "";
 
   if (!lemma) {
     result.innerHTML = `<article class="notice">Nessun lemma indicato nell'URL.</article>`;
@@ -434,7 +471,7 @@ const renderWord = async () => {
 
   try {
     const data = await loadData();
-    const word = buildWordData(data, lemma);
+    const word = buildWordData(data, lemma, { form: focusForm, bcv: focusBcv });
     const sections = word.morphology?.sections?.length
       ? word.morphology.sections
       : [{ title: word.morphology?.sectionTitle || "Paradigma della parola", forms: Object.entries(word.morphology?.forms || {}), meanings: {} }];
@@ -446,9 +483,13 @@ const renderWord = async () => {
     result.innerHTML = `
       <section class="word-layout">
         <article class="panel word-hero">
-          <h2>${escapeHtml(word.greek)}</h2>
+          <h2>${escapeHtml(word.focusForm || word.greek)}</h2>
           <p class="word-pronunciation">${escapeHtml(word.pronunciation)}</p>
-          <p><strong>Lemma:</strong> ${escapeHtml(word.lemma)}</p>
+          ${
+            word.focusForm
+              ? `<p><strong>Lemma:</strong> ${escapeHtml(word.greek)} <span class="meta">(${escapeHtml(word.lemma)})</span></p>`
+              : `<p><strong>Lemma:</strong> ${escapeHtml(word.lemma)}</p>`
+          }
           <p><strong>Categoria:</strong> ${escapeHtml(word.partOfSpeech)}</p>
           <p><strong>Significato:</strong> ${escapeHtml(word.gloss || "Da definire nel lessico italiano privato")}</p>
         </article>
@@ -526,6 +567,10 @@ const renderWord = async () => {
                           <div class="micro-panel">
                             <strong><a class="verse-word-link" href="${buildWordHref(
                               occurrence.lemma,
+                              {
+                                form: occurrence.surface,
+                                bcv: occurrence.bcv,
+                              },
                             )}" target="_blank" rel="noopener noreferrer">${escapeHtml(occurrence.surface)}</a></strong>
                             <span class="word-pronunciation">${escapeHtml(occurrence.pronunciation)}</span>
                             <span class="meta"><a class="verse-word-link" href="${buildInterlinearHref(

@@ -376,48 +376,66 @@
         "subsections": [
           {
             "title": "A) Dittonghi e iota sottoscritto",
-            "paragraphs": [
-              "Le vocali possono essere aspre (α, ε, η, ο, ω) o dolci (ι, υ) e, quanto al timbro, chiare (ε, η, ι), medie (α) o scure (ο, ω, υ).",
-              "L'incontro delle vocali α, ε, ο con le vocali ι e υ forma i dittonghi propri (due vocali che formano un'unica sillaba):",
-              "Quando la υ e la ι si incontrano, formano il «dittongo dolce»: υι.",
-              "Quando le vocali ᾱ (lunga), η e ω incontrano la vocale ι, formano un dittongo che si chiama improprio. In realtà, il suono ι è scomparso dalla pronuncia nel secolo XII d.C., ma sopravvive nella scrittura; perciò un piccolo ι viene scritto sotto la vocale lunga, ma non si pronuncia; se però, quest'ultima è maiuscola, lo ι le viene segnato a fianco (ascritto), ma, come quando è sottoscritto, non è pronunziato."
-            ],
-            "compactTable": {
-              "className": "grammar-diphthong-table",
-              "rows": [
-                [
-                  "αι",
-                  "αυ"
-                ],
-                [
-                  "ει",
-                  "ευ"
-                ],
-                [
-                  "οι",
-                  "ου",
-                  {
-                    "label": "(pronuncia come u italiana)",
-                    "className": "grammar-table-note-cell",
-                    "colspan": 2
-                  }
-                ]
-              ]
-            },
-            "compactTableAfterParagraph": 1,
-            "alignedExamples": {
-              "label": "Ess.:",
-              "rows": [
-                {
-                  "key": "minuscole =",
-                  "value": "ᾳ, ῃ, ῳ (cfr. μνᾷ, τῇ, τῷ)"
-                },
-                {
-                  "key": "maiuscole =",
-                  "value": "Αι, Ηι, Ωι (cfr. Ἅιδης)"
+            "contentBlocks": [
+              {
+                "type": "paragraph",
+                "text": "Le vocali possono essere aspre (α, ε, η, ο, ω) o dolci (ι, υ) e, quanto al timbro, chiare (ε, η, ι), medie (α) o scure (ο, ω, υ)."
+              },
+              {
+                "type": "paragraph",
+                "text": "L'incontro delle vocali α, ε, ο con le vocali ι e υ forma i dittonghi propri (due vocali che formano un'unica sillaba):"
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-diphthong-table grammar-table-compact-centered",
+                  "rows": [
+                    [
+                      "αι",
+                      "αυ"
+                    ],
+                    [
+                      "ει",
+                      "ευ"
+                    ],
+                    [
+                      "οι",
+                      "ου",
+                      {
+                        "label": "(pronuncia come u italiana)",
+                        "className": "grammar-table-note-cell",
+                        "colspan": 2
+                      }
+                    ]
+                  ]
                 }
-              ]
-            }
+              },
+              {
+                "type": "paragraph",
+                "text": "Quando la υ e la ι si incontrano, formano il «dittongo dolce»: υι."
+              },
+              {
+                "type": "paragraph",
+                "text": "Quando le vocali ᾱ (lunga), η e ω incontrano la vocale ι, formano un dittongo che si chiama improprio. In realtà, il suono ι è scomparso dalla pronuncia nel secolo XII d.C., ma sopravvive nella scrittura; perciò un piccolo ι viene scritto sotto la vocale lunga, ma non si pronuncia; se però, quest'ultima è maiuscola, lo ι le viene segnato a fianco (ascritto), ma, come quando è sottoscritto, non è pronunziato."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "intro": "Ess.:",
+                  "rows": [
+                    [
+                      "minuscole =",
+                      "ᾳ, ῃ, ῳ (cfr. μνᾷ, τῇ, τῷ)"
+                    ],
+                    [
+                      "maiuscole =",
+                      "Αι, Ηι, Ωι (cfr. Ἅιδης)"
+                    ]
+                  ]
+                }
+              }
+            ]
           },
           {
             "title": "B) Accento nei dittonghi",
@@ -687,7 +705,7 @@
             ]
           },
           {
-            "type": "summaryTable",
+            "type": "compactTable",
             "table": {
               "intro": "Ess.:",
               "headerRows": [
@@ -699,19 +717,46 @@
               ],
               "bodyRows": [
                 [
-                  "ἔλιπον\nlasciai",
-                  "λείπω\nlascio",
-                  "λέλοιπα\nho lasciato"
+                  {
+                    "label": "ἔλιπον\nlasciai",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "λείπω\nlascio",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "λέλοιπα\nho lasciato",
+                    "className": "grammar-table-stacked"
+                  }
                 ],
                 [
-                  "ἔπαθον\npatii",
-                  "πένθος\ndolore",
-                  "πέπονθα\nho sofferto"
+                  {
+                    "label": "ἔπαθον\npatii",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "πένθος\ndolore",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "πέπονθα\nho sofferto",
+                    "className": "grammar-table-stacked"
+                  }
                 ],
                 [
-                  "ἰδεῖν\nvedere",
-                  "εἶδον\nvidi",
-                  "οἶδα\nso"
+                  {
+                    "label": "ἰδεῖν\nvedere",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "εἶδον\nvidi",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "οἶδα\nso",
+                    "className": "grammar-table-stacked"
+                  }
                 ]
               ]
             }
@@ -875,19 +920,19 @@
             }
           },
           {
-            "type": "alignedExamples",
-            "block": {
-              "className": "grammar-example-apophonia",
-              "label": "Ess.:",
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-keyvalue",
+              "intro": "Ess.:",
               "rows": [
-                {
-                  "key": "(α/η) =",
-                  "value": "τιμάω (Pres.) - τιμήσω (Fut.) - ἐτίμησα (Aor.)"
-                },
-                {
-                  "key": "(η/ε) =",
-                  "value": "πατήρ (NOM.) - πατέρα (ACC.)"
-                }
+                [
+                  "(α/η) =",
+                  "τιμάω (Pres.) - τιμήσω (Fut.) - ἐτίμησα (Aor.)"
+                ],
+                [
+                  "(η/ε) =",
+                  "πατήρ (NOM.) - πατέρα (ACC.)"
+                ]
               ]
             }
           },
@@ -907,6 +952,7 @@
           {
             "type": "compactTable",
             "table": {
+              "className": "grammar-table-compact-keyvalue",
               "rows": [
                 [
                   "ᾰ",
@@ -1860,18 +1906,18 @@
             "text": "Il tempo determinato si esprime, in greco, con il genitivo o il dativo."
           },
           {
-            "type": "alignedExamples",
-            "block": {
-              "label": "Ess.:",
+            "type": "compactTable",
+            "table": {
+              "intro": "Ess.:",
               "rows": [
-                {
-                  "key": "ὄρθρου",
-                  "value": "all'alba"
-                },
-                {
-                  "key": "σαββάτῳ",
-                  "value": "di sabato"
-                }
+                [
+                  "ὄρθρου",
+                  "all'alba"
+                ],
+                [
+                  "σαββάτῳ",
+                  "di sabato"
+                ]
               ]
             }
           },
@@ -1880,14 +1926,14 @@
             "text": "Per il tempo continuato si usa abitualmente l'accusativo."
           },
           {
-            "type": "alignedExamples",
-            "block": {
-              "label": "Es.:",
+            "type": "compactTable",
+            "table": {
+              "intro": "Es.:",
               "rows": [
-                {
-                  "key": "νύκτα καὶ ἡμέραν",
-                  "value": "per una notte e un giorno"
-                }
+                [
+                  "νύκτα καὶ ἡμέραν",
+                  "per una notte e un giorno"
+                ]
               ]
             }
           }
@@ -2263,38 +2309,43 @@
         "subsections": [
           {
             "title": "Prospetto delle contrazioni più comuni",
-            "alignedExamples": {
-              "rows": [
-                {
-                  "key": "α + ε",
-                  "value": "α"
-                },
-                {
-                  "key": "α + ει",
-                  "value": "ᾳ"
-                },
-                {
-                  "key": "α + ο / ω / ου",
-                  "value": "ω"
-                },
-                {
-                  "key": "ε + ε",
-                  "value": "ει"
-                },
-                {
-                  "key": "ε + ο / ου",
-                  "value": "ου"
-                },
-                {
-                  "key": "ο + ε / ο / ου",
-                  "value": "ου"
-                },
-                {
-                  "key": "ο + η / ω",
-                  "value": "ω"
+            "contentBlocks": [
+              {
+                "type": "compactTable",
+                "table": {
+                  "rows": [
+                    [
+                      "α + ε",
+                      "α"
+                    ],
+                    [
+                      "α + ει",
+                      "ᾳ"
+                    ],
+                    [
+                      "α + ο / ω / ου",
+                      "ω"
+                    ],
+                    [
+                      "ε + ε",
+                      "ει"
+                    ],
+                    [
+                      "ε + ο / ου",
+                      "ου"
+                    ],
+                    [
+                      "ο + ε / ο / ου",
+                      "ου"
+                    ],
+                    [
+                      "ο + η / ω",
+                      "ω"
+                    ]
+                  ]
                 }
-              ]
-            }
+              }
+            ]
           }
         ]
       },
@@ -3464,7 +3515,7 @@
             "text": "Alcuni, però, hanno due uscite soltanto: una, che vale per il maschile e per il femminile, in -ος (II decl.), e una per il neutro, in -ον (pure II decl.). Quindi, la loro flessione non riguarda la I declinazione."
           },
           {
-            "type": "summaryTable",
+            "type": "compactTable",
             "table": {
               "intro": "Ess.:",
               "headerRows": [
@@ -5030,30 +5081,29 @@
             "text": "Secondo uno sviluppo che si ritrova anche in altre lingue indoeuropee, nel greco della «koinè» le preposizioni hanno un uso molto più esteso che nel greco classico, ma subiscono una riduzione di numero, per processi sincretici. Nella traduzione dei LXX e nel N.T., l'uso amplissimo della preposizione è anche dovuto alle risonanze semitiche. Presentiamo, di seguito, una breve trattazione sull'uso di alcune preposizioni, precisando che altre, largamente usate nella lingua greca, verranno prese in esame in lezioni successive."
           },
           {
-            "type": "alignedExamples",
-            "block": {
-              "className": "grammar-example-prepositions",
+            "type": "compactTable",
+            "table": {
               "rows": [
-                {
-                  "key": "ἀπό",
-                  "value": "= da (regge il GEN.)"
-                },
-                {
-                  "key": "εἰς",
-                  "value": "= a/in (regge l'ACC.)"
-                },
-                {
-                  "key": "κατά",
-                  "value": "= giù/contro/secondo... (regge il GEN. e l'ACC.)"
-                },
-                {
-                  "key": "ἐκ/ἐξ",
-                  "value": "= da/fuori da... (regge il GEN.)"
-                },
-                {
-                  "key": "ἐν",
-                  "value": "= in (regge il DAT.)"
-                }
+                [
+                  "ἀπό",
+                  "= da (regge il GEN.)"
+                ],
+                [
+                  "εἰς",
+                  "= a/in (regge l'ACC.)"
+                ],
+                [
+                  "κατά",
+                  "= giù/contro/secondo... (regge il GEN. e l'ACC.)"
+                ],
+                [
+                  "ἐκ/ἐξ",
+                  "= da/fuori da... (regge il GEN.)"
+                ],
+                [
+                  "ἐν",
+                  "= in (regge il DAT.)"
+                ]
               ]
             }
           }
@@ -5398,16 +5448,10 @@
             "text": "b) Quando οὗτος e ἐκεῖνος («questo» e «quello») accompagnano, in funzione di aggettivi, un nome, vanno nello stesso genere, numero e caso di esso; in tal caso, il nome è sempre accompagnato dall'articolo (diversamente da quanto avviene nelle lingue moderne); cfr. § 50."
           },
           {
-            "type": "summaryTable",
+            "type": "compactTable",
             "table": {
               "intro": "Es.:",
-              "headerRows": [
-                [
-                  "Greco",
-                  "Italiano"
-                ]
-              ],
-              "bodyRows": [
+              "rows": [
                 [
                   "οὗτος ὁ ἄνθρωπος",
                   "quest'uomo"
@@ -5424,16 +5468,10 @@
             "text": "c) Quando οὗτος sta da solo, cioè ha funzione di pronome, significa «costui» (femm. «costei», neutro «ciò»); il neutro plurale, NOM. e ACC., ταῦτα = «queste cose»."
           },
           {
-            "type": "summaryTable",
+            "type": "compactTable",
             "table": {
               "intro": "Es.:",
-              "headerRows": [
-                [
-                  "Greco",
-                  "Italiano"
-                ]
-              ],
-              "bodyRows": [
+              "rows": [
                 [
                   "οὗτος ἦλθεν εἰς μαρτυρίαν",
                   "questi (o costui) venne a testimonianza"
@@ -5638,7 +5676,7 @@
             "title": "1) attributiva",
             "contentBlocks": [
               {
-                "type": "summaryTable",
+                "type": "compactTable",
                 "table": {
                   "headerRows": [
                     [
@@ -5666,8 +5704,16 @@
                 "text": "Se il sostantivo è indeterminato (cioè senza articolo), anche il suo attributo sarà senza articolo."
               },
               {
-                "type": "paragraph",
-                "text": "Es.: δένδρον ἀγαθόν = un albero buono."
+                "type": "compactTable",
+                "table": {
+                  "intro": "Es.:",
+                  "rows": [
+                    [
+                      "δένδρον ἀγαθόν",
+                      "un albero buono"
+                    ]
+                  ]
+                }
               }
             ]
           },
@@ -5675,16 +5721,10 @@
             "title": "2) predicativa",
             "contentBlocks": [
               {
-                "type": "summaryTable",
+                "type": "compactTable",
                 "table": {
                   "intro": "Ess.:",
-                  "headerRows": [
-                    [
-                      "Greco",
-                      "Italiano"
-                    ]
-                  ],
-                  "bodyRows": [
+                  "rows": [
                     [
                       "πρῶτος ὁ λόγος",
                       "primo, il discorso; il discorso (è) primo"
@@ -5705,16 +5745,10 @@
                 "text": "Distinguere la posizione predicativa da quella attributiva è particolarmente importante per alcuni aggettivi, come, p. es., μέσος. In posizione attributiva, significa «che sta in mezzo», «centrale». In posizione predicativa significa «il centro di...», «in mezzo a...». Il latino, che non ha l'articolo, ha espressioni di significato ambiguo: in medio monte, infatti, vuol dire sia «nel monte di mezzo» che «a metà del monte»."
               },
               {
-                "type": "summaryTable",
+                "type": "compactTable",
                 "table": {
                   "intro": "Ess.:",
-                  "headerRows": [
-                    [
-                      "Greco",
-                      "Italiano"
-                    ]
-                  ],
-                  "bodyRows": [
+                  "rows": [
                     [
                       "τὸ καταπέτασμα μέσον",
                       "il mezzo della cortina del tempio (Lc. 23,45)"
@@ -5739,16 +5773,10 @@
                 "text": "Lo stesso discorso vale per αὐτός, αὐτή, αὐτό; infatti, quando è in posizione attributiva, è un aggettivo e significa «il medesimo» (lat. idem)."
               },
               {
-                "type": "summaryTable",
+                "type": "compactTable",
                 "table": {
                   "intro": "Ess.:",
-                  "headerRows": [
-                    [
-                      "Greco",
-                      "Italiano"
-                    ]
-                  ],
-                  "bodyRows": [
+                  "rows": [
                     [
                       "ὁ αὐτὸς ἀπόστολος",
                       "il medesimo apostolo"
@@ -5765,16 +5793,10 @@
                 "text": "Quando è in posizione predicativa, significa «stesso» (lat. ipse)."
               },
               {
-                "type": "summaryTable",
+                "type": "compactTable",
                 "table": {
                   "intro": "Ess.:",
-                  "headerRows": [
-                    [
-                      "Greco",
-                      "Italiano"
-                    ]
-                  ],
-                  "bodyRows": [
+                  "rows": [
                     [
                       "αὐτὸς ὁ ἀπόστολος",
                       "l'apostolo stesso, in persona"
@@ -5896,36 +5918,3430 @@
     "id": "lezione-dodicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione dodicesima",
-    "title": "Genitivo assoluto e infinito",
-    "summary": "Costrutti fondamentali della sintassi del participio e dell'infinito.",
+    "title": "Forma attiva, media e passiva del verbo",
+    "summary": "Medio-passivo, complemento di agente, uso di διά, μετά, σύν e Vocabolario 13º.",
     "contents": [
-      "45. Genitivo assoluto",
-      "46. Infinito presente e aoristo",
-      "47. Vocabolario 12º"
+      "§ 51 - Forma attiva, media e passiva del verbo",
+      "§ 52 - Presente e Imperfetto Indic. M.-P.",
+      "§ 53 - Pres. e Impf. Indic. M.-P. dei verbi contratti in -εω",
+      "§ 54 - La forma passiva ed il complemento di agente",
+      "§ 55 - Uso di διά",
+      "§ 56 - Uso di μετά",
+      "§ 57 - Uso di σύν",
+      "Vocabolario 13º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 51 - Forma attiva, media e passiva del verbo",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "I verbi greci, come si è brevemente accennato al § 6 (Lez. III), hanno tre diverse forme (diàtesi):"
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-keyvalue",
+              "rows": [
+                [
+                  "1)",
+                  "forma attiva (cfr. §§ 52, 81-82, 87-89, 91, 113-120)"
+                ],
+                [
+                  "2)",
+                  "forma media"
+                ],
+                [
+                  "3)",
+                  "forma passiva (cfr. §§ 54, 126-130)"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "a) La forma attiva indica un'azione, transitiva o intransitiva, compiuta dal soggetto."
+          },
+          {
+            "type": "paragraph",
+            "text": "b) La forma media indica, invece, un'attività riferita al soggetto nella sua sfera d'azione. Questo rapporto fra il soggetto e l'azione del verbo può essere diretto, quando il soggetto rivolge l'azione a se stesso (λύομαι = mi sciolgo; λούομαι = mi lavo): in questo caso, il Medio ha valore riflessivo; oppure il rapporto può essere indiretto, quando il soggetto compie l'azione non a o su se stesso, ma a suo vantaggio (sciolgo per me), e quando compie l'azione da se stesso, con i propri mezzi. In questi due casi abbiamo un medio indiretto, d'interesse, e uno dinamico."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ci sono passi del N.T., in cui il Medio è usato per dire «farsi...»: ἀπογράψασθαι = farsi registrare (cfr. Lc. 2,5); κειράμενος τὴν κεφαλήν = farsi radere il capo (cfr. At. 18,18). Talvolta, nel N.T., troviamo l'attivo dove ci aspetteremmo il Medio (p. es., in Lc. 1,30: «trovasti grazia presso Dio») e viceversa (p. es., in At. 9,39: ἐπιδεικνύμεναι = mostrandi. Altrove questo verbo è usato solo all'attivo)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il Medio-passivo si forma, generalmente, con desinenze proprie, che si uniscono ai temi dei vari tempi, secondo le regole specifiche di ciascuno di essi: per il tema del presente, ad esempio, interponendo le vocali tematiche già studiate (cfr. § 7b), -ε ed -ο. In taluni casi possono prodursi piccole modifiche, che sono determinate da fenomeni fonetici ben precisi."
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "Desinenze M.-P. dei tempi principali",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Desinenza"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "-μαι"
+                ],
+                [
+                  "II pers.",
+                  "-σαι"
+                ],
+                [
+                  "III pers.",
+                  "-ται"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "-μεθα"
+                ],
+                [
+                  "II pers.",
+                  "-σθε"
+                ],
+                [
+                  "III pers.",
+                  "-νται"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "Desinenze M.-P. dei tempi storici",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Desinenza"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "-μην"
+                ],
+                [
+                  "II pers.",
+                  "-σο"
+                ],
+                [
+                  "III pers.",
+                  "-το"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "-μεθα"
+                ],
+                [
+                  "II pers.",
+                  "-σθε"
+                ],
+                [
+                  "III pers.",
+                  "-ντο"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 52 - Presente e Imperfetto Indic. M.-P.",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Presente indicativo - λύω, sciolgo. T.P. λυ-",
+                    "colspan": 6
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Passivo",
+                  "Medio",
+                  "Medio d'interesse"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-ο-μαι",
+                  "sono sciolto",
+                  "mi sciolgo",
+                  "sciolgo per me"
+                ],
+                [
+                  "II pers.",
+                  "λύ-ῃ",
+                  "sei sciolto",
+                  "ti sciogli",
+                  "sciogli per te"
+                ],
+                [
+                  "III pers.",
+                  "λύ-ε-ται",
+                  "è sciolto",
+                  "si scioglie",
+                  "scioglie per sé"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-ό-μεθα",
+                  "siamo sciolti",
+                  "ci sciogliamo",
+                  "sciogliamo per noi"
+                ],
+                [
+                  "II pers.",
+                  "λύ-ε-σθε",
+                  "siete sciolti",
+                  "vi sciogliete",
+                  "sciogliete per voi"
+                ],
+                [
+                  "III pers.",
+                  "λύ-ο-νται",
+                  "sono sciolti",
+                  "si sciolgono",
+                  "sciolgono per sé"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Imperfetto indicativo - λύω, sciolgo. T.P. λυ-",
+                    "colspan": 6
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Passivo",
+                  "Medio",
+                  "Medio d'interesse"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "ἐ-λυ-ό-μην",
+                  "ero sciolto",
+                  "mi scioglievo",
+                  "scioglievo per me"
+                ],
+                [
+                  "II pers.",
+                  "ἐ-λύ-ου",
+                  "eri sciolto",
+                  "ti scioglievi",
+                  "scioglievi per te"
+                ],
+                [
+                  "III pers.",
+                  "ἐ-λύ-ε-το",
+                  "era sciolto",
+                  "si scioglieva",
+                  "scioglieva per sé"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "ἐ-λυ-ό-μεθα",
+                  "eravamo sciolti",
+                  "ci scioglievamo",
+                  "scioglievamo per noi"
+                ],
+                [
+                  "II pers.",
+                  "ἐ-λύ-ε-σθε",
+                  "eravate sciolti",
+                  "vi scioglievate",
+                  "scioglievate per voi"
+                ],
+                [
+                  "III pers.",
+                  "ἐ-λύ-ο-ντο",
+                  "erano sciolti",
+                  "si scioglievano",
+                  "scioglievano per sé"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "N.B."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel Pres. Indic., la II pers. sing. λύῃ < λύ-ε-σαι; quindi > λύ-ε-αι (per caduta di σ intervocalico; cfr. § 5, III) e poi λύῃ (per contrazione; cfr. § 21)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nell'Imperf. Indic., la II pers. sing. ἐλύου < ἐ-λύ-ε-σο; quindi > ἐλύ-ε-ο (per caduta di σ intervocalico) e poi ἐλύου (per contrazione)."
+          }
+        ]
+      },
+      {
+        "heading": "§ 53 - Pres. e Impf. Indic. M.-P. dei verbi contratti in -εω",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Presente indicativo - καλέ-ω, chiamo. T.P. καλε-",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Forma non contratta",
+                  "Forma contratta",
+                  "Nota"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "καλέ-ο-μαι",
+                  "καλοῦμαι",
+                  ""
+                ],
+                [
+                  "II pers.",
+                  "καλέ-ε-σαι",
+                  "καλῇ",
+                  "caduta di -σ- e contrazione"
+                ],
+                [
+                  "III pers.",
+                  "καλέ-ε-ται",
+                  "καλεῖται",
+                  ""
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "καλέ-ο-μεθα",
+                  "καλούμεθα",
+                  ""
+                ],
+                [
+                  "II pers.",
+                  "καλέ-ε-σθε",
+                  "καλεῖσθε",
+                  ""
+                ],
+                [
+                  "III pers.",
+                  "καλέ-ο-νται",
+                  "καλοῦνται",
+                  ""
+                ]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Imperfetto indicativo - καλέ-ω, chiamo. T.P. καλε-",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Forma non contratta",
+                  "Forma contratta",
+                  "Nota"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "ἐ-καλέ-ό-μην",
+                  "ἐκαλούμην",
+                  ""
+                ],
+                [
+                  "II pers.",
+                  "ἐ-καλέ-ε-σο",
+                  "ἐκαλοῦ",
+                  "caduta di -σ- e contrazione"
+                ],
+                [
+                  "III pers.",
+                  "ἐ-καλέ-ε-το",
+                  "ἐκαλεῖτο",
+                  ""
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "ἐ-καλε-ό-μεθα",
+                  "ἐκαλούμεθα",
+                  ""
+                ],
+                [
+                  "II pers.",
+                  "ἐ-καλέ-ε-σθε",
+                  "ἐκαλεῖσθε",
+                  ""
+                ],
+                [
+                  "III pers.",
+                  "ἐ-καλέ-ο-ντο",
+                  "ἐκαλοῦντο",
+                  ""
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "N.B."
+          },
+          {
+            "type": "paragraph",
+            "text": "La traduzione italiana delle forme medio-pass. del verbo καλέ-ω, chiamo, salvo il significato, è analoga a quella di λύ-ω, indicata al § 52, e cioè: io sono chiamato, mi chiamo, chiamo per me ecc.; io ero chiamato, mi chiamavo, chiamavo per me ecc."
+          }
+        ]
+      },
+      {
+        "heading": "§ 54 - La forma passiva ed il complemento di agente",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Nella forma passiva, il soggetto subisce l'azione. In greco, però (è bene ripeterlo), soltanto il Futuro e l'Aoristo hanno forme specifiche per esprimere la diàtesi passiva."
+          },
+          {
+            "type": "paragraph",
+            "text": "In tutti gli altri tempi (Presente, Imperfetto, Perfetto e Piuccheperfetto, Futuro Perfetto), le due forme (media e passiva) coincidono (cfr. Lez. II, § 6)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nelle proposizioni con il verbo al Medio passivo e al passivo, la persona che fa l'azione (complemento di agente) si indica mediante la preposizione ὑπό (= «da»; cfr. App. III), seguita dal genitivo. Se l'azione è compiuta non da una persona, ma provocata da una cosa (complemento di causa efficiente), si usa il dativo semplice (cioè senza preposizione)."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "intro": "Ess.:",
+              "rows": [
+                [
+                  "καὶ ἔσεσθε μισούμενοι ὑπὸ πάντων",
+                  "e sarete odiati da tutti (Mt. 10,22)"
+                ],
+                [
+                  "ταῖς ἡδοναῖς πολλάκις οἱ ἄνθρωποι διαφθείρονται",
+                  "gli uomini spesso sono rovinati dai piaceri"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 55 - Uso di διά",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "NOTE SINTATTICHE"
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel N.T. la preposizione διά è usata molto frequentemente, seguita, come nel greco classico, dal genitivo e dall'accusativo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel primo caso (con il GEN.), il valore strumentale, che è quello prevalente, si rende con «attraverso», «per mezzo di», «per opera di»: Egli è colui che fu annunziato διὰ Ἠσαΐου τοῦ προφήτου τοῦ λέγοντος... = tramite il profeta Isaia quando dice... (Mt. 3,3). Sono inoltre attestati, il valore locale: Egli (Gesù) passava διὰ τῶν σπορίμων = per i campi di grano (Mc. 2,23); quello temporale: i discepoli di Gesù hanno faticato δι' ὅλης νυκτός = tutta la notte (Lc. 5,5). Si può ancora notare la sfumatura di modo in espressioni come διὰ λόγου = a voce, in opposizione a διὰ ἐπιστολῆς = tramite lettera (cfr. At. 15,27; II Ts. 2,15)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con l'ACC., la prep. διά indica la causa (cfr. lat. propter): Paolo dovette essere portato di peso dai soldati διὰ τὴν βίαν τοῦ ὄχλου = per la violenza della folla (At. 21,35). Talvolta il costrutto assume la sfumatura di causa finale: διὰ τοὺς ἐκλεκτούς = a causa degli eletti, saranno abbreviati quei giorni (Mt. 24,22). Frequente è, inoltre, l'espressione διὰ τί come interrogativa = perché? (cfr. Mt. 10,22; 13,11, ecc.)."
+          }
+        ]
+      },
+      {
+        "heading": "§ 56 - Uso di μετά",
+        "paragraphs": [
+          "Nel N.T. la preposizione μετά è seguita dal Genitivo e dall'Accusativo. Con il Genitivo, assume i valori del complemento di compagnia o di unione, insieme a valori o sfumature di modo: Gesù rimase nel deserto quaranta giorni ed era μετὰ τῶν θηρίων = con le fiere (Mc. 1,13); rivolto ai farisei, Gesù li guardò μετ' ὀργῆς = con sdegno (Mc. 3,5).",
+          "Con l'accusativo, μετά significa «dopo», nel tempo come nello spazio: μεθ' ἡμέρας ὀκτώ = otto giorni dopo, i suoi discepoli erano di nuovo in casa e Tommaso stava μετ' αὐτῶν = con loro (Gv. 20,26).",
+          "Più raro è il valore spaziale, non sempre separabile da quello temporale: il primo «guai» è passato, ma ecco vengono gli altri due μετὰ ταῦτα = dopo ciò (Ap. 9,12)."
+        ]
+      },
+      {
+        "heading": "§ 57 - Uso di σύν",
+        "paragraphs": [
+          "Anche la preposizione σύν significa «in compagnia di», «con»; essa è, però, sempre seguita dal DAT. In particolare, Paolo e Luca (Atti) prediligono questa preposizione.",
+          "Ess.: Paolo scrive ai Filippesi che sono nella città σὺν ἐπισκόποις καὶ διακόνοις = con episcopi e diaconi (Fil. 1,1); nella stessa lettera, esprime il desiderio di «essere σὺν Χριστῷ = con Cristo» (1,23)."
+        ]
+      },
+      {
+        "heading": "Vocabolario 13º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ὁ ἐργάτης, ου",
+                  "il lavoratore"
+                ],
+                [
+                  "ὁ Θωμᾶς, ᾶ",
+                  "Tommaso"
+                ],
+                [
+                  "τὰ Ἱεροσόλυμα, ων (N. plur.)",
+                  "Gerusalemme"
+                ],
+                [
+                  "Ἱερουσαλήμ (invariabile)",
+                  "id."
+                ],
+                [
+                  "ὁ λῃστής, οῦ",
+                  "il ladro, il predone"
+                ],
+                [
+                  "ἡ νόσος, ου",
+                  "la malattia (nosocomio)"
+                ],
+                [
+                  "ὁ ὀφθαλμός, οῦ",
+                  "l'occhio (oftalmico)"
+                ],
+                [
+                  "ὁ Πέτρος, ου",
+                  "Pietro"
+                ],
+                [
+                  "ὁ πρεσβύτερος, ου",
+                  "il vecchio, l'anziano, il presbitero"
+                ],
+                [
+                  "ἡ προσευχή, ῆς",
+                  "la preghiera"
+                ],
+                [
+                  "ὁ χρόνος, ου",
+                  "il tempo (cronometro)"
+                ],
+                [
+                  "ὀκτώ",
+                  "otto"
+                ],
+                [
+                  "ἀεί (avv.)",
+                  "sempre"
+                ],
+                [
+                  "ἔσω (avv. e prep. con GEN.)",
+                  "dentro"
+                ],
+                [
+                  "εὐθύς (avv.)",
+                  "subito"
+                ],
+                [
+                  "οὕτως (avv.)",
+                  "così"
+                ],
+                [
+                  "πάλιν (avv.)",
+                  "di nuovo"
+                ],
+                [
+                  "ὡς, ὥσπερ (avv. e cong.)",
+                  "come"
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. τὰ βιβλία συνήγετο ὑπὸ τῶν διδασκάλων. 2. τὸ εὐαγγέλιον ἐκηρύσσετο ὑπὸ τοῦ πρεσβυτέρου. 3. ἀπεστελλόμεθα εἰς τὸν ὄχλον ὑπὸ τῶν προφητῶν. 4. οἱ τελῶναι ἐβαπτίζοντο ὑπὸ τοῦ βαπτιστοῦ. 5. οἱ πρεσβύτεροι ἐβάπτιζον τοὺς ὄχλους. 6. ὁ οἰκοδεσπότης ἐδίδασκε¹ τοὺς ἐργάτας καὶ τὰ παιδία τὴν γραφήν. 7. αἱ γραφαὶ τοῦ θεοῦ ἀνεγινώσκοντο τοῖς ἀδελφοῖς. 8. διεφέρετο δὲ ὁ λόγος τοῦ κυρίου δι' ὅλης τῆς χώρας. 9. ἡ παρθένος ἡ πιστὴ ἐπέμπετο εἰς τὸ ἱερόν. 10. ὁ υἱὸς ὁ ἀγαπητὸς ἀπεστέλλετο εἰς τὸν κόσμον ὑπὸ τοῦ θεοῦ. 11. καὶ μεθ' ἡμέρας ὀκτὼ πάλιν ἦσαν ἔσω οἱ μαθηταὶ αὐτοῦ καὶ Θωμᾶς μετ' αὐτῶν. 12. σωζόμεθα ὑπὸ τοῦ κυρίου καὶ σὺν τῷ κόσμῳ οὐ κρινόμεθα."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. La parola di Dio era predicata dagli apostoli. 2. Questi frutti erano mandati dal padrone di casa agli anziani. 3. E Gesù non era amato dai Giudei perché (ὅτι) faceva queste cose di (ἐν + DAT.) sabato. 4. Ai profeti di Gerusalemme Dio mandava i segni del cielo. 5. Subito dopo queste cose noi predicavamo la parola di Dio ai discepoli. 6. Gli apostoli e i presbiteri con l'intera chiesa erano confortati da Dio."
+            ]
+          },
+          {
+            "title": "Note",
+            "plainPoints": [
+              "1 Il verbo διδάσκω regge il doppio accusativo: quello della cosa che si insegna e della persona cui si insegna."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
     "id": "lezione-tredicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione tredicesima",
-    "title": "Participio e pronomi",
-    "summary": "Uso del participio e completamento del sistema pronominale di base.",
+    "title": "Imperativo, deponenti e preposizioni",
+    "summary": "Imperativo presente attivo e medio-passivo, verbi deponenti, uso di ἐπί, παρά, περί, πρός e Vocabolario 14º.",
     "contents": [
-      "48. Participio presente e aoristo",
-      "49. Pronomi dimostrativi e relativi",
-      "50. Vocabolario 13º"
+      "§ 58 - L'imperativo",
+      "§ 59 - Imper. contratto attivo (-εω) e contratto M.-P. (-εω)",
+      "§ 60 - Verbi deponenti",
+      "§ 61 - Uso di ἐπί",
+      "§ 62 - Uso di παρά",
+      "§ 63 - Uso di περί",
+      "§ 64 - Uso di πρός",
+      "Vocabolario 14º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 58 - L'imperativo",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Il modo Imperativo esprime comando, esortazione (di fare o di non fare); esiste nei tempi del Presente, dell'Aoristo e del Perfetto, non negli altri, ed è privo delle prime persone (sing. e plur.)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Esso si forma, per ciascuno dei tempi indicati, mediante l'aggiunta di desinenze sue proprie, che si collegano ai vari temi temporali secondo modalità specifiche."
+          },
+          {
+            "type": "tableGrid",
+            "grid": {
+              "items": [
+                {
+                  "title": "Desinenze attive",
+                  "table": {
+                    "className": "grammar-table-compact-keyvalue",
+                    "headerRows": [
+                      [
+                        "Persona",
+                        "Desinenza"
+                      ]
+                    ],
+                    "bodyRows": [
+                      [
+                        "Sing. I pers.",
+                        "—"
+                      ],
+                      [
+                        "Sing. II pers.",
+                        "-θι / -ς / -ον"
+                      ],
+                      [
+                        "Sing. III pers.",
+                        "-τω"
+                      ],
+                      [
+                        "Plur. I pers.",
+                        "—"
+                      ],
+                      [
+                        "Plur. II pers.",
+                        "-τε"
+                      ],
+                      [
+                        "Plur. III pers.",
+                        "-ντων / -τωσαν"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Desinenze medio-passive",
+                  "table": {
+                    "className": "grammar-table-compact-keyvalue",
+                    "headerRows": [
+                      [
+                        "Persona",
+                        "Desinenza"
+                      ]
+                    ],
+                    "bodyRows": [
+                      [
+                        "Sing. I pers.",
+                        "—"
+                      ],
+                      [
+                        "Sing. II pers.",
+                        "-σο / -ου"
+                      ],
+                      [
+                        "Sing. III pers.",
+                        "-σθω"
+                      ],
+                      [
+                        "Plur. I pers.",
+                        "—"
+                      ],
+                      [
+                        "Plur. II pers.",
+                        "-σθε"
+                      ],
+                      [
+                        "Plur. III pers.",
+                        "-σθων / -σθωσαν"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni sulle desinenze"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) La desinenza -θι (II pers. sing.) appare solo nella coniugazione atematica (Aor. fortissimo; cfr. § 94; Aor. pass. forte; cfr. § 129; Perf. fortissimo οἶδα; cfr. § 118; verbi in -μι; cfr. Lezioni XXXIII ss).",
+              "b) La desinenza -ς (II pers. sing.) compare in alcuni Imperativi Aor.: σχές (< ἔχω, ho), δός (< δίδωμι, do, cfr. Gv. 4,7).",
+              "c) La desinenza -ον (II pers. sing.) è propria dell'Aoristo sigmatico (cfr. § 88).",
+              "d) Nei verbi in -ω (coniugazione tematica), la II pers. sing. attiva del Presente, dell'Aor. forte e del Perfetto, è priva di desinenza. La -ε che compare come terminazione, nella II pers. sing. attiva, non è una desinenza, ma semplicemente la vocale tematica."
+            ]
+          },
+          {
+            "type": "subheading",
+            "text": "Imperativo Presente attivo"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "λυ-ω, sciolgo. T.P. λυ-",
+                    "colspan": 4
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "—",
+                  "—"
+                ],
+                [
+                  "II pers.",
+                  "λῦε",
+                  "sciogli tu"
+                ],
+                [
+                  "III pers.",
+                  "λυέτω",
+                  "sciolga egli"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "—",
+                  "—"
+                ],
+                [
+                  "II pers.",
+                  "λύετε",
+                  "sciogliete voi"
+                ],
+                [
+                  "III pers.",
+                  {
+                    "label": "λυέτωσαν\n(λυόντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  "sciolgano essi"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Imperativo Presente Medio-passivo"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation grammar-table-imperative",
+              "headerRows": [
+                [
+                  {
+                    "label": "λύω, sciolgo. T.P. λυ-",
+                    "colspan": 6
+                  }
+                ],
+                [
+                  "Numero",
+                  "Persona",
+                  "Attivo",
+                  "Traduzione",
+                  "M.-P.",
+                  "Traduzione"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "—",
+                  "—",
+                  "—",
+                  "—"
+                ],
+                [
+                  "II pers.",
+                  "λῦε",
+                  "sciogli tu",
+                  "λύου",
+                  "sii sciolto tu / sciogliti / sciogli per te"
+                ],
+                [
+                  "III pers.",
+                  "λυέτω",
+                  "sciolga egli",
+                  "λυέσθω",
+                  "sia sciolto egli / si sciolga egli / sciolga per sé"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "—",
+                  "—",
+                  "—",
+                  "—"
+                ],
+                [
+                  "II pers.",
+                  "λύετε",
+                  "sciogliete voi",
+                  "λύεσθε",
+                  "siate sciolti voi / scioglietevi voi / sciogliete per voi"
+                ],
+                [
+                  "III pers.",
+                  {
+                    "label": "λυέτωσαν\n(λυόντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  "sciolgano essi",
+                  {
+                    "label": "λυέσθωσαν\n(λυέσθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  "siano sciolti essi / si sciolgano essi / sciolgano per sé"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni sull'Imperativo Presente"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) Nel N.T. la III persona plurale attiva e medio-passiva si formano sempre con le desinenze -τωσαν e -σθωσαν (cfr., p. es., Lc. 21,21).",
+              "b) La II pers. sing. attiva ha l'accento acuto nei temi monosillabici con vocale breve, mentre, in quelli polisillabici, è proparossitona (cfr. § 3): κέλευε = ordina (< κελεύω).",
+              "c) La II pers. sing. medio-pass. (λύου) si forma attraverso i seguenti passaggi: λύ-ε-σο > λύ-ε-ο (per caduta di σ intervocalico) > λύου (per contrazione, secondo le norme già indicate al § 21).",
+              "d) Il significato dell'Imperativo Pres. si può capire bene, solo per contrasto con quello dell'Imperativo Aoristo (cfr. i §§ 87-95). Il Presente Imper. indica azione duratura o ripetuta, mentre l'Aoristo Imperativo si riferisce ad un'azione momentanea o ingressiva. Perciò i precetti generali vengono espressi mediante il Presente, mentre gli ordini riguardanti atteggiamenti da prendere o cose da fare in situazioni specifiche, preferiscono l'uso dell'Imperativo Aoristo (cfr. § 67).",
+              "e) Nell'Imperativo negativo, la negazione usata è μή."
+            ]
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "intro": "Ess. nel N.T.:",
+              "className": "grammar-table-compact-usage",
+              "headerRows": [
+                [
+                  "Forma",
+                  "Riferimenti"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "μείνατε (Imper. Aor.) ὧδε",
+                  "Mt. 26,38; 14,29; Lc. 22,40; 22,46; Eb. 13,18 e 19"
+                ],
+                [
+                  "μὴ κλαίετε (Imper. Pres.)",
+                  "Lc. 8,52; At. 22,10; Mt. 25,9; Gv. 1,46; 5,24; I Pt. 4,15"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 59 - Imper. contratto attivo (-εω) e contratto M.-P. (-εω)",
+        "contentBlocks": [
+          {
+            "type": "tableGrid",
+            "grid": {
+              "items": [
+                {
+                  "title": "Imper. contratto attivo (-εω)",
+                  "description": "καλέ-ω, chiamo. T.P. καλε-",
+                  "table": {
+                    "headerRows": [
+                      [
+                        "Persona",
+                        "Non contratta",
+                        "Contratta"
+                      ]
+                    ],
+                    "bodyRows": [
+                      [
+                        "Sing. I pers.",
+                        "—",
+                        "—"
+                      ],
+                      [
+                        "Sing. II pers.",
+                        "καλέ-ε",
+                        "κάλει"
+                      ],
+                      [
+                        "Sing. III pers.",
+                        "καλε-έ-τω",
+                        "καλείτω"
+                      ],
+                      [
+                        "Plur. I pers.",
+                        "—",
+                        "—"
+                      ],
+                      [
+                        "Plur. II pers.",
+                        "καλέ-ε-τε",
+                        "καλεῖτε"
+                      ],
+                      [
+                        "Plur. III pers.",
+                        {
+                          "label": "καλε-έ-τωσαν\n(καλε-ό-ντων)",
+                          "className": "grammar-table-stacked"
+                        },
+                        {
+                          "label": "καλείτωσαν\n(καλούντων)",
+                          "className": "grammar-table-stacked"
+                        }
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Imper. contratto M.-P. (-εω)",
+                  "description": "καλέ-ω, chiamo. T.P. καλε-",
+                  "table": {
+                    "headerRows": [
+                      [
+                        "Persona",
+                        "Non contratta",
+                        "Contratta"
+                      ]
+                    ],
+                    "bodyRows": [
+                      [
+                        "Sing. I pers.",
+                        "—",
+                        "—"
+                      ],
+                      [
+                        "Sing. II pers.",
+                        "καλέ-ε-σο",
+                        "καλοῦ"
+                      ],
+                      [
+                        "Sing. III pers.",
+                        "καλε-έ-σθω",
+                        "καλείσθω"
+                      ],
+                      [
+                        "Plur. I pers.",
+                        "—",
+                        "—"
+                      ],
+                      [
+                        "Plur. II pers.",
+                        "καλέ-ε-σθε",
+                        "καλεῖσθε"
+                      ],
+                      [
+                        "Plur. III pers.",
+                        {
+                          "label": "καλε-έ-σθωσαν\n(καλε-έ-σθων)",
+                          "className": "grammar-table-stacked"
+                        },
+                        {
+                          "label": "καλείσθωσαν\n(καλείσθων)",
+                          "className": "grammar-table-stacked"
+                        }
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 60 - Verbi deponenti",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Con la terminologia più spesso riferita alla lingua latina, si chiamano deponenti i verbi che hanno le forme della coniugazione medio-passiva, ma il significato attivo. Se ciò accade solo per alcuni tempi, il verbo è detto semideponente."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "intro": "Ess.:",
+              "className": "grammar-table-compact-keyvalue",
+              "rows": [
+                [
+                  "ἀποκρίνομαι",
+                  "rispondo"
+                ],
+                [
+                  "ἄρχομαι",
+                  "comincio"
+                ],
+                [
+                  "ἔρχομαι",
+                  "vengo"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel N.T. sono usati come deponenti diversi verbi che non sono tali nel greco classico."
+          },
+          {
+            "type": "paragraph",
+            "text": "P. es., ἐπαγγέλλομαι è adoperato, nel N.T., nelle forme deponenti e non in quelle attive (ma in Gal. 3,19 una forma medio-passiva è usata con significato passivo, come se venisse da un verbo non deponente). Lo stesso accade nel caso del verbo λογίζομαι, usato come deponente, in Rm. 4,6: Δαυὶδ λέγει τὸν μακαρισμὸν τοῦ ἀνθρώπου ᾧ θεὸς λογίζεται δικαιοσύνην χωρίς ἔργων = Davide proclama beato l'uomo a cui Dio accredita la giustizia indipendentemente dalle opere; come non deponente, in Rm. 4,4: τῷ δὲ ἐργαζομένῳ ὁ μισθὸς οὐ λογίζεται κατὰ χάριν ἀλλὰ κατὰ ὀφείλημα = a chi lavora, il salario non viene calcolato come un dono, ma come debito."
+          }
+        ]
+      },
+      {
+        "heading": "§ 61 - Uso di ἐπί",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "NOTE SINTATTICHE"
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-usage",
+              "headerRows": [
+                [
+                  "Caso",
+                  "Valore prevalente",
+                  "Esempio"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "DAT.",
+                  "stato",
+                  "ἐπὶ πίνακι = su un vassoio"
+                ],
+                [
+                  "GEN.",
+                  "stato / collocazione",
+                  "ἐπὶ τῆς θαλάσσης = sul mare"
+                ],
+                [
+                  "ACC.",
+                  "movimento / intenzione / ostilità",
+                  "ἐπὶ τὰ ὕδατα = sulle acque"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "La preposizione ἐπί, con il DAT., ha generalmente un significato di stato. Es.: dammi qui, ἐπὶ πίνακι, su un vassoio, la testa di Giovanni Battista (Mt. 14,8). Questo significato può anche essere metaforico. Es.: l'uomo non vivrà di solo pane, ma ἐπὶ παντὶ ῥήματι = su ogni parola che procede dalla bocca di Dio (Mt. 4,4). Noi diremmo: «d'ogni parola...»."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con il GEN., il significato di ἐπί può essere molto simile. Es.: vedono Gesù che cammina ἐπὶ τῆς θαλάσσης = sul mare (Gv. 6,19). Talvolta il significato è impreciso; p. es., in Gv. 21,1, si legge che Gesù si manifestò ai discepoli ἐπὶ τῆς θαλάσσης di Galilea = sul mar di Galilea. Qui l'espressione «sul» ha lo stesso significato che assume quando noi diciamo: passerò le vacanze sul lago di Garda."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con l'ACC., invece, ἐπί prende una sfumatura più di movimento (o di intenzione) che di stato. In Mt. 14,29, ad esempio, si legge che Pietro camminò ἐπὶ τὰ ὕδατα = sulle acque: forse l'evangelista pensa a Pietro che lascia la barca e s'incammina verso l'acqua del lago? Infine, trattandosi di persone, questo senso di movimento può essere anche espressione di ostilità."
+          },
+          {
+            "type": "paragraph",
+            "text": "Es.: siete venuti per prendermi come ἐπὶ λῃστήν = come [si va] verso un brigante (Mt. 26,55)."
+          }
+        ]
+      },
+      {
+        "heading": "§ 62 - Uso di παρά",
+        "contentBlocks": [
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-usage",
+              "headerRows": [
+                [
+                  "Caso",
+                  "Valore prevalente",
+                  "Esempio"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ACC.",
+                  "a fianco di / lungo il bordo di / comparazione",
+                  "παρὰ πάντας τοὺς Γαλιλαίους = di tutti i Galilei"
+                ],
+                [
+                  "GEN.",
+                  "da presso a / da parte di",
+                  "ἐγὼ παρὰ τοῦ θεοῦ ἐξῆλθον"
+                ],
+                [
+                  "DAT.",
+                  "presso",
+                  "παρὰ τῷ σταυρῷ = presso la croce"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "La preposizione παρά può essere costruita con tre casi:"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "con l'ACC., ha il significato di «a fianco di...», «lungo il bordo di» (del mare, della strada ecc.; cfr. Mc. 2,13; Mt. 20,30), ma può anche avere un senso comparativo. Es.: pensate che quei Galilei fossero più peccatori παρὰ πάντας τοὺς Γαλιλαίους = di tutti i Galilei? (Lc. 13,2); la stessa costruzione si trova in Lc. 13,4 e forse rientra in questo significato anche quanto si legge in Rm. 1,25: hanno adorato e servito la creatura παρὰ τὸν κτίσαντα = più del Creatore (oppure: invece del Creatore);",
+              "con il GEN., prende il significato di «da presso a...», «da parte di...». Es.: ἐγὼ παρὰ τοῦ θεοῦ ἐξῆλθον = io sono venuto da presso Dio (Gv. 16,27). Da notare la sfumatura che questa accezione di significato assume in Lc. 10,7 (μένετε ἐσθίοντες καὶ πίνοντες τὰ παρ' αὐτῶν = restate mangiando e bevendo di quello che hanno) e in Rm. 11,27;",
+              "con il DAT., significa semplicemente «presso». Es.: la madre di Gesù e le sue sorelle e altre donne stavano παρὰ τῷ σταυρῷ = presso la croce (Gv. 19,25)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 63 - Uso di περί",
+        "contentBlocks": [
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-usage",
+              "headerRows": [
+                [
+                  "Caso",
+                  "Valore prevalente",
+                  "Esempio"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ACC.",
+                  "intorno (locale e temporale)",
+                  "περὶ Τύρον καὶ Σιδῶνα = intorno a Tiro e Sidone"
+                ],
+                [
+                  "GEN.",
+                  "argomento",
+                  "περὶ ὑμῶν = intorno a voi"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "La preposizione περί, costruita con l'ACC., ha il significato (locale e temporale) di «intorno». Ess.: περὶ Τύρον καὶ Σιδῶνα = intorno a Tiro e Sidone (Mc. 3,8); una gran luce dal cielo sfolgorò περὶ ἐμέ = intorno a me (At. 22,6)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Molto più frequente è la costruzione di περί con il GEN., che indica il complemento di argomento. Ess.: ho molte cose da dire περὶ ὑμῶν = intorno a voi (Gv. 8,26); tutta la folla dei discepoli cominciò a lodare Dio a gran voce περὶ πασῶν ὧν εἶδον δυνάμεων = per tutte le opere potenti che avevano viste (Lc. 19,37)."
+          }
+        ]
+      },
+      {
+        "heading": "§ 64 - Uso di πρός",
+        "contentBlocks": [
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-usage",
+              "headerRows": [
+                [
+                  "Caso",
+                  "Valore prevalente",
+                  "Esempio"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ACC.",
+                  "verso / a, rivolto a",
+                  "πρὸς ὑμᾶς = verso di voi"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "La preposizione πρός, con l'ACC., significa «verso». Ess.: i falsi profeti vengono πρὸς ὑμᾶς = verso di voi, in veste di pecore (Mt. 7,15); Gesù va πρὸς τὸν Ἰωάννην = verso Giovanni, per essere battezzato da lui (Mt. 3,13). È anche usata per indicare la persona a cui si parla: disse πρὸς αὐτούς = loro, a loro, rivolto a loro (Lc. 9,2). Nel greco classico, tale preposizione regge anche il GEN. e il DAT."
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 14º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary grammar-table-vocabulary-wide",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ἀναβλέπω",
+                  "vedo",
+                  "ἀπέρχομαι",
+                  "me ne vado"
+                ],
+                [
+                  "ἀποκρίνομαι",
+                  "rispondo",
+                  "ἅπτομαι (con il GEN.)",
+                  "tocco"
+                ],
+                [
+                  "ἅπτω (con ACC.)",
+                  "accendo",
+                  "ἀρνέομαι",
+                  "nego, rifiuto"
+                ],
+                [
+                  "ἄρχω (con il GEN.)",
+                  "domino, governo (al M.-P. comincio)",
+                  "βούλομαι",
+                  "voglio"
+                ],
+                [
+                  "γίνομαι",
+                  "divento, sono",
+                  "δεῖ (Impf. ἔδει)",
+                  "bisogna"
+                ],
+                [
+                  "δέομαι (con il GEN.)",
+                  "prego, supplico",
+                  "δέχομαι",
+                  "ricevo"
+                ],
+                [
+                  "διαλέγομαι",
+                  "ragiono, discuto (dialettica)",
+                  "διέρχομαι",
+                  "attraverso, passo"
+                ],
+                [
+                  "εἰσέρχομαι",
+                  "entro",
+                  "ἐξέρχομαι",
+                  "esco"
+                ],
+                [
+                  "ἐργάζομαι [§ 41e]",
+                  "lavoro",
+                  "ἔρχομαι",
+                  "vado, vengo"
+                ],
+                [
+                  "εὐαγγελίζω/μαι",
+                  "evangelizzo",
+                  "ἡγέομαι",
+                  "guido, ritengo"
+                ],
+                [
+                  "λογίζομαι",
+                  "considero",
+                  "μαίνομαι",
+                  "sono fuori di me, sono pazzo"
+                ],
+                [
+                  "νουθετέω",
+                  "ammonisco",
+                  "πορεύομαι",
+                  "vado, mi reco, viaggio"
+                ],
+                [
+                  "ταράσσω",
+                  "sconvolgo",
+                  "ὑπακούω",
+                  "ascolto, obbedisco"
+                ],
+                [
+                  "φεύγω",
+                  "fuggo",
+                  "φοβέομαι",
+                  "temo, sono spaventato (fobía)"
+                ],
+                [
+                  "ἡ ἀγορά, ᾶς",
+                  "la piazza",
+                  "ὁ ἀρχισυνάγωγος, ου",
+                  "il capo della Sinagoga"
+                ],
+                [
+                  "ἡ βία, ας",
+                  "la forza, la violenza",
+                  "ὁ δάκτυλος, ου",
+                  "il dito (dattilografia)"
+                ],
+                [
+                  "ἡ εἰδωλολατρία, ας",
+                  "l'idololatria",
+                  "τὸ μυστήριον, ου",
+                  "il mistero"
+                ],
+                [
+                  "ὁ οἰκονόμος, ου",
+                  "l'amministratore",
+                  "ὁ Παῦλος, ου",
+                  "Paolo"
+                ],
+                [
+                  "ἡ πλευρά, ᾶς",
+                  "il fianco, il costato",
+                  "ἡ Σαμάρεια, ας",
+                  "Samaria"
+                ],
+                [
+                  "ὁ στρατηγός, οῦ",
+                  "il comandante",
+                  "ἐχθρός, ά, όν",
+                  "nemico"
+                ],
+                [
+                  "λεπρός, ά, όν",
+                  "lebbroso",
+                  "κωφός, ή, όν",
+                  "muto, sordomuto"
+                ],
+                [
+                  "πτωχός, ή, όν",
+                  "povero, mendico",
+                  "τυφλός, ή, όν",
+                  "cieco"
+                ],
+                [
+                  "χωλός, ή, όν",
+                  "zoppo",
+                  "διό, διόπερ",
+                  "perciò"
+                ],
+                [
+                  "μόνον (avv.)",
+                  "soltanto",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. μὴ ταρασσέσθω ἡ ὑμετέρα (vostro) καρδία· πιστεύετε εἰς τὸν θεόν. 2. εἰ δέ τις (se qualcuno) οὐχ ὑπακούει τῷ λόγῳ τῆς ἐπιστολῆς, μὴ ὡς ἐχθρὸν τοῦτον ἡγεῖσθε, ἀλλὰ νουθετεῖτε ὡς ἀδελφόν. 3. ὁ Παῦλος εἰσήρχετο εἰς τὴν συναγωγὴν καὶ διελέγετο τοῖς Ἰουδαίοις. 4. ἔρχεται ὁ Ἰησοῦς καὶ λέγει τῷ Θωμᾷ· φέρε τὸν δάκτυλον εἰς τὴν ἐμὴν (mio) πλευρὰν καὶ μὴ γίνου ἄπιστος ἀλλὰ πιστός. 5. οὕτως ἡμᾶς (ci) λογιζέσθω ἄνθρωπος ὡς ὑπηρέτας Χριστοῦ καὶ οἰκονόμους μυστηρίων θεοῦ. 6. ἔλεγον δὲ πολλοί (molti) ἐξ αὐτῶν· δαιμόνιον ἔχει καὶ μαίνεται· τί (perché) αὐτοῦ ἀκούετε; 7. διόπερ ἀγαπητοί, φεύγετε ἀπὸ τῆς εἰδωλολατρίας. 8. ὁ δὲ Ἰησοῦς λέγει τῷ ἀρχισυναγώγῳ· μὴ φοβοῦ, μόνον πίστευε. 9. τυφλοὶ ἀναβλέπουσιν, χωλοὶ περιπατοῦσιν, λεπροὶ καθαρίζονται, καὶ κωφοὶ ἀκούουσιν, νεκροὶ ἐγείρονται, πτωχοὶ εὐαγγελίζονται. 10. κριτής ἐγὼ (io) τούτων οὐ βούλομαι εἶναι (essere). 11. ἔδει δὲ διέρχεσθαι (passare attraverso) διὰ τῆς Σαμαρείας. 12. ὁ στρατηγὸς σὺν τοῖς ὑπηρέταις ἦγεν αὐτοὺς οὐ μετὰ βίας· ἐφοβοῦντο γὰρ τὸν λαόν. 13. οἱ μαθηταὶ πρὸς τὸν Ἰωάννην ἔρχονται καὶ λέγουσιν αὐτῷ· οὗτος βαπτίζει καὶ ὁ ὄχλος ἔρχεται πρὸς αὐτόν. 14. Πέτρος καὶ Ἰωάννης εἰσέρχονται εἰς τὸ ἱερὸν ἐπὶ τὴν ὥραν τῆς προσευχῆς. 15. ὁ Ἰησοῦς ἐδέχετο τοὺς ὄχλους καὶ ἐλάλει αὐτοῖς περὶ τῆς βασιλείας τοῦ θεοῦ. 16. καὶ πᾶς (tutta) ὁ ὄχλος ἐζήτει αὐτόν ὅτι (perché) δύναμις (forza) παρ' αὐτοῦ ἐξήρχετο."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Gesù si recava con i discepoli a Gerusalemme e parlava alle folle del paese. 2. L'apostolo Paolo discuteva nella sinagoga con i Giudei riguardo a Gesù, ma soltanto alcuni (τινες) uomini credevano in lui. 3. Gesù dice alla peccatrice: «Vai e da (ἀπό) ora non peccare». 4. Non temete! Annunziate ai fratelli le parole della lettera dell'apostolo. 5. Perciò i fratelli pregavano il servo di Dio: entra nella casa di quell'uomo. 6. Allora Gesù toccava gli occhi del cieco ed egli veniva salvato. 7. I servitori vanno dal (πρός) padrone di casa e gli dicono: «Il maestro viene nella tua (σου) casa»."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
     "id": "lezione-quattordicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione quattordicesima",
-    "title": "Perfetto e congiuntivo",
-    "summary": "Primi passi nel sistema del perfetto e nel congiuntivo.",
+    "title": "Congiuntivo, forme nominali, verbi contratti e frase",
+    "summary": "Presente congiuntivo e ottativo, infinito e participio presenti, sistema durativo, verbi contratti in -αω/-εω/-οω e prime note su frase e periodo.",
     "contents": [
-      "51. Perfetto attivo e medio-passivo",
-      "52. Congiuntivo presente e aoristo",
-      "53. Vocabolario 14º"
+      "§ 65 - Presente Congiuntivo e Ottativo (λύ-ω)",
+      "§ 66 - Presente Infinito e Participio",
+      "§ 67 - Tempo e qualità dell'azione",
+      "§ 68 - Quadro riassuntivo dei tempi dell'azione continuata o ripetuta",
+      "§ 69 - Presente attivo dei verbi contratti (-αω, -εω, -οω)",
+      "§ 70 - Presente Medio-Passivo dei verbi contratti (-αω, -εω, -οω)",
+      "§ 71 - La frase e il periodo",
+      "Vocabolario 15º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 65 - Presente Congiuntivo e Ottativo (λύ-ω)",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "Presente Congiuntivo Attivo"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-ω",
+                  "che io sciolga"
+                ],
+                [
+                  "II pers.",
+                  "λύ-ῃ-ς",
+                  "che tu sciolga"
+                ],
+                [
+                  "III pers.",
+                  "λύ-ῃ",
+                  "che egli sciolga"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-ω-μεν",
+                  "che noi sciogliamo"
+                ],
+                [
+                  "II pers.",
+                  "λύ-η-τε",
+                  "che voi sciogliate"
+                ],
+                [
+                  "III pers.",
+                  "λύ-ω-σι(ν)",
+                  "che essi sciolgano"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Presente Congiuntivo Medio-Passivo"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-ω-μαι",
+                  "che io mi sciolga/sia sciolto"
+                ],
+                [
+                  "II pers.",
+                  "λύ-ῃ",
+                  "che tu ti sciolga/sia sciolto"
+                ],
+                [
+                  "III pers.",
+                  "λύ-η-ται",
+                  "che egli si sciolga/sia sciolto"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-ώ-μεθα",
+                  "che noi ci sciogliamo/siamo sciolti"
+                ],
+                [
+                  "II pers.",
+                  "λύ-η-σθε",
+                  "che voi vi sciogliate/siate sciolti"
+                ],
+                [
+                  "III pers.",
+                  "λύ-ω-νται",
+                  "che essi si sciolgano/siano sciolti"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Presente Ottativo Attivo"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-οι-μι",
+                  "io scioglierei"
+                ],
+                [
+                  "II pers.",
+                  "λύ-οι-ς",
+                  "tu scioglieresti"
+                ],
+                [
+                  "III pers.",
+                  "λύ-οι",
+                  "egli scioglierebbe"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-οι-μεν",
+                  "noi scioglieremmo"
+                ],
+                [
+                  "II pers.",
+                  "λύ-οι-τε",
+                  "voi sciogliereste"
+                ],
+                [
+                  "III pers.",
+                  "λύ-οι-ε-ν",
+                  "essi scioglierebbero"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Presente Ottativo Medio-Passivo"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-οί-μην",
+                  "io mi scioglierei/sarei sciolto"
+                ],
+                [
+                  "II pers.",
+                  "λύ-οι-ο",
+                  "tu ti scioglieresti/saresti sciolto"
+                ],
+                [
+                  "III pers.",
+                  "λύ-οι-το",
+                  "egli si scioglierebbe/sarebbe sciolto"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-οί-μεθα",
+                  "noi ci scioglieremmo/saremmo sciolti"
+                ],
+                [
+                  "II pers.",
+                  "λύ-οι-σθε",
+                  "voi vi sciogliereste/sareste sciolti"
+                ],
+                [
+                  "III pers.",
+                  "λύ-οι-ντο",
+                  "essi si scioglierebbero/sarebbero sciolti"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) La II e III pers. sing. del Pres. Cong. att. si formano in base ai seguenti passaggi: λύ-ε-ι-ς > λύ-η-ι-ς > λύ-ῃ-ς (II pers. sing.); λύ-ε-ι > λύ-η-ι > λύ-ῃ (III pers. sing.).",
+              "b) La III pers. plur. del Pres. Cong. att. deriva dalle seguenti trasformazioni: *λύ-ο-ντι (ντι = antica desinenza usata nell'arioeuropeo) > λύ-ω-ντι > λύ-ω-νσι (assibilazione del τ) > λύ-ω-σι (caduta del ν vicino al σ).",
+              "c) Analogo fenomeno avviene nella III pers. plur. att. del Presente Indicativo: λύ-ο-ντι > λύ-ο-νσι > λύ-ου-σι (caduta del ν contiguo al σ e allungamento di compenso di ο in ου; cfr. § 6c).",
+              "d) La II pers. sing. del Pres. Cong. medio-pass. deriva da: *λύ-ε-σαι > *λύ-η-αι (caduta di σ intervocalico) > λύ-ῃ (per contrazione di η + αι).",
+              "e) La caratteristica del Congiuntivo è l'allungamento della vocale tematica (cfr. § 7b), che nell'Indicativo è breve.",
+              "f) L'Ottativo si forma inserendo uno ι tra la vocale tematica, che è sempre ο, e le desinenze. Queste sono quelle dei tempi storici (cfr. § 35), ma nella I pers. sing. è rimasta l'antica desinenza -μι, di cui si tratterà al § 167.",
+              "g) Per quanto riguarda il significato, il Congiuntivo esprime eventualità, volontà, aspettazione, dubbio, nelle proposizioni principali; è, però, prevalentemente usato nelle proposizioni secondarie, in cui indica la subordinazione da un tempo principale (cfr. Gv. 6,28-30). L'Ottativo, invece, esprime, nelle frasi principali, il desiderio o la possibilità, mentre nelle dipendenti rappresenta la subordinazione da un tempo storico. Per il suo uso nel N.T. v. pp. 367 ss.",
+              "h) La negazione usata davanti ai congiuntivi è μή."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 66 - Presente Infinito e Participio",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Oltre ai quattro modi finiti (Indic., Cong., Ott. e Imper.), coniugabili, esistono, in greco, i modi non finiti: Participio, Infinito e aggettivo verbale, detti anche forme nominali, perché non si coniugano, ma si declinano come i nomi e gli aggettivi."
+          },
+          {
+            "type": "tableGrid",
+            "grid": {
+              "items": [
+                {
+                  "title": "Pres. Inf. Attivo",
+                  "table": {
+                    "className": "grammar-table-compact-keyvalue",
+                    "rows": [
+                      [
+                        "λύ-ειν",
+                        "sciogliere"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Pres. Inf. Medio-Passivo",
+                  "table": {
+                    "className": "grammar-table-compact-keyvalue",
+                    "rows": [
+                      [
+                        "λύ-ε-σθαι",
+                        {
+                          "label": "sciogliersi\nessere sciolto",
+                          "className": "grammar-table-stacked"
+                        }
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "I due Infiniti Presenti (attivo e medio-passivo) sono invariabili."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il Participio attivo si declina come un aggettivo: per il maschile e il neutro, segue la terza declinazione, come in latino (timens, timentis), per il femminile, la prima (cfr. Lez. XXVII e XXVIII)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il Participio medio-passivo, invece, si declina secondo il modello degli aggettivi a tre uscite della I classe (cfr. §§ 31-33), come in latino (amatus, -a, -um)."
+          },
+          {
+            "type": "subheading",
+            "text": "Participio Pres. Attivo (λύ-ω)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Temi: -ντ (M./N.); -ᾰ impura (F.)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  "Numero",
+                  "Caso",
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "λύων",
+                  "λύουσα",
+                  "λῦον"
+                ],
+                [
+                  "GEN.",
+                  "λύοντος",
+                  "λυούσης",
+                  "λύοντος"
+                ],
+                [
+                  "DAT.",
+                  "λύοντι",
+                  "λυούσῃ",
+                  "λύοντι"
+                ],
+                [
+                  "ACC.",
+                  "λύοντα",
+                  "λύουσαν",
+                  "λῦον"
+                ],
+                [
+                  "VOC.",
+                  "λύων",
+                  "λύουσα",
+                  "λῦον"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "λύοντες",
+                  "λύουσαι",
+                  "λύοντα"
+                ],
+                [
+                  "GEN.",
+                  "λυόντων",
+                  "λυουσῶν",
+                  "λυόντων"
+                ],
+                [
+                  "DAT.",
+                  "λύουσι(ν)",
+                  "λυούσαις",
+                  "λύουσι(ν)"
+                ],
+                [
+                  "ACC.",
+                  "λύοντας",
+                  "λυούσας",
+                  "λύοντα"
+                ],
+                [
+                  "VOC.",
+                  "λύοντες",
+                  "λύουσαι",
+                  "λύοντα"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Participio Pres. Medio-Passivo (λύ-ω)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Temi: -ο (M./N.); -ᾱ impura (F.)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  "Numero",
+                  "Caso",
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "λυόμενος",
+                  "λυομένη",
+                  "λυόμενον"
+                ],
+                [
+                  "GEN.",
+                  "λυομένου",
+                  "λυομένης",
+                  "λυομένου"
+                ],
+                [
+                  "DAT.",
+                  "λυομένῳ",
+                  "λυομένῃ",
+                  "λυομένῳ"
+                ],
+                [
+                  "ACC.",
+                  "λυόμενον",
+                  "λυομένην",
+                  "λυόμενον"
+                ],
+                [
+                  "VOC.",
+                  "λυόμενε",
+                  "λυομένη",
+                  "λυόμενον"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 5,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "λυόμενοι",
+                  "λυόμεναι",
+                  "λυόμενα"
+                ],
+                [
+                  "GEN.",
+                  "λυομένων",
+                  "λυομένων",
+                  "λυομένων"
+                ],
+                [
+                  "DAT.",
+                  "λυομένοις",
+                  "λυομέναις",
+                  "λυομένοις"
+                ],
+                [
+                  "ACC.",
+                  "λυομένους",
+                  "λυομένας",
+                  "λυόμενα"
+                ],
+                [
+                  "VOC.",
+                  "λυόμενοι",
+                  "λυόμεναι",
+                  "λυόμενα"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 67 - Tempo e qualità dell'azione",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Nel greco, come nelle lingue moderne, l'azione espressa dal verbo presenta due valori particolarmente importanti: il tempo e l'aspetto (o qualità)."
+          },
+          {
+            "type": "paragraph",
+            "text": "1) In base al tempo, l'azione può essere passata, presente o futura. Il valore temporale del verbo è preminente nel sistema verbale latino e nelle lingue che da esso derivano."
+          },
+          {
+            "type": "paragraph",
+            "text": "In greco, invece, solo l'Indicativo riflette il valore temporale dell'azione; in particolare, l'azione passata viene espressa dall'Indic. Imperfetto, Aoristo (cfr. Lez. XVII) e Piuccheperfetto (cfr. § 116), tempi caratterizzati dalla presenza dell'aumento; l'azione presente è espressa dal Presente e, in determinate circostanze, dal Perfetto; l'azione futura dal Futuro semplice e dal Futuro perfetto (raro nel N.T.; cfr. § 125)."
+          },
+          {
+            "type": "paragraph",
+            "text": "2) In base alla qualità (o aspetto), l'azione può essere puntuale (momentanea), durativa (o ripetuta), conclusa (o completa)."
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "All'azione puntuale corrisponde l'Aoristo.",
+              "All'azione durativa corrispondono il Presente, l'Imperfetto e il Futuro (I).",
+              "All'azione conclusa corrispondono il Perfetto, il Piuccheperfetto e il Futuro Perfetto (II)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il valore qualitativo o aspettuale è preminente nel sistema verbale greco, e lo si riscontra in tutti i modi finiti e indefiniti e in tutti i tempi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Risulta da quanto sopra che, nei modi diversi dall'Indicativo, è molto più evidente la qualità dell'azione, mentre non ha particolare rilievo il tempo in cui l'azione si compie."
+          },
+          {
+            "type": "subheading",
+            "text": "Ess."
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "φυγεῖν (Inf. Aor. di φεύγω) = prendere la fuga, darsi alla fuga;",
+              "φεύγειν (Inf. Pres. di φεύγω) = essere fuggiasco, in fuga;",
+              "πεφευγέναι (Inf. Perf. di φεύγω) = essere scampato, in salvo;",
+              "διαλέγου (Imper. Pres. medio-pass. di διαλέγομαι) αὐτοῖς καὶ μάθε (Imper. Aor. di μανθάνω) τίνες εἰσίν = discorri (azione durativa) con loro e apprendi (azione puntuale) chi sono!",
+              "εἴπωμεν (Cong. Aor. di λέγω) ἢ σιγῶμεν (Cong. Pres. di σιγάω) = prendiamo la parola, iniziamo a parlare (azione puntuale), o continuiamo a tacere? (azione durativa);",
+              "παρατάσσεσθαι (Inf. Pres. medio-pass. di παρατάσσω) = osteggiare/opporsi (azione durativa);",
+              "παρατάξασθαι (Inf. Aor. medio-pass. di παρατάσσω) = schierarsi (azione puntuale);",
+              "παρατετάχθαι (Inf. Perf. medio-pass. di παρατάσσω) = stare schierati (azione conclusa)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 68 - Quadro riassuntivo dei tempi dell'azione continuata o ripetuta",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  {
+                    "label": "Modo",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "λύ-ω - T.V. λυ-",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "Presente",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "Imperfetto",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  "Attivo",
+                  "Medio-passivo",
+                  "Attivo",
+                  "Medio-passivo"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "INDICATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "λύ-ω",
+                  "λύ-ο-μαι",
+                  "ἔ-λυ-ο-ν",
+                  "ἐ-λυ-ό-μην"
+                ],
+                [
+                  "Sing. II pers.",
+                  "λύ-ε-ις",
+                  "λύ-ῃ (λύ-ε-ι)",
+                  "ἔ-λυ-ε-ς",
+                  "ἐ-λύ-ου"
+                ],
+                [
+                  "Sing. III pers.",
+                  "λύ-ε-ι",
+                  "λύ-ε-ται",
+                  "ἔ-λυ-ε(ν)",
+                  "ἐ-λύ-ε-το"
+                ],
+                [
+                  "Plur. I pers.",
+                  "λύ-ο-μεν",
+                  "λυ-ό-μεθα",
+                  "ἐ-λύ-ο-μεν",
+                  "ἐ-λυ-ό-μεθα"
+                ],
+                [
+                  "Plur. II pers.",
+                  "λύ-ε-τε",
+                  "λύ-ε-σθε",
+                  "ἐ-λύ-ε-τε",
+                  "ἐ-λύ-ε-σθε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "λύ-ου-σι(ν)",
+                  "λύ-ο-νται",
+                  "ἔ-λυ-ο-ν",
+                  "ἐ-λύ-ο-ντο"
+                ],
+                [
+                  {
+                    "label": "CONGIUNTIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "λύ-ω",
+                  "λύ-ω-μαι",
+                  "",
+                  ""
+                ],
+                [
+                  "Sing. II pers.",
+                  "λύ-ῃ-ς",
+                  "λύ-ῃ",
+                  "",
+                  ""
+                ],
+                [
+                  "Sing. III pers.",
+                  "λύ-ῃ",
+                  "λύ-η-ται",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. I pers.",
+                  "λύ-ω-μεν",
+                  "λυ-ώ-μεθα",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. II pers.",
+                  "λύ-η-τε",
+                  "λύ-η-σθε",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. III pers.",
+                  "λύ-ω-σι(ν)",
+                  "λύ-ω-νται",
+                  "",
+                  ""
+                ],
+                [
+                  {
+                    "label": "OTTATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "λύ-οι-μι",
+                  "λυ-οί-μην",
+                  "",
+                  ""
+                ],
+                [
+                  "Sing. II pers.",
+                  "λύ-οι-ς",
+                  "λύ-οι-ο",
+                  "",
+                  ""
+                ],
+                [
+                  "Sing. III pers.",
+                  "λύ-οι",
+                  "λύ-οι-το",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. I pers.",
+                  "λύ-οι-μεν",
+                  "λυ-οί-μεθα",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. II pers.",
+                  "λύ-οι-τε",
+                  "λύ-οι-σθε",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. III pers.",
+                  "λύ-οι-εν",
+                  "λύ-οι-ντο",
+                  "",
+                  ""
+                ],
+                [
+                  {
+                    "label": "IMPERATIVO",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. II pers.",
+                  "λύ-ε",
+                  "λύ-ου",
+                  "",
+                  ""
+                ],
+                [
+                  "Sing. III pers.",
+                  "λυ-έ-τω",
+                  "λυ-έ-σθω",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. II pers.",
+                  "λύ-ε-τε",
+                  "λύ-ε-σθε",
+                  "",
+                  ""
+                ],
+                [
+                  "Plur. III pers.",
+                  {
+                    "label": "λυ-έ-τωσαν\n(λυ-ό-ντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "λυ-έ-σθωσαν\n(λυ-έ-σθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  "",
+                  ""
+                ],
+                [
+                  {
+                    "label": "INFINITO",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "",
+                  "λύ-ειν",
+                  "λύ-ε-σθαι",
+                  "",
+                  ""
+                ],
+                [
+                  {
+                    "label": "PARTICIPIO",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "",
+                  "NOM.   GEN.",
+                  "NOM.   GEN.",
+                  "",
+                  ""
+                ],
+                [
+                  "M.",
+                  "λύ-ω-ν, -οντος",
+                  "λυ-ό-μενος, -ου",
+                  "",
+                  ""
+                ],
+                [
+                  "F.",
+                  "λύ-ου-σα, -σης",
+                  "λυ-ο-μένη, -ης",
+                  "",
+                  ""
+                ],
+                [
+                  "N.",
+                  "λύ-ο-ν, -οντος",
+                  "λυ-ό-μενον, -ου",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 69 - Presente attivo dei verbi contratti (-αω, -εω, -οω)",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-summary grammar-table-contract-paradigm",
+              "headerRows": [
+                [
+                  {
+                    "label": "Modo",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "Numero / Persona",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "τιμάω, onoro\nT.P. τιμαο-/ε-",
+                    "colspan": 2,
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ποιέω, faccio\nT.P. ποιεο-/ε-",
+                    "colspan": 2,
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "δηλόω, mostro\nT.P. δηλοο-/ε-",
+                    "colspan": 2,
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "INDICATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "τιμῶ",
+                  "< τιμάω",
+                  "ποιῶ",
+                  "< ποιέω",
+                  "δηλῶ",
+                  "< δηλόω"
+                ],
+                [
+                  "Sing. II pers.",
+                  "τιμᾷς",
+                  "< τιμάεις",
+                  "ποιεῖς",
+                  "< ποιέεις",
+                  "δηλοῖς",
+                  "< δηλόεις"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμᾷ",
+                  "< τιμάει",
+                  "ποιεῖ",
+                  "< ποιέει",
+                  "δηλοῖ",
+                  "< δηλόει"
+                ],
+                [
+                  "Plur. I pers.",
+                  "τιμῶμεν",
+                  "< τιμάομεν",
+                  "ποιοῦμεν",
+                  "< ποιέομεν",
+                  "δηλοῦμεν",
+                  "< δηλόομεν"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμᾶτε",
+                  "< τιμάετε",
+                  "ποιεῖτε",
+                  "< ποιέετε",
+                  "δηλοῦτε",
+                  "< δηλόετε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "τιμῶσι(ν)",
+                  "< τιμάουσι(ν)",
+                  "ποιοῦσι(ν)",
+                  "< ποιέουσι(ν)",
+                  "δηλοῦσι(ν)",
+                  "< δηλόουσι(ν)"
+                ],
+                [
+                  {
+                    "label": "CONGIUNTIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "τιμῶ",
+                  "< τιμάω",
+                  "ποιῶ",
+                  "< ποιέω",
+                  "δηλῶ",
+                  "< δηλόω"
+                ],
+                [
+                  "Sing. II pers.",
+                  "τιμᾷς",
+                  "< τιμάῃς",
+                  "ποιῇς",
+                  "< ποιέῃς",
+                  "δηλοῖς",
+                  "< δηλόῃς"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμᾷ",
+                  "< τιμάῃ",
+                  "ποιῇ",
+                  "< ποιέῃ",
+                  "δηλοῖ",
+                  "< δηλόῃ"
+                ],
+                [
+                  "Plur. I pers.",
+                  "τιμῶμεν",
+                  "< τιμάωμεν",
+                  "ποιῶμεν",
+                  "< ποιέωμεν",
+                  "δηλῶμεν",
+                  "< δηλοώμεν"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμᾶτε",
+                  "< τιμάητε",
+                  "ποιῆτε",
+                  "< ποιέητε",
+                  "δηλῶτε",
+                  "< δηλόητε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "τιμῶσι(ν)",
+                  "< τιμάωσι(ν)",
+                  "ποιῶσι(ν)",
+                  "< ποιέωσι(ν)",
+                  "δηλῶσι(ν)",
+                  "< δηλόωσι(ν)"
+                ],
+                [
+                  {
+                    "label": "OTTATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "τιμῴην",
+                  "< τιμαοίην",
+                  "ποιοίην",
+                  "< ποιεοίην",
+                  "δηλοίην",
+                  "< δηλοοίην"
+                ],
+                [
+                  "Sing. II pers.",
+                  "τιμῴης",
+                  "< τιμαοίης",
+                  "ποιοίης",
+                  "< ποιεοίης",
+                  "δηλοίης",
+                  "< δηλοοίης"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμῴη",
+                  "< τιμαοίη",
+                  "ποιοίη",
+                  "< ποιεοίη",
+                  "δηλοίη",
+                  "< δηλοοίη"
+                ],
+                [
+                  "Plur. I pers.",
+                  "τιμῷμεν",
+                  "< τιμαοίμεν",
+                  "ποιοῖμεν",
+                  "< ποιεοίμεν",
+                  "δηλοῖμεν",
+                  "< δηλοοίμεν"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμῷτε",
+                  "< τιμαοῖτε",
+                  "ποιοῖτε",
+                  "< ποιεοῖτε",
+                  "δηλοῖτε",
+                  "< δηλοοῖτε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "τιμῷεν",
+                  "< τιμαοῖεν",
+                  "ποιοῖεν",
+                  "< ποιεοῖεν",
+                  "δηλοῖεν",
+                  "< δηλοοῖεν"
+                ],
+                [
+                  {
+                    "label": "IMPERATIVO",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. II pers.",
+                  "τίμα",
+                  "< τίμαε",
+                  "ποίει",
+                  "< ποίεε",
+                  "δήλου",
+                  "< δήλοε"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμάτω",
+                  "< τιμαέτω",
+                  "ποιείτω",
+                  "< ποιεέτω",
+                  "δηλούτω",
+                  "< δηλοέτω"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμᾶτε",
+                  "< τιμάετε",
+                  "ποιεῖτε",
+                  "< ποιέετε",
+                  "δηλοῦτε",
+                  "< δηλόετε"
+                ],
+                [
+                  "Plur. III pers.",
+                  {
+                    "label": "τιμάτωσαν\n(τιμώντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "< τιμαέτωσαν\n< (τιμαόντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ποιείτωσαν\n(ποιούντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "< ποιεέτωσαν\n< (ποιεόντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "δηλούτωσαν\n(δηλούντων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "< δηλοέτωσαν\n< (δηλοόντων)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  {
+                    "label": "INFINITO",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "",
+                  "τιμᾶν",
+                  "< τιμάειν",
+                  "ποιεῖν",
+                  "< ποιέειν",
+                  "δηλοῦν",
+                  "< δηλόειν"
+                ],
+                [
+                  {
+                    "label": "PARTICIPIO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM. M.",
+                  "τιμῶν",
+                  "< τιμάων",
+                  "ποιῶν",
+                  "< ποιέων",
+                  "δηλῶν",
+                  "< δηλόων"
+                ],
+                [
+                  "NOM. F.",
+                  "τιμῶσα",
+                  "< τιμάουσα",
+                  "ποιοῦσα",
+                  "< ποιέουσα",
+                  "δηλοῦσα",
+                  "< δηλόουσα"
+                ],
+                [
+                  "NOM. N.",
+                  "τιμῶν",
+                  "< τιμάον",
+                  "ποιοῦν",
+                  "< ποιέον",
+                  "δηλοῦν",
+                  "< δηλόον"
+                ],
+                [
+                  "GEN. M.",
+                  "τιμῶντος",
+                  "< τιμάοντος",
+                  "ποιοῦντος",
+                  "< ποιέοντος",
+                  "δηλοῦντος",
+                  "< δηλόοντος"
+                ],
+                [
+                  "GEN. F.",
+                  "τιμώσης",
+                  "< τιμαούσης",
+                  "ποιούσης",
+                  "< ποιεούσης",
+                  "δηλούσης",
+                  "< δηλοούσης"
+                ],
+                [
+                  "GEN. N.",
+                  "τιμῶντος",
+                  "< τιμάοντος",
+                  "ποιοῦντος",
+                  "< ποιέοντος",
+                  "δηλοῦντος",
+                  "< δηλόοντος"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Imperfetto attivo dei verbi contratti (-αω, -εω, -οω)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-summary grammar-table-contract-paradigm",
+              "headerRows": [
+                [
+                  {
+                    "label": "Modo",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "Numero / Persona",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "τιμάω",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "ποιέω",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "δηλόω",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "INDICATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "ἐτίμων",
+                  "< ἐτίμαον",
+                  "ἐποίουν",
+                  "< ἐποίεον",
+                  "ἐδήλουν",
+                  "< ἐδήλοον"
+                ],
+                [
+                  "Sing. II pers.",
+                  "ἐτίμας",
+                  "< ἐτίμαες",
+                  "ἐποίεις",
+                  "< ἐποίεες",
+                  "ἐδήλους",
+                  "< ἐδήλοες"
+                ],
+                [
+                  "Sing. III pers.",
+                  "ἐτίμα",
+                  "< ἐτίμαε(ν)",
+                  "ἐποίει",
+                  "< ἐποίεε(ν)",
+                  "ἐδήλου",
+                  "< ἐδήλοε(ν)"
+                ],
+                [
+                  "Plur. I pers.",
+                  "ἐτιμῶμεν",
+                  "< ἐτιμάομεν",
+                  "ἐποιοῦμεν",
+                  "< ἐποιέομεν",
+                  "ἐδηλοῦμεν",
+                  "< ἐδηλόομεν"
+                ],
+                [
+                  "Plur. II pers.",
+                  "ἐτιμᾶτε",
+                  "< ἐτιμάετε",
+                  "ἐποιεῖτε",
+                  "< ἐποιέετε",
+                  "ἐδηλοῦτε",
+                  "< ἐδηλόετε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "ἐτίμων",
+                  "< ἐτίμαον",
+                  "ἐποίουν",
+                  "< ἐποίεον",
+                  "ἐδήλουν",
+                  "< ἐδήλοον"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 70 - Presente Medio-Passivo dei verbi contratti (-αω, -εω, -οω)",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-summary grammar-table-contract-paradigm",
+              "headerRows": [
+                [
+                  {
+                    "label": "Modo",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "Numero / Persona",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "τιμάω\nT.P. τιμαο-/ε-",
+                    "colspan": 2,
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ποιέω\nT.P. ποιεο-/ε-",
+                    "colspan": 2,
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "δηλόω\nT.P. δηλοο-/ε-",
+                    "colspan": 2,
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "INDICATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "τιμῶμαι",
+                  "< τιμάομαι",
+                  "ποιοῦμαι",
+                  "< ποιέομαι",
+                  "δηλοῦμαι",
+                  "< δηλόομαι"
+                ],
+                [
+                  "Sing. II pers.",
+                  "τιμᾷ",
+                  "< τιμάῃ, -ει",
+                  "ποιῇ, -εῖ",
+                  "< ποιέῃ, -ει",
+                  "δηλοῖ",
+                  "< δηλόῃ, -ει"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμᾶται",
+                  "< τιμάεται",
+                  "ποιεῖται",
+                  "< ποιέεται",
+                  "δηλοῦται",
+                  "< δηλόεται"
+                ],
+                [
+                  "Plur. I pers.",
+                  "τιμώμεθα",
+                  "< τιμαόμεθα",
+                  "ποιούμεθα",
+                  "< ποιεόμεθα",
+                  "δηλούμεθα",
+                  "< δηλοόμεθα"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμᾶσθε",
+                  "< τιμάεσθε",
+                  "ποιεῖσθε",
+                  "< ποιέεσθε",
+                  "δηλοῦσθε",
+                  "< δηλόεσθε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "τιμῶνται",
+                  "< τιμάονται",
+                  "ποιοῦνται",
+                  "< ποιέονται",
+                  "δηλοῦνται",
+                  "< δηλόονται"
+                ],
+                [
+                  {
+                    "label": "CONGIUNTIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "τιμῶμαι",
+                  "< τιμάωμαι",
+                  "ποιῶμαι",
+                  "< ποιέωμαι",
+                  "δηλῶμαι",
+                  "< δηλοώμαι"
+                ],
+                [
+                  "Sing. II pers.",
+                  "τιμᾷ",
+                  "< τιμάῃ",
+                  "ποιῇ",
+                  "< ποιέῃ",
+                  "δηλοῖ",
+                  "< δηλόῃ"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμᾶται",
+                  "< τιμάηται",
+                  "ποιῆται",
+                  "< ποιέηται",
+                  "δηλῶται",
+                  "< δηλόηται"
+                ],
+                [
+                  "Plur. I pers.",
+                  "τιμώμεθα",
+                  "< τιμαώμεθα",
+                  "ποιώμεθα",
+                  "< ποιεώμεθα",
+                  "δηλώμεθα",
+                  "< δηλοώμεθα"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμᾶσθε",
+                  "< τιμάησθε",
+                  "ποιῆσθε",
+                  "< ποιέησθε",
+                  "δηλῶσθε",
+                  "< δηλόησθε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "τιμῶνται",
+                  "< τιμάωνται",
+                  "ποιῶνται",
+                  "< ποιέωνται",
+                  "δηλῶνται",
+                  "< δηλόωνται"
+                ],
+                [
+                  {
+                    "label": "OTTATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "τιμῴμην",
+                  "< τιμαοίμην",
+                  "ποιοίμην",
+                  "< ποιεοίμην",
+                  "δηλοίμην",
+                  "< δηλοοίμην"
+                ],
+                [
+                  "Sing. II pers.",
+                  "τιμῷο",
+                  "< τιμαοῖο",
+                  "ποιοῖο",
+                  "< ποιεοῖο",
+                  "δηλοῖο",
+                  "< δηλοοῖο"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμῷτο",
+                  "< τιμαοῖτο",
+                  "ποιοῖτο",
+                  "< ποιεοῖτο",
+                  "δηλοῖτο",
+                  "< δηλοοῖτο"
+                ],
+                [
+                  "Plur. I pers.",
+                  "τιμῴμεθα",
+                  "< τιμαοίμεθα",
+                  "ποιοίμεθα",
+                  "< ποιεοίμεθα",
+                  "δηλοίμεθα",
+                  "< δηλοοίμεθα"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμῷσθε",
+                  "< τιμαοῖσθε",
+                  "ποιοῖσθε",
+                  "< ποιεοῖσθε",
+                  "δηλοῖσθε",
+                  "< δηλοοῖσθε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "τιμῷντο",
+                  "< τιμαοῖντο",
+                  "ποιοῖντο",
+                  "< ποιεοῖντο",
+                  "δηλοῖντο",
+                  "< δηλοοῖντο"
+                ],
+                [
+                  {
+                    "label": "IMPERATIVO",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. II pers.",
+                  "τιμῶ",
+                  "< τιμάου",
+                  "ποιοῦ",
+                  "< ποιέου",
+                  "δηλοῦ",
+                  "< δηλόου"
+                ],
+                [
+                  "Sing. III pers.",
+                  "τιμάσθω",
+                  "< τιμαέσθω",
+                  "ποιείσθω",
+                  "< ποιεέσθω",
+                  "δηλούσθω",
+                  "< δηλοέσθω"
+                ],
+                [
+                  "Plur. II pers.",
+                  "τιμᾶσθε",
+                  "< τιμάεσθε",
+                  "ποιεῖσθε",
+                  "< ποιέεσθε",
+                  "δηλοῦσθε",
+                  "< δηλόεσθε"
+                ],
+                [
+                  "Plur. III pers.",
+                  {
+                    "label": "τιμάσθωσαν\n(τιμάσθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "< τιμαέσθωσαν\n< (τιμαέσθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ποιείσθωσαν\n(ποιείσθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "< ποιεέσθωσαν\n< (ποιεέσθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "δηλούσθωσαν\n(δηλούσθων)",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "< δηλοέσθωσαν\n< (δηλοέσθων)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  {
+                    "label": "INFINITO",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "",
+                  "τιμᾶσθαι",
+                  "< τιμάεσθαι",
+                  "ποιεῖσθαι",
+                  "< ποιέεσθαι",
+                  "δηλοῦσθαι",
+                  "< δηλόεσθαι"
+                ],
+                [
+                  {
+                    "label": "PARTICIPIO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM. M.",
+                  "τιμώμενος",
+                  "< τιμαόμενος",
+                  "ποιούμενος",
+                  "< ποιεόμενος",
+                  "δηλούμενος",
+                  "< δηλοόμενος"
+                ],
+                [
+                  "NOM. F.",
+                  "τιμωμένη",
+                  "< τιμαομένη",
+                  "ποιουμένη",
+                  "< ποιεομένη",
+                  "δηλουμένη",
+                  "< δηλοομένη"
+                ],
+                [
+                  "NOM. N.",
+                  "τιμώμενον",
+                  "< τιμαόμενον",
+                  "ποιούμενον",
+                  "< ποιεόμενον",
+                  "δηλούμενον",
+                  "< δηλοόμενον"
+                ],
+                [
+                  "GEN. M.",
+                  "τιμωμένου",
+                  "< τιμαομένου",
+                  "ποιουμένου",
+                  "< ποιεομένου",
+                  "δηλουμένου",
+                  "< δηλοομένου"
+                ],
+                [
+                  "GEN. F.",
+                  "τιμωμένης",
+                  "< τιμαομένης",
+                  "ποιουμένης",
+                  "< ποιεομένης",
+                  "δηλουμένης",
+                  "< δηλοομένης"
+                ],
+                [
+                  "GEN. N.",
+                  "τιμωμένου",
+                  "< τιμαομένου",
+                  "ποιουμένου",
+                  "< ποιεομένου",
+                  "δηλουμένου",
+                  "< δηλοομένου"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Imperfetto Medio-Passivo dei verbi contratti (-αω, -εω, -οω)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-summary grammar-table-contract-paradigm",
+              "headerRows": [
+                [
+                  {
+                    "label": "Modo",
+                    "rowspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "Numero / Persona",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "τιμάω",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "ποιέω",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "δηλόω",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta",
+                  "Contratta",
+                  "< Non contratta"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "INDICATIVO",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "Sing. I pers.",
+                  "ἐτιμώμην",
+                  "< ἐτιμαόμην",
+                  "ἐποιούμην",
+                  "< ἐποιεόμην",
+                  "ἐδηλούμην",
+                  "< ἐδηλοόμην"
+                ],
+                [
+                  "Sing. II pers.",
+                  "ἐτιμῶ",
+                  "< ἐτιμάου",
+                  "ἐποιοῦ",
+                  "< ἐποιέου",
+                  "ἐδηλοῦ",
+                  "< ἐδηλόου"
+                ],
+                [
+                  "Sing. III pers.",
+                  "ἐτιμᾶτο",
+                  "< ἐτιμάετο",
+                  "ἐποιεῖτο",
+                  "< ἐποιέετο",
+                  "ἐδηλοῦτο",
+                  "< ἐδηλόετο"
+                ],
+                [
+                  "Plur. I pers.",
+                  "ἐτιμώμεθα",
+                  "< ἐτιμαόμεθα",
+                  "ἐποιούμεθα",
+                  "< ἐποιεόμεθα",
+                  "ἐδηλούμεθα",
+                  "< ἐδηλοόμεθα"
+                ],
+                [
+                  "Plur. II pers.",
+                  "ἐτιμᾶσθε",
+                  "< ἐτιμάεσθε",
+                  "ἐποιεῖσθε",
+                  "< ἐποιέεσθε",
+                  "ἐδηλοῦσθε",
+                  "< ἐδηλόεσθε"
+                ],
+                [
+                  "Plur. III pers.",
+                  "ἐτιμῶντο",
+                  "< ἐτιμάοντο",
+                  "ἐποιοῦντο",
+                  "< ἐποιέοντο",
+                  "ἐδηλοῦντο",
+                  "< ἐδηλόοντο"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) Fanno apparentemente eccezione alle regole ζάω, vivere ed altri pochi verbi, che hanno η invece di α, nelle forme contratte del Pres. Indic. (sing.: I pers. ζῶ, II pers. ζῇς, III pers. ζῇ; Plur.: I pers. ζῶμεν, II pers. ζῆτε, III pers. ζῶσι) e dell'Inf. (ζῆν). In realtà, tali verbi uscivano originariamente in -ηω e quindi, nelle forme con vocale tematica -ε, essi contraggono in η e non in α.",
+              "b) Per le contrazioni nei verbi in -αω, -εω, -οω, cfr. § 21."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 71 - La frase e il periodo",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "NOTE SINTATTICHE"
+          },
+          {
+            "type": "paragraph",
+            "text": "L'unità comunicativa più semplice è costituita dalla proposizione o frase."
+          },
+          {
+            "type": "paragraph",
+            "text": "Benché anche altri elementi possano concorrere a formarla, tuttavia essa si considera di «senso compiuto», quindi indipendente, quando vi si trovi almeno un predicato, nella forma di un verbo di modo finito, di solito all'Indicativo, che si riferisca ad un soggetto, a meno che la frase non sia impersonale (Es.: piove)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli altri elementi a cui si è accennato (apposizioni, attributi, complementi), quindi, servono semplicemente ad aggiungere ulteriori particolari al discorso."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nella proposizione indipendente può però esservi, oltre all'Indicativo e all'Imperativo, anche il Congiuntivo, con varie sfumature di significato:"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "1) Congiuntivo esortativo, usato di solito alla I pers. plur., quasi a supplenza dell'Imperativo. Es.: ἄγωμεν = andiamo! (Mc. 14,42).",
+              "2) Congiuntivo dubitativo, attestato in domande che esprimono dubbio o stupore. Es.: δῶμεν ἢ μὴ δῶμεν; = dobbiamo darlo o non darlo? (Mc. 12,14).",
+              "3) Congiuntivo proibitivo (quasi sempre Aoristo), esprime lo stesso significato dell'Imperativo negativo in italiano. Es.: μὴ εἰσέλθητε = non entrate (Mc. 10,5)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Quanto alle frasi indipendenti che presentano l'Ottativo, cfr. Appendice II."
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando in una unità comunicativa sono presenti più predicati, si ha, invece, una frase complessa o periodo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nella lingua greca (come, peraltro, in latino e nelle lingue moderne), il periodo può comprendere più proposizioni principali, unite da congiunzioni coordinanti, oppure una o più proposizioni subordinate (o secondarie), rette da una principale tramite congiunzioni subordinanti o tramite altre strutture di dipendenza come, ad esempio, il pronome o avverbio relativo e interrogativo, seguiti dall'Indicativo o dal Congiuntivo, a seconda dei casi, oppure la costruzione dell'accusativo con l'Infinito."
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 15º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary grammar-table-vocabulary-wide",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ἀγαπάω",
+                  "amo",
+                  "ζηλόω",
+                  "ardo di zelo"
+                ],
+                [
+                  "βοάω",
+                  "grido",
+                  "ὁμοιόω",
+                  "paragono"
+                ],
+                [
+                  "γεννάω",
+                  "genero",
+                  "πληρόω",
+                  "riempio, porto a compimento"
+                ],
+                [
+                  "διψάω",
+                  "ho sete",
+                  "σταυρόω",
+                  "crocifiggo"
+                ],
+                [
+                  "ἐρωτάω",
+                  "chiedo, prego",
+                  "ταπεινόω",
+                  "umilio"
+                ],
+                [
+                  "ζάω",
+                  "vivo",
+                  "τελειόω",
+                  "effettuo"
+                ],
+                [
+                  "κοιμάομαι",
+                  "mi addormento",
+                  "φανερόω",
+                  "rivelo, manifesto"
+                ],
+                [
+                  "νικάω",
+                  "vinco",
+                  "δύο",
+                  "due"
+                ],
+                [
+                  "πεινάω",
+                  "ho fame",
+                  "ἐγγύς (avv. e prep. con il GEN.)",
+                  "vicino"
+                ],
+                [
+                  "τελευτάω",
+                  "muoio",
+                  "ὅτι (cong.)",
+                  "che, perché"
+                ],
+                [
+                  "τιμάω",
+                  "onoro",
+                  "τότε (avv.)",
+                  "allora"
+                ],
+                [
+                  "βεβαιόω",
+                  "rafforzo",
+                  "",
+                  ""
+                ],
+                [
+                  "δηλόω",
+                  "mostro",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. τότε σταυροῦνται σὺν αὐτῷ δύο λῃσταί. 2. ἡ δικαιοσύνη τοῦ θεοῦ τὴν ἁμαρτίαν τοῦ κόσμου φανεροῖ. 3. οἱ μαθηταὶ ἐπληροῦντο χαρᾶς. 4. ἐκ τούτοις γινώσκετε ὅτι ἐγγύς ἐστιν ἡ βασιλεία τοῦ θεοῦ. 5. μὴ νικῶ (Imper.) ὑπὸ τοῦ κακοῦ, ἀλλὰ νίκα ἐν τῷ ἀγαθῷ τὸ κακόν. 6. ἐρωτῶμεν καὶ παρακαλοῦμεν τοὺς ἀδελφοὺς ἐν κυρίῳ Ἰησοῦ. 7. ἀγαπᾶτε κύριον τὸν θεὸν ἐξ ὅλης τῆς καρδίας καὶ ἐν ὅλῃ τῇ ψυχῇ. 8. ὁ Ἰησοῦς τοὺς ἀγαπητοὺς βεβαιοῖ ἐν τῇ ἡμέρᾳ τοῦ κυρίου. 9. ὁ κύριος ὡμοίου τοὺς ἀνθρώπους τῆς γενεᾶς ἐκείνης τοῖς παιδίοις τῆς ἀγορᾶς. 10. ὁ νόμος ὑπὸ τοῦ Ἰησοῦ τελειοῦται."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. I peccatori terminano la vita nel peccato. 2. I fratelli amano la chiesa e pregano il Signore. 3. Il regno dei cieli è paragonato a un banchetto. 4. Gli uomini hanno fame e hanno sete di giustizia (ACC.). 5. Le vergini si addormentano e il Signore non le trova."
+            ]
+          }
+        ]
+      }
     ]
   },
   {

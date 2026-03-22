@@ -8,6 +8,7 @@
 import { loadData } from "./data-loader.js";
 import {
   buildVerbSectionEntries,
+  conjugateItalianGloss,
   escapeHtml,
   normalize,
   normalizeParadigmSection,
@@ -122,12 +123,24 @@ const replaceRouteState = (route, params = {}) => {
 
 // Apertura della pagina parola dedicata.
 // Qui il lemma viene passato come querystring.
-const goToWord = (lemma) => {
-  window.location.href = `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
+const goToWord = (lemma, options = {}) => {
+  const params = new URLSearchParams({
+    lemma: normalize(lemma),
+  });
+  if (options.form) params.set("form", options.form);
+  if (options.bcv) params.set("bcv", options.bcv);
+  window.location.href = `word.html?${params.toString()}`;
 };
 
 // Link diretto alla scheda parola completa.
-const buildWordHref = (lemma) => `word.html?lemma=${encodeURIComponent(normalize(lemma))}`;
+const buildWordHref = (lemma, options = {}) => {
+  const params = new URLSearchParams({
+    lemma: normalize(lemma),
+  });
+  if (options.form) params.set("form", options.form);
+  if (options.bcv) params.set("bcv", options.bcv);
+  return `word.html?${params.toString()}`;
+};
 
 // Nella pagina Grammatica mostriamo i capitoli del manuale come "Parti".
 // Il dato sorgente conserva ancora "Lezione" per restare vicino all'indice fotografato,
@@ -283,8 +296,18 @@ const renderGrammarSummaryTable = (table) => {
 };
 
 const renderGrammarCompactTable = (table) => {
-  if (!table?.rows?.length) return "";
-  const rowsHtml = table.rows
+  if (!table) return "";
+  const headerRows = table.headerRows || [];
+  const bodyRows = table.bodyRows || table.rows || [];
+  if (!headerRows.length && !bodyRows.length) return "";
+
+  const headerRowsHtml = headerRows.length
+    ? `<thead>${headerRows
+        .map((row) => `<tr>${row.map((cell) => renderGrammarTableCell(cell, "th")).join("")}</tr>`)
+        .join("")}</thead>`
+    : "";
+
+  const rowsHtml = bodyRows
     .map(
       (row) => `
         <tr>
@@ -307,10 +330,35 @@ const renderGrammarCompactTable = (table) => {
     .join("");
 
   return `
+    ${table.intro ? `<p>${escapeHtml(table.intro)}</p>` : ""}
     <div class="grammar-table-wrap grammar-table-wrap-compact">
       <table class="grammar-table grammar-table-compact${table.className ? ` ${escapeHtml(table.className)}` : ""}">
+        ${headerRowsHtml}
         <tbody>${rowsHtml}</tbody>
       </table>
+    </div>
+  `;
+};
+
+const renderGrammarTableGrid = (grid) => {
+  if (!grid?.items?.length) return "";
+  return `
+    <div class="grammar-table-grid${grid.className ? ` ${escapeHtml(grid.className)}` : ""}">
+      ${grid.items
+        .map((item) => {
+          const tableHtml =
+            item.tableType === "summaryTable"
+              ? renderGrammarSummaryTable(item.table)
+              : renderGrammarCompactTable(item.table);
+          return `
+            <article class="grammar-table-card">
+              ${item.title ? `<h4 class="grammar-table-card-title">${escapeHtml(item.title)}</h4>` : ""}
+              ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
+              ${tableHtml}
+            </article>
+          `;
+        })
+        .join("")}
     </div>
   `;
 };
@@ -390,6 +438,7 @@ const renderGrammarContentBlock = (block, options = {}) => {
   if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
   if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
   if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
+  if (block.type === "tableGrid") return renderGrammarTableGrid(block.grid);
   if (block.type === "alignedExamples") return renderGrammarAlignedExamples(block.block);
   if (block.type === "underlineWords") return renderGrammarUnderlineWords(block.words);
   return "";
@@ -648,6 +697,10 @@ const getLexiconGloss = (lemma) => {
 // Gloss fissi per parole grammaticali e lemma lessicale.
 const getFixedFunctionGloss = (lemma) => state.data.functionGlosses?.[normalize(lemma)]?.glossIt || "";
 const getFixedLexiconGloss = (lemma) => state.data.fixedLexicon?.[normalize(lemma)]?.glossIt || "";
+const sanitizeTokenGloss = (value) => {
+  const gloss = String(value || "").trim();
+  return /^[<>*]+$/.test(gloss) ? "" : gloss;
+};
 
 // Per articoli, pronomi e parole-funzione usiamo gloss dipendenti da caso/numero/genere.
 const getFixedFunctionFormGloss = (token) => {
@@ -670,7 +723,7 @@ const getFixedFunctionFormGloss = (token) => {
 const getFixedTokenGloss = (verse, tokenIndex) => {
   const bcv = verse?.tokens?.[tokenIndex]?.bcv;
   if (!bcv && bcv !== "") return "";
-  return state.data.tokenGlossesFixed?.[`${bcv}:${tokenIndex}`] || "";
+  return sanitizeTokenGloss(state.data.tokenGlossesFixed?.[`${bcv}:${tokenIndex}`] || "");
 };
 
 // Piccolo dizionario di supporto per interpretare alcune fonti secondarie.
@@ -781,6 +834,130 @@ const getBaseLexicalGloss = (token) =>
   getFixedLexiconGloss(token.lemma) ||
   "";
 
+const buildItalianParticipleGloss = (gloss = "") => {
+  const value = (gloss || "").split(",")[0].trim().toLowerCase();
+  if (!value) return "";
+
+  const irregulars = {
+    benedire: "benedetto",
+    compiere: "compiuto",
+    dare: "dato",
+    dire: "detto",
+    essere: "stato",
+    fare: "fatto",
+    generare: "generato",
+    avere: "avuto",
+    venire: "venuto",
+  };
+
+  if (irregulars[value]) return irregulars[value];
+  if (value.endsWith("are")) return `${value.slice(0, -3)}ato`;
+  if (value.endsWith("ere")) return `${value.slice(0, -3)}uto`;
+  if (value.endsWith("ire")) return `${value.slice(0, -3)}ito`;
+  return value;
+};
+
+const getVerbPersonLabel = (token) => {
+  const rawPerson = normalize(token?.morphology?.person || "");
+  const number = normalize(token?.morphology?.number || "");
+  const personMap = {
+    prima: "1a",
+    seconda: "2a",
+    terza: "3a",
+    "1a": "1a",
+    "2a": "2a",
+    "3a": "3a",
+  };
+  const person = personMap[rawPerson] || "";
+  if (!person || !number) return "";
+  return `${person} ${number}`;
+};
+
+const conjugateItalianImperativeGloss = (gloss = "", token) => {
+  const value = (gloss || "").split(",")[0].trim().toLowerCase();
+  const person = normalize(token?.morphology?.person || "");
+  const number = normalize(token?.morphology?.number || "");
+  if (!value || !person || !number) return value;
+
+  const label = `${person} ${number}`;
+  const irregulars = {
+    andare: {
+      "2a singolare": "va'",
+      "1a plurale": "andiamo",
+      "2a plurale": "andate",
+    },
+    avere: {
+      "2a singolare": "abbi",
+      "1a plurale": "abbiamo",
+      "2a plurale": "abbiate",
+    },
+    dare: {
+      "2a singolare": "da'",
+      "1a plurale": "diamo",
+      "2a plurale": "date",
+    },
+    dire: {
+      "2a singolare": "di'",
+      "1a plurale": "diciamo",
+      "2a plurale": "dite",
+    },
+    essere: {
+      "2a singolare": "sii",
+      "1a plurale": "siamo",
+      "2a plurale": "siate",
+    },
+    fare: {
+      "2a singolare": "fa'",
+      "1a plurale": "facciamo",
+      "2a plurale": "fate",
+    },
+    stare: {
+      "2a singolare": "sta'",
+      "1a plurale": "stiamo",
+      "2a plurale": "state",
+    },
+    venire: {
+      "2a singolare": "vieni",
+      "1a plurale": "veniamo",
+      "2a plurale": "venite",
+    },
+  };
+
+  if (irregulars[value]?.[label]) return irregulars[value][label];
+  if (label === "1a plurale" || label === "2a plurale") {
+    return conjugateItalianGloss(value, label) || value;
+  }
+  if (label !== "2a singolare") return value;
+
+  if (value.endsWith("care")) return `${value.slice(0, -4)}ca`;
+  if (value.endsWith("gare")) return `${value.slice(0, -4)}ga`;
+  if (value.endsWith("are")) return `${value.slice(0, -3)}a`;
+  if (value.endsWith("ere")) return `${value.slice(0, -3)}i`;
+  if (value.endsWith("ire")) return `${value.slice(0, -3)}i`;
+  return value;
+};
+
+const buildVerbDisplayGloss = (token, fixedTokenGloss = "") => {
+  const lexicalGloss = getFixedLexiconGloss(token.lemma) || fixedTokenGloss || "";
+  const normalizedFixed = normalize(fixedTokenGloss);
+  const normalizedLexical = normalize(lexicalGloss);
+  if (fixedTokenGloss && normalizedFixed && normalizedFixed !== normalizedLexical) return fixedTokenGloss;
+  if (!lexicalGloss) return "";
+
+  const mood = normalize(token?.morphology?.mood || "");
+  const tense = normalize(token?.morphology?.tense || "");
+  const voice = normalize(token?.morphology?.voice || "");
+  const personLabel = getVerbPersonLabel(token);
+
+  if (mood === "participio") return buildItalianParticipleGloss(lexicalGloss) || lexicalGloss;
+  if (mood === "imperativo") return conjugateItalianImperativeGloss(lexicalGloss, token) || lexicalGloss;
+  if (mood === "indicativo" && tense === "presente" && voice === "attiva" && personLabel) {
+    return conjugateItalianGloss(lexicalGloss, personLabel) || lexicalGloss;
+  }
+
+  return lexicalGloss;
+};
+
 // Regola generale per il significato del singolo quadrino nell'interlineare.
 // Ordine di priorita:
 // 1. gloss fisso del token
@@ -790,6 +967,11 @@ const getBaseLexicalGloss = (token) =>
 const getTokenDisplayGloss = (token, verse = null, tokenIndex = -1) => {
   const fixedTokenGloss =
     verse && Number.isInteger(tokenIndex) && tokenIndex >= 0 ? getFixedTokenGloss(verse, tokenIndex) : "";
+
+  if (token.partOfSpeech === "verbo") {
+    return buildVerbDisplayGloss(token, fixedTokenGloss) || "da completare nel lessico fisso";
+  }
+
   if (fixedTokenGloss) return fixedTokenGloss;
 
   const functionGloss = getMorphologyAwareGloss(token) || getFixedFunctionGloss(token.lemma);
@@ -801,13 +983,6 @@ const getTokenDisplayGloss = (token, verse = null, tokenIndex = -1) => {
       verse && tokenIndex >= 0 && tokenIndex + 1 < verse.tokens.length ? verse.tokens[tokenIndex + 1] : null;
     return (
       applyNominalCaseGloss(token, getBaseLexicalGloss(token), previousToken, nextToken) ||
-      "da completare nel lessico fisso"
-    );
-  }
-
-  if (token.partOfSpeech === "verbo") {
-    return (
-      getFixedLexiconGloss(token.lemma) ||
       "da completare nel lessico fisso"
     );
   }
@@ -1017,7 +1192,13 @@ const renderInterlinear = () => {
               ${verse.tokens
                 .map(
                   (token, index) => `
-                    <button class="token-card" type="button" data-lemma="${escapeHtml(token.lemma)}">
+                    <button
+                      class="token-card"
+                      type="button"
+                      data-lemma="${escapeHtml(token.lemma)}"
+                      data-form="${escapeHtml(token.surface)}"
+                      data-bcv="${escapeHtml(token.bcv || "")}"
+                    >
                       <strong>${escapeHtml(token.surface)}</strong>
                       <span class="pronunciation">${escapeHtml(token.pronunciation || pronounceGreek(token.surface))}</span>
                       <small class="token-italian">${escapeHtml(getTokenDisplayGloss(token, verse, index))}</small>
@@ -1032,7 +1213,12 @@ const renderInterlinear = () => {
       .join("");
 
     results.querySelectorAll("[data-lemma]").forEach((button) => {
-      button.addEventListener("click", () => goToWord(button.dataset.lemma));
+      button.addEventListener("click", () =>
+        goToWord(button.dataset.lemma, {
+          form: button.dataset.form || "",
+          bcv: button.dataset.bcv || "",
+        }),
+      );
     });
   };
 
@@ -1598,7 +1784,10 @@ const renderMorphology = () => {
                       .map(
                         (occurrence) => `
                           <div class="micro-panel">
-                            <strong><a class="verse-word-link" href="${buildWordHref(occurrence.lemma)}">${escapeHtml(
+                            <strong><a class="verse-word-link" href="${buildWordHref(occurrence.lemma, {
+                              form: occurrence.surface,
+                              bcv: occurrence.bcv,
+                            })}">${escapeHtml(
                               occurrence.surface,
                             )}</a></strong>
                             <span class="word-pronunciation">${escapeHtml(occurrence.pronunciation)}</span>
