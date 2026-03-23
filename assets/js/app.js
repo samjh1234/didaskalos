@@ -337,6 +337,13 @@ const renderGrammarCompactTable = (table) => {
         <tbody>${rowsHtml}</tbody>
       </table>
     </div>
+    ${
+      table.notes?.length
+        ? `<div class="stack grammar-table-notes">${table.notes
+            .map((note) => `<p class="grammar-table-note">${escapeHtml(note)}</p>`)
+            .join("")}</div>`
+        : ""
+    }
   `;
 };
 
@@ -438,6 +445,7 @@ const renderGrammarContentBlock = (block, options = {}) => {
   if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
   if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
   if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
+  if (block.type === "note") return `<p class="grammar-table-note">${escapeHtml(block.text || "")}</p>`;
   if (block.type === "tableGrid") return renderGrammarTableGrid(block.grid);
   if (block.type === "alignedExamples") return renderGrammarAlignedExamples(block.block);
   if (block.type === "underlineWords") return renderGrammarUnderlineWords(block.words);

@@ -9348,12 +9348,782 @@
     "id": "lezione-quindicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione quindicesima",
-    "title": "Ottativo e pronomi indefiniti",
-    "summary": "Cenni all'ottativo e ai principali indefiniti e interrogativi.",
+    "title": "Pronomi e proposizioni oggettiva, soggettiva e finale",
+    "summary": "Pronomi personali, reciproci, riflessivi, possessivi, relativi e prime subordinate completive: oggettiva, soggettiva e finale.",
     "contents": [
-      "54. Ottativo presente e aoristo",
-      "55. Pronomi indefiniti e interrogativi",
-      "56. Vocabolario 15º"
+      "§ 72 - Pronomi personali",
+      "§ 73 - Pronome personale reciproco",
+      "§ 74 - Pronome riflessivo",
+      "§ 75 - Pronome-aggettivo possessivo",
+      "§ 76 - Pronome relativo",
+      "§ 77 - La proposizione oggettiva",
+      "§ 78 - La proposizione soggettiva",
+      "§ 79 - La proposizione finale",
+      "Vocabolario 16º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 72 - Pronomi personali",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Abbiamo già visto (cfr. § 49) che il N.T., come del resto anche il greco classico, usa αὐτός, αὐτή, αὐτό come pronome personale di terza persona."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la prima e la seconda persona, le forme sono, invece, quelle indicate nel quadro seguente."
+          },
+          {
+            "type": "subheading",
+            "text": "Pronomi personali"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "I PERSONA",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "II PERSONA",
+                    "colspan": 2
+                  }
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "ἐγώ,",
+                  "io",
+                  "σύ,",
+                  "tu"
+                ],
+                [
+                  "GEN.",
+                  "ἐμοῦ, μου,",
+                  "di me",
+                  "σοῦ,",
+                  "di te"
+                ],
+                [
+                  "DAT.",
+                  "ἐμοί, μοι,",
+                  "a me",
+                  "σοί,",
+                  "a te"
+                ],
+                [
+                  "ACC.",
+                  "ἐμέ, μέ,",
+                  "me",
+                  "σέ,",
+                  "te"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "ἡμεῖς,",
+                  "noi",
+                  "ὑμεῖς,",
+                  "voi"
+                ],
+                [
+                  "GEN.",
+                  "ἡμῶν,",
+                  "di noi",
+                  "ὑμῶν,",
+                  "di voi"
+                ],
+                [
+                  "DAT.",
+                  "ἡμῖν,",
+                  "a noi",
+                  "ὑμῖν,",
+                  "a voi"
+                ],
+                [
+                  "ACC.",
+                  "ἡμᾶς,",
+                  "noi",
+                  "ὑμᾶς,",
+                  "voi"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) Il NOM. sing. equivale a «io, tu». Gli altri casi equivalgono ai nostri «me, te», preceduti, secondo la necessità, dalle preposizioni corrispondenti alla loro funzione nella frase. Il dativo, oltre che alle forme «a me», «a te» (sing.); «a noi»; «a voi» (plur.), corrisponde alle particelle pronominali «mi, ti, ci, vi».",
+              "b) Le forme μοῦ, μοι, μέ; σοῦ, σοί, σέ; οὗ, οἷ, ἕ si trovano anche senza accento, perché enclitiche (cfr. § 37). Rispetto alle corrispondenti forme con accento, quelle enclitiche sono lievemente meno enfatiche: l'uso della forma accentata sottolinea maggiormente l'importanza della persona di cui (o a cui) si dice, si fa qualcosa.",
+              "c) Per l'uso (raro) del pronome-soggetto, cfr. il § 7f.",
+              "d) Il GEN. del pronome personale è usato, talvolta, dove noi useremmo il pronome possessivo (cfr. Mt. 2,6: ὁ λαός μου = il mio popolo; Gv. 15,10: ἐν τῇ ἀγάπῃ μου = nel mio amore).",
+              "e) Anche l'articolo, al nominativo, è usato spesso, nei Vangeli, come pronome di III persona, seguito da δέ (= «ed egli», «ma lui...»). Un caso particolare è rappresentato dalla espressione ὁ μὲν... ὁ δέ..., che equivale all'italiano «l'uno... l'altro...». Le particelle μέν e δέ sono usate, infatti, quando si vogliono contrapporre due o più persone o cose (cfr. At. 14,4; 17,32; 28,24: ἕκαστος ἴδιον ἔχει χάρισμα ἐκ θεοῦ, ὁ μὲν οὕτως, ὁ δὲ οὕτως = ciascuno ha il suo proprio dono da Dio, l'uno in un modo, l'altro in un altro, I Cor. 7,7; καὶ αὐτὸς ἔδωκεν τοὺς μὲν ἀποστόλους, τοὺς δὲ προφήτας..., = è lui che ha dato alcuni come apostoli, altri come profeti... Ef. 4,11)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 73 - Pronome personale reciproco",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "ἀλλήλων - M./F./N. - (l'un l'altro, a vicenda)",
+                    "colspan": 5
+                  }
+                ],
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  "M.",
+                  "F.",
+                  "N."
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "GEN.",
+                  "ἀλλήλων",
+                  "ἀλλήλων",
+                  "ἀλλήλων"
+                ],
+                [
+                  "DAT.",
+                  "ἀλλήλοις",
+                  "ἀλλήλαις",
+                  "ἀλλήλοις"
+                ],
+                [
+                  "ACC.",
+                  "ἀλλήλους",
+                  "ἀλλήλας",
+                  "ἀλλήλα"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dal raddoppiamento del tema ἀλλο-, del pronome-agg. indefinito ἄλλος (altro), deriva il pronome reciproco ἀλλήλων che, per il suo significato (l'un l'altro), non ha il singolare, né il nominativo. Esso, infatti, indica un rapporto di reciprocità fra persone di numero plurale."
+          }
+        ]
+      },
+      {
+        "heading": "§ 74 - Pronome riflessivo",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  {
+                    "label": "I PERSONA\n(di me stesso/a)\nM./F.",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "II PERSONA\n(di te stesso/a)\nM./F.",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "III PERSONA\n(di se stesso/a)\nM./F.",
+                    "className": "grammar-table-stacked"
+                  }
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "GEN.",
+                  {
+                    "label": "ἐμαυτοῦ, ἐμαυτῆς",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "σεαυτοῦ, σεαυτῆς",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ἑαυτοῦ, ἑαυτῆς\n(αὐτοῦ, -τῆς)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  "DAT.",
+                  {
+                    "label": "ἐμαυτῷ, ἐμαυτῇ",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "σεαυτῷ, σεαυτῇ",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ἑαυτῷ, ἑαυτῇ\n(αὐτῷ, -τῇ)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  "ACC.",
+                  {
+                    "label": "ἐμαυτόν, ἐμαυτήν",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "σεαυτόν, σεαυτήν",
+                    "className": "grammar-table-stacked"
+                  },
+                  {
+                    "label": "ἑαυτόν, ἑαυτήν, ἑαυτό\n(αὐτόν, -ή, -ό)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "GEN.",
+                  "ἡμῶν αὐτῶν",
+                  "ὑμῶν αὐτῶν",
+                  {
+                    "label": "ἑαυτῶν\n(αὐτῶν)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  "DAT.",
+                  "ἡμῖν αὐτοῖς, -αῖς",
+                  "ὑμῖν αὐτοῖς, -αῖς",
+                  {
+                    "label": "ἑαυτοῖς, -αῖς\n(αὐτοῖς, -αῖς)",
+                    "className": "grammar-table-stacked"
+                  }
+                ],
+                [
+                  "ACC.",
+                  "ἡμᾶς αὐτούς, -άς",
+                  "ὑμᾶς αὐτούς, -άς",
+                  {
+                    "label": "ἑαυτούς, -άς, -ά\n(αὐτούς, -άς, -ά)",
+                    "className": "grammar-table-stacked"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) Trattandosi di pronomi usati solo come complementi, non esiste una forma per il nominativo (cfr., in italiano, le forme pronominali me, mi ecc., usate solo in casi diversi dal NOM.).",
+              "Es.: Ἐὰν ἐγὼ μαρτυρῶ περὶ ἐμαυτοῦ... = Se io rendo testimonianza a me stesso..., Gv. 5,31; cfr. anche Gv. 8,54; 10,33; I Tm. 4,16.",
+              "b) Il pronome di III pers. ha forme contratte (tra parentesi), che si potrebbero confondere con quelle di αὐτός, αὐτή, αὐτό. Però il riflessivo ha lo spirito aspro, mentre αὐτός, -ή, -ό ha lo spirito dolce.",
+              "c) Per il plurale della I e II persona, si usano i pronomi personali (§ 72), seguiti da αὐτός, nello stesso genere e caso.",
+              "Es.: ὑμῶν αὐτῶν = di voi stessi."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 75 - Pronome-aggettivo possessivo",
+        "contentBlocks": [
+          {
+            "type": "tableGrid",
+            "grid": {
+              "items": [
+                {
+                  "title": "Sing.",
+                  "table": {
+                    "className": "grammar-table-compact-keyvalue",
+                    "headerRows": [
+                      [
+                        "",
+                        "M.   F.   N."
+                      ]
+                    ],
+                    "rows": [
+                      [
+                        "I pers.",
+                        "ἐμός, -ή, -όν = mio"
+                      ],
+                      [
+                        "II pers.",
+                        "σός, -ή, -όν = tuo"
+                      ],
+                      [
+                        "III pers.",
+                        "(ὅς, ἥ, ὅν) = suo"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Plur.",
+                  "table": {
+                    "className": "grammar-table-compact-keyvalue",
+                    "headerRows": [
+                      [
+                        "",
+                        "M.   F.   N."
+                      ]
+                    ],
+                    "rows": [
+                      [
+                        "I pers.",
+                        "ἡμέτερος, -ᾱ, -ον = nostro"
+                      ],
+                      [
+                        "II pers.",
+                        "ὑμέτερος, -ᾱ, -ον = vostro"
+                      ],
+                      [
+                        "III pers.",
+                        "(σφέτερος, -ᾱ, -ον = loro)"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) I pronomi e aggettivi possessivi si declinano come aggettivi della I classe a tre uscite (M.-F.-N.) ed in realtà lo sono, essendo derivati dai corrispondenti pronomi personali, alla cui radice sono stati aggiunti i suffissi -ο/-ᾱ (Sing.) e -τερο/-τερα (Plur.).",
+              "b) I possessivi vengono usati in posizione attributiva (cfr. § 50): ὁ ἐμὸς φίλος; ὁ φίλος ὁ ἐμός = il mio amico.",
+              "c) L'articolo può talvolta mancare, come in Mc. 10,40, dove ἐμόν ha valore di predicato, o in Fil. 3,9, dove ἐμὴν si accompagna a un sostantivo indeterminato: ἐμὴν δικαιοσύνην = una giustizia mia."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 76 - Pronome relativo",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "headerRows": [
+                [
+                  {
+                    "label": "ὅς, ἥ, ὅ (il quale)",
+                    "colspan": 6
+                  }
+                ],
+                [
+                  {
+                    "label": "",
+                    "colspan": 2,
+                    "className": "grammar-table-corner"
+                  },
+                  "M.",
+                  "F.",
+                  "N.",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "ὅς",
+                  "ἥ",
+                  "ὅ",
+                  "(che), il quale, la quale, la qual cosa"
+                ],
+                [
+                  "GEN.",
+                  "οὗ",
+                  "ἧς",
+                  "οὗ",
+                  "(di cui), del quale, della quale, della qual cosa"
+                ],
+                [
+                  "DAT.",
+                  "ᾧ",
+                  "ᾗ",
+                  "ᾧ",
+                  "(a cui), al quale, alla quale, alla quale cosa"
+                ],
+                [
+                  "ACC.",
+                  "ὅν",
+                  "ἥν",
+                  "ὅ",
+                  "(che), il quale, la quale, la quale cosa"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 4,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "NOM.",
+                  "οἵ",
+                  "αἵ",
+                  "ἅ",
+                  "(che), i quali, le quali, le quali cose"
+                ],
+                [
+                  "GEN.",
+                  "ὧν",
+                  "ὧν",
+                  "ὧν",
+                  "(di cui), dei quali, delle quali, delle quali cose"
+                ],
+                [
+                  "DAT.",
+                  "οἷς",
+                  "αἷς",
+                  "οἷς",
+                  "(a cui), ai quali, alle quali, alle quali cose"
+                ],
+                [
+                  "ACC.",
+                  "οὕς",
+                  "ἅς",
+                  "ἅ",
+                  "(che), i quali, le quali, le quali cose"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "Osservazioni"
+          },
+          {
+            "type": "plainPoints",
+            "items": [
+              "a) Il pronome relativo si trova abitualmente nello stesso genere e numero del nome a cui si riferisce¹. Il caso, invece, dipende dalla funzione che il relativo ha nella proposizione, funzione che può essere individuata mediante l'analisi logica. Per maggiori particolari, cfr. § 180.",
+              "b) Non vanno confuse le forme dell'articolo con quelle del pronome relativo. In particolare, ἥ (pronome relativo femm.) con ἢ (congiunzione disgiuntiva = ovvero, ed anche particella comparativa, che precede il secondo termine di paragone, lat. quam) e con ἦ (particella interrogativa retorica), che introduce le domande a cui la risposta può essere sia positiva che negativa; quest'ultima non è usata nel greco biblico."
+            ]
+          },
+          {
+            "type": "note",
+            "text": "¹ Regola talvolta inosservata, dando luogo alla costruzione ad sensum, (cfr. Gal. 4,19: τέκνα μου, οὕς - maschile al posto del neutro); Col. 2,19: τὴν κεφαλήν, ἐξ οὗ - maschile invece del femminile (perché si tratta di Cristo?); cfr. anche Gal. 3,16, alla fine del versetto."
+          }
+        ]
+      },
+      {
+        "heading": "§ 77 - La proposizione oggettiva",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "NOTE SINTATTICHE"
+          },
+          {
+            "type": "paragraph",
+            "text": "Si chiama oggettiva, quella proposizione dipendente che svolge, nel periodo, la funzione di oggetto di una frase reggente, il cui verbo appartenga ad una delle seguenti categorie: verbi del dire o dichiarare, del giudicare, del volere e del provare sentimenti (verba dicendi, declarandi, opinandi, voluntatis, affectuum):"
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-list",
+              "rows": [
+                [
+                  "Ess.:",
+                  "diciamo che nessuno nutre sospetti;"
+                ],
+                [
+                  "",
+                  "pensano di aver studiato a sufficienza;"
+                ],
+                [
+                  "",
+                  "desidero che tutti se ne vadano;"
+                ],
+                [
+                  "",
+                  "mi meraviglio che abbiate questo coraggio;"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "La lingua greca ammette, dopo tali verbi, due diverse costruzioni:"
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-examples",
+              "headerRows": [
+                [
+                  "N.",
+                  "Costruzione",
+                  "Esempio"
+                ]
+              ],
+              "rows": [
+                [
+                  "1)",
+                  "soggetto in accusativo e predicato all'Infinito (proposizione infinitiva).",
+                  "νομίσαντες δὲ αὐτὸν εἶναι ἐν τῇ συνοδίᾳ ἦλθον ἡμέρας ὁδόν = credendo (i genitori) che egli si trovasse nella comitiva, fecero una giornata di cammino (Lc. 2,44);"
+                ],
+                [
+                  "2)",
+                  "ὅτι, ὡς seguiti dall'Indicativo o dall'Ottativo (proposizione dichiarativa).",
+                  "προσευχόμενοι δὲ μὴ βατταλογήσητε ὥσπερ οἱ ἐθνικοί, δοκοῦσιν γὰρ ὅτι ἐν τῇ πολυλογίᾳ αὐτῶν εἰσακουσθήσονται = pregando, poi, non sprecate parole come i gentili, i quali credono che saranno esauditi per la loro verbosità (Mt. 6,7)."
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "In realtà, il greco ellenistico e il N.T. privilegiano l'uso della dichiarativa, a scapito della costruzione con l'accusativo e l'infinito."
+          }
+        ]
+      },
+      {
+        "heading": "§ 78 - La proposizione soggettiva",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "La proposizione soggettiva compie, nel periodo, la funzione di soggetto della proposizione reggente, che è costituita da una forma impersonale."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-list",
+              "rows": [
+                [
+                  "Es.:",
+                  "è evidente che tu sei stanco."
+                ]
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "In greco, le proposizioni soggettive si riscontrano, per lo più, in dipendenza da verbi ed espressioni impersonali come δεῖ = bisogna; ἔστι e ἔξεστι = è possibile; καλόν ἐστι = è bello; δυνατόν ἐστι = è possibile; συμφέρει = è meglio, conviene; ecc. Dopo tali verbi, è attestato l'uso dell'accusativo e l'infinito. Non mancano, tuttavia, nel N.T., proposizioni soggettive con ὅτι."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-list",
+              "rows": [
+                [
+                  "Es.:",
+                  "κύριε, καλόν ἐστιν ἡμᾶς ὧδε εἶναι = Signore, è bello per noi stare qui (Mt. 17,4)."
+                ],
+                [
+                  "",
+                  "ὅτι δὲ ἐν νόμῳ οὐδεὶς δικαιοῦται παρὰ τῷ θεῷ δῆλον (ἐστίν) = Che poi nessuno, rimanendo nell'ambito della legge, venga giustificato dinanzi a Dio, è manifesto (Gal. 3,11)."
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 79 - La proposizione finale",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Prendono il nome di finali, quelle proposizioni che indicano lo scopo dell'azione espressa nella frase principale (o nella reggente). Nel greco classico, esse sono introdotte dalle congiunzioni ἵνα, ὡς, ὅπως (le negative si presentano con μή, ἵνα μή ecc.) e seguite dal verbo al Congiuntivo o all'Ottativo. Nel N.T. è usata prevalentemente la congiunzione ἵνα, ma già a partire dal primo Ellenismo le altre sono progressivamente scomparse."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-list",
+              "rows": [
+                [
+                  "Es.:",
+                  "τοὺς ἁμαρτάνοντας ἐνώπιον πάντων ἔλεγχε, ἵνα καὶ οἱ λοιποὶ φόβον ἔχωσιν = rimprovera alla presenza di tutti, quelli che sbagliano, affinché anche gli altri ne abbiano timore (I Tm. 5,20)."
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 16º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary grammar-table-vocabulary-wide",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "βασιλεύω",
+                  "regno, domino",
+                  "ἔξεστι",
+                  "è lecito"
+                ],
+                [
+                  "θέλω",
+                  "voglio",
+                  "θεραπεύω",
+                  "curo (terapeutico)"
+                ],
+                [
+                  "κρύπτω",
+                  "nascondo",
+                  "μισέω",
+                  "odio (misoginia, misoneismo)"
+                ],
+                [
+                  "ὁμολογέω",
+                  "riconosco, proclamo (omologare)",
+                  "παραγγέλλω",
+                  "comando"
+                ],
+                [
+                  "πίνω",
+                  "bevo",
+                  "ὁ Ἀβραάμ",
+                  "Abramo"
+                ],
+                [
+                  "ἡ Ἁγάρ",
+                  "Agar",
+                  "ἡ ἀδελφή, ῆς",
+                  "la sorella"
+                ],
+                [
+                  "ἡ διαθήκη, ης",
+                  "il patto, l'alleanza, il testamento (Ebr 9,16)",
+                  "ὁ διάκονος, ου",
+                  "il servo, il ministro, il diacono"
+                ],
+                [
+                  "ἡ εὐδοκία, ας",
+                  "la buona volontà, il gradimento",
+                  "ὁ Ἰορδάνης, ου",
+                  "il Giordano (fiume)"
+                ],
+                [
+                  "ὁ Ἰσαάκ",
+                  "Isacco",
+                  "ὁ Ἰσραήλ",
+                  "Israele"
+                ],
+                [
+                  "ἡ Σάρρα, ας",
+                  "Sara",
+                  "ἡ σοφία, ας",
+                  "la sapienza, la saggezza (filosofia)"
+                ],
+                [
+                  "ὁ σπόρος, ου",
+                  "il seme",
+                  "ὁ φθόνος, ου",
+                  "l'invidia"
+                ],
+                [
+                  "ὁ Χριστός, οῦ",
+                  "Cristo, (Gesù) Cristo, il Messia, l'Unto",
+                  "ἐλεύθερος, α, ον",
+                  "libero"
+                ],
+                [
+                  "μακάριος, α, ον",
+                  "beato, benedetto",
+                  "σοφός, ή, όν",
+                  "saggio, sapiente"
+                ],
+                [
+                  "ἀμήν (voce ebraica)",
+                  "amen, in verità",
+                  "δέκα",
+                  "dieci"
+                ],
+                [
+                  "ἐκεῖ (avv.)",
+                  "lì, là",
+                  "ὧδε (avv.)",
+                  "qui"
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. ἐβούλοντο ἀκούειν τοὺς λόγους οὓς ἐλάλει ὁ Ἰησοῦς. 2. ἐδέοντο οὖν αὐτοῦ θεραπεύειν τοὺς υἱοὺς αὐτῶν. 3. οὗτος ἄρχεται οἰκοδομεῖν ἀλλ' οὐ ποιεῖ τὸ ἔργον αὐτοῦ. 4. ἔξεστιν ἡμῖν κηρύσσειν τὴν βασιλείαν τῶν οὐρανῶν. 5. ἔπεμπε τοὺς δούλους αὐτοῦ καλεῖν τοὺς πτωχοὺς καὶ τοὺς τυφλοὺς εἰς τὸν γάμον. 6. ὁ γὰρ θεὸς πέμπει τὸν υἱὸν αὐτοῦ σῴζειν τὸν κόσμον. 7. παρεκάλουν αὐτοὺς οἱ προφῆται μένειν ἐν τῇ ἀληθείᾳ. 8. ὁ Ἰησοῦς τοῖς ἀνέμοις καὶ τῇ θαλάσσῃ παρήγγελλε καὶ ὑπήκουον αὐτῷ. 9. μακάριοι οἱ πτωχοί, ὅτι ὑμετέρα ἐστὶν ἡ βασιλεία τοῦ θεοῦ. 10. οἱ δοῦλοι οὓς ἐβλέπομεν ἐν τοῖς ἀγροῖς εἰργάζοντο. 11. γινώσκομεν τοὺς ἀνθρώπους οἳ ἔρχονται. 12. οἱ ὄχλοι ἀπῆρχοντο πρὸς τὴν ἔρημον ἐν ᾗ ὁ Ἰωάννης ἐβάπτιζεν. 13. ἠρνοῦντο τὸν κύριον τῆς δόξης ὃς τηρεῖ αὐτοὺς ἀπὸ τοῦ πονηροῦ. 14. καὶ φέρουσιν αὐτῷ τυφλὸν καὶ παρακαλοῦσιν αὐτὸν ἵνα ἅπτηται αὐτοῦ. 15. οἱ σπόροι παρὰ τὴν ὁδόν εἰσιν οἱ ἀκούσαντες (coloro che ascoltano) τὸν λόγον τοῦ θεοῦ, ἀλλὰ ὁ διάβολος ἔρχεται καὶ ἐκβάλλει τὸν λόγον ἀπὸ τῆς καρδίας αὐτῶν, ἵνα μὴ σῴζωνται. 16. λέγει τοῖς Ἰουδαίοις ὁ Ἰησοῦς· ἀμὴν ἀμὴν λέγω ὑμῖν ὅτι ὃς¹ ποιεῖ τὴν ἁμαρτίαν δοῦλός ἐστιν τῆς ἁμαρτίας."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Gesù si recava in Giudea e la folla lo ascoltava. 2. Insegnava nelle sinagoghe dei Giudei, predicava l'evangelo del regno e curava ogni (πᾶσαν) malattia. 3. Signore, vogliamo vedere Gesù. 4. Ogni (πᾶσα) ingiustizia è peccato; non c'è ingiustizia presso Dio. 5. Ti ordino, o demonio, di andare via dalla fanciulla. 6. L'anziano leggeva la lettera che l'apostolo scriveva. 7. I buoni frutti della pace non sono portati (prodotti) dagli ipocriti. 8. Le parabole che Gesù diceva ai discepoli sono insegnate nella chiesa dai maestri. 9. La folla portava a Gesù ciechi e sordomuti affinché li curasse. 10. I discepoli dicevano che le promesse del regno erano proclamate da Gesù."
+            ]
+          },
+          {
+            "title": "Note",
+            "plainPoints": [
+              "1 Il pronome relativo sottintende un dimostrativo nello stesso suo caso."
+            ]
+          }
+        ]
+      }
     ]
   },
   {

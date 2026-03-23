@@ -1019,6 +1019,41 @@ select {
   white-space: normal;
 }
 
+.grammar-table-syntax-list td,
+.grammar-table-syntax-list th,
+.grammar-table-syntax-examples td,
+.grammar-table-syntax-examples th {
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.grammar-table-syntax-list td:first-child,
+.grammar-table-syntax-list th:first-child {
+  width: 4.5rem;
+  text-align: right;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.grammar-table-syntax-examples td:first-child,
+.grammar-table-syntax-examples th:first-child {
+  width: 3.4rem;
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.grammar-table-syntax-examples td:nth-child(2),
+.grammar-table-syntax-examples th:nth-child(2) {
+  min-width: 18rem;
+}
+
+.grammar-table-syntax-examples td:nth-child(3),
+.grammar-table-syntax-examples th:nth-child(3) {
+  min-width: 22rem;
+}
+
 .grammar-table-apophonia-shifts {
   width: auto;
 }
