@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-19",
+  "updatedAt": "2026-03-23",
   "description": "Prime soluzioni trascritte dalle pagine fotografate del manuale. Il file contiene solo le soluzioni, separate dal testo degli esercizi.",
   "exercises": [
     {
@@ -329,8 +329,7 @@
       "label": "Esercizio 9",
       "page": 61,
       "lessonId": "lezione-nona",
-      "status": "partial",
-      "notes": "La foto copre solo il primo blocco dell'esercizio.",
+      "status": "complete",
       "sections": [
         {
           "id": "tradurre-dal-greco",
@@ -347,7 +346,287 @@
             "La lingua è cattiva.",
             "Dio è giudice giusto e forte.",
             "Ma ci sono alcuni fra di voi che non credono, dice il Signore.",
-            "Non c'è profeta privo di onore se non nella sua patria e nella sua casa."
+            "Non c'è profeta privo di onore se non nella sua patria e nella sua casa.",
+            "Rispose Gesù: «Ora il Regno non è di qui» (Gv 18,36).",
+            "Diletti, non vi scrivo un comandamento nuovo, bensì un comandamento vecchio.",
+            "Non siamo in grado di giudicare i fratelli."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Οἱ ἀπόστολοι κακοί εἰσιν.",
+            "Ὁ προφήτης δίκαιός ἐστιν.",
+            "Ὁ πόνος ἄδικός ἐστιν.",
+            "Τὰ βιβλία τοῦ Θεοῦ ἅγιά ἐστιν.",
+            "Υἱοὶ ἀγαπητοί νῦν υἱοὶ τοῦ Θεοῦ ἐσμεν καὶ τηροῦμεν τὰς αὐτοῦ ἐντολάς.",
+            "Οἱ γάμοι ἕτοιμοί εἰσιν ἀλλὰ οἱ κεκλημένοι οὐκ ἄξιοί εἰσιν."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-10",
+      "label": "Esercizio 10",
+      "page": 68,
+      "lessonId": "lezione-decima",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Le donne fedeli rimangono nel tempio.",
+            "Voi siete discepoli del Signore.",
+            "Tu sei santo, Signore!",
+            "Noi chiamavamo i giovani.",
+            "Voi uccidevate i profeti del Signore.",
+            "Dio mandava gli angeli del Signore nel mondo.",
+            "Il maestro conduceva (via) i discepoli dal mare.",
+            "I giovani si rallegravano.",
+            "Le pecore si ritiravano dal deserto.",
+            "Il Battista battezza le fanciulle.",
+            "L'angelo liberava l'apostolo.",
+            "I discepoli glorificavano il Signore.",
+            "I servi buoni radunavano le pecore.",
+            "I fratelli leggevano nell'assemblea la lettera dell'apostolo.",
+            "I discepoli di Gesù scacciavano i demoni.",
+            "Le briciole cadevano dalla tavola del padrone."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ἀνὴρ ὁ πονηρὸς ἐν τῇ πρώτῃ πλοίᾳ ἐστίν.",
+            "Ὁ ἀνὴρ ὁ πονηρὸς ἐν τῇ πρώτῃ πλοίᾳ ἐστίν.",
+            "Αὐτὸς ἐποίει τὰ ἱμάτια ἑαυτοῦ.",
+            "Ὁ Βαπτιστὴς τοὺς πονηροὺς ἄνδρας παρεκάλει.",
+            "Οἱ ἅγιοι ἐν τῇ οἰκίᾳ τοῦ Θεοῦ ἔμενον.",
+            "Οἱ δοῦλοι τὸν ἄρτον τῷ κυρίῳ ἔφερον.",
+            "Ὁ μαθητὴς ἐν ταῖς συναγωγαῖς Ἰησοῦν υἱὸν τοῦ Θεοῦ ἐκήρυσσεν.",
+            "Ὁ Ἰησοῦς εἰς τὴν Ἰουδαίαν περιεπάτει καὶ τῷ λαῷ ἐκήρυσσεν."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-11",
+      "label": "Esercizio 11",
+      "page": 72,
+      "lessonId": "lezione-undicesima",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Il padrone di casa metteva alla prova i servi.",
+            "Il Signore conosce il frutto dell'iniquità.",
+            "Il pubblicano riceve il compenso del mondo.",
+            "Il diavolo tenta le folle e gli apostoli.",
+            "La via degli ipocriti è cattiva agli occhi del Signore.",
+            "Il discepolo è amato dal maestro.",
+            "Il giovane fedele legge le Sacre Scritture.",
+            "Portate vino al padrone di casa.",
+            "Quel giorno era sabato.",
+            "Udivano questa voce nella propria lingua (cfr. At 2,6).",
+            "Così parla il Primo e l'Ultimo (Ap 2,8).",
+            "Dio crea il cielo, la terra e il mare."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ὁ ὄχλος ἤκουε τοὺς λόγους τοῦ διδασκάλου καὶ αὐτοὺς διετήρει ἐν τῇ καρδίᾳ.",
+            "Ἐν ἐκείνῃ τῇ οἰκίᾳ ἡ εἰρήνη τοῦ κυρίου ἦν.",
+            "Οἱ μαθηταὶ ἄρτον καὶ ῥάβδον ἐν τῇ ὁδῷ ἔφερον.",
+            "Ἄγγελος αὐτῷ ἔλεγε καὶ αὐτὸν παρεκάλει.",
+            "Οἱ ἄνθρωποι τὰ σημεῖα τοῦ διδασκάλου βλέπουσι καὶ πιστεύουσιν ἐν αὐτῷ.",
+            "Τελῶναι καὶ ἁμαρτωλοὶ ἤκουον Ἰησοῦν."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-12",
+      "label": "Esercizio 12",
+      "page": 77,
+      "lessonId": "lezione-dodicesima",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "I libri erano raccolti dai maestri.",
+            "Il vangelo era proclamato dal presbitero.",
+            "Eravamo mandati dai profeti alla folla.",
+            "I pubblicani erano battezzati dal Battista.",
+            "I presbiteri battezzavano la folla.",
+            "Il padrone di casa insegnava la scrittura agli operai e ai bambini.",
+            "Le scritture di Dio erano lette ai fratelli.",
+            "Intanto la parola del Signore si diffondeva per l'intero paese.",
+            "La fanciulla fedele era mandata al tempio.",
+            "Il Figlio diletto era mandato da Dio nel mondo.",
+            "Otto giorni dopo i suoi discepoli erano di nuovo dentro e c'era con loro Tommaso.",
+            "Siamo salvati dal Signore e non siamo giudicati insieme al mondo."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ὁ λόγος τοῦ Θεοῦ ἐκηρύσσετο ὑπὸ τῶν ἀποστόλων.",
+            "Οὗτοι καρποὶ ἀπεστέλλοντο ὑπὸ τοῦ δεσπότου τοῦ οἴκου πρὸς τοὺς πρεσβυτέρους.",
+            "Καὶ Ἰησοῦς οὐκ ἐφιλεῖτο ὑπὸ τῶν Ἰουδαίων ὅτι ἐποίει τάδε ἐν σαββάτῳ.",
+            "Εἰς τοὺς προφήτας τῶν Ἱεροσολύμων ὁ Θεὸς ἀπέστελλε τὰ σημεῖα τοῦ οὐρανοῦ.",
+            "Ἐκ τῶνδε ἐκηρύσσομεν τὸν λόγον τοῦ Θεοῦ τοῖς μαθηταῖς.",
+            "Οἱ ἀπόστολοι καὶ οἱ πρεσβύτεροι σὺν ὅλῃ τῇ ἐκκλησίᾳ παρεκαλοῦντο ὑπὸ τοῦ Θεοῦ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-13",
+      "label": "Esercizio 13",
+      "page": 83,
+      "lessonId": "lezione-tredicesima",
+      "status": "complete",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Non sia sconvolto il vostro cuore; credete in Dio!",
+            "Se qualcuno non obbedisce alla (parola della) lettera, non considerate costui come nemico, ma ammonitelo come fratello.",
+            "Paolo entrava nella sinagoga e discuteva con i Giudei.",
+            "Venne Gesù e disse a Tommaso: «Metti il dito nel mio costato e non essere incredulo ma credente!».",
+            "Ognuno ci consideri come servitori di Cristo e amministratori dei misteri di Dio (1 Cor 4,1).",
+            "Dicevano molti tra di loro: «Ha un demonio ed è fuori di sé, perché lo ascoltate?».",
+            "Perciò diletti, fuggite l'idolatria!",
+            "Disse Gesù al capo della sinagoga: non temere, soltanto credi!",
+            "I ciechi vedono, gli zoppi camminano, i lebbrosi sono purificati, i sordi odono, i morti risorgono, i poveri sono evangelizzati.",
+            "Io non voglio essere giudice di queste cose.",
+            "Bisognava attraversare la Samaria.",
+            "Il comandante con i servitori li conduceva, ma non con forza; temevano infatti il popolo.",
+            "I discepoli giunsero da Giovanni e gli dissero: costui battezza e il popolo va da lui.",
+            "Pietro e Giovanni entrarono nel tempio nell'ora della preghiera.",
+            "Gesù riceveva la folla e parlava loro del regno di Dio.",
+            "Tutta la folla lo cercava perché da lui promanava forza."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ὁ Ἰησοῦς προσήρχετο μετὰ τῶν μαθητῶν εἰς Ἱερουσαλήμ καὶ ἔλεγε πρὸς τοὺς ὄχλους τῆς χώρας.",
+            "Ὁ ἀπόστολος ὁ Παῦλος ἐλογίζετο ἐν τῇ συναγωγῇ σὺν τοῖς Ἰουδαίοις περὶ Ἰησοῦ ἀλλὰ μόνον τινὲς ἄνθρωποι ἐπίστευον αὐτῷ.",
+            "Ὁ Ἰησοῦς λέγει τῇ ἁμαρτωλῷ· ἄπερχου καὶ ἀπὸ νῦν μὴ ἁμάρτανε.",
+            "Μὴ φοβεῖσθε· κηρύσσετε τοῖς ἀδελφοῖς τοὺς λόγους τῆς ἐπιστολῆς τοῦ ἀποστόλου.",
+            "Διὸ οἱ ἀδελφοὶ ἐδέοντο τὸν δοῦλον τοῦ Θεοῦ· εἰσέρχου εἰς τὸν οἶκον ἐκείνου ἀνθρώπου.",
+            "Τότε ὁ Ἰησοῦς ἥπτετο τῶν ὀφθαλμῶν τοῦ τυφλοῦ καὶ αὐτὸς ἐσῴζετο.",
+            "Οἱ δοῦλοι ἀπέρχονται πρὸς τὸν δεσπότην οἴκου καὶ αὐτῷ λέγουσιν· ὁ διδάσκαλος ἔρχεται εἰς τὸν οἶκόν σου."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-14",
+      "label": "Esercizio 14",
+      "page": 92,
+      "lessonId": "lezione-quattordicesima",
+      "status": "partial",
+      "notes": "La foto copre il blocco italiano e solo le prime 5 frasi della sezione greca.",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Allora crocifissero con lui due ladroni.",
+            "La giustizia di Dio manifesta il peccato del mondo.",
+            "I discepoli erano riempiti di letizia.",
+            "Da queste cose conoscete che è vicino il regno di Dio.",
+            "Non lasciarti vincere dal male, ma vinci il male con il bene! (Rm 12,21).",
+            "Preghiamo e supplichiamo i fratelli nel Signore Gesù.",
+            "Amate il Signore Dio con tutto il cuore e con tutta l'anima.",
+            "Nel giorno del Signore Gesù rafforza i diletti.",
+            "Il Signore paragonava gli uomini di questa generazione ai bambini della piazza (Lc 7,31).",
+            "La legge si compie per mezzo di Gesù."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Οἱ ἁμαρτωλοὶ τελευτῶσιν ἐν τῇ ἁμαρτίᾳ.",
+            "Οἱ ἀδελφοὶ ἀγαπῶσι τὴν ἐκκλησίαν καὶ προσεύχονται τὸν κύριον.",
+            "Ἡ βασιλεία τῶν οὐρανῶν ὁμοιούται δείπνῳ.",
+            "Οἱ ἄνθρωποι πεινώσιν καὶ διψῶσι δικαιοσύνην.",
+            "Αἱ παρθένοι κοιμῶνται καὶ ὁ κύριος οὐχ εὑρίσκει αὐτάς."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esercizio-15",
+      "label": "Esercizio 15",
+      "page": 99,
+      "lessonId": "lezione-quindicesima",
+      "status": "partial",
+      "notes": "La foto copre il blocco italiano e solo le prime 10 frasi della sezione greca.",
+      "sections": [
+        {
+          "id": "tradurre-dal-greco",
+          "label": "Tradurre dal greco",
+          "language": "it",
+          "items": [
+            "Volevano sentire le parole che diceva Gesù.",
+            "Chiedevano dunque a Lui di guarire i loro figli.",
+            "Costui comincia a costruire ma non compie il suo lavoro.",
+            "È lecito per noi proclamare il regno dei cieli.",
+            "Egli mandava i suoi servi a invitare i poveri ed i ciechi alla nozze.",
+            "Dio manda il suo Figlio a salvare il mondo.",
+            "I profeti li esortavano a rimanere nella verità.",
+            "Gesù comandò ai venti e al mare ed essi si sottomettevano a lui.",
+            "Beati voi poveri, perché è vostro il regno di Dio.",
+            "I servi che vedevamo lavoravano nei campi.",
+            "Conosciamo gli uomini che arrivano.",
+            "Le folle andavano al deserto dove Giovanni battezzava.",
+            "Essi rifiutavano il Signore della gloria, che li custodisce dal maligno.",
+            "Essi portano a Lui un cieco supplicandolo affinché lo tocchi.",
+            "I semi sulla strada sono coloro che ascoltano la parola di Dio, ma il diavolo viene e toglie via dal loro cuore la parola affinché non si salvino.",
+            "Disse Gesù ai Giudei: in verità vi dico che colui che compie peccato è servo del peccato."
+          ]
+        },
+        {
+          "id": "tradurre-in-greco",
+          "label": "Tradurre in greco",
+          "language": "grc",
+          "items": [
+            "Ὁ Ἰησοῦς ἀπῆρχετο εἰς Ἰουδαίαν καὶ ὁ ὄχλος ἤκουεν αὐτοῦ.",
+            "Αὐτὸς ἐδίδασκεν ἐν ταῖς συναγωγαῖς τῶν Ἰουδαίων καὶ ἐκήρυσσε τὸ εὐαγγέλιον καὶ ἐθεράπευεν πᾶσαν νόσον.",
+            "Κύριε, θέλομεν ἀναβλέπειν τὸν Ἰησοῦν.",
+            "Πᾶσα ἀδικία ἐστὶ ἁμαρτία οὐκ ἔστιν ἀδικία παρὰ Θεόν.",
+            "Κελεύω σοι, δαιμόνιε, ἵνα ἀπέρχῃ ἀπὸ τῆς παρθένου.",
+            "Ὁ πρεσβύτερος ἀνεγίνωσκε τὴν ἐπιστολὴν ἣν ὁ ἀπόστολος ἔγραφεν.",
+            "Οἱ ἀγαθοὶ καρποὶ τῆς εἰρήνης οὐκ φέρονται ἀπὸ τῶν ὑποκριτῶν.",
+            "Αἱ παραβολαὶ ἃς Ἰησοῦς ἔλεγε τοῖς μαθηταῖς διδάσκονται ἐν τῇ ἐκκλησίᾳ ὑπὸ τῶν διδασκάλων.",
+            "Ὁ ὄχλος ἔφερεν τῷ Ἰησοῦ τυφλοὺς καὶ κωφοὺς ἵνα αὐτοὺς θεραπεύοι.",
+            "Οἱ μαθηταὶ ἔλεγον τὰς ἐπαγγελίας τῆς βασιλείας κηρύσσεσθαι ὑπὸ τοῦ Ἰησοῦ."
           ]
         }
       ]
