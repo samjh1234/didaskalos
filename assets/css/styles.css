@@ -47,13 +47,13 @@ a {
 }
 
 .grammar-cross-reference {
-  color: inherit;
+  color: #1f5fbf;
   text-decoration: none;
   font: inherit;
 }
 
 .grammar-cross-reference:visited {
-  color: inherit;
+  color: #1f5fbf;
 }
 
 .grammar-cross-reference:focus-visible {
