@@ -46,6 +46,21 @@ a {
   text-decoration: none;
 }
 
+.grammar-cross-reference {
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+}
+
+.grammar-cross-reference:visited {
+  color: inherit;
+}
+
+.grammar-cross-reference:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
 button,
 input,
 select {

@@ -41,6 +41,7 @@ const state = {
   },
   data: null,
   vocabularyIndex: [],
+  grammarSectionIndex: null,
 };
 
 // Riferimenti ai contenitori delle viste principali.
@@ -186,6 +187,116 @@ const getGrammarChildSections = (chapter, parentTitle) => {
   return (chapter?.sections || []).filter((section) => childPattern.test(section.heading || section.title || ""));
 };
 
+const getGrammarSectionIndex = () => {
+  if (state.grammarSectionIndex) return state.grammarSectionIndex;
+  const index = new Map();
+
+  (state.data?.grammar || []).forEach((chapter) => {
+    getGrammarOverviewContents(chapter).forEach((title, itemIndex) => {
+      const match = String(title || "").match(/^§\s*(\d+)/);
+      if (!match || index.has(match[1])) return;
+      index.set(match[1], {
+        chapterId: chapter.id,
+        itemId: String(itemIndex),
+        title,
+      });
+    });
+  });
+
+  state.grammarSectionIndex = index;
+  return index;
+};
+
+const buildGrammarItemHref = (chapterId, itemId) => {
+  const baseUrl = window.location.href.split("#")[0];
+  return `${baseUrl}#${buildHash("grammar", { chapter: chapterId, item: itemId })}`;
+};
+
+const parseGrammarReferenceSegment = (source, startIndex) => {
+  const match = source.slice(startIndex).match(
+    /^(\d+[a-z]?(?:ss\.)?(?:\s*[A-Z])?(?:\/[IVXLC]+(?:\s*e\s*[IVXLC]+)?)?(?:,\d+|,\s*[IVXLC]+|,\s*[a-z])?(?:\s*[a-z])?(?:-\d+[a-z]?(?:ss\.)?)?)/,
+  );
+  if (!match) return null;
+  const [rawText] = match;
+  const numberMatch = rawText.match(/\d+/);
+  if (!numberMatch) return null;
+  return {
+    text: rawText,
+    sectionNumber: numberMatch[0],
+    endIndex: startIndex + rawText.length,
+  };
+};
+
+const parseGrammarReferenceRun = (source, startIndex) => {
+  const signMatch = source.slice(startIndex).match(/^(§{1,2}\s*)/);
+  if (!signMatch) return null;
+
+  const signText = signMatch[1];
+  let cursor = startIndex + signText.length;
+  const segments = [];
+  const separators = [];
+  const firstSegment = parseGrammarReferenceSegment(source, cursor);
+  if (!firstSegment) return null;
+  segments.push(firstSegment);
+  cursor = firstSegment.endIndex;
+
+  while (cursor < source.length) {
+    const separatorMatch = source.slice(cursor).match(/^(\s*(?:,|e)\s*)/);
+    if (!separatorMatch) break;
+    const separatorText = separatorMatch[1];
+    const nextStart = cursor + separatorText.length;
+    const nextSegment = parseGrammarReferenceSegment(source, nextStart);
+    if (!nextSegment) break;
+    separators.push(separatorText);
+    segments.push(nextSegment);
+    cursor = nextSegment.endIndex;
+  }
+
+  return {
+    signText,
+    segments,
+    separators,
+    endIndex: cursor,
+  };
+};
+
+const renderGrammarReferenceLink = (label, sectionNumber) => {
+  const target = getGrammarSectionIndex().get(String(sectionNumber));
+  if (!target) return escapeHtml(label);
+  return `<a class="grammar-cross-reference" href="${escapeHtml(buildGrammarItemHref(target.chapterId, target.itemId))}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+};
+
+const renderGrammarInlineText = (value = "") => {
+  const text = String(value ?? "");
+  let html = "";
+  let cursor = 0;
+
+  while (cursor < text.length) {
+    const nextSectionSign = text.indexOf("§", cursor);
+    if (nextSectionSign === -1) {
+      html += escapeHtml(text.slice(cursor));
+      break;
+    }
+
+    html += escapeHtml(text.slice(cursor, nextSectionSign));
+    const parsedReference = parseGrammarReferenceRun(text, nextSectionSign);
+    if (!parsedReference) {
+      html += escapeHtml(text.charAt(nextSectionSign));
+      cursor = nextSectionSign + 1;
+      continue;
+    }
+
+    html += escapeHtml(parsedReference.signText);
+    parsedReference.segments.forEach((segment, index) => {
+      if (index > 0) html += escapeHtml(parsedReference.separators[index - 1]);
+      html += renderGrammarReferenceLink(segment.text, segment.sectionNumber);
+    });
+    cursor = parsedReference.endIndex;
+  }
+
+  return html;
+};
+
 const renderGrammarItemNav = (previousItem, nextItem) => `
   <article class="panel grammar-detail-nav">
     ${
@@ -255,7 +366,7 @@ const renderGrammarTableCell = (cell, tagName = "td") => {
   const colspan = descriptor.colspan ? ` colspan="${descriptor.colspan}"` : "";
   const rowspan = descriptor.rowspan ? ` rowspan="${descriptor.rowspan}"` : "";
   const className = descriptor.className ? ` class="${escapeHtml(descriptor.className)}"` : "";
-  return `<${tagName}${colspan}${rowspan}${className}>${escapeHtml(descriptor.label || "")}</${tagName}>`;
+  return `<${tagName}${colspan}${rowspan}${className}>${renderGrammarInlineText(descriptor.label || "")}</${tagName}>`;
 };
 
 const renderGrammarSummaryTable = (table) => {
@@ -281,7 +392,7 @@ const renderGrammarSummaryTable = (table) => {
     .join("");
 
   return `
-    ${table.intro ? `<p>${escapeHtml(table.intro)}</p>` : ""}
+    ${table.intro ? `<p>${renderGrammarInlineText(table.intro)}</p>` : ""}
     <div class="grammar-table-wrap">
       <table class="grammar-table grammar-table-summary${table.className ? ` ${escapeHtml(table.className)}` : ""}">
         <thead>${headerRowsHtml}</thead>
@@ -291,7 +402,7 @@ const renderGrammarSummaryTable = (table) => {
     ${
       table.notes?.length
         ? `<div class="stack grammar-table-notes">${table.notes
-            .map((note) => `<p class="grammar-table-note">${escapeHtml(note)}</p>`)
+            .map((note) => `<p class="grammar-table-note">${renderGrammarInlineText(note)}</p>`)
             .join("")}</div>`
         : ""
     }
@@ -324,7 +435,7 @@ const renderGrammarCompactTable = (table) => {
                     };
               const colspan = descriptor.colspan ? ` colspan="${descriptor.colspan}"` : "";
               const className = descriptor.className ? ` class="${escapeHtml(descriptor.className)}"` : "";
-              return `<td${colspan}${className}>${escapeHtml(descriptor.label || "")}</td>`;
+              return `<td${colspan}${className}>${renderGrammarInlineText(descriptor.label || "")}</td>`;
             })
             .join("")}
         </tr>
@@ -333,7 +444,7 @@ const renderGrammarCompactTable = (table) => {
     .join("");
 
   return `
-    ${table.intro ? `<p>${escapeHtml(table.intro)}</p>` : ""}
+    ${table.intro ? `<p>${renderGrammarInlineText(table.intro)}</p>` : ""}
     <div class="grammar-table-wrap grammar-table-wrap-compact">
       <table class="grammar-table grammar-table-compact${table.className ? ` ${escapeHtml(table.className)}` : ""}">
         ${headerRowsHtml}
@@ -343,7 +454,7 @@ const renderGrammarCompactTable = (table) => {
     ${
       table.notes?.length
         ? `<div class="stack grammar-table-notes">${table.notes
-            .map((note) => `<p class="grammar-table-note">${escapeHtml(note)}</p>`)
+            .map((note) => `<p class="grammar-table-note">${renderGrammarInlineText(note)}</p>`)
             .join("")}</div>`
         : ""
     }
@@ -394,21 +505,21 @@ const renderGrammarUnderlineWords = (words) => {
 
 const renderGrammarPlainPoints = (items) => {
   if (!items?.length) return "";
-  return items.map((item) => `<p>${escapeHtml(item)}</p>`).join("");
+  return items.map((item) => `<p>${renderGrammarInlineText(item)}</p>`).join("");
 };
 
 const renderGrammarAlignedExamples = (exampleBlock) => {
   if (!exampleBlock?.rows?.length) return "";
   return `
     <div class="grammar-example-block${exampleBlock.className ? ` ${escapeHtml(exampleBlock.className)}` : ""}">
-      ${exampleBlock.label ? `<div class="grammar-example-label">${escapeHtml(exampleBlock.label)}</div>` : ""}
+      ${exampleBlock.label ? `<div class="grammar-example-label">${renderGrammarInlineText(exampleBlock.label)}</div>` : ""}
       <div class="grammar-example-rows">
         ${exampleBlock.rows
           .map(
             (row) => `
               <div class="grammar-example-row">
-                <span class="grammar-example-key">${escapeHtml(row.key || "")}</span>
-                <span class="grammar-example-value">${escapeHtml(row.value || "")}</span>
+                <span class="grammar-example-key">${renderGrammarInlineText(row.key || "")}</span>
+                <span class="grammar-example-value">${renderGrammarInlineText(row.value || "")}</span>
               </div>
             `,
           )
@@ -430,10 +541,10 @@ const splitNumberedExerciseParagraph = (paragraph = "") => {
 const renderGrammarParagraph = (paragraph, options = {}) => {
   const { splitNumbered = false } = options;
   const lines = splitNumbered ? splitNumberedExerciseParagraph(paragraph) : null;
-  if (!lines?.length) return `<p>${escapeHtml(paragraph)}</p>`;
+  if (!lines?.length) return `<p>${renderGrammarInlineText(paragraph)}</p>`;
   return `
     <div class="stack grammar-exercise-lines">
-      ${lines.map((line) => `<p class="grammar-exercise-line">${escapeHtml(line)}</p>`).join("")}
+      ${lines.map((line) => `<p class="grammar-exercise-line">${renderGrammarInlineText(line)}</p>`).join("")}
     </div>
   `;
 };
@@ -444,11 +555,11 @@ const renderGrammarParagraphs = (paragraphs = [], options = {}) =>
 const renderGrammarContentBlock = (block, options = {}) => {
   if (!block || typeof block !== "object") return "";
   if (block.type === "paragraph") return renderGrammarParagraph(block.text || "", options);
-  if (block.type === "subheading") return `<h4 class="grammar-inline-heading">${escapeHtml(block.text || "")}</h4>`;
+  if (block.type === "subheading") return `<h4 class="grammar-inline-heading">${renderGrammarInlineText(block.text || "")}</h4>`;
   if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
   if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
   if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
-  if (block.type === "note") return `<p class="grammar-table-note">${escapeHtml(block.text || "")}</p>`;
+  if (block.type === "note") return `<p class="grammar-table-note">${renderGrammarInlineText(block.text || "")}</p>`;
   if (block.type === "tableGrid") return renderGrammarTableGrid(block.grid);
   if (block.type === "alignedExamples") return renderGrammarAlignedExamples(block.block);
   if (block.type === "underlineWords") return renderGrammarUnderlineWords(block.words);
@@ -467,7 +578,7 @@ const renderGrammarSectionContent = (section, options = {}) => {
   const pointsHtml = section.points?.length
     ? `
         <div class="stack grammar-topic-list">
-          ${section.points.map((item) => `<div class="micro-panel grammar-topic-row">${escapeHtml(item)}</div>`).join("")}
+          ${section.points.map((item) => `<div class="micro-panel grammar-topic-row">${renderGrammarInlineText(item)}</div>`).join("")}
         </div>
       `
     : "";
@@ -478,9 +589,9 @@ const renderGrammarSectionContent = (section, options = {}) => {
             .map(
               (group) => `
                 <div class="micro-panel grammar-group-card">
-                  <strong>${escapeHtml(group.title)}</strong>
+                  <strong>${renderGrammarInlineText(group.title)}</strong>
                   <div class="stack grammar-topic-list">
-                    ${group.items.map((item) => `<div class="grammar-topic-row">${escapeHtml(item)}</div>`).join("")}
+                    ${group.items.map((item) => `<div class="grammar-topic-row">${renderGrammarInlineText(item)}</div>`).join("")}
                   </div>
                 </div>
               `,
@@ -558,14 +669,14 @@ const renderGrammarSectionContent = (section, options = {}) => {
 
           return `
             <div class="grammar-subsection">
-              <h4>${escapeHtml(item.title)}</h4>
+              <h4>${renderGrammarInlineText(item.title)}</h4>
               ${subsectionBodyHtml}
               ${item.alignedExamples ? renderGrammarAlignedExamples(item.alignedExamples) : ""}
               ${item.underlineWords ? renderGrammarUnderlineWords(item.underlineWords) : ""}
               ${
                 item.points?.length
                   ? `<div class="stack grammar-topic-list">${item.points
-                      .map((point) => `<div class="micro-panel grammar-topic-row">${escapeHtml(point)}</div>`)
+                      .map((point) => `<div class="micro-panel grammar-topic-row">${renderGrammarInlineText(point)}</div>`)
                       .join("")}</div>`
                   : ""
               }
@@ -577,9 +688,9 @@ const renderGrammarSectionContent = (section, options = {}) => {
   const versesHtml = section.verses?.length
     ? `
         <div class="grammar-greek-block">
-      ${section.subheading ? `<h4>${escapeHtml(section.subheading)}</h4>` : ""}
+      ${section.subheading ? `<h4>${renderGrammarInlineText(section.subheading)}</h4>` : ""}
           <div class="stack grammar-greek-verses">
-            ${section.verses.map((verse) => `<p class="grammar-greek-line">${escapeHtml(verse)}</p>`).join("")}
+            ${section.verses.map((verse) => `<p class="grammar-greek-line">${renderGrammarInlineText(verse)}</p>`).join("")}
           </div>
         </div>
       `
@@ -590,7 +701,7 @@ const renderGrammarSectionContent = (section, options = {}) => {
     : `${paragraphsHtml}${alphabetTableHtml}${plainPointsHtml}${groupsHtml}${pointsHtml}${summaryTableHtml}${postSummaryParagraphsHtml}${subsectionsHtml}${versesHtml}`;
 
   return `
-    ${showHeading ? `<${headingTag}>${escapeHtml(section.heading || section.title || "")}</${headingTag}>` : ""}
+    ${showHeading ? `<${headingTag}>${renderGrammarInlineText(section.heading || section.title || "")}</${headingTag}>` : ""}
     <div class="grammar-section-body">
       ${bodyHtml}
     </div>
@@ -1626,7 +1737,7 @@ const renderGrammar = () => {
 
       <article class="panel grammar-detail-hero grammar-detail-hero-item">
         ${renderGrammarHeroItemNavButton("previous", previousItem)}
-        <h2>${escapeHtml(selectedItem.title)}</h2>
+        <h2>${renderGrammarInlineText(selectedItem.title)}</h2>
         ${renderGrammarHeroItemNavButton("next", nextItem)}
       </article>
 
@@ -1637,7 +1748,7 @@ const renderGrammar = () => {
             : renderGrammarSection(selectedSection, { showHeading: false })
           : `
             <article class="panel grammar-section-card">
-              <h3>${escapeHtml(selectedItem.title)}</h3>
+              <h3>${renderGrammarInlineText(selectedItem.title)}</h3>
               <p>Il contenuto dettagliato di questo punto non e ancora stato inserito nel dataset locale. La struttura della navigazione e pronta, ma questa scheda verra completata in un passaggio successivo.</p>
             </article>
           `
