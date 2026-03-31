@@ -29,6 +29,7 @@ const state = {
   grammarSelection: {
     chapter: "",
     item: "",
+    section: "",
   },
   vocabularySelection: {
     query: "",
@@ -84,6 +85,7 @@ const setRoute = (route, params = {}) => {
   state.grammarSelection = {
     chapter: params.chapter || "",
     item: params.item || "",
+    section: params.section || "",
   };
   state.vocabularySelection = {
     query: params.q || "",
@@ -108,6 +110,7 @@ const replaceRouteState = (route, params = {}) => {
   state.grammarSelection = {
     chapter: params.chapter || "",
     item: params.item || "",
+    section: params.section || "",
   };
   state.vocabularySelection = {
     query: params.q || "",
@@ -158,6 +161,14 @@ const getGrammarDisplayLabel = (chapter) => {
 const getGrammarOverviewContents = (chapter) =>
   (chapter?.contents || []).filter((item) => !/^\d+[a-z]\.|^[A-ZΑ-Ω]\)/.test(item));
 
+const getGrammarAllChapterItems = (chapter) =>
+  (chapter?.contents || []).map((title, index) => ({
+    id: String(index),
+    index,
+    title,
+    section: findGrammarSectionForTitle(chapter, title),
+  }));
+
 const findGrammarSectionForTitle = (chapter, title) => {
   const normalizedTitle = normalize(title);
   const sections = chapter?.sections || [];
@@ -192,13 +203,15 @@ const getGrammarSectionIndex = () => {
   const index = new Map();
 
   (state.data?.grammar || []).forEach((chapter) => {
-    getGrammarOverviewContents(chapter).forEach((title, itemIndex) => {
-      const match = String(title || "").match(/^§\s*(\d+)/);
-      if (!match || index.has(match[1])) return;
-      index.set(match[1], {
+    getGrammarAllChapterItems(chapter).forEach(({ title }) => {
+      const normalizedTitle = String(title || "").trim();
+      const match = normalizedTitle.match(/^(?:§\s*)?(\d+[a-z]?)(?:\s*[.-]|$)/i);
+      if (!match) return;
+      const key = match[1].toLowerCase();
+      if (index.has(key)) return;
+      index.set(key, {
         chapterId: chapter.id,
-        itemId: String(itemIndex),
-        title,
+        sectionTitle: title,
       });
     });
   });
@@ -207,9 +220,9 @@ const getGrammarSectionIndex = () => {
   return index;
 };
 
-const buildGrammarItemHref = (chapterId, itemId) => {
+const buildGrammarSectionHref = (chapterId, sectionTitle) => {
   const baseUrl = window.location.href.split("#")[0];
-  return `${baseUrl}#${buildHash("grammar", { chapter: chapterId, item: itemId })}`;
+  return `${baseUrl}#${buildHash("grammar", { chapter: chapterId, section: sectionTitle })}`;
 };
 
 const parseGrammarReferenceSegment = (source, startIndex) => {
@@ -218,11 +231,11 @@ const parseGrammarReferenceSegment = (source, startIndex) => {
   );
   if (!match) return null;
   const [rawText] = match;
-  const numberMatch = rawText.match(/\d+/);
-  if (!numberMatch) return null;
+  const keyMatch = rawText.match(/^(\d+[a-z]?)/i);
+  if (!keyMatch) return null;
   return {
     text: rawText,
-    sectionNumber: numberMatch[0],
+    sectionKey: keyMatch[1].toLowerCase(),
     endIndex: startIndex + rawText.length,
   };
 };
@@ -260,10 +273,14 @@ const parseGrammarReferenceRun = (source, startIndex) => {
   };
 };
 
-const renderGrammarReferenceLink = (label, sectionNumber) => {
-  const target = getGrammarSectionIndex().get(String(sectionNumber));
+const renderGrammarReferenceLink = (label, sectionKey) => {
+  const normalizedKey = String(sectionKey || "").toLowerCase();
+  const sectionIndex = getGrammarSectionIndex();
+  const target =
+    sectionIndex.get(normalizedKey) ||
+    sectionIndex.get((normalizedKey.match(/^\d+/) || [])[0] || "");
   if (!target) return escapeHtml(label);
-  return `<a class="grammar-cross-reference" href="${escapeHtml(buildGrammarItemHref(target.chapterId, target.itemId))}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+  return `<a class="grammar-cross-reference" href="${escapeHtml(buildGrammarSectionHref(target.chapterId, target.sectionTitle))}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
 };
 
 const renderGrammarInlineText = (value = "") => {
@@ -286,10 +303,10 @@ const renderGrammarInlineText = (value = "") => {
       continue;
     }
 
-    html += escapeHtml(parsedReference.signText);
     parsedReference.segments.forEach((segment, index) => {
       if (index > 0) html += escapeHtml(parsedReference.separators[index - 1]);
-      html += renderGrammarReferenceLink(segment.text, segment.sectionNumber);
+      const linkLabel = index === 0 ? `${parsedReference.signText}${segment.text}` : segment.text;
+      html += renderGrammarReferenceLink(linkLabel, segment.sectionKey);
     });
     cursor = parsedReference.endIndex;
   }
@@ -473,8 +490,8 @@ const renderGrammarTableGrid = (grid) => {
               : renderGrammarCompactTable(item.table);
           return `
             <article class="grammar-table-card">
-              ${item.title ? `<h4 class="grammar-table-card-title">${escapeHtml(item.title)}</h4>` : ""}
-              ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
+              ${item.title ? `<h4 class="grammar-table-card-title">${renderGrammarInlineText(item.title)}</h4>` : ""}
+              ${item.description ? `<p>${renderGrammarInlineText(item.description)}</p>` : ""}
               ${tableHtml}
             </article>
           `;
@@ -761,7 +778,7 @@ const activateRouteFromHash = () => {
     state.route = "home";
     state.selectedLemma = "";
     state.selectedMorphType = "verb";
-    state.grammarSelection = { chapter: "", item: "" };
+    state.grammarSelection = { chapter: "", item: "", section: "" };
     state.vocabularySelection = { query: "", page: "1" };
     state.interlinearSelection = { book: "", chapter: "", verse: "" };
     return;
@@ -778,6 +795,7 @@ const activateRouteFromHash = () => {
   state.grammarSelection = {
     chapter: params.get("chapter") || "",
     item: params.get("item") || "",
+    section: params.get("section") || "",
   };
   state.vocabularySelection = {
     query: params.get("q") || "",
@@ -1586,12 +1604,17 @@ const renderGrammar = () => {
   const visibleChapters = [...lessons, ...(appendix ? [appendix] : [])];
   const routableChapters = frontMatter && frontItems.length ? [frontMatter, ...visibleChapters] : visibleChapters;
   const selectedChapter = routableChapters.find((item) => item.id === state.grammarSelection.chapter) || null;
+  const allChapterItems = selectedChapter ? getGrammarAllChapterItems(selectedChapter).filter((item) => item.section) : [];
   const chapterItems = selectedChapter
     ? selectedChapter.kind === "front"
       ? getGrammarChapterItems(selectedChapter).filter((item) => item.section)
       : getGrammarChapterItems(selectedChapter)
     : [];
-  const selectedItem = chapterItems.find((item) => item.id === state.grammarSelection.item) || null;
+  const selectedItem = selectedChapter
+    ? state.grammarSelection.section
+      ? allChapterItems.find((item) => normalize(item.title) === normalize(state.grammarSelection.section)) || null
+      : chapterItems.find((item) => item.id === state.grammarSelection.item) || null
+    : null;
   const selectedVisibleChapterIndex = selectedChapter ? visibleChapters.findIndex((item) => item.id === selectedChapter.id) : -1;
   const previousChapter =
     selectedChapter?.kind === "front"
@@ -1723,8 +1746,13 @@ const renderGrammar = () => {
 
   const selectedSection = selectedItem.section;
   const childSections = getGrammarChildSections(selectedChapter, selectedItem.title);
-  const previousItem = selectedItem.index > 0 ? chapterItems[selectedItem.index - 1] : null;
-  const nextItem = selectedItem.index < chapterItems.length - 1 ? chapterItems[selectedItem.index + 1] : null;
+  const navigationItems = state.grammarSelection.section ? allChapterItems : chapterItems;
+  const selectedNavigationIndex = navigationItems.findIndex((item) => normalize(item.title) === normalize(selectedItem.title));
+  const previousItem = selectedNavigationIndex > 0 ? navigationItems[selectedNavigationIndex - 1] : null;
+  const nextItem =
+    selectedNavigationIndex >= 0 && selectedNavigationIndex < navigationItems.length - 1
+      ? navigationItems[selectedNavigationIndex + 1]
+      : null;
   container.innerHTML = `
     <section class="stack grammar-detail">
       <article class="panel grammar-breadcrumb">
@@ -1774,13 +1802,17 @@ const renderGrammar = () => {
   container.querySelectorAll("[data-grammar-prev-item]").forEach((button) => {
     button.addEventListener("click", (event) => {
       const target = event.currentTarget.dataset.grammarPrevItem || "";
-      setRoute("grammar", { chapter: selectedChapter.id, item: target });
+      const targetItem = navigationItems.find((item) => item.id === target);
+      if (!targetItem) return;
+      setRoute("grammar", { chapter: selectedChapter.id, section: targetItem.title });
     });
   });
   container.querySelectorAll("[data-grammar-next-item]").forEach((button) => {
     button.addEventListener("click", (event) => {
       const target = event.currentTarget.dataset.grammarNextItem || "";
-      setRoute("grammar", { chapter: selectedChapter.id, item: target });
+      const targetItem = navigationItems.find((item) => item.id === target);
+      if (!targetItem) return;
+      setRoute("grammar", { chapter: selectedChapter.id, section: targetItem.title });
     });
   });
 };
