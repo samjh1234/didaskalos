@@ -529,8 +529,7 @@
       {
         "heading": "§ 1 - L'alfabeto greco",
         "paragraphs": [
-          "L'alfabeto greco si compone di 24 lettere, consonanti e vocali.",
-          "Per iniziare bene la lettura conviene imparare insieme nome, forma maiuscola, forma minuscola e pronunzia di ogni lettera."
+          "L'alfabeto greco si compone di 24 lettere (consonanti e vocali)."
         ],
         "alphabetTable": [
           [
@@ -552,7 +551,7 @@
             "Γ",
             "γ",
             "g",
-            "davanti a gutturale ha valore nasale"
+            "sempre dura, salvo dinanzi a gutturale, ove suona come n nasale"
           ],
           [
             "Delta",
@@ -587,7 +586,7 @@
             "Θ",
             "θ",
             "th",
-            "simile al th inglese"
+            "simile al th inglese in thin"
           ],
           [
             "Iota",
@@ -650,12 +649,12 @@
             "Ρ",
             "ρ",
             "r (rh)",
-            "rh all'inizio di parola"
+            "rh, all'inizio di parola"
           ],
           [
             "Sigma",
             "Σ",
-            "σ / ς",
+            "σ¹ / ς² / c³",
             "s",
             ""
           ],
