@@ -1179,6 +1179,30 @@ select {
   margin: 0;
 }
 
+.grammar-table-card .grammar-table-compact-abbreviations {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+.grammar-table-card .grammar-table-compact-abbreviations td,
+.grammar-table-card .grammar-table-compact-abbreviations th {
+  white-space: normal;
+}
+
+.grammar-table-card .grammar-table-compact-abbreviations td:first-child,
+.grammar-table-card .grammar-table-compact-abbreviations th:first-child {
+  width: 34%;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.grammar-table-card .grammar-table-compact-abbreviations td:nth-child(2),
+.grammar-table-card .grammar-table-compact-abbreviations th:nth-child(2) {
+  text-align: left;
+}
+
 .grammar-exercise-underline {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;

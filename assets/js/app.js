@@ -147,6 +147,7 @@ const buildWordHref = (lemma, options = {}) => {
 // ma l'interfaccia utente usa il lessico richiesto dal progetto.
 const getGrammarDisplayLabel = (chapter) => {
   if (!chapter) return "";
+  if (chapter.kind === "front") return "Pagine iniziali";
   if (chapter.kind === "appendix") return "Appendice";
   return (chapter.lessonLabel || "").replace(/^Lezione/i, "Parte");
 };
@@ -218,10 +219,12 @@ const renderGrammarChapterNav = (previousChapter, nextChapter) => {
   `;
 };
 
-const renderGrammarChapterNumber = (chapterIndex) =>
-  Number.isInteger(chapterIndex) && chapterIndex >= 0
-    ? `<span class="grammar-breadcrumb-page">${chapterIndex + 1}</span>`
+const renderGrammarChapterNumber = (chapter) => {
+  const chapterNumber = getGrammarChapterNumber(chapter);
+  return chapterNumber
+    ? `<span class="grammar-breadcrumb-page">${escapeHtml(chapterNumber)}</span>`
     : `<span class="grammar-breadcrumb-page" aria-hidden="true"></span>`;
+};
 
 const getGrammarChapterNumber = (chapter) => {
   const label = chapter?.lessonLabel || "";
@@ -1468,22 +1471,56 @@ const renderGrammar = () => {
   const frontMatter = chapters.find((item) => item.kind === "front");
   const appendix = chapters.find((item) => item.kind === "appendix");
   const lessons = chapters.filter((item) => item.kind === "lesson");
-  const navigableChapters = [...lessons, ...(appendix ? [appendix] : [])];
-  const selectedChapter = navigableChapters.find((item) => item.id === state.grammarSelection.chapter) || null;
-  const chapterItems = selectedChapter ? getGrammarChapterItems(selectedChapter) : [];
+  const frontItems = frontMatter ? getGrammarChapterItems(frontMatter).filter((item) => item.section) : [];
+  const visibleChapters = [...lessons, ...(appendix ? [appendix] : [])];
+  const routableChapters = frontMatter && frontItems.length ? [frontMatter, ...visibleChapters] : visibleChapters;
+  const selectedChapter = routableChapters.find((item) => item.id === state.grammarSelection.chapter) || null;
+  const chapterItems = selectedChapter
+    ? selectedChapter.kind === "front"
+      ? getGrammarChapterItems(selectedChapter).filter((item) => item.section)
+      : getGrammarChapterItems(selectedChapter)
+    : [];
   const selectedItem = chapterItems.find((item) => item.id === state.grammarSelection.item) || null;
-  const selectedChapterIndex = selectedChapter ? navigableChapters.findIndex((item) => item.id === selectedChapter.id) : -1;
-  const previousChapter = selectedChapterIndex > 0 ? navigableChapters[selectedChapterIndex - 1] : null;
+  const selectedVisibleChapterIndex = selectedChapter ? visibleChapters.findIndex((item) => item.id === selectedChapter.id) : -1;
+  const previousChapter =
+    selectedChapter?.kind === "front"
+      ? null
+      : selectedVisibleChapterIndex > 0
+        ? visibleChapters[selectedVisibleChapterIndex - 1]
+        : null;
   const nextChapter =
-    selectedChapterIndex >= 0 && selectedChapterIndex < navigableChapters.length - 1
-      ? navigableChapters[selectedChapterIndex + 1]
-      : null;
+    selectedChapter?.kind === "front"
+      ? visibleChapters[0] || null
+      : selectedVisibleChapterIndex >= 0 && selectedVisibleChapterIndex < visibleChapters.length - 1
+        ? visibleChapters[selectedVisibleChapterIndex + 1]
+        : null;
   const chapterNavigationHtml = renderGrammarChapterNav(previousChapter, nextChapter);
 
   if (!selectedChapter) {
     container.innerHTML = `
-      <section class="stack grammar-index">
-        ${navigableChapters
+      <section class="stack grammar-detail">
+        ${
+          frontItems.length
+            ? `
+              <article class="panel grammar-section-card">
+                <h3>Pagine iniziali</h3>
+                <div class="stack grammar-item-list">
+                  ${frontItems
+                    .map(
+                      (item) => `
+                        <button type="button" class="grammar-chapter-card grammar-item-card" data-grammar-front-item="${escapeHtml(item.id)}">
+                          <strong>${escapeHtml(item.title)}</strong>
+                        </button>
+                      `,
+                    )
+                    .join("")}
+                </div>
+              </article>
+            `
+            : ""
+        }
+        <section class="stack grammar-index">
+        ${visibleChapters
           .map(
             (chapter) => `
               <button type="button" class="grammar-chapter-card grammar-index-card" data-grammar-chapter="${escapeHtml(chapter.id)}">
@@ -1495,9 +1532,18 @@ const renderGrammar = () => {
             `
           )
           .join("")}
+        </section>
       </section>
     `;
 
+    container.querySelectorAll("[data-grammar-front-item]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setRoute("grammar", {
+          chapter: frontMatter?.id || "",
+          item: button.dataset.grammarFrontItem || "",
+        });
+      });
+    });
     container.querySelectorAll("[data-grammar-chapter]").forEach((button) => {
       button.addEventListener("click", () => {
         setRoute("grammar", { chapter: button.dataset.grammarChapter || "" });
@@ -1511,7 +1557,7 @@ const renderGrammar = () => {
       <section class="stack grammar-detail">
         <article class="panel grammar-breadcrumb">
           <button type="button" class="text-link-button" data-grammar-back-index>&larr; Torna all'indice</button>
-          ${renderGrammarChapterNumber(selectedChapterIndex)}
+          ${renderGrammarChapterNumber(selectedChapter)}
           ${chapterNavigationHtml}
         </article>
 
@@ -1522,7 +1568,7 @@ const renderGrammar = () => {
         </article>
 
         <article class="panel grammar-section-card">
-          <h3>Elementi della parte</h3>
+          <h3>${selectedChapter.kind === "front" ? "Pagine iniziali" : "Elementi della parte"}</h3>
           <div class="stack grammar-item-list">
             ${chapterItems
               .map(
@@ -1571,8 +1617,10 @@ const renderGrammar = () => {
   container.innerHTML = `
     <section class="stack grammar-detail">
       <article class="panel grammar-breadcrumb">
-        <button type="button" class="text-link-button" data-grammar-back-chapter>&larr; Indice della parte</button>
-        ${renderGrammarChapterNumber(selectedChapterIndex)}
+        <button type="button" class="text-link-button" data-grammar-back-chapter>&larr; ${escapeHtml(
+          selectedChapter.kind === "front" ? "Pagine iniziali" : "Indice della parte",
+        )}</button>
+        ${renderGrammarChapterNumber(selectedChapter)}
         ${chapterNavigationHtml}
       </article>
 

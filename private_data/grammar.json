@@ -4,10 +4,508 @@
     "kind": "front",
     "title": "Apertura del manuale",
     "contents": [
-      "Prefazione dell'editore",
-      "Al lettore",
-      "Prefazione II edizione",
-      "Tavola delle abbreviazioni"
+      "Tavola delle abbrevazioni"
+    ],
+    "sections": [
+      {
+        "heading": "Tavola delle abbrevazioni",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "A) Scritti del Nuovo Testamento"
+          },
+          {
+            "type": "tableGrid",
+            "grid": {
+              "items": [
+                {
+                  "tableType": "compactTable",
+                  "table": {
+                    "className": "grammar-table-compact-abbreviations",
+                    "rows": [
+                      [
+                        "Mt.",
+                        "Matteo"
+                      ],
+                      [
+                        "Mc.",
+                        "Marco"
+                      ],
+                      [
+                        "Lc.",
+                        "Luca"
+                      ],
+                      [
+                        "Gv.",
+                        "Giovanni"
+                      ],
+                      [
+                        "At.",
+                        "Atti"
+                      ],
+                      [
+                        "Rm.",
+                        "Romani"
+                      ],
+                      [
+                        "I-II Cor.",
+                        "I-II Corinzi"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "tableType": "compactTable",
+                  "table": {
+                    "className": "grammar-table-compact-abbreviations",
+                    "rows": [
+                      [
+                        "Gal.",
+                        "Galati"
+                      ],
+                      [
+                        "Ef.",
+                        "Efesini"
+                      ],
+                      [
+                        "Fil.",
+                        "Filippesi"
+                      ],
+                      [
+                        "Col.",
+                        "Colossesi"
+                      ],
+                      [
+                        "I-II Ts.",
+                        "I-II Tessalonicesi"
+                      ],
+                      [
+                        "I-II Tm.",
+                        "I-II Timoteo"
+                      ],
+                      [
+                        "Tt.",
+                        "Tito"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "tableType": "compactTable",
+                  "table": {
+                    "className": "grammar-table-compact-abbreviations",
+                    "rows": [
+                      [
+                        "Fm.",
+                        "Filemone"
+                      ],
+                      [
+                        "Eb.",
+                        "Ebrei"
+                      ],
+                      [
+                        "Gc.",
+                        "Giacomo"
+                      ],
+                      [
+                        "I-II Pt.",
+                        "I-II Pietro"
+                      ],
+                      [
+                        "I-II-III Gv.",
+                        "I-II-III Giovanni"
+                      ],
+                      [
+                        "Gd.",
+                        "Giuda"
+                      ],
+                      [
+                        "Ap.",
+                        "Apocalisse"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "subheading",
+            "text": "B) Altre abbreviazioni"
+          },
+          {
+            "type": "tableGrid",
+            "grid": {
+              "items": [
+                {
+                  "tableType": "compactTable",
+                  "table": {
+                    "className": "grammar-table-compact-abbreviations",
+                    "rows": [
+                      [
+                        "abbr.",
+                        "abbreviato"
+                      ],
+                      [
+                        "a.C.",
+                        "avanti Cristo"
+                      ],
+                      [
+                        "ACC.",
+                        "Accusativo"
+                      ],
+                      [
+                        "agg.",
+                        "aggettivo"
+                      ],
+                      [
+                        "A.P.",
+                        "Aoristo passivo"
+                      ],
+                      [
+                        "App.",
+                        "Appendice"
+                      ],
+                      [
+                        "Aor.",
+                        "Aoristo"
+                      ],
+                      [
+                        "art.",
+                        "articolo"
+                      ],
+                      [
+                        "asigm.",
+                        "asigmatico"
+                      ],
+                      [
+                        "A.T.",
+                        "Antico Testamento"
+                      ],
+                      [
+                        "att.",
+                        "attivo"
+                      ],
+                      [
+                        "avv.",
+                        "avverbio"
+                      ],
+                      [
+                        "Caratt.",
+                        "caratteristica"
+                      ],
+                      [
+                        "cfr.",
+                        "confronta"
+                      ],
+                      [
+                        "comp.",
+                        "composto"
+                      ],
+                      [
+                        "compl.",
+                        "complemento"
+                      ],
+                      [
+                        "Cong.",
+                        "Congiuntivo"
+                      ],
+                      [
+                        "cong.",
+                        "congiunzione"
+                      ],
+                      [
+                        "DAT.",
+                        "Dativo"
+                      ],
+                      [
+                        "d.C.",
+                        "dopo Cristo"
+                      ],
+                      [
+                        "decl.",
+                        "declinazione"
+                      ],
+                      [
+                        "desin.",
+                        "desinenza"
+                      ],
+                      [
+                        "determin.",
+                        "determinativo"
+                      ],
+                      [
+                        "ecc.",
+                        "eccetera"
+                      ],
+                      [
+                        "Es.",
+                        "esempio"
+                      ],
+                      [
+                        "Ess.",
+                        "esempi"
+                      ],
+                      [
+                        "*",
+                        "voce non documentata nei testi, ricostruibile per deduzione"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "tableType": "compactTable",
+                  "table": {
+                    "className": "grammar-table-compact-abbreviations",
+                    "rows": [
+                      [
+                        ">",
+                        "dà origine a..."
+                      ],
+                      [
+                        "<",
+                        "deriva da..."
+                      ],
+                      [
+                        "F.",
+                        "femminile"
+                      ],
+                      [
+                        "femm.",
+                        "femminile"
+                      ],
+                      [
+                        "franc.",
+                        "francese"
+                      ],
+                      [
+                        "Fut.",
+                        "futuro"
+                      ],
+                      [
+                        "GEN.",
+                        "Genitivo"
+                      ],
+                      [
+                        "Gr.",
+                        "Greco"
+                      ],
+                      [
+                        "Imper.",
+                        "Imperativo"
+                      ],
+                      [
+                        "Impf.",
+                        "Imperfetto"
+                      ],
+                      [
+                        "Indic.",
+                        "Indicativo"
+                      ],
+                      [
+                        "Inf.",
+                        "Infinito"
+                      ],
+                      [
+                        "ingl.",
+                        "inglese"
+                      ],
+                      [
+                        "inter.",
+                        "interiezione"
+                      ],
+                      [
+                        "intrans.",
+                        "intransitivo"
+                      ],
+                      [
+                        "lat.",
+                        "latino"
+                      ],
+                      [
+                        "Lez.",
+                        "lezione"
+                      ],
+                      [
+                        "masch.",
+                        "maschile"
+                      ],
+                      [
+                        "M.",
+                        "maschile"
+                      ],
+                      [
+                        "M.-P.",
+                        "Medio-passivo"
+                      ],
+                      [
+                        "MS, MSS",
+                        "Manoscritto/i"
+                      ],
+                      [
+                        "N.",
+                        "Neutro"
+                      ],
+                      [
+                        "N.B.",
+                        "Nota bene"
+                      ],
+                      [
+                        "Nestle",
+                        "cfr. Appendice VI"
+                      ],
+                      [
+                        "NOM.",
+                        "Nominativo"
+                      ],
+                      [
+                        "N.T.",
+                        "Nuovo Testamento"
+                      ],
+                      [
+                        "Oss.",
+                        "osservazione"
+                      ],
+                      [
+                        "Ott.",
+                        "Ottativo"
+                      ],
+                      [
+                        "pag./pagg.",
+                        "pagina/e"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "tableType": "compactTable",
+                  "table": {
+                    "className": "grammar-table-compact-abbreviations",
+                    "rows": [
+                      [
+                        "p. es.",
+                        "per esempio"
+                      ],
+                      [
+                        "Part.",
+                        "Participio"
+                      ],
+                      [
+                        "pass.",
+                        "passivo"
+                      ],
+                      [
+                        "Perf. (Pf.)",
+                        "Perfetto"
+                      ],
+                      [
+                        "pers.",
+                        "persona"
+                      ],
+                      [
+                        "Plur./plur. (pl.)",
+                        "plurale"
+                      ],
+                      [
+                        "Ppf.",
+                        "piuccheperfetto"
+                      ],
+                      [
+                        "prep.",
+                        "preposizione"
+                      ],
+                      [
+                        "Pres.",
+                        "Presente"
+                      ],
+                      [
+                        "Prot.",
+                        "protasi"
+                      ],
+                      [
+                        "qc.",
+                        "qualcosa"
+                      ],
+                      [
+                        "qn.",
+                        "qualcuno"
+                      ],
+                      [
+                        "s., ss.",
+                        "seguente/i"
+                      ],
+                      [
+                        "sec.",
+                        "secolo"
+                      ],
+                      [
+                        "sigm.",
+                        "sigmatico"
+                      ],
+                      [
+                        "Sing./sing.",
+                        "singolare"
+                      ],
+                      [
+                        "sost.",
+                        "sostantivo"
+                      ],
+                      [
+                        "sottint.",
+                        "sottinteso"
+                      ],
+                      [
+                        "T.",
+                        "tema"
+                      ],
+                      [
+                        "ted.",
+                        "tedesco"
+                      ],
+                      [
+                        "tem.",
+                        "tematico, -a"
+                      ],
+                      [
+                        "trans.",
+                        "transitivo"
+                      ],
+                      [
+                        "T.P.",
+                        "tema del Presente"
+                      ],
+                      [
+                        "T.V.",
+                        "tema verbale"
+                      ],
+                      [
+                        "v.",
+                        "vedi"
+                      ],
+                      [
+                        "verb.",
+                        "verbale"
+                      ],
+                      [
+                        "v.l.",
+                        "varia lectio"
+                      ],
+                      [
+                        "voc.",
+                        "vocale"
+                      ],
+                      [
+                        "VOC.",
+                        "Vocativo"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
     ]
   },
   {
