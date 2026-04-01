@@ -809,12 +809,53 @@ select {
 
 .grammar-group-list,
 .grammar-greek-verses {
-  gap: 0.75rem;
+  gap: 2rem;
 }
 
 .grammar-group-card {
   display: grid;
   gap: 0.7rem;
+}
+
+.grammar-group-card-brace {
+  grid-template-columns: max-content 0.95rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.grammar-group-brace-label {
+  align-self: center;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.grammar-group-brace {
+  position: relative;
+  min-height: 100%;
+  border-left: 2px solid rgba(102, 89, 79, 0.5);
+}
+
+.grammar-group-brace::before,
+.grammar-group-brace::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  width: 0.72rem;
+  height: 2px;
+  background: rgba(102, 89, 79, 0.5);
+}
+
+.grammar-group-brace::before {
+  top: 0;
+}
+
+.grammar-group-brace::after {
+  bottom: 0;
+}
+
+.grammar-group-brace-content {
+  min-width: 0;
 }
 
 .grammar-group-card strong,
@@ -991,6 +1032,75 @@ select {
   white-space: pre-line;
 }
 
+.grammar-group-card-brace .grammar-table-wrap-compact {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.grammar-group-card-brace .grammar-table-compact {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.grammar-group-card-brace .grammar-table-compact th {
+  background: transparent;
+}
+
+.grammar-table-compact-consonant-families th,
+.grammar-table-compact-consonant-families td,
+.grammar-table-compact-consonant-list th,
+.grammar-table-compact-consonant-list td,
+.grammar-table-compact-consonant-doubles th,
+.grammar-table-compact-consonant-doubles td {
+  padding: 0.24rem 0.48rem;
+  border-bottom: 0;
+}
+
+.grammar-table-compact-consonant-families thead th {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.grammar-table-compact-consonant-families tbody th,
+.grammar-table-compact-consonant-list tbody th,
+.grammar-table-compact-consonant-doubles tbody th {
+  padding-left: 0;
+  padding-right: 0.75rem;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.grammar-table-compact-consonant-families tbody td {
+  min-width: 2.2rem;
+}
+
+.grammar-table-compact-consonant-families tbody td:last-child,
+.grammar-table-compact-consonant-list tbody td:last-child,
+.grammar-table-compact-consonant-doubles tbody td:last-child {
+  padding-left: 0.8rem;
+  text-align: left;
+  white-space: normal;
+  font-style: italic;
+}
+
+.grammar-table-compact-consonant-list td:nth-child(2),
+.grammar-table-compact-consonant-doubles td:nth-child(2) {
+  text-align: left;
+}
+
+.grammar-table-compact-consonant-doubles td:nth-child(2) {
+  width: 1.4rem;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
 .grammar-table-compact-centered td,
 .grammar-table-compact-centered th {
   text-align: center;
@@ -1152,6 +1262,19 @@ select {
   .grammar-example-row {
     grid-template-columns: 1fr;
     gap: 0.05rem;
+  }
+
+  .grammar-group-card-brace {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .grammar-group-brace {
+    display: none;
+  }
+
+  .grammar-group-brace-label {
+    align-self: start;
   }
 }
 

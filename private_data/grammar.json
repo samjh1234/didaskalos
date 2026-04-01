@@ -732,28 +732,139 @@
         "groups": [
           {
             "title": "MUTE",
-            "items": [
-              "Gutturali: κ, γ, χ (kappa, gamma, chi)",
-              "Labiali: π, β, φ (pi, beta, phi)",
-              "Dentali: τ, δ, θ (tau, delta, theta)"
-            ]
+            "layout": "braceTable",
+            "tableType": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-consonant-families",
+              "headerRows": [
+                [
+                  "",
+                  "TENUI",
+                  "MEDIE",
+                  "ASPIRATE",
+                  ""
+                ]
+              ],
+              "rows": [
+                [
+                  {
+                    "label": "Gutturali",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "κ",
+                  "γ",
+                  "χ",
+                  "(kappa, gamma, chi)"
+                ],
+                [
+                  {
+                    "label": "Labiali",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "π",
+                  "β",
+                  "φ",
+                  "(pi, beta, phi)"
+                ],
+                [
+                  {
+                    "label": "Dentali",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "τ",
+                  "δ",
+                  "θ",
+                  "(tau, delta, theta)"
+                ]
+              ]
+            }
           },
           {
             "title": "SONANTI",
-            "items": [
-              "liquide: λ, ρ (lambda, rho)",
-              "nasali: μ, ν, γ [= ν] (mi, ni, gamma)",
-              "spiranti: σ/ς (sigma)",
-              "j (jod)¹, Ϝ (digamma o wau)¹"
-            ]
+            "layout": "braceTable",
+            "tableType": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-consonant-list",
+              "rows": [
+                [
+                  {
+                    "label": "liquide",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "λ, ρ",
+                  {
+                    "label": "(lambda, rho)",
+                    "className": "grammar-table-note-cell"
+                  }
+                ],
+                [
+                  {
+                    "label": "nasali",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "μ, ν, γ [= ν]",
+                  {
+                    "label": "(mi, ni, gamma)",
+                    "className": "grammar-table-note-cell"
+                  }
+                ],
+                [
+                  {
+                    "label": "spiranti",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "σ / ς",
+                  {
+                    "label": "(sigma)",
+                    "className": "grammar-table-note-cell"
+                  }
+                ],
+                [
+                  {
+                    "label": "»",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "j (jod)¹, Ϝ (digamma o wau)¹",
+                    "colspan": 2
+                  }
+                ]
+              ]
+            }
           },
           {
             "title": "DOPPIE",
-            "items": [
-              "ζ (zeta) < sigma + Dentale",
-              "ξ (csi) < Gutturale + sigma",
-              "ψ (psi) < Labiale + sigma"
-            ]
+            "layout": "braceTable",
+            "tableType": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-consonant-doubles",
+              "rows": [
+                [
+                  {
+                    "label": "ζ (zeta)",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "<",
+                  "sigma + dentale"
+                ],
+                [
+                  {
+                    "label": "ξ (csi)",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "<",
+                  "gutturale + sigma"
+                ],
+                [
+                  {
+                    "label": "ψ (psi)",
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "<",
+                  "labiale + sigma"
+                ]
+              ]
+            }
           }
         ],
         "summaryTable": {
@@ -829,11 +940,11 @@
               "(F)",
               "γ (= ν)"
             ]
-          ],
-          "notes": [
-            "1 Lettere usate nel greco arcaico, dette anche semivocali, la cui importanza e attestata dagli effetti fonetici che esse hanno prodotto nel greco usato successivamente."
           ]
-        }
+        },
+        "postSummaryParagraphs": [
+          "¹ Lettere usate nel greco arcaico, dette anche semivocali, la cui importanza e attestata dagli effetti fonetici che esse hanno prodotto nel greco usato successivamente."
+        ]
       },
       {
         "heading": "Esercizio di lettura sui segni alfabetici",

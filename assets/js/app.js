@@ -225,6 +225,16 @@ const buildGrammarSectionHref = (chapterId, sectionTitle) => {
   return `${baseUrl}#${buildHash("grammar", { chapter: chapterId, section: sectionTitle })}`;
 };
 
+const resolveGrammarReferenceTarget = (sectionKey) => {
+  const normalizedKey = String(sectionKey || "").toLowerCase();
+  const sectionIndex = getGrammarSectionIndex();
+  return (
+    sectionIndex.get(normalizedKey) ||
+    sectionIndex.get((normalizedKey.match(/^\d+/) || [])[0] || "") ||
+    null
+  );
+};
+
 const parseGrammarReferenceSegment = (source, startIndex) => {
   const match = source.slice(startIndex).match(
     /^(\d+[a-z]?(?:ss\.)?(?:\s*[A-Z])?(?:\/[IVXLC]+(?:\s*e\s*[IVXLC]+)?)?(?:,\d+|,\s*[IVXLC]+|,\s*[a-z])?(?:\s*[a-z])?(?:-\d+[a-z]?(?:ss\.)?)?)/,
@@ -274,11 +284,7 @@ const parseGrammarReferenceRun = (source, startIndex) => {
 };
 
 const renderGrammarReferenceLink = (label, sectionKey) => {
-  const normalizedKey = String(sectionKey || "").toLowerCase();
-  const sectionIndex = getGrammarSectionIndex();
-  const target =
-    sectionIndex.get(normalizedKey) ||
-    sectionIndex.get((normalizedKey.match(/^\d+/) || [])[0] || "");
+  const target = resolveGrammarReferenceTarget(sectionKey);
   if (!target) return escapeHtml(label);
   return `<a class="grammar-cross-reference" href="${escapeHtml(buildGrammarSectionHref(target.chapterId, target.sectionTitle))}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
 };
@@ -300,6 +306,13 @@ const renderGrammarInlineText = (value = "") => {
     if (!parsedReference) {
       html += escapeHtml(text.charAt(nextSectionSign));
       cursor = nextSectionSign + 1;
+      continue;
+    }
+
+    const allSegmentsResolvable = parsedReference.segments.every((segment) => resolveGrammarReferenceTarget(segment.sectionKey));
+    if (!allSegmentsResolvable) {
+      html += escapeHtml(text.slice(nextSectionSign, parsedReference.endIndex));
+      cursor = parsedReference.endIndex;
       continue;
     }
 
@@ -439,25 +452,24 @@ const renderGrammarCompactTable = (table) => {
     : "";
 
   const rowsHtml = bodyRows
-    .map(
-      (row) => `
+    .map((row) => {
+      const firstCell = row[0];
+      const firstDescriptor =
+        typeof firstCell === "object" && firstCell !== null
+          ? firstCell
+          : {
+              label: firstCell ?? "",
+            };
+      const firstCellIsRowHeader = (firstDescriptor.className || "").includes("grammar-table-rowlabel");
+
+      return `
         <tr>
           ${row
-            .map((cell) => {
-              const descriptor =
-                typeof cell === "object" && cell !== null
-                  ? cell
-                  : {
-                      label: cell ?? "",
-                    };
-              const colspan = descriptor.colspan ? ` colspan="${descriptor.colspan}"` : "";
-              const className = descriptor.className ? ` class="${escapeHtml(descriptor.className)}"` : "";
-              return `<td${colspan}${className}>${renderGrammarInlineText(descriptor.label || "")}</td>`;
-            })
+            .map((cell, index) => renderGrammarTableCell(cell, index === 0 && firstCellIsRowHeader ? "th" : "td"))
             .join("")}
         </tr>
-      `,
-    )
+      `;
+    })
     .join("");
 
   return `
@@ -603,16 +615,35 @@ const renderGrammarSectionContent = (section, options = {}) => {
     ? `
         <div class="stack grammar-group-list">
           ${section.groups
-            .map(
-              (group) => `
-                <div class="micro-panel grammar-group-card">
-                  <strong>${renderGrammarInlineText(group.title)}</strong>
-                  <div class="stack grammar-topic-list">
-                    ${group.items.map((item) => `<div class="grammar-topic-row">${renderGrammarInlineText(item)}</div>`).join("")}
+            .map((group) => {
+              const groupBodyHtml = group.table
+                ? group.tableType === "summaryTable"
+                  ? renderGrammarSummaryTable(group.table)
+                  : renderGrammarCompactTable(group.table)
+                : `<div class="stack grammar-topic-list">
+                    ${(group.items || []).map((item) => `<div class="grammar-topic-row">${renderGrammarInlineText(item)}</div>`).join("")}
+                  </div>`;
+              const cardClassName = `grammar-group-card${group.layout === "braceTable" ? " grammar-group-card-brace" : ""}${
+                group.className ? ` ${escapeHtml(group.className)}` : ""
+              }`;
+
+              if (group.layout === "braceTable") {
+                return `
+                  <div class="${cardClassName}">
+                    <div class="grammar-group-brace-label">${renderGrammarInlineText(group.title)}</div>
+                    <div class="grammar-group-brace" aria-hidden="true"></div>
+                    <div class="grammar-group-brace-content">${groupBodyHtml}</div>
                   </div>
+                `;
+              }
+
+              return `
+                <div class="micro-panel ${cardClassName}">
+                  <strong>${renderGrammarInlineText(group.title)}</strong>
+                  ${groupBodyHtml}
                 </div>
-              `,
-            )
+              `;
+            })
             .join("")}
         </div>
       `
