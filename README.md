@@ -211,8 +211,6 @@ Output:
 ## Dati locali opzionali
 
 File:
-- `assets/data/lexicon_it.example.json`
-- `assets/data/contextual_glosses_it.example.json`
 - `assets/data/lexicon_it.json`
 - `assets/data/cei2008_verses.json`
 
