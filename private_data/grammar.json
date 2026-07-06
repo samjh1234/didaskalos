@@ -10738,12 +10738,943 @@
     "id": "lezione-sedicesima",
     "kind": "lesson",
     "lessonLabel": "Lezione sedicesima",
-    "title": "Imperativo e comparativi",
-    "summary": "Imperativo e primi gradi dell'aggettivo.",
+    "title": "Futuro, εἰμί e proposizioni temporali e causali",
+    "summary": "Tema verbale, Futuro sigmatico e asigmatico, futuro di εἰμί, proposizioni temporali e causali, uso di ὑπέρ e Vocabolario 17º.",
     "contents": [
-      "57. Imperativo presente e aoristo",
-      "58. Comparativo e superlativo",
-      "59. Vocabolario 16º"
+      "§ 80 - Il tema verbale",
+      "§ 81 - Il Futuro «sigmatico»",
+      "§ 82 - Il Futuro «asigmatico»",
+      "§ 83 - Futuro del verbo εἰμί, sono",
+      "Note sintattiche",
+      "§ 84 - La proposizione temporale",
+      "§ 85 - La proposizione causale",
+      "§ 86 - Uso di ὑπέρ",
+      "Vocabolario 17º"
+    ],
+    "sections": [
+      {
+        "heading": "§ 80 - Il tema verbale",
+        "subheading": "Dal tema verbale al tema del presente",
+        "paragraphs": [
+          "Tutte le forme di un verbo greco derivano, come si è detto (cfr. § 6), dal tema verbale (o dalla radice), da cui si sono formati tutti i tempi e i modi. Si è anche sottolineato che la maggior parte dei verbi forma il Presente aggiungendo direttamente al tema verbale la vocale tematica (cfr. § 7b) e le desinenze specifiche. In tal caso, il tema verbale e il tema del Presente, tolta appunto la vocale tematica, coincidono (cfr., p. es., il verbo λύω).",
+          "A volte, invece, nel passaggio dal tema verbale al tema del Presente, avvengono modificazioni che è importante conoscere, perché è l'individuazione del tema verbale, che consente di costruire gli altri tempi e modi (e viceversa).",
+          "Un consiglio pratico da seguire, è quello di memorizzare non solo la I pers. sing. del Presente Indic., ma anche quella degli altri tempi (indicati nell'Appendice V o nei vocabolari), via via che essi vengono studiati."
+        ],
+        "contentBlocks": [
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-compact-keyvalue",
+              "intro": "Ess.:",
+              "rows": [
+                [
+                  "",
+                  "λύω, λύσω, ἔλυσα, λέλυκα, λέλυμαι, ἐλύθην."
+                ],
+                [
+                  "",
+                  "ἔρχομαι, ἐλεύσομαι, ἦλθον, ἐλήλυθα."
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 81 - Il Futuro «sigmatico»",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "Quadro delle forme dell'azione futura (attiva e media)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "λύ-ω, sciolgo. T.V. λυ-. ATTIVO",
+              "headerRows": [
+                [
+                  "Modo",
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Indicativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-σω",
+                  "scioglierò"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σε-ις",
+                  "scioglierai"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σε-ι",
+                  "scioglierà"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-σο-μεν",
+                  "scioglieremo"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σε-τε",
+                  "scioglierete"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σου-σι(ν)",
+                  "scioglieranno"
+                ],
+                [
+                  {
+                    "label": "Ottativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-σοι-μι",
+                  "scioglierei"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σοι-ς",
+                  "scioglieresti"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σοι",
+                  "scioglierebbe"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-σοι-μεν",
+                  "scioglieremmo"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σοι-τε",
+                  "sciogliereste"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σοιε-ν",
+                  "scioglierebbero"
+                ],
+                [
+                  "Infinito",
+                  "",
+                  "",
+                  "λύ-σειν",
+                  "essere per sciogliere"
+                ],
+                [
+                  "Participio",
+                  "M.",
+                  "NOM./GEN.",
+                  "λύ-σων, -οντος",
+                  "che è per sciogliere, che scioglierà"
+                ],
+                [
+                  "Participio",
+                  "F.",
+                  "NOM./GEN.",
+                  "λύ-σουσα, -σης",
+                  "che è per sciogliere, che scioglierà"
+                ],
+                [
+                  "Participio",
+                  "N.",
+                  "NOM./GEN.",
+                  "λύ-σον, -οντος",
+                  "che è per sciogliere, che scioglierà"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "λύ-ω, sciolgo. T.V. λυ-. MEDIO",
+              "headerRows": [
+                [
+                  "Modo",
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Indicativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λύ-σο-μαι",
+                  "scioglierò per me, mi scioglierò"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σῃ (λύ-σει)",
+                  "scioglierai per te, ti scioglierai"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σε-ται",
+                  "scioglierà per sé, si scioglierà"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-σό-μεθα",
+                  "scioglieremo per noi, ci scioglieremo"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σε-σθε",
+                  "scioglierete per voi, vi scioglierete"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σο-νται",
+                  "scioglieranno per sé, si scioglieranno"
+                ],
+                [
+                  {
+                    "label": "Ottativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-σοί-μην",
+                  "scioglierei per me, mi scioglierei"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σοι-ο",
+                  "scioglieresti per te, ti scioglieresti"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σοι-το",
+                  "scioglierebbe per sé, si scioglierebbe"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "λυ-σοί-μεθα",
+                  "scioglieremmo per noi, ci scioglieremmo"
+                ],
+                [
+                  "II pers.",
+                  "λύ-σοι-σθε",
+                  "sciogliereste per voi, vi sciogliereste"
+                ],
+                [
+                  "III pers.",
+                  "λύ-σοι-ντο",
+                  "scioglierebbero per sé, si scioglierebbero"
+                ],
+                [
+                  "Infinito",
+                  "",
+                  "",
+                  "λύ-σε-σθαι",
+                  "essere per sciogliersi, essere per sciogliere per sé"
+                ],
+                [
+                  "Participio",
+                  "M.",
+                  "NOM./GEN.",
+                  "λυ-σό-μενος, -ου",
+                  "che è per sciogliersi"
+                ],
+                [
+                  "Participio",
+                  "F.",
+                  "NOM./GEN.",
+                  "λυ-σο-μένη, -ης",
+                  "che è per sciogliere"
+                ],
+                [
+                  "Participio",
+                  "N.",
+                  "NOM./GEN.",
+                  "λυ-σό-μενον, -ου",
+                  "che è per sciogliere per sé"
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "paragraphs": [
+              "a) Il Futuro è un tempo principale, che ha tutte e tre le diatesi (attiva, media e passiva), ma manca dei modi Congiuntivo e Imperativo. Esso esprime sia azione incipiente, sia azione duratura nel Futuro.",
+              "b) Esistono, in greco, quattro tipi di Futuro: I) sigmatico; II) cosiddetto asigmatico o contratto; III) attico; IV) dorico.",
+              "c) Il futuro sigmatico forma l'Attivo e il Medio aggiungendo al tema verbale una «caratteristica», che è la lettera sigma. A questa segue la vocale tematica, rappresentata da ε/ο, come nel Presente, di cui il Futuro usa le medesime desinenze primarie e le stesse modalità di coniugazione.",
+              "d) Schematizzando quanto si è detto, il primo tipo di Futuro (sigmatico) risulta così formato: TEMA VERB. + CARATTERISTICA + VOCALE TEM. + DESINENZE PRIMARIE: λύ - σ - ο - μεν (I pers. plur.).",
+              "e) Il Futuro sigmatico è proprio dei verbi con tema che termina in consonante muta, in vocale e in dittongo.",
+              "f) L'unione del tema verbale con la caratteristica -σ- produce, nei temi in consonante muta, i seguenti fenomeni fonetici: se il tema termina in κ, γ, χ (gutturale) o in π, β, φ (labiale), il sigma si fonde con esse, producendo una consonante doppia: κ/γ/χ + σ = ξ; π/β/φ + σ = ψ. Ess.: διώκω, inseguo; T.V. διωκ-; Fut. Indic., I pers. plur. = διώξ-ο-μεν, inseguiremo. βλέπω, guardo; T.V. βλεπ-; Fut. Indic., I pers. plur. = βλέψ-ο-μεν, guarderemo.",
+              "Se il tema verbale termina in τ, δ, θ (dentale), questa scompare davanti alla caratteristica -σ- del Futuro. Es.: πείθω, persuado, T.V. πειθ-; Fut. Indic., I pers. plur. = πεί-σ-ο-μεν, persuaderemo.",
+              "Se la dentale è preceduta da ν, anche questa scompare, ma in tal caso la vocale precedente si allunga per compenso (cfr. § 6c). Es.: σπένδω, offro una libagione; T.V. σπενδ-, Fut. Indic., I pers. plur. = σπενδ-σ-ο-μεν > σπε-σ-ο-μεν > σπεί-σ-ο-μεν, offriremo una libagione (quest'esempio non ricorre nel N.T.).",
+              "g) Nei verbi con tema che termina in vocale o in dittongo, la vocale finale del tema normalmente si allunga, davanti alla caratteristica sigma del Futuro (allungamento organico), con le seguenti modalità: ε > η (ποιέω, faccio; T.V. ποιε-, Fut. ποιήσω, farò); ο > ω (γι(ν)νώσκω, conosco; T.V. γνω-, Fut. γνώσομαι, conoscerò); ᾰ > ᾱ, se preceduta da ε, ι, ρ (ἐάω, lascio; T.V. εα-, Fut. ἐάσω, lascerò); ᾰ > η in tutti gli altri casi (τιμάω, onoro; T.V. τιμα-, Fut. τιμήσω, onorerò)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 82 - Il Futuro «asigmatico»",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "Quadro delle forme dell'azione futura (attiva e media)"
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "κρίν-ω, giudico. T.V. κριν-. ATTIVO",
+              "headerRows": [
+                [
+                  "Modo",
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Indicativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινῶ",
+                  "giudicherò"
+                ],
+                [
+                  "II pers.",
+                  "κρινεῖς",
+                  "giudicherai"
+                ],
+                [
+                  "III pers.",
+                  "κρινεῖ",
+                  "giudicherà"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινοῦμεν",
+                  "giudicheremo"
+                ],
+                [
+                  "II pers.",
+                  "κρινεῖτε",
+                  "giudicherete"
+                ],
+                [
+                  "III pers.",
+                  "κρινοῦσι(ν)",
+                  "giudicheranno"
+                ],
+                [
+                  {
+                    "label": "Ottativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινοίην",
+                  "giudicherei"
+                ],
+                [
+                  "II pers.",
+                  "κρινοίης",
+                  "giudicheresti"
+                ],
+                [
+                  "III pers.",
+                  "κρινοίη",
+                  "giudicherebbe"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινοῖμεν",
+                  "giudicheremmo"
+                ],
+                [
+                  "II pers.",
+                  "κρινοῖτε",
+                  "giudichereste"
+                ],
+                [
+                  "III pers.",
+                  "κρινοῖεν",
+                  "giudicherebbero"
+                ],
+                [
+                  "Infinito",
+                  "",
+                  "",
+                  "κρινεῖν",
+                  "stare per giudicare"
+                ],
+                [
+                  "Participio",
+                  "M.",
+                  "NOM./GEN.",
+                  "κρινῶν, -οῦντος",
+                  "che sta per giudicare, che giudicherà"
+                ],
+                [
+                  "Participio",
+                  "F.",
+                  "NOM./GEN.",
+                  "κρινοῦσα, -ούσης",
+                  "che sta per giudicare, che giudicherà"
+                ],
+                [
+                  "Participio",
+                  "N.",
+                  "NOM./GEN.",
+                  "κρινοῦν, -οῦντος",
+                  "che sta per giudicare, che giudicherà"
+                ]
+              ]
+            }
+          },
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "intro": "κρίν-ω, giudico. T.V. κριν-. MEDIO",
+              "headerRows": [
+                [
+                  "Modo",
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Indicativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινοῦμαι",
+                  "giudicherò per me, mi giudicherò"
+                ],
+                [
+                  "II pers.",
+                  "κρινῇ",
+                  "giudicherai per te, ti giudicherai"
+                ],
+                [
+                  "III pers.",
+                  "κρινεῖται",
+                  "giudicherà per sé, si giudicherà"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινούμεθα",
+                  "giudicheremo per noi, ci giudicheremo"
+                ],
+                [
+                  "II pers.",
+                  "κρινεῖσθε",
+                  "giudicherete per voi, vi giudicherete"
+                ],
+                [
+                  "III pers.",
+                  "κρινοῦνται",
+                  "giudicheranno per sé, si giudicheranno"
+                ],
+                [
+                  {
+                    "label": "Ottativo",
+                    "rowspan": 6,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινοίμην",
+                  "giudicherei per me, mi giudicherei"
+                ],
+                [
+                  "II pers.",
+                  "κρινοῖο",
+                  "giudicheresti per te, ti giudicheresti"
+                ],
+                [
+                  "III pers.",
+                  "κρινοῖτο",
+                  "giudicherebbe per sé, si giudicherebbe"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "κρινοίμεθα",
+                  "giudicheremmo per noi, ci giudicheremmo"
+                ],
+                [
+                  "II pers.",
+                  "κρινοῖσθε",
+                  "giudichereste per voi, vi giudichereste"
+                ],
+                [
+                  "III pers.",
+                  "κρινοῖντο",
+                  "giudicherebbero per sé, si giudicherebbero"
+                ],
+                [
+                  "Infinito",
+                  "",
+                  "",
+                  "κρινεῖσθαι",
+                  "stare per giudicare per sé, stare per giudicarsi"
+                ],
+                [
+                  "Participio",
+                  "M.",
+                  "NOM./GEN.",
+                  "κρινού-μενος, -ου",
+                  "che sta per giudicare per sé"
+                ],
+                [
+                  "Participio",
+                  "F.",
+                  "NOM./GEN.",
+                  "κρινου-μένη, -ης",
+                  "che si giudicherà"
+                ],
+                [
+                  "Participio",
+                  "N.",
+                  "NOM./GEN.",
+                  "κρινού-μενον, -ου",
+                  "che si giudicherà"
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Osservazioni",
+            "paragraphs": [
+              "a) Il secondo tipo di Futuro (cosiddetto asigmatico o contratto) è caratteristico dei verbi con tema verbale che termina in liquida (λ, ρ) o nasale (μ, ν). Queste consonanti non sono compatibili con il -σ-, caratteristica del Futuro. Tra esse ed il -σ-, secondo la maggior parte dei grammatici, si è, perciò, interposta una -ε-; poi, trovandosi fra due vocali, il -σ- è caduto e le due vocali si sono contratte. Così sarebbe nato il Futuro, detto asigmatico: nelle sue forme, esso è identico a quelle del Presente contratto dei verbi in -εω (§ 22, 69 e 70).",
+              "Ess.: μένω, rimango; T.V. μεν-; Fut. Indic., I pers. plur. = *μεν-ε-σ-ο-μεν > μενέ-ο-μεν > μενοῦμεν, rimarremo.",
+              "ἀπαγγέλλω, annunzio; T.V. ἀπαγγελ-; Fut. Indic., I pers. plur. = *ἀπαγγελ-ε-σ-ο-μεν > ἀπαγγελέ-ο-μεν > ἀπαγγελοῦμεν, annunzieremo.",
+              "b) Il terzo tipo di Futuro, detto Attico, è anch'esso contratto ed è tipico di alcune radici bisillabiche in vocale (α/ε), che rimane breve, preceduta da consonante liquida o nasale.",
+              "Es.: καλέω, chiamo; T.V. καλε-; Fut. Indic., I pers. plur. = *καλε-σ-ο-μεν > καλέ-ο-μεν > καλοῦμεν, chiameremo (cfr. coniugaz. dei verbi contratti in -εω).",
+              "c) Hanno, inoltre, il Futuro Attico quasi tutti i verbi con tema polisillabo in -ίζω e pochi in -άζω (nel N.T., solo nelle citazioni dai LXX).",
+              "Ess.: νομίζω, credo; T.V. νομιδ-; Fut. Ind., I pers. plur. = *νομιδ-σ-ο-μεν > νομι-σ-ο-μεν > νομιοῦμεν, crederemo (cfr. coniugaz. dei verbi contratti in -εω).",
+              "ἐξετάζω, esamino; T.V. ἐξεταδ- Fut. Indic., I pers. plur. = *ἐξεταδ-σ-ο-μεν > ἐξετά-σ-ο-μεν > ἐξετά-ο-μεν > ἐξετῶμεν, esamineremo (cfr. coniugazione dei verbi contratti in -αω; §§ 69 e 70).",
+              "d) Pochi verbi usano, quasi sempre accanto alla forma regolare, un quarto tipo di Futuro, detto Dorico (per il fatto di essere, appunto, proprio dei Dori), il quale ha, anche in Attico, forma media, ma significato attivo. Esso deriva da una contaminazione del Fut. sigmatico con quello contratto, di cui segue la coniugazione (cfr. verbi in -εω, § 22)."
+            ],
+            "contentBlocks": [
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "rows": [
+                    [
+                      "Pres. φεύγ-ω, fuggo; T.V. φευγ-",
+                      "Fut. dor. φευξοῦ-μαι (anche φεύξο-μαι)"
+                    ],
+                    [
+                      "πλέ-ω, navigo; T.V. πλευ-",
+                      "πλευ-σοῦ-μαι (anche πλεύ-σο-μαι)"
+                    ],
+                    [
+                      "πνέ-ω, spiro; T.V. πνευ-",
+                      "πνευ-σοῦ-μαι (anche πνεύ-σο-μαι)"
+                    ],
+                    [
+                      "κλαί-ω, piango; T.V. κλαυ-",
+                      "κλαυ-σοῦ-μαι (anche κλαύ-σο-μαι)"
+                    ],
+                    [
+                      "ῥέ-ω, scorro; T.V. ῥευ-",
+                      "ῥευ-σοῦ-μαι (anche ῥευ-σο-μαι)"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "plainPoints",
+                "items": [
+                  "e) Sono da notare i seguenti Futuri, formati con il suffisso ο/ε: (ἐκ-)χέ-ω (med. χέ-ο-μαι) = verserò (pres. χέ-ω, verso) - cfr. At. 2,17-18; ἔδ-ο-μαι¹ = mangerò (pres. ἐσθίω, mangio); πί-ο-μαι = berrò (pres. πίνω, bevo)²; ἐλ-ῶ = prenderò (nei composti di αἱρέω), cfr. Lc. 12,18; II Ts. 2,8; Ap. 22,19.",
+                  "f) Il passivo del Futuro si forma in modo autonomo, rispetto all'attivo e al medio (cfr. § 130).",
+                  "g) Nel N.T. il Futuro è usato quasi unicamente all'Indicativo.",
+                  "h) Un buon numero di verbi al Futuro si può trovare in Gv. 16."
+                ]
+              },
+              {
+                "type": "note",
+                "text": "¹ ἔδομαι è sostituito spesso da φάγομαι, cfr. Lc. 14,15; 17,8; Gc. 5,3; Ap. 17,16; Gv. 2,17."
+              },
+              {
+                "type": "note",
+                "text": "² Per quanto riguarda πί-ο-μαι, cfr. Mc. 10,39; Lc. 17,8, dove si trova una II pers. sing. πίεσαι, invece del normale πίῃ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "§ 83 - Futuro del verbo εἰμί, sono",
+        "paragraphs": [
+          "(Per il Presente e l'Imperfetto, cfr. §§ 36 e 43)"
+        ],
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-conjugation",
+              "headerRows": [
+                [
+                  "Numero",
+                  "Persona",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  {
+                    "label": "Sing.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "ἔσομαι",
+                  "io sarò"
+                ],
+                [
+                  "II pers.",
+                  "ἔσῃ (ει)",
+                  "tu sarai"
+                ],
+                [
+                  "III pers.",
+                  "ἔσται",
+                  "egli sarà"
+                ],
+                [
+                  {
+                    "label": "Plur.",
+                    "rowspan": 3,
+                    "className": "grammar-table-rowlabel"
+                  },
+                  "I pers.",
+                  "ἐσόμεθα",
+                  "noi saremo"
+                ],
+                [
+                  "II pers.",
+                  "ἔσεσθε",
+                  "voi sarete"
+                ],
+                [
+                  "III pers.",
+                  "ἔσονται",
+                  "essi saranno"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 84 - La proposizione temporale",
+        "contentBlocks": [
+          {
+            "type": "subheading",
+            "text": "Note sintattiche"
+          },
+          {
+            "type": "paragraph",
+            "text": "Le proposizioni temporali indicano il tempo dell'azione espressa nella frase principale (o nella reggente). Esse sono introdotte dalle congiunzioni ὅτε, ὡς e seguite dal modo Indicativo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Frequenti sono, anche nel N.T., le temporali in cui compare la particella ἄν che, unita ad ὅτε, produce la congiunzione ὅταν, nel qual caso si tratta di temporali eventuali, che si costruiscono con il Congiuntivo."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-list",
+              "rows": [
+                [
+                  "Es.:",
+                  "ὅτε δὲ ἤγγισεν ὁ καιρὸς τῶν καρπῶν, (ὁ οἰκοδεσπότης) ἀπέστειλεν τοὺς δούλους αὐτοῦ πρὸς τοὺς γεωργοὺς λαβεῖν τοὺς καρποὺς αὐτοῦ = quando s'avvicinò il tempo dei frutti, il padrone mandò i suoi servi dagli agricoltori a ritirare i suoi frutti (Mt. 21,34)."
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 85 - La proposizione causale",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "Le proposizioni causali indicano la causa dell'azione espressa nella frase principale (o nella reggente). Nel greco classico sono introdotte dalle congiunzioni ὅτι, ὡς, ἐπεί, seguite dall'Indicativo o dall'Ottativo obliquo. Nel N.T. si notano poche differenze, se si eccettua il fatto che ὅτι è di gran lunga la congiunzione prevalente e l'Ottativo non è più usato."
+          },
+          {
+            "type": "compactTable",
+            "table": {
+              "className": "grammar-table-syntax-list",
+              "rows": [
+                [
+                  "Es.:",
+                  "ὁ δὲ μισῶν τὸν ἀδελφὸν αὐτοῦ ἐν τῇ σκοτίᾳ ἐστὶν καὶ ἐν τῇ σκοτίᾳ περιπατεῖ καὶ οὐκ οἶδεν ποῦ ὑπάγει, ὅτι ἡ σκοτία ἐτύφλωσεν τοὺς ὀφθαλμοὺς αὐτοῦ = ma chi odia suo fratello è nelle tenebre e cammina nelle tenebre e non sa dove va, perché le tenebre hanno accecato i suoi occhi (I Gv. 2,11)."
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "§ 86 - Uso di ὑπέρ",
+        "contentBlocks": [
+          {
+            "type": "paragraph",
+            "text": "La preposizione greca ὑπέρ può essere seguita dal GEN. e dall'ACC. Con l'ACC. essa può significare «sopra», in senso metaforico (Mt. 10,24: οὐκ ἔστιν μαθητὴς ὑπὲρ τὸν διδάσκαλον = il discepolo non è al di sopra del suo maestro). In senso locale, ὑπέρ non appare nel N.T. (a meno che si accetti la congetturale interpretazione di I Cor. 4,6: τὸ μὴ ὑπὲρ ἃ γέγραπται = il μή sta scritto sopra l'α)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con il GEN. ha il significato di «a favore di, per». Cfr. Mc. 9,40: ὃς γὰρ οὐκ ἔστιν καθ' ἡμῶν, ὑπὲρ ἡμῶν ἐστιν = chi non è contro di noi, è per noi; Rm. 5,7-8: Per una persona buona, ὑπὲρ τοῦ ἀγαθοῦ, uno potrebbe anche morire, ma Cristo è morto per noi, ὑπὲρ ἡμῶν, quand'eravamo peccatori."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nello stesso senso: II Cor. 5,15; Gal. 3,13; Mc. 14,24; Gv. 11,50: ὑπὲρ τοῦ λαοῦ = per il popolo; I Cor. 15,29: τί ποιήσουσιν οἱ βαπτιζόμενοι ὑπὲρ τῶν νεκρῶν; = che faranno quelli che si fanno battezzare per i morti?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Sempre con il GEN., ὑπέρ può significare su, nel senso di riguardo a, a proposito di...; II Cor. 12,8: ὑπὲρ τούτου τρὶς τὸν κύριον παρεκάλεσα = riguardo a ciò tre volte supplicai il Signore...; Gv. 1,30: Questo è colui del quale, ὑπὲρ οὗ, io dicevo...; in tale significato c'è poca differenza fra ὑπέρ e περί (cfr. § 63)."
+          }
+        ]
+      },
+      {
+        "heading": "Vocabolario 17º",
+        "contentBlocks": [
+          {
+            "type": "summaryTable",
+            "table": {
+              "className": "grammar-table-vocabulary grammar-table-vocabulary-wide",
+              "headerRows": [
+                [
+                  "Greco",
+                  "Italiano",
+                  "Greco",
+                  "Italiano"
+                ]
+              ],
+              "bodyRows": [
+                [
+                  "ἁγιάζω",
+                  "santifico",
+                  "ἐλεέω",
+                  "ho compassione"
+                ],
+                [
+                  "ἀγοράζω",
+                  "compro",
+                  "ἐλπίζω",
+                  "spero"
+                ],
+                [
+                  "ἀδικέω",
+                  "offendo, faccio torto",
+                  "ἐνδύω",
+                  "indosso"
+                ],
+                [
+                  "ἀνοίγω",
+                  "apro",
+                  "ἐξετάζω",
+                  "esamino"
+                ],
+                [
+                  "ἀπαγγέλλω",
+                  "annunzio",
+                  "ἑτοιμάζω",
+                  "preparo"
+                ],
+                [
+                  "ἀπάγω",
+                  "conduco via",
+                  "εὐλογέω",
+                  "lodo, benedico"
+                ],
+                [
+                  "ἀποκαλύπτω",
+                  "rivelo, svelo",
+                  "θαυμάζω",
+                  "mi meraviglio, ammiro"
+                ],
+                [
+                  "βαστάζω",
+                  "porto, trasporto",
+                  "καλύπτω",
+                  "copro, nascondo, velo"
+                ],
+                [
+                  "διακονέω",
+                  "presto servizio a",
+                  "κατοικέω",
+                  "abito"
+                ],
+                [
+                  "διώκω",
+                  "inseguo, perseguito",
+                  "νομίζω",
+                  "credo"
+                ],
+                [
+                  "ἐγγίζω",
+                  "mi avvicino",
+                  "προφητεύω",
+                  "profetizzo"
+                ],
+                [
+                  "ἐκκόπτω",
+                  "taglio via",
+                  "πλησίον (avv.)",
+                  "vicino"
+                ],
+                [
+                  "ἐκφέρω",
+                  "porto via",
+                  "ὁ πλησίον¹",
+                  "il prossimo"
+                ]
+              ]
+            }
+          }
+        ],
+        "subsections": [
+          {
+            "title": "Tradurre dal greco",
+            "paragraphs": [
+              "1. οἱ δὲ ἐνδύσουσιν τὰ ἱμάτια. 2. ἀνοίξει τοὺς ὀφθαλμοὺς τῶν τυφλῶν οἱ συνάγονται ἐν τῇ συναγωγῇ. 3. πέμψω πρὸς αὐτοὺς σοφοὺς καὶ προφήτας, ἀλλ' οὐχ δέξονται αὐτοὺς οἱ υἱοὶ Ἰσραήλ. 4. ἄρξετε τῶν Ἰουδαίων οἱ κατοικοῦσιν ἐκείνην τὴν γῆν. 5. προφητεύσεις τῷ λαῷ τούτῳ καὶ ὑπακούσουσί σοι. 6. οἱ διάκονοι τῆς συναγωγῆς οὐ διώξουσι τοὺς λῃστὰς ἐν σαββάτῳ. 7. ἀρξόμεθα εὐλογεῖν τὸν θεόν. 8. ἀγαπήσεις τὸν πλησίον σου καὶ μισήσεις τὸν ἐχθρόν σου. 9. ὅτε γὰρ δοῦλοι ἦτε τῆς ἁμαρτίας, ἦτε ἐλεύθεροι τῇ δικαιοσύνῃ. 10. οἱ μὲν διὰ φθόνον, οἱ δὲ καὶ διὰ εὐδοκίαν τὸν Χριστὸν κηρύσσουσιν. 11. καὶ ὑμεῖς γίνεσθε ἕτοιμοι ὅτι ὁ υἱὸς τοῦ ἀνθρώπου ἔρχεται τῇ ὥρᾳ ᾗ (in cui) οὐ δοκεῖτε. 12. ὁ οἰκοδεσπότης ἀπέστελλεν τὸν δοῦλον αὐτοῦ τῇ ὥρᾳ τοῦ δείπνου λέγειν τοῖς κεκλημένοις (invitati)· ἔρχεσθε ὅτι ἕτοιμά ἐστιν."
+            ]
+          },
+          {
+            "title": "Tradurre in greco",
+            "paragraphs": [
+              "1. Negli ultimi tempi Dio vi rivelerà la verità. 2. E i Giudei perseguitavano Gesù perché faceva queste cose nel sabato. 3. Avranno compassione di voi e non vi umilieranno. 4. Gesù Cristo abiterà nei vostri cuori e voi sarete suoi discepoli. 5. Quando viene il Figlio dell'uomo, vi rivelerà il volto di Dio. 6. Sempre avrete i poveri con voi, ma non sempre io sarò con voi."
+            ]
+          },
+          {
+            "title": "Note",
+            "plainPoints": [
+              "1 L'articolo può rendere sostantivo qualsiasi parte del discorso (cfr. § 105, II)."
+            ]
+          }
+        ]
+      }
     ]
   },
   {
