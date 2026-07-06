@@ -993,12 +993,22 @@ select {
   overflow-x: auto;
 }
 
+.grammar-table-wrap-full {
+  width: 100%;
+  overflow-x: visible;
+}
+
 .grammar-table-compact {
   min-width: 0;
   width: max-content;
   max-width: none;
   margin: 0 auto;
   background: transparent;
+}
+
+.grammar-table-wrap-full .grammar-table-compact {
+  width: 100%;
+  max-width: 100%;
 }
 
 .grammar-table-compact th,
@@ -1118,6 +1128,11 @@ select {
   padding-left: 0.15rem;
 }
 
+.grammar-table-compact-sound-change td:first-child,
+.grammar-table-compact-sound-change th:first-child {
+  text-align: center;
+}
+
 .grammar-table-compact-usage th,
 .grammar-table-compact-usage td {
   text-align: left;
@@ -1130,6 +1145,11 @@ select {
   text-align: center;
   white-space: nowrap;
   font-weight: 700;
+}
+
+.grammar-table-compact-future-forms td:first-child,
+.grammar-table-compact-future-forms th:first-child {
+  font-weight: 400;
 }
 
 .grammar-table-imperative td:nth-child(3),
@@ -1159,6 +1179,11 @@ select {
   text-align: right;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.grammar-table-syntax-box td:nth-child(2),
+.grammar-table-syntax-box th:nth-child(2) {
+  white-space: normal;
 }
 
 .grammar-table-syntax-examples td:first-child,
@@ -1355,6 +1380,11 @@ select {
 .grammar-table-note {
   margin: 0;
   font-size: 0.92rem;
+}
+
+.grammar-footnote-separated {
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(140, 76, 35, 0.18);
 }
 
 .grammar-subsection {

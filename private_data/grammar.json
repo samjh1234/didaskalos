@@ -10745,7 +10745,6 @@
       "§ 81 - Il Futuro «sigmatico»",
       "§ 82 - Il Futuro «asigmatico»",
       "§ 83 - Futuro del verbo εἰμί, sono",
-      "Note sintattiche",
       "§ 84 - La proposizione temporale",
       "§ 85 - La proposizione causale",
       "§ 86 - Uso di ὑπέρ",
@@ -11063,16 +11062,138 @@
         "subsections": [
           {
             "title": "Osservazioni",
-            "paragraphs": [
-              "a) Il Futuro è un tempo principale, che ha tutte e tre le diatesi (attiva, media e passiva), ma manca dei modi Congiuntivo e Imperativo. Esso esprime sia azione incipiente, sia azione duratura nel Futuro.",
-              "b) Esistono, in greco, quattro tipi di Futuro: I) sigmatico; II) cosiddetto asigmatico o contratto; III) attico; IV) dorico.",
-              "c) Il futuro sigmatico forma l'Attivo e il Medio aggiungendo al tema verbale una «caratteristica», che è la lettera sigma. A questa segue la vocale tematica, rappresentata da ε/ο, come nel Presente, di cui il Futuro usa le medesime desinenze primarie e le stesse modalità di coniugazione.",
-              "d) Schematizzando quanto si è detto, il primo tipo di Futuro (sigmatico) risulta così formato: TEMA VERB. + CARATTERISTICA + VOCALE TEM. + DESINENZE PRIMARIE: λύ - σ - ο - μεν (I pers. plur.).",
-              "e) Il Futuro sigmatico è proprio dei verbi con tema che termina in consonante muta, in vocale e in dittongo.",
-              "f) L'unione del tema verbale con la caratteristica -σ- produce, nei temi in consonante muta, i seguenti fenomeni fonetici: se il tema termina in κ, γ, χ (gutturale) o in π, β, φ (labiale), il sigma si fonde con esse, producendo una consonante doppia: κ/γ/χ + σ = ξ; π/β/φ + σ = ψ. Ess.: διώκω, inseguo; T.V. διωκ-; Fut. Indic., I pers. plur. = διώξ-ο-μεν, inseguiremo. βλέπω, guardo; T.V. βλεπ-; Fut. Indic., I pers. plur. = βλέψ-ο-μεν, guarderemo.",
-              "Se il tema verbale termina in τ, δ, θ (dentale), questa scompare davanti alla caratteristica -σ- del Futuro. Es.: πείθω, persuado, T.V. πειθ-; Fut. Indic., I pers. plur. = πεί-σ-ο-μεν, persuaderemo.",
-              "Se la dentale è preceduta da ν, anche questa scompare, ma in tal caso la vocale precedente si allunga per compenso (cfr. § 6c). Es.: σπένδω, offro una libagione; T.V. σπενδ-, Fut. Indic., I pers. plur. = σπενδ-σ-ο-μεν > σπε-σ-ο-μεν > σπεί-σ-ο-μεν, offriremo una libagione (quest'esempio non ricorre nel N.T.).",
-              "g) Nei verbi con tema che termina in vocale o in dittongo, la vocale finale del tema normalmente si allunga, davanti alla caratteristica sigma del Futuro (allungamento organico), con le seguenti modalità: ε > η (ποιέω, faccio; T.V. ποιε-, Fut. ποιήσω, farò); ο > ω (γι(ν)νώσκω, conosco; T.V. γνω-, Fut. γνώσομαι, conoscerò); ᾰ > ᾱ, se preceduta da ε, ι, ρ (ἐάω, lascio; T.V. εα-, Fut. ἐάσω, lascerò); ᾰ > η in tutti gli altri casi (τιμάω, onoro; T.V. τιμα-, Fut. τιμήσω, onorerò)."
+            "contentBlocks": [
+              {
+                "type": "paragraph",
+                "text": "a) Il Futuro è un tempo principale, che ha tutte e tre le diatesi (attiva, media e passiva), ma manca dei modi Congiuntivo e Imperativo. Esso esprime sia azione incipiente, sia azione duratura nel Futuro."
+              },
+              {
+                "type": "paragraph",
+                "text": "b) Esistono, in greco, quattro tipi di Futuro: I) sigmatico; II) cosiddetto asigmatico o contratto; III) attico; IV) dorico."
+              },
+              {
+                "type": "paragraph",
+                "text": "c) Il futuro sigmatico forma l'Attivo e il Medio aggiungendo al tema verbale una «caratteristica», che è la lettera sigma. A questa segue la vocale tematica, rappresentata da ε/ο, come nel Presente, di cui il Futuro usa le medesime desinenze primarie e le stesse modalità di coniugazione."
+              },
+              {
+                "type": "paragraph",
+                "text": "d) Schematizzando quanto si è detto, il primo tipo di Futuro (sigmatico) risulta così formato:"
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "rows": [
+                    [
+                      "Schema",
+                      "TEMA VERB. + CARATTERISTICA + VOCALE TEM. + DESINENZE PRIMARIE"
+                    ],
+                    [
+                      "Esempio",
+                      "λύ - σ - ο - μεν = I pers. plur."
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "e) Il Futuro sigmatico è proprio dei verbi con tema che termina in consonante muta, in vocale e in dittongo."
+              },
+              {
+                "type": "paragraph",
+                "text": "f) L'unione del tema verbale con la caratteristica -σ- produce, nei temi in consonante muta, alcuni fenomeni fonetici."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "intro": "Temi in gutturale e labiale",
+                  "rows": [
+                    [
+                      "Regola",
+                      "κ/γ/χ + σ = ξ"
+                    ],
+                    [
+                      "Regola",
+                      "π/β/φ + σ = ψ"
+                    ],
+                    [
+                      "Ess.: διώκω, inseguo",
+                      "T.V. διωκ-; Fut. Indic. I plur. διώξ-ο-μεν = inseguiremo"
+                    ],
+                    [
+                      "Ess.: βλέπω, guardo",
+                      "T.V. βλεπ-; Fut. Indic. I plur. βλέψ-ο-μεν = guarderemo"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Se il tema verbale termina in τ, δ, θ (dentale), questa scompare davanti alla caratteristica -σ- del Futuro."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "intro": "Temi in dentale",
+                  "rows": [
+                    [
+                      "Es.: πείθω, persuado",
+                      "T.V. πειθ-; Fut. Indic. I plur. πεί-σ-ο-μεν = persuaderemo"
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "Se la dentale è preceduta da ν, anche questa scompare, ma in tal caso la vocale precedente si allunga per compenso (cfr. § 6c)."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "intro": "Dentale preceduta da ν",
+                  "rows": [
+                    [
+                      "Es.: σπένδω, offro una libagione",
+                      "T.V. σπενδ-; σπενδ-σ-ο-μεν > σπε-σ-ο-μεν > σπεί-σ-ο-μεν = offriremo una libagione"
+                    ]
+                  ],
+                  "notes": [
+                    "Quest'esempio non ricorre nel N.T."
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "g) Nei verbi con tema che termina in vocale o in dittongo, la vocale finale del tema normalmente si allunga davanti alla caratteristica sigma del Futuro (allungamento organico)."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue grammar-table-compact-sound-change",
+                  "intro": "Allungamento organico",
+                  "rows": [
+                    [
+                      "ε > η",
+                      "Es.: ποιέω, faccio; T.V. ποιε-; Fut. ποιήσω = farò"
+                    ],
+                    [
+                      "ο > ω",
+                      "Es.: γι(ν)νώσκω, conosco; T.V. γνω-; Fut. γνώσομαι = conoscerò"
+                    ],
+                    [
+                      "ᾰ > ᾱ, se preceduta da ε, ι, ρ",
+                      "Es.: ἐάω, lascio; T.V. εα-; Fut. ἐάσω = lascerò"
+                    ],
+                    [
+                      "ᾰ > η negli altri casi",
+                      "Es.: τιμάω, onoro; T.V. τιμα-; Fut. τιμήσω = onorerò"
+                    ]
+                  ]
+                }
+              }
             ]
           }
         ]
@@ -11360,18 +11481,67 @@
         "subsections": [
           {
             "title": "Osservazioni",
-            "paragraphs": [
-              "a) Il secondo tipo di Futuro (cosiddetto asigmatico o contratto) è caratteristico dei verbi con tema verbale che termina in liquida (λ, ρ) o nasale (μ, ν). Queste consonanti non sono compatibili con il -σ-, caratteristica del Futuro. Tra esse ed il -σ-, secondo la maggior parte dei grammatici, si è, perciò, interposta una -ε-; poi, trovandosi fra due vocali, il -σ- è caduto e le due vocali si sono contratte. Così sarebbe nato il Futuro, detto asigmatico: nelle sue forme, esso è identico a quelle del Presente contratto dei verbi in -εω (§ 22, 69 e 70).",
-              "Ess.: μένω, rimango; T.V. μεν-; Fut. Indic., I pers. plur. = *μεν-ε-σ-ο-μεν > μενέ-ο-μεν > μενοῦμεν, rimarremo.",
-              "ἀπαγγέλλω, annunzio; T.V. ἀπαγγελ-; Fut. Indic., I pers. plur. = *ἀπαγγελ-ε-σ-ο-μεν > ἀπαγγελέ-ο-μεν > ἀπαγγελοῦμεν, annunzieremo.",
-              "b) Il terzo tipo di Futuro, detto Attico, è anch'esso contratto ed è tipico di alcune radici bisillabiche in vocale (α/ε), che rimane breve, preceduta da consonante liquida o nasale.",
-              "Es.: καλέω, chiamo; T.V. καλε-; Fut. Indic., I pers. plur. = *καλε-σ-ο-μεν > καλέ-ο-μεν > καλοῦμεν, chiameremo (cfr. coniugaz. dei verbi contratti in -εω).",
-              "c) Hanno, inoltre, il Futuro Attico quasi tutti i verbi con tema polisillabo in -ίζω e pochi in -άζω (nel N.T., solo nelle citazioni dai LXX).",
-              "Ess.: νομίζω, credo; T.V. νομιδ-; Fut. Ind., I pers. plur. = *νομιδ-σ-ο-μεν > νομι-σ-ο-μεν > νομιοῦμεν, crederemo (cfr. coniugaz. dei verbi contratti in -εω).",
-              "ἐξετάζω, esamino; T.V. ἐξεταδ- Fut. Indic., I pers. plur. = *ἐξεταδ-σ-ο-μεν > ἐξετά-σ-ο-μεν > ἐξετά-ο-μεν > ἐξετῶμεν, esamineremo (cfr. coniugazione dei verbi contratti in -αω; §§ 69 e 70).",
-              "d) Pochi verbi usano, quasi sempre accanto alla forma regolare, un quarto tipo di Futuro, detto Dorico (per il fatto di essere, appunto, proprio dei Dori), il quale ha, anche in Attico, forma media, ma significato attivo. Esso deriva da una contaminazione del Fut. sigmatico con quello contratto, di cui segue la coniugazione (cfr. verbi in -εω, § 22)."
-            ],
             "contentBlocks": [
+              {
+                "type": "paragraph",
+                "text": "a) Il secondo tipo di Futuro (cosiddetto asigmatico o contratto) è caratteristico dei verbi con tema verbale che termina in liquida (λ, ρ) o nasale (μ, ν). Queste consonanti non sono compatibili con il -σ-, caratteristica del Futuro. Tra esse ed il -σ-, secondo la maggior parte dei grammatici, si è, perciò, interposta una -ε-; poi, trovandosi fra due vocali, il -σ- è caduto e le due vocali si sono contratte. Così sarebbe nato il Futuro, detto asigmatico: nelle sue forme, esso è identico a quelle del Presente contratto dei verbi in -εω (§ 22, 69 e 70)."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "rows": [
+                    [
+                      "Ess.: μένω, rimango",
+                      "T.V. μεν-; Fut. Indic., I pers. plur. = *μεν-ε-σ-ο-μεν > μενέ-ο-μεν > μενοῦμεν, rimarremo."
+                    ],
+                    [
+                      "Ess.: ἀπαγγέλλω, annunzio",
+                      "T.V. ἀπαγγελ-; Fut. Indic., I pers. plur. = *ἀπαγγελ-ε-σ-ο-μεν > ἀπαγγελέ-ο-μεν > ἀπαγγελοῦμεν, annunzieremo."
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "b) Il terzo tipo di Futuro, detto Attico, è anch'esso contratto ed è tipico di alcune radici bisillabiche in vocale (α/ε), che rimane breve, preceduta da consonante liquida o nasale."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "rows": [
+                    [
+                      "Es.: καλέω, chiamo",
+                      "T.V. καλε-; Fut. Indic., I pers. plur. = *καλε-σ-ο-μεν > καλέ-ο-μεν > καλοῦμεν, chiameremo (cfr. coniugaz. dei verbi contratti in -εω)."
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "c) Hanno, inoltre, il Futuro Attico quasi tutti i verbi con tema polisillabo in -ίζω e pochi in -άζω (nel N.T., solo nelle citazioni dai LXX)."
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue",
+                  "rows": [
+                    [
+                      "Ess.: νομίζω, credo",
+                      "T.V. νομιδ-; Fut. Ind., I pers. plur. = *νομιδ-σ-ο-μεν > νομι-σ-ο-μεν > νομιοῦμεν, crederemo (cfr. coniugaz. dei verbi contratti in -εω)."
+                    ],
+                    [
+                      "Ess.: ἐξετάζω, esamino",
+                      "T.V. ἐξεταδ- Fut. Indic., I pers. plur. = *ἐξεταδ-σ-ο-μεν > ἐξετά-σ-ο-μεν > ἐξετά-ο-μεν > ἐξετῶμεν, esamineremo (cfr. coniugazione dei verbi contratti in -αω; §§ 69 e 70)."
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "text": "d) Pochi verbi usano, quasi sempre accanto alla forma regolare, un quarto tipo di Futuro, detto Dorico (per il fatto di essere, appunto, proprio dei Dori), il quale ha, anche in Attico, forma media, ma significato attivo. Esso deriva da una contaminazione del Fut. sigmatico con quello contratto, di cui segue la coniugazione (cfr. verbi in -εω, § 22)."
+              },
               {
                 "type": "compactTable",
                 "table": {
@@ -11401,9 +11571,36 @@
                 }
               },
               {
+                "type": "paragraph",
+                "text": "e) Sono da notare i seguenti Futuri, formati con il suffisso ο/ε:"
+              },
+              {
+                "type": "compactTable",
+                "table": {
+                  "className": "grammar-table-compact-keyvalue grammar-table-compact-usage grammar-table-compact-future-forms",
+                  "rows": [
+                    [
+                      "(ἐκ-)χέ-ω (med. χέ-ο-μαι)",
+                      "= verserò (pres. χέ-ω, verso) - cfr. At. 2,17-18"
+                    ],
+                    [
+                      "ἔδ-ο-μαι¹",
+                      "= mangerò (pres. ἐσθίω, mangio)"
+                    ],
+                    [
+                      "πί-ο-μαι",
+                      "= berrò (pres. πίνω, bevo)²"
+                    ],
+                    [
+                      "ἐλ-ῶ",
+                      "= prenderò (nei composti di αἱρέω), cfr. Lc. 12,18; II Ts. 2,8; Ap. 22,19."
+                    ]
+                  ]
+                }
+              },
+              {
                 "type": "plainPoints",
                 "items": [
-                  "e) Sono da notare i seguenti Futuri, formati con il suffisso ο/ε: (ἐκ-)χέ-ω (med. χέ-ο-μαι) = verserò (pres. χέ-ω, verso) - cfr. At. 2,17-18; ἔδ-ο-μαι¹ = mangerò (pres. ἐσθίω, mangio); πί-ο-μαι = berrò (pres. πίνω, bevo)²; ἐλ-ῶ = prenderò (nei composti di αἱρέω), cfr. Lc. 12,18; II Ts. 2,8; Ap. 22,19.",
                   "f) Il passivo del Futuro si forma in modo autonomo, rispetto all'attivo e al medio (cfr. § 130).",
                   "g) Nel N.T. il Futuro è usato quasi unicamente all'Indicativo.",
                   "h) Un buon numero di verbi al Futuro si può trovare in Gv. 16."
@@ -11411,10 +11608,12 @@
               },
               {
                 "type": "note",
+                "className": "grammar-footnote-separated",
                 "text": "¹ ἔδομαι è sostituito spesso da φάγομαι, cfr. Lc. 14,15; 17,8; Gc. 5,3; Ap. 17,16; Gv. 2,17."
               },
               {
                 "type": "note",
+                "className": "grammar-footnote-separated",
                 "text": "² Per quanto riguarda πί-ο-μαι, cfr. Mc. 10,39; Lc. 17,8, dove si trova una II pers. sing. πίεσαι, invece del normale πίῃ."
               }
             ]
@@ -11503,7 +11702,8 @@
           {
             "type": "compactTable",
             "table": {
-              "className": "grammar-table-syntax-list",
+              "className": "grammar-table-syntax-list grammar-table-syntax-box",
+              "wrapClassName": "grammar-table-wrap-full",
               "rows": [
                 [
                   "Es.:",
@@ -11524,7 +11724,8 @@
           {
             "type": "compactTable",
             "table": {
-              "className": "grammar-table-syntax-list",
+              "className": "grammar-table-syntax-list grammar-table-syntax-box",
+              "wrapClassName": "grammar-table-wrap-full",
               "rows": [
                 [
                   "Es.:",

@@ -474,7 +474,7 @@ const renderGrammarCompactTable = (table) => {
 
   return `
     ${table.intro ? `<p>${renderGrammarInlineText(table.intro)}</p>` : ""}
-    <div class="grammar-table-wrap grammar-table-wrap-compact">
+    <div class="grammar-table-wrap grammar-table-wrap-compact${table.wrapClassName ? ` ${escapeHtml(table.wrapClassName)}` : ""}">
       <table class="grammar-table grammar-table-compact${table.className ? ` ${escapeHtml(table.className)}` : ""}">
         ${headerRowsHtml}
         <tbody>${rowsHtml}</tbody>
@@ -588,7 +588,10 @@ const renderGrammarContentBlock = (block, options = {}) => {
   if (block.type === "plainPoints") return renderGrammarPlainPoints(block.items);
   if (block.type === "summaryTable") return renderGrammarSummaryTable(block.table);
   if (block.type === "compactTable") return renderGrammarCompactTable(block.table);
-  if (block.type === "note") return `<p class="grammar-table-note">${renderGrammarInlineText(block.text || "")}</p>`;
+  if (block.type === "note") {
+    const className = `grammar-table-note${block.className ? ` ${escapeHtml(block.className)}` : ""}`;
+    return `<p class="${className}">${renderGrammarInlineText(block.text || "")}</p>`;
+  }
   if (block.type === "tableGrid") return renderGrammarTableGrid(block.grid);
   if (block.type === "alignedExamples") return renderGrammarAlignedExamples(block.block);
   if (block.type === "underlineWords") return renderGrammarUnderlineWords(block.words);
@@ -682,6 +685,9 @@ const renderGrammarSectionContent = (section, options = {}) => {
     : "";
   const summaryTableHtml = section.summaryTable ? renderGrammarSummaryTable(section.summaryTable) : "";
   const postSummaryParagraphsHtml = renderGrammarParagraphs(section.postSummaryParagraphs || []);
+  const subheadingHtml = section.subheading
+    ? `<h4 class="grammar-inline-heading">${renderGrammarInlineText(section.subheading)}</h4>`
+    : "";
   const contentBlocksHtml = (section.contentBlocks || [])
     .map((block) => renderGrammarContentBlock(block, { splitNumbered: sectionIsTranslationExercise }))
     .join("");
@@ -689,12 +695,9 @@ const renderGrammarSectionContent = (section, options = {}) => {
     ? section.subsections
         .map((item) => {
           const subsectionIsTranslationExercise = isTranslationExerciseTitle(item.title || "");
-          const subsectionHasContentBlocks = Boolean(item.contentBlocks?.length);
-          const subsectionContentBlocksHtml = subsectionHasContentBlocks
-            ? item.contentBlocks
-                .map((block) => renderGrammarContentBlock(block, { splitNumbered: subsectionIsTranslationExercise }))
-                .join("")
-            : "";
+          const subsectionContentBlocksHtml = (item.contentBlocks || [])
+            .map((block) => renderGrammarContentBlock(block, { splitNumbered: subsectionIsTranslationExercise }))
+            .join("");
           const compactTableAfterParagraph =
             Number.isInteger(item.compactTableAfterParagraph) && item.compactTableAfterParagraph >= 0
               ? item.compactTableAfterParagraph
@@ -711,9 +714,7 @@ const renderGrammarSectionContent = (section, options = {}) => {
           const trailingCompactTableHtml =
             compactTableHtml && !compactTableInserted ? compactTableHtml : "";
           const subsectionPlainPointsHtml = renderGrammarPlainPoints(item.plainPoints);
-          const subsectionBodyHtml = subsectionHasContentBlocks
-            ? subsectionContentBlocksHtml
-            : `${subsectionParagraphsHtml}${trailingCompactTableHtml}${subsectionPlainPointsHtml}`;
+          const subsectionBodyHtml = `${subsectionParagraphsHtml}${trailingCompactTableHtml}${subsectionPlainPointsHtml}${subsectionContentBlocksHtml}`;
 
           return `
             <div class="grammar-subsection">
@@ -736,7 +737,6 @@ const renderGrammarSectionContent = (section, options = {}) => {
   const versesHtml = section.verses?.length
     ? `
         <div class="grammar-greek-block">
-      ${section.subheading ? `<h4>${renderGrammarInlineText(section.subheading)}</h4>` : ""}
           <div class="stack grammar-greek-verses">
             ${section.verses.map((verse) => `<p class="grammar-greek-line">${renderGrammarInlineText(verse)}</p>`).join("")}
           </div>
@@ -744,9 +744,7 @@ const renderGrammarSectionContent = (section, options = {}) => {
       `
     : "";
   const headingTag = headingLevel === "h4" ? "h4" : "h3";
-  const bodyHtml = contentBlocksHtml
-    ? `${contentBlocksHtml}${subsectionsHtml}${versesHtml}`
-    : `${paragraphsHtml}${alphabetTableHtml}${plainPointsHtml}${groupsHtml}${pointsHtml}${summaryTableHtml}${postSummaryParagraphsHtml}${subsectionsHtml}${versesHtml}`;
+  const bodyHtml = `${subheadingHtml}${paragraphsHtml}${alphabetTableHtml}${plainPointsHtml}${groupsHtml}${pointsHtml}${summaryTableHtml}${postSummaryParagraphsHtml}${contentBlocksHtml}${subsectionsHtml}${versesHtml}`;
 
   return `
     ${showHeading ? `<${headingTag}>${renderGrammarInlineText(section.heading || section.title || "")}</${headingTag}>` : ""}

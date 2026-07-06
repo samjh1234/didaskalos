@@ -64,6 +64,7 @@ Il progetto è separato in livelli:
 Regola importante:
 - `interlineare` e `lessico` sono separati
 - il significato di un token nel versetto non coincide sempre con il significato base del lemma
+- La pagina `Grammatica` è la trascrizione di un manuale: quando si corregge l'impaginazione, il testo deve restare fedele alle foto sorgente in parole, sigle (`Es.`, `Ess.`), punteggiatura, accenti, segni e formule. Se un punto non è leggibile o non torna, va segnalato invece di normalizzarlo o indovinarlo.
 
 ## Dataset runtime
 
